@@ -1,1 +1,0 @@
-# mindcloud92.github.io
