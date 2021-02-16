@@ -15,5 +15,5 @@ categories: Github organization
 
 
 **Reference**  
-https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/removing-yourself-from-an-organization
+- [Github Docs](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/removing-yourself-from-an-organization){:target="_blank"}
  
