@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Github :: withdraw from the organization"
+title:  "Github :: leave from the organization"
 date:   2021-02-16 21:34:39 +0900
 categories: Github organization
 ---
 
 - #### Step1    
-![step1]({{ "/static/images/20210216-github-withdraw-organization-step1.png"| relative_url }})  
+![step1]({{ "/static/images/20210216-github--leave-organization-step1.png"| relative_url }})  
 
 
 - #### Step2
-![step2]({{ "/static/images/20210216-github-withdraw-organization-step2.png"| relative_url }})  
+![step2]({{ "/static/images/20210216-github--leave-organization-step2.png"| relative_url }})  
 
 
 
