@@ -1,11 +1,19 @@
 ---
 layout: post
-title:  "Github :: free web hosting(Github Pages)"
+title:  "GitHub :: free web hosting (GitHub Pages)"
 date:   2021-02-16 21:34:39 +0900
 categories: Technical
-tags: Github Github-Pages Web-Hosting Free
+tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
 ---
 
+- #### Step1    
+    ![step1-1]({{ "/static/images/github/web-hosting/step1-1.png"| relative_url }}){:style="width:50%"}  
+    ![step1-2]({{ "/static/images/github/web-hosting/step1-2.png"| relative_url }})  
+    - Create a new public repository named `{username}.github.io` on GitHub  
+
+
+
+
 **Reference**
-- [Github Pages Official Site](https://pages.github.com/){:target="_blank"}
-- [Github Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
+- [GitHub Pages Official Site](https://pages.github.com/){:target="_blank"}
+- [GitHub Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
