@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GitHub :: leave from the organization"
+title:  "GitHub :: 조직 탈퇴하기"
 date:   2021-02-16 21:34:39 +0900
 categories: Technical
 tags: GitHub Organization
@@ -8,12 +8,12 @@ tags: GitHub Organization
 
 - #### Step1    
     ![step1]({{ "/static/images/github/leave-organization/step1.png"| relative_url }})  
-    - Click the top right `Profile > Settings`   
+    - 오른쪽 상단에 `Profile > Settings` 클릭   
 
 
 - #### Step2
     ![step2]({{ "/static/images/github/leave-organization/step2.png"| relative_url }})
-    - Click the `Leave` in target organization row on the `Organizations`    
+    - `Organizations` 선택 후 탈퇴하고 싶은 조직에 있는 `Leave` 클릭
 
 
 
