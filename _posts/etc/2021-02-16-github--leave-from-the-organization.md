@@ -2,7 +2,8 @@
 layout: post
 title:  "Github :: leave from the organization"
 date:   2021-02-16 21:34:39 +0900
-categories: Github organization
+categories: Technical
+tags: Github Organization
 ---
 
 - #### Step1    
@@ -18,4 +19,3 @@ categories: Github organization
 
 **Reference**  
 - [Github Docs](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/removing-yourself-from-an-organization){:target="_blank"}
- 
