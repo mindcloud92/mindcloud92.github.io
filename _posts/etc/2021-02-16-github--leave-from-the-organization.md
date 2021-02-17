@@ -6,11 +6,13 @@ categories: Github organization
 ---
 
 - #### Step1    
-![step1]({{ "/static/images/20210216-github--leave-organization-step1.png"| relative_url }})  
+    ![step1]({{ "/static/images/20210216-github--leave-organization-step1.png"| relative_url }})  
+    Click the top right `Profile > Settings`   
 
 
 - #### Step2
-![step2]({{ "/static/images/20210216-github--leave-organization-step2.png"| relative_url }})  
+    ![step2]({{ "/static/images/20210216-github--leave-organization-step2.png"| relative_url }})
+    Click the `Leave` in target organization row on the `Organizations`    
 
 
 
