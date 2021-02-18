@@ -6,9 +6,8 @@ categories: Technical
 tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
 ---
 
-- #### Step1    
-    ![step1-1]({{ "/static/images/github/web-hosting/step1-1.png"| relative_url }}){:style="width:50%"}  
-    ![step1-2]({{ "/static/images/github/web-hosting/step1-2.png"| relative_url }})
+- #### Step1      
+    ![step1]({{ "/static/images/github/web-hosting/step1.png"| relative_url }})
     -  GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고  
 
 - #### Step2
