@@ -18,12 +18,16 @@ tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
           ```
           
 - #### Step3
-    ![step3]({{ "/static/images/github/web-hosting/step3.png"| relative_url }})
-    - Step1에서 만든  Git 저장소를 로컬에 clone 하고 터미널을 켜서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 나면 끗
+    ![step3-1]({{ "/static/images/github/web-hosting/step3-1.png"| relative_url }})
+    ![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }})
+    - Step1에서 만든  Git 저장소를 로컬에 clone 하고
+
+- #### Step4
+    ![step4]({{ "/static/images/github/web-hosting/step4.png"| relative_url }})
+    - 터미널을 켜서 Step3에서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 나면 끗
         - ```text 
           jekyll new {project name}
-          ```
-  
+          ```  
 
     
 **Reference**
