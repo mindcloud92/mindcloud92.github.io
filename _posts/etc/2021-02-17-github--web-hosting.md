@@ -33,3 +33,4 @@ tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
 **Reference**
 - [GitHub Pages Official Site](https://pages.github.com/){:target="_blank"}
 - [GitHub Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
+- [Jekyll tutorial](https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/){:target="_blank"}
