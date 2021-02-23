@@ -7,8 +7,8 @@ tags: Jekyll Custom-Layout
 ---
 
 - #### Step1
-    ![step2]({{ "/static/images/jekyll/custom-layout/step1-1.png"| relative_url }})
-    ![step2]({{ "/static/images/jekyll/custom-layout/step1-2.png"| relative_url }})
+    ![step1-1]({{ "/static/images/jekyll/custom-layout/step1-1.png"| relative_url }})
+    ![step1-2]({{ "/static/images/jekyll/custom-layout/step1-2.png"| relative_url }})
     - `_config.yml`에 기본으로 설정된 테마를 제거하고 루트 경로에 `_layouts` 디펙토리를 추가한 다음
         - **_config.yml을 수정하면 서버를 다시 껏다 켜야 적용대니까 반영안된다고 당황하지 말기!**  
 
