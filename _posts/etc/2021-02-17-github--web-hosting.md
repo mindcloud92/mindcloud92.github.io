@@ -24,7 +24,7 @@ tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
 
 - #### Step4
     ![step4]({{ "/static/images/github/web-hosting/step4.png"| relative_url }})
-    - 터미널을 켜서 Step3에서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 나면 끗
+    - 터미널을 켜서 Step3에서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 commit & push하면 끗
         - ```text 
           jekyll new {project name}
           ```  
