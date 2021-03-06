@@ -1,0 +1,67 @@
+.main
+  .contents-wrapper
+    padding: $padding--contents-wrapper-y ($padding--contents-wrapper-x / 2)
+
+    section
+      padding: 1em ($padding--contents-wrapper-x / 1.5)
+      background: $background-color--main-section
+      border: 1px solid #eee
+      border-radius: 5px
+
+      .section-title
+        text-align: center
+        font-size: 1.55em
+        &:before
+          content: '"'
+          margin-right: .2em
+        &:after
+          content: '"'
+          margin-left: .2em
+
+    .latest-post
+      .post-list
+        list-style: none
+        padding: 0
+        display: flex
+        justify-content: center
+
+        li
+          width: 30%
+          margin-left: $padding--contents-wrapper-x
+
+          &:first-child
+            margin-left: 0
+
+        .thumbnail-wrapper
+          position: relative
+
+        .thumbnail
+          border: 1px solid $border-color--thumbnail
+
+        .category-badge
+          position: absolute
+          background: $background-color--main-post-badge
+          padding: .3em .7em
+          font-size: 0.85em
+          font-weight: bold
+          color: $font-color--main-post-badge
+
+        .tag
+          font-size: .78em
+          margin: .5em
+          color: $font-color--main-post-tag
+
+          &:first-child
+            margin-left: 0
+
+        .tag-more
+          position: relative
+          &:before
+            content: '\00B7 \00B7 \00B7'
+            position: absolute
+            top: .15em
+
+        .date
+          font-size: .78em
+          color: $font-color--main-post-date
+          margin-block-end: .5em

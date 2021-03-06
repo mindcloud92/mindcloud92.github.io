@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body class="{{ page.layout }} container">
+        {% include navigation-bar.html %}
+
+        <div class="contents-wrapper">
+            <section class="latest-post">
+                <h2 class="section-title">따끈따끈한 글이에요</h2>
+                <ul class="post-list mt-3">
+                    {% for post in site.posts %}
+                        <li>
+                            <a href="{{ post.url }}" class="thumbnail-wrapper">
+                                <span class="category-badge">
+                                    {{ post.categories | first | upcase }}
+                                </span>
+
+                                <img src="{{ post.thumbnail }}" class="thumbnail" onerror="this.src='https://miro.medium.com/max/1400/1*KOAfAOQ9FwAp9i2muTkGWw.png'" />
+                            </a>
+                            <p class="date">{{ post.date | date: "%Y.%m.%d " }}</p>
+                            <a href="{{ post.url }}" class="title">
+                                {{ post.title }}
+                            </a>
+
+                            <div class="mt-2">
+                                {% for tag in post.tags limit: 4 %}
+                                    <span class="tag"># {{ tag }} </span>
+                                {% endfor %}
+                                {% if post.tags.size > 4 %}
+                                    <i class="tag-more"></i>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: text-post
 title:  "GitHub :: 조직 탈퇴하기"
 date:   2021-02-16 21:34:39 +0900
 categories: Technical
-tags: GitHub Organization
+tags: github organization
 ---
 
 - #### Step1    

@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: text-post
 title:  "GitHub :: GitHub Pages로 웹 호스팅 하기"
 date:   2021-02-17 21:34:39 +0900
 categories: Technical
-tags: GitHub GitHub-Pages Web-Hosting Free Jekyll
+tags: github pages web-hosting jekyll free
 ---
 
 - #### Step1      

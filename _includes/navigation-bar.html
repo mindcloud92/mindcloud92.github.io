@@ -1,0 +1,29 @@
+<div class="navigation-bar">
+    <section class="mt-2">
+        <h1 class="title">
+            <a href="/">
+                {{ site.title }}
+            </a>
+        </h1>
+    </section>
+    <section>
+        <ul class="category-container">
+            {% for category in site.categories %}
+                <li>
+                    <a href="javascript:;" class="{{ category | first | downcase }}">
+                        {{ category | first | upcase }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="profile">
+        <div class="profile-container">
+            {% for profile in site.profile %}
+                <a href="{{ profile | last }}" target="_blank">
+                    <i class="{{ profile | first }}"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>

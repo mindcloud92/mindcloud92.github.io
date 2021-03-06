@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body class="{{ page.layout }} container">
+        {% include navigation-bar.html %}
+
+        <div class="contents-wrapper">
+            <section>
+                <h2>{{ page.title }}</h2>
+                <div>
+                    {{ page.content }}
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
+

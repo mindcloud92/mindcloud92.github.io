@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: text-post
 title:  "Jekyll :: Custom Layout 적용하기"
 date:   2021-02-23 18:34:39 +0900
 categories: Technical
-tags: Jekyll Custom-Layout
+tags: jekyll custom layout
 ---
 
 - #### Step1
