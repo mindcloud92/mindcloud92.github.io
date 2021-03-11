@@ -20,8 +20,8 @@
     <section class="profile">
         <div class="profile-container">
             {% for profile in site.profile %}
-                <a href="{{ profile | last }}" target="_blank">
-                    <i class="{{ profile | first }}"></i>
+                <a href="{{ profile | last }}" target="_blank" >
+                    <i class="icon {{ profile | first }}"></i>
                 </a>
             {% endfor %}
         </div>
