@@ -1,8 +1,8 @@
 ---
-layout: text-post
+layout: post-detail--text
 title:  "Jekyll :: Custom Layout 적용하기"
 date:   2021-02-23 18:34:39 +0900
-categories: Technical
+categories: Notes
 tags: jekyll custom layout
 ---
 

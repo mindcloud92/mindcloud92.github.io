@@ -1,10 +1,11 @@
 ---
-layout: text-post
+layout: post-detail--text
 title:  "GitHub :: 조직 탈퇴하기"
 date:   2021-02-16 21:34:39 +0900
-categories: Technical
+categories: Notes
 tags: github organization
 ---
+
 
 - #### Step1    
     ![step1]({{ "/static/images/github/leave-organization/step1.png"| relative_url }})  

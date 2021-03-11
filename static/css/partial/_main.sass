@@ -11,6 +11,7 @@
       .section-title
         text-align: center
         font-size: 1.55em
+
         &:before
           content: '"'
           margin-right: .2em
@@ -18,33 +19,10 @@
           content: '"'
           margin-left: .2em
 
-    .latest-post
       .post-list
         list-style: none
         padding: 0
-        display: flex
         justify-content: center
-
-        li
-          width: 30%
-          margin-left: $padding--contents-wrapper-x
-
-          &:first-child
-            margin-left: 0
-
-        .thumbnail-wrapper
-          position: relative
-
-        .thumbnail
-          border: 1px solid $border-color--thumbnail
-
-        .category-badge
-          position: absolute
-          background: $background-color--main-post-badge
-          padding: .3em .7em
-          font-size: 0.85em
-          font-weight: bold
-          color: $font-color--main-post-badge
 
         .tag
           font-size: .78em
@@ -54,14 +32,62 @@
           &:first-child
             margin-left: 0
 
-        .tag-more
-          position: relative
-          &:before
-            content: '\00B7 \00B7 \00B7'
-            position: absolute
-            top: .15em
+          .tag-more
+            position: relative
+            &:before
+              content: '\00B7 \00B7 \00B7'
+              position: absolute
+              top: .15em
 
         .date
           font-size: .78em
           color: $font-color--main-post-date
           margin-block-end: .5em
+
+        .category-badge
+          background: $background-color--main-post-badge
+          padding: .3em .85em
+          font-size: 0.68em
+          font-weight: bold
+          color: $font-color--main-post-badge
+
+        &.thumbnail
+          display: flex
+
+          li
+            width: 30%
+            margin-left: $padding--contents-wrapper-x
+
+            &:first-child
+              margin-left: 0
+
+          .thumbnail-wrapper
+            position: relative
+
+          .thumbnail
+            border: 1px solid $border-color--thumbnail
+
+          .category-badge
+            position: absolute
+
+        &.text
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          flex-direction: row
+
+          li
+            width: 32%
+            padding: 0 0 1em
+            margin-top: 3.5em
+
+            &:nth-child(1)
+              margin-top: 0
+            &:nth-child(2)
+              margin-top: 0
+            &:nth-child(3)
+              margin-top: 0
+
+            .title
+              display: flex
+              align-items: center
