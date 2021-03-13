@@ -9,16 +9,17 @@
                 <h2 class="section-title">
                     따끈따끈한 글이에요
                 </h2>
-                <ul class="post-container thumbnail mt-3">
+                <ul class="post-container thumbnail">
                     {% for post in site.posts limit: 3 %}
                         <li>
                             <a href="{{ post.url }}" class="thumbnail-wrapper">
                                 <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" onerror="this.src='https://miro.medium.com/max/1400/1*KOAfAOQ9FwAp9i2muTkGWw.png'" />
                             </a>
                             <div class="additional-info-wrapper">
-                                <p class="category-badge">
+                                <p class="category">
                                     {{ post.categories | first | upcase }}
                                 </p>
+                                <i class="divider"></i>
                                 <p class="date">{{ post.date | date: "%Y.%m.%d " }}</p>
                             </div>
                             <a href="{{ post.url }}" class="title">
@@ -29,9 +30,9 @@
                 </ul>
             </section>
 
-            <section class="mt-3 pb-3">
+            <section class="mt-1 pb-3">
                 <h2 class="section-title">인기있는 글이에요</h2>
-                <ul class="post-container text mt-4">
+                <ul class="post-container text">
                     {% for post in site.posts limit: 6 %}
                         <li>
                             <a href="{{ post.url }}" class="title">

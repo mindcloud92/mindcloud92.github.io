@@ -8,10 +8,34 @@
       .section-title
 
       .post-container
+        background: #fffefb
+        border: 1px solid #f5f5f5
+        border-top: 2px solid #5b4e4c
+        padding: 2em 1.5em
+
+        .additional-info-wrapper
+          display: flex
+          align-items: center
+
+        .divider
+          padding-left: .05em
+          padding-right: .2em
+
+          &:before
+            content: '\00B7'
+
         &.thumbnail
           display: flex
 
-      .additional-info-wrapper
-        display: flex
-        align-items: center
+          li
+            padding-left: 2em
+
+            &:first-child
+              padding-left: 0
+
+        &.text
+          li
+            padding-bottom: 2em
+
+
 
