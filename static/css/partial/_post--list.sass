@@ -5,13 +5,19 @@
       padding: 0
 
     section
-      .section-title
-
       .post-container
         background: #fffefb
         border: 1px solid #f5f5f5
-        border-top: 2px solid #5b4e4c
         padding: 2em 1.5em
+        position: relative
+
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          border: 2px solid #ffc883
+          width: 10%
 
         .additional-info-wrapper
           display: flex
