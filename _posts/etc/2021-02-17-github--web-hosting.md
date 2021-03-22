@@ -11,18 +11,22 @@ tags: github pages web-hosting jekyll free
     - GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고
     
 
-- #### Step2 터미널로 `Jekyll bundler`를 깐 다음
+- #### Step2 
     ![step2]({{ "/static/images/github/web-hosting/step2.png"| relative_url }})
+    - 터미널로 `Jekyll bundler`를 깐 다음
+    
     ```text 
         sudo gem install jekyll bundler
     ```
           
-- #### Step3 Step1에서 만든  Git 저장소를 로컬에 clone 하고
+- #### Step3 
     ![step3-1]({{ "/static/images/github/web-hosting/step3-1.png"| relative_url }})
     ![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }})
+    - Step1에서 만든  Git 저장소를 로컬에 clone 하고
 
-- #### Step4 터미널을 켜서 Step3에서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 commit & push하면 끗
+- #### Step4 
     ![step4]({{ "/static/images/github/web-hosting/step4.png"| relative_url }})
+    - 터미널을 켜서 Step3에서 clone 한 위치에 jekyll 프로젝트를 생성해서 덮어씌우고 commit & push하면 끗
     ```text 
       jekyll new {project name}
     ```  
