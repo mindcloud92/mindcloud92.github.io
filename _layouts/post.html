@@ -4,14 +4,12 @@
     <body class="{{ page.layout }} container">
         {% include navigation-bar.html %}
 
-        <div class="contents-wrapper">
-            <section>
-                <h2 class="post-title">{{ page.title }}</h2>
-                <p class="post-date">{{ page.date | date: '%Y.%m.%d' }}</p>
-                <div class="post-content mt-4">
-                    {{ page.content }}
-                </div>
-            </section>
+        <div class="contents-wrapper post-detail">
+            <h2 class="title">{{ page.title }}</h2>
+            <p class="date">{{ page.date | date: '%Y.%m.%d' }}</p>
+            <div class="post-content mt-4">
+                {{ page.content }}
+            </div>
         </div>
     </body>
 </html>
