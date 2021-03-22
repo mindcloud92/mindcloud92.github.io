@@ -6,8 +6,9 @@ categories: Notes
 tags: github pages web-hosting jekyll free
 --- 
 
-- #### Step1 GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고      
+- #### Step1       
     ![step1]({{ "/static/images/github/web-hosting/step1.png"| relative_url }})
+    - GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고
     
 
 - #### Step2 터미널로 `Jekyll bundler`를 깐 다음
