@@ -5,15 +5,14 @@
                 {{ site.title }}
             </a>
         </h1>
-    </section>
-    <section>
-        <ul class="category-container">
+
+        <ul class="category-container mt-3">
             {% for category in site.categories %}
-                <li>
-                    <a href="/" class="{{ category | first | downcase }}">
-                        {{ category | first | upcase }}
-                    </a>
-                </li>
+            <li>
+                <a href="/" class="{{ category | first | downcase }}">
+                    {{ category | first | upcase }}
+                </a>
+            </li>
             {% endfor %}
         </ul>
     </section>
