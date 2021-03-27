@@ -84,4 +84,4 @@ tags: jekyll custom layout
 
 
 > **Reference**  
-[Jekyll Docs](https://jekyllrb-ko.github.io/docs/layouts/){:target="_blank"}
+* [Jekyll Docs](https://jekyllrb-ko.github.io/docs/layouts/){:target="_blank"}
