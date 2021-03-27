@@ -28,7 +28,7 @@ tags: jekyll custom layout
 
 
 
-<div markdown="1" class="stepper text mt-4">
+<div markdown="1" class="stepper text mt-3">
 <h4 markdown="1" data-step="2" class="title">
     프로젝트 루트 경로에 `_layouts` 디렉토리와 그 하위에 적용할 레이아웃 파일을 사용할 레이아웃명과 동일한 파일명으로 추가한 다음
 </h4>
@@ -64,7 +64,7 @@ tags: jekyll custom layout
 
 
 
-<div markdown="1" class="stepper text mt-4 mb-4">
+<div markdown="1" class="stepper text mt-3 mb-4">
 <h4 markdown="1" data-step="3" class="title">
     적용하고자 하는 글에 적용하면 끗
 </h4>
