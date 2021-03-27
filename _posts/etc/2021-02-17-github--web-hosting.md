@@ -10,7 +10,7 @@ tags: github pages web-hosting jekyll free
 <h4 markdown="1" data-step="1" class="title">
     GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고
 </h4>
-![step1]({{ "/static/images/github/web-hosting/step1.png"| relative_url }}){:class="thumbnail" style="width:50%"}
+![step1]({{ "/static/images/github/web-hosting/step1.png"| relative_url }}){:class="thumbnail"}
 </div>
 
 
@@ -29,8 +29,8 @@ tags: github pages web-hosting jekyll free
 <h4 markdown="1" data-step="3" class="title">
     Step1에서 만든  Git 저장소를 로컬에 clone 하고
 </h4>
-![step3-1]({{ "/static/images/github/web-hosting/step3-1.png"| relative_url }}){:class="thumbnail" style="width:50%"}
-![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }}){:class="thumbnail" style="width:50%"}
+![step3-1]({{ "/static/images/github/web-hosting/step3-1.png"| relative_url }}){:class="thumbnail"}
+![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }}){:class="thumbnail mt-2"}
 </div>
           
 
