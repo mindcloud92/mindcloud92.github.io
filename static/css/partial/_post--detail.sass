@@ -1,0 +1,48 @@
+.container
+  .post-detail
+    code
+      line-height: 2em
+
+    div
+      &[class^=language]
+        background: $background-color--file
+        border: 1px solid #eee
+        padding: .5em 0
+        color: #fff
+
+    .language-html
+      code
+        line-height: 1em
+
+    .stepper
+      .title
+        &:before
+          content: attr(data-step)
+
+    .file-wrapper
+      .filename-badge
+        font-size: .8em
+        color: #fff
+        background: $background-color--file
+        margin: 0
+        display: inline-block
+        padding: .5em 1em
+        border: 1px solid #eee
+        border-bottom: none
+        margin-bottom: -1px
+
+        &:before
+          font-family: $font-family--icon
+          content: '\f15b'
+          margin-right: .5em
+
+      .info
+        font-size: .85em
+
+    blockquote
+      margin: 0
+      background: $background-color--blockquote
+      border: 1px solid #fefefe
+      padding: .5em 1.5em
+      font-size: .9em
+      border-left: 4px solid $key-color--default
