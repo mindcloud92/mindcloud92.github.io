@@ -18,12 +18,11 @@ tags: jekyll custom layout
     baseurl: project baseurl
     url: project url
     
-    theme: project theme `← remove!`
+    theme: project theme ← remove!
 ```
 <p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용대니까 반영안된다고 당황하지 말기</p>
 </div>
 </div>
-
 
 
 
@@ -70,6 +69,7 @@ tags: jekyll custom layout
 </h4>
 
 <div markdown="1" class="file-wrapper">
+<p class="filename-badge">post.md</p>
 ```markdown
     ---
     layout: layout_name

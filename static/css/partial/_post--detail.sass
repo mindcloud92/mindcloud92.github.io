@@ -1,5 +1,11 @@
 .container
   .post-detail
+    text-align: center
+
+    .post-content
+      text-align: left
+      color: $font-color--post-content
+
     code
       line-height: 2em
 
@@ -46,7 +52,14 @@
           margin-right: .5em
 
       .info
-        font-size: .85em
+        font-size: .78em
+        color: #948473
+        &:before
+          font-size: 1.3em
+          font-family: $font-family--icon
+          content: '\f05a'
+          margin-right: .5em
+          font-weight: 900
 
     blockquote
       margin: 0
