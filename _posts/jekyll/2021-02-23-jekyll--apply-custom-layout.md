@@ -14,11 +14,11 @@ tags: jekyll custom layout
 <div markdown="1" class="file-wrapper">
 <p class="filename-badge">_config.yml</p>    
 ```yaml
-    title: {project title}
-    baseurl: {project baseurl}
-    url: {project url}
+    title: project title
+    baseurl: project baseurl
+    url: project url
     
-    theme: {project theme} ← remove!
+    theme: project theme `← remove!`
 ```
 <p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용대니까 반영안된다고 당황하지 말기</p>
 </div>
@@ -36,13 +36,13 @@ tags: jekyll custom layout
 ```text
     project
     ├─ _layouts
-        ├─ {layout name}.html        
+        ├─ layout_name.html        
     ├─_config.yml
     ├─ index.md
 ```
 
 <div markdown="1" class="file-wrapper mt-1">
-<p class="filename-badge">{layout name}.html</p>
+<p class="filename-badge">layout_name.html</p>
 ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -72,7 +72,7 @@ tags: jekyll custom layout
 <div markdown="1" class="file-wrapper">
 ```markdown
     ---
-    layout: {layout name}
+    layout: layout_name
     title:  title
     date:   2021-02-23 18:34:39 +0900
     ---
