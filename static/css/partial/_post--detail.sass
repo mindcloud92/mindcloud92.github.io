@@ -33,6 +33,12 @@
       .title
         &:before
           content: attr(data-step)
+          border-radius: 5px
+          background: $key-color--default
+          padding: .3em .7em
+          font-size: .8em
+          margin-right: .5em
+          color: $font-color--post-step-title
 
     .file-wrapper
       .filename-badge
@@ -53,7 +59,7 @@
 
       .info
         font-size: .78em
-        color: #948473
+        color: $font-color--post-info
         &:before
           font-size: 1.3em
           font-family: $font-family--icon
@@ -68,4 +74,8 @@
       padding: .5em 1.5em
       font-size: .9em
       border-left: 4px solid $key-color--default
+
+      a
+        color: #2196f3
+        text-decoration: underline
 

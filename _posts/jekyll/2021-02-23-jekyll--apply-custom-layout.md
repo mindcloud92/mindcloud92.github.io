@@ -20,7 +20,7 @@ tags: jekyll custom layout
     
     theme: project theme ← remove!
 ```
-<p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용대니까 반영안된다고 당황하지 말기</p>
+<p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용됨</p>
 </div>
 </div>
 
@@ -77,11 +77,11 @@ tags: jekyll custom layout
     date:   2021-02-23 18:34:39 +0900
     ---
 ```  
-<p class="info">레이아웃명이 default인 경우에는 따로 지정하지 않아도 바로 전체에 적용되니 참고하기</p>
+<p class="info">레이아웃명이 default인 경우에는 따로 지정하지 않아도 바로 전체에 적용됨</p>
 </div>
 </div>
 
 
 
-> Reference  
+> **Reference**  
 [Jekyll Docs](https://jekyllrb-ko.github.io/docs/layouts/){:target="_blank"}
