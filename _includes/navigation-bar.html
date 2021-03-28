@@ -7,11 +7,19 @@
         </h1>
 
         <ul class="category-container mt-3">
+            {% assign currentPath = page.url | replace: '.html', '' | replace: '/', '' %}
             {% for category in site.categories %}
             <li>
-                <a href="/" class="{{ category | first | downcase }}">
-                    {{ category | first | upcase }}
-                </a>
+                {% assign categoryPath = category | first | downcase %}
+                {% if currentPath contains categoryPath %}
+                    <a href="/{{ categoryPath }}" class="{{ categoryPath }} active">
+                        {{ category | first | upcase }}
+                    </a>
+                {% else %}
+                    <a href="/{{ categoryPath }}" class="{{ categoryPath }}">
+                        {{ category | first | upcase }}
+                    </a>
+                {% endif %}
             </li>
             {% endfor %}
         </ul>
