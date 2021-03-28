@@ -1,5 +1,5 @@
 .container
-  .post-detail
+  &.post-detail
     text-align: center
 
     .post-content
@@ -41,15 +41,13 @@
 
     .stepper
       .title
-        display: flex
-        align-items: center
         &:before
           content: attr(data-step)
           border-radius: 5px
           background: var(--background-color--stepper-title)
-          padding: .3em .7em
+          padding: .15em .55em
           font-size: .8em
-          margin-right: .8em
+          margin-right: .5em
           color: var(--font-color--post-step-title)
 
     .file-wrapper
@@ -72,6 +70,7 @@
     .info
       font-size: .78em
       color: var(--font-color--post-info)
+
       &:before
         font-size: 1.3em
         font-family: var(--font-family--icon)
@@ -92,3 +91,6 @@
         text-decoration: underline
         font-size: .9em
 
+    &.text
+      .thumbnail
+        width: 70%
