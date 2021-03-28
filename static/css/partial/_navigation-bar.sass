@@ -60,3 +60,34 @@
       margin: 0 .5em
       .icon
         color: var(--font-color--nav-profile-link)
+
+  &.mobile
+    display: none
+
+
+@media screen and (max-width: 768px)
+  .navigation-bar
+    &.default
+      display: none
+
+    &.mobile
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: .5em 0
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 1
+
+      .title
+        margin: 0
+        margin-left: 2em
+
+      .btn-menu
+        margin-right: .5em
+        background: transparent
+        border: none
+        font-size: 1.4em
+        color: var(--font-color--nav-title)
+        opacity: .9

@@ -19,7 +19,7 @@ thumbnail: '/static/images/jekyll/custom-layout/thumbnail.png'
     baseurl: project baseurl
     url: project url
     
-    theme: project theme ← remove!
+    theme: project theme # ← remove!
 ```
 <p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용됨</p>
 </div>

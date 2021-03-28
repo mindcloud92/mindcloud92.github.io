@@ -4,6 +4,7 @@ body
   margin: 0
   background: var(--background-color--default)
   color: var(--font-color--default)
+  line-height: 1.6
 
   a
     color: var(--font-color--default)
@@ -72,3 +73,13 @@ body
 
       &:before
         content: '\f658'
+
+
+@media screen and (max-width: 768px)
+  body
+    &.container
+      display: block
+
+    .contents-wrapper
+      padding: var(--padding--contents-wrapper-y) calc(var(--padding--contents-wrapper-x) / 2)
+      margin-top: 3em

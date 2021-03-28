@@ -43,5 +43,22 @@
             &:last-child
               padding: 0
 
+@media screen and (max-width: 768px)
+  .container
+    &.main, &.post-list
+      section
+        .post-container
+          &.thumbnail
+            display: block
 
+            .thumbnail-wrapper
+              .thumbnail
+                height: calc(100vw * 0.4)
 
+            li
+              width: 100%
+              padding-left: 0
+              padding-top: 2em
+
+              &:first-child
+                padding-top: 0
