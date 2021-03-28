@@ -5,8 +5,11 @@
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">
+            {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' %}
             <section>
-                {{ page }}
+                <h2 class="section-title">
+                    {{ currentCategoryName }}
+                </h2>
             </section>
         </div>
     </body>
