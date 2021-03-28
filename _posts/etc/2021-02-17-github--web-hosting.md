@@ -29,8 +29,7 @@ tags: github pages web-hosting jekyll free
 <h4 markdown="1" data-step="3" class="title">
     Step1에서 만든  Git 저장소를 로컬에 clone 하고
 </h4>
-![step3-1]({{ "/static/images/github/web-hosting/step3-1.png"| relative_url }}){:class="thumbnail"}
-![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }}){:class="thumbnail mt-2"}
+![step3-2]({{ "/static/images/github/web-hosting/step3-2.png"| relative_url }}){:class="thumbnail"}
 </div>
           
 
