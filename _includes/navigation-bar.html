@@ -34,13 +34,50 @@
         </div>
     </section>
 </div>
+
 <div class="navigation-bar mobile">
-    <h5 class="title">
-        <a href="/">
-            {{ site.title }}
-        </a>
-    </h5>
-    <!--    <button type="button" class="btn-menu">-->
-    <!--        <i class="fa fa-bars"></i>-->
-    <!--    </button>-->
+    <div class="header">
+        <h5 class="title">
+            <a href="/">
+                {{ site.title }}
+            </a>
+        </h5>
+        <button id="btnToggleMenu" type="button" class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+
+    <ul id="categoryContainer" class="category-container">
+        {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' %}
+        {% for category in site.categories %}
+        <li>
+            {% assign categoryName = category | first | downcase %}
+            {% if currentCategoryName contains categoryName %}
+            <a href="/{{ categoryName }}" class="{{ categoryName }} active">
+                {{ category | first | upcase }}
+            </a>
+            {% else %}
+            <a href="/{{ categoryName }}" class="{{ categoryName }}">
+                {{ category | first | upcase }}
+            </a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
 </div>
+
+<script src="//code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    (function($) {
+        bindEvent()
+
+        function bindEvent() {
+            const $btnToggleMenu = $('#btnToggleMenu')
+            $btnToggleMenu.on('click', function() {
+                const $categoryContainer = $('#categoryContainer')
+
+                $categoryContainer.slideToggle()
+            })
+        }
+    })(jQuery)
+</script>
