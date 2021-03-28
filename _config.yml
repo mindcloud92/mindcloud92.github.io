@@ -27,7 +27,7 @@ profile:
   email: mailto:mira@coyobi.com
 
 # Build settings
-theme: minima
+custom-theme: pink-theme
 plugins:
   - jekyll-feed
 

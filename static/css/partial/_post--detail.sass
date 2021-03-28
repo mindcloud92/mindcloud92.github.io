@@ -4,7 +4,7 @@
 
     .post-content
       text-align: left
-      color: $font-color--post-content
+      color: var(--font-color--post-content)
 
     .thumbnail
       border-radius: 0
@@ -15,7 +15,7 @@
 
     div
       &[class^=language]
-        background: $background-color--file
+        background: var(--background-color--file)
         border: 1px solid #eee
         padding: .5em 0
         color: #dadcf3
@@ -35,20 +35,22 @@
 
     .stepper
       .title
+        display: flex
+        align-items: center
         &:before
           content: attr(data-step)
           border-radius: 5px
-          background: $key-color--default
+          background: var(--background-color--stepper-title)
           padding: .3em .7em
           font-size: .8em
-          margin-right: .5em
-          color: $font-color--post-step-title
+          margin-right: .8em
+          color: var(--font-color--post-step-title)
 
     .file-wrapper
       .filename-badge
         font-size: .8em
         color: #fff
-        background: $background-color--file
+        background: var(--background-color--file)
         margin: 0
         display: inline-block
         padding: .5em 1em
@@ -57,27 +59,27 @@
         margin-bottom: -1px
 
         &:before
-          font-family: $font-family--icon
+          font-family: var(--font-family--icon)
           content: '\f15b'
           margin-right: .5em
 
     .info
       font-size: .78em
-      color: $font-color--post-info
+      color: var(--font-color--post-info)
       &:before
         font-size: 1.3em
-        font-family: $font-family--icon
+        font-family: var(--font-family--icon)
         content: '\f05a'
         margin-right: .5em
         font-weight: 900
 
     blockquote
       margin: 0
-      background: $background-color--blockquote
+      background: var(--background-color--blockquote)
       border: 1px solid #fefefe
       padding: .5em 1.5em
       font-size: .9em
-      border-left: 4px solid $key-color--default
+      border-left: 4px solid var(--key-color--default)
 
       a
         color: #2196f3

@@ -1,8 +1,11 @@
 ---
 ---
 
-@import 'variable';
 @import 'font';
+
+@import 'default-theme--variable';
+@import 'pink-theme--variable';
+
 @import 'base';
 @import 'navigation-bar';
 
