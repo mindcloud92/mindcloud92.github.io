@@ -1,7 +1,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
+    <title>
+        {{ site.title }}
+        {% if page.title %}
+            &middot; {{ page.title }}
+        {% endif %}
+    </title>
+    <meta name="description" content="{{ page.title | default: site.description }}">
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/index.css">
 </head>
