@@ -5,6 +5,7 @@ date:   2021-02-23 18:34:39 +0900
 categories: Notes
 tags: jekyll custom layout
 thumbnail: '/static/images/jekyll/custom-layout/thumbnail.png'
+slug: Jekyll-Custom-Layout-적용하기
 ---
 
 <div markdown="1" class="stepper text">

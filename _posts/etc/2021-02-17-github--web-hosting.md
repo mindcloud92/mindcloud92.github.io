@@ -5,6 +5,7 @@ date:   2021-02-17 21:34:39 +0900
 categories: Notes
 tags: github pages web-hosting jekyll free
 thumbnail: '/static/images/github/web-hosting/thumbnail.png'
+slug: GitHub-Pages로-웹-호스팅-하기
 --- 
 
 <div markdown="1" class="stepper text">

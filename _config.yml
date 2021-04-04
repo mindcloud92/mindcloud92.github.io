@@ -20,16 +20,19 @@
 
 title: Step by step
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://super-dev.xyz" # the hostname & protocol for site
 
 profile:
-  github: https://github.com/mindcloud92
-  email: mailto:mira@coyobi.com
+  github: "https://github.com/mindcloud92"
+  email: "mailto:mira@coyobi.com"
 
-# Build settings
 custom-theme: pink-theme
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+
+permalink: pretty
 
 sass:
   sass_dir: static/css/partial
