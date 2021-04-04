@@ -2,10 +2,7 @@
 <html lang="en">
     {% include head.html %}
 
-    {% assign layoutName = page.layout | slice: 0, 11 %}
-    {% assign contentsType = page.layout | slice: 13, page.layout.size %}
-
-    <body class="{{ layoutName }} {{ site.custom-theme }} {{ contentsType }} container">
+    <body class="{{ page.layout }} {{ site.custom-theme }} {{ page.contentsType | default: 'text' }} container">
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">

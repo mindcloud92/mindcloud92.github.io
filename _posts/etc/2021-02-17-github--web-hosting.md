@@ -1,5 +1,5 @@
 ---
-layout: post-detail--text
+layout: post-detail
 title:  "GitHub :: GitHub Pages로 웹 호스팅 하기"
 date:   2021-02-17 21:34:39 +0900
 categories: Notes
