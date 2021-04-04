@@ -5,7 +5,6 @@ date:   2021-02-16 21:34:39 +0900
 categories: Notes
 tags: github organization
 thumbnail: '/static/images/github/leave-organization/thumbnail.png'
-slug: GitHub-조직-탈퇴하기
 ---
 
 <div markdown="1" class="stepper text">
