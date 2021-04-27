@@ -21,10 +21,9 @@ thumbnail: '/static/images/github/web-hosting/thumbnail.png'
     터미널로 `Jekyll bundler`를 깐 다음
 </h4>
 ```text 
-    sudo gem install jekyll bundler
+    $ sudo gem install jekyll bundler
 ```
 </div>
-
 
 <div markdown="1" class="stepper text mt-3">
 <h4 markdown="1" data-step="3" class="title">
@@ -39,7 +38,7 @@ thumbnail: '/static/images/github/web-hosting/thumbnail.png'
     Step3에서 clone 한 위치에서 터미널을 열어 jekyll 프로젝트를 만들어서 덮어씌운 다음 commit & push하면 끗
 </h4>
 ```text 
-    jekyll new project_name
+    $ jekyll new project_name
 ```
 </div>
 
