@@ -4,14 +4,14 @@ title:  "GitHub :: GitHub Pages로 웹 호스팅 하기"
 date:   2021-02-17 21:34:39 +0900
 categories: Notes
 tags: github pages web-hosting jekyll free
-thumbnail: '/static/images/github/web-hosting/thumbnail.png'
+thumbnail: '/asset/images/github/web-hosting/thumbnail.png'
 --- 
 
 <div markdown="1" class="stepper text">
 <h4 markdown="1" data-step="1" class="title">
     GitHub에서 `{username}.github.io`라는 이름으로 저장소를 새로 만들고
 </h4>
-![step1]({{ "/static/images/github/web-hosting/step1.png"| relative_url }}){:class="thumbnail"}
+![step1]({{ "/asset/images/github/web-hosting/step1.png"| relative_url }}){:class="thumbnail"}
 </div>
 
 
@@ -29,7 +29,7 @@ thumbnail: '/static/images/github/web-hosting/thumbnail.png'
 <h4 markdown="1" data-step="3" class="title">
     Step1에서 만든  Git 저장소를 로컬에 clone 하고
 </h4>
-![step3]({{ "/static/images/github/web-hosting/step3.png"| relative_url }}){:class="thumbnail"}
+![step3]({{ "/asset/images/github/web-hosting/step3.png"| relative_url }}){:class="thumbnail"}
 </div>
           
 
