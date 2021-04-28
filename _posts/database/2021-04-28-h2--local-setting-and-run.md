@@ -9,7 +9,7 @@ thumbnail: '/asset/images/database/h2-local-setting/thumbnail.png'
 
 <div markdown="1" class="stepper text">
 <h4 markdown="1" data-step="1" class="title">
-    <a href="http://www.h2database.com/html/download.html" target="_blank">H2 Database 사이트</a>에서 `Platform-Independent zip`을 다운로드하고
+    <a href="http://www.h2database.com/html/download.html" target="_blank">H2 Database 공식 사이트</a>에서 `Platform-Independent zip`을 다운로드하고
 </h4>
 ![step1]({{ "/asset/images/database/h2-local-setting/step1.png"| relative_url }}){:class="thumbnail"}
 </div>
