@@ -32,6 +32,10 @@ thumbnail: '/asset/images/database/h2-local-setting/thumbnail.png'
 </h4>
 ```text
     $ sh h2.sh
+    
+    or 
+    
+    $ ./h2.sh
 ```
 
 - 실행결과
