@@ -31,11 +31,7 @@ thumbnail: '/asset/images/database/h2-local-setting/thumbnail.png'
     h2 쉘 스크립트 실행하면 끗
 </h4>
 ```text
-    $ sh h2.sh
-    
-    or 
-    
-    $ ./h2.sh
+    $ sh h2.sh -- or  ./h2.sh
 ```
 
 - 실행결과
