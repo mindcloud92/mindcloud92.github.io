@@ -2,6 +2,9 @@
   &.post-detail
     text-align: center
 
+    .contents-wrapper
+      padding: var(--padding--contents-wrapper-y) calc(var(--padding--contents-wrapper-x) * 5)
+
     .post-content
       text-align: left
       color: var(--font-color--post-content)
@@ -105,3 +108,6 @@
       &.text
         .thumbnail
           width: 100%
+      .contents-wrapper
+        padding: var(--padding--contents-wrapper-y) var(--padding--contents-wrapper-x)
+
