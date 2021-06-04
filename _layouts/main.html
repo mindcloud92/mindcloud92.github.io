@@ -31,7 +31,7 @@
             <section class="mt-3">
                 <h2 class="section-title">Populary Posts</h2>
                 <ul class="post-container text">
-                    {% for post in site.posts limit: 6 %}
+                    {% for post in site.posts limit: 8 %}
                         <li>
                             <p class="category-badge ma-0 mb-1">{{ post.categories | first | upcase }}</p>
                             <a href="{{ post.url }}" class="title">
