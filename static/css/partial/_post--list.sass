@@ -6,9 +6,6 @@
 
     section
       .post-container
-        background: var(--background-color--post-container)
-        border: 1px solid var(--border-color--post-container)
-        padding: 2em 1.5em
         position: relative
 
         .additional-info-wrapper
@@ -23,6 +20,10 @@
             content: '\00B7'
 
         &.thumbnail
+          background: var(--background-color--post-container)
+          border: 1px solid var(--border-color--post-container)
+          padding: 2em 1.5em
+
           display: flex
 
           .thumbnail-wrapper
@@ -37,11 +38,19 @@
               padding-left: 0
 
         &.text
-          li
-            padding-bottom: 2.5em
+          display: grid
+          grid-template-columns: 25% 25% 25% 25%
 
-            &:last-child
-              padding: 0
+          li
+            background: var(--background-color--post-container)
+            border: 1px solid var(--border-color--post-container)
+            border-radius: 5px
+            padding: 2em 1.5em
+            margin-right: 1.5em
+            margin-bottom: 1em
+
+            &:nth-child(4)
+              margin-right: 0
 
 @media screen and (max-width: 768px)
   .container
@@ -62,3 +71,6 @@
 
               &:first-child
                 padding-top: 0
+
+          &.text
+            display: block
