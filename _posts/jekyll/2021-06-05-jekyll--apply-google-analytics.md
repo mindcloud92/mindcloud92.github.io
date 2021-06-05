@@ -4,7 +4,7 @@ title:  "Jekyll :: Google Analytics 적용하기"
 date:   2021-06-05 22:37:00 +0900
 categories: Notes
 tags: google GA web-analytics jekyll
-thumbnail: '/asset/images/jekyll/analytics/thumbnail.png?t=1'
+thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 ---
 
 <div markdown="1" class="stepper text mt-2">
