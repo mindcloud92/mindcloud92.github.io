@@ -7,7 +7,9 @@ tags: seo google search-console web-crawling
 thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 ---
 
-<div markdown="1" class="stepper text">
+<p class="warning">최소한의 SEO meta tag와 sitemap.xml이 있다는 가정하에 작성</p>
+
+<div markdown="1" class="stepper text mt-2">
 <h4 markdown="1" data-step="1" class="title">
     Google 검색엔진에 내 사이트를 등록하고
 </h4>
