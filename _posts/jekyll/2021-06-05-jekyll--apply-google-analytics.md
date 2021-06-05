@@ -13,7 +13,7 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 </h4>
 * 계정 이름 입력
 
-![step1-1]({{ "/asset/images/jekyll/analytics/step1-1.png"| relative_url }}){:class="thumbnail ml-3"}
+![step1-1]({{ "/asset/images/jekyll/analytics/step1-1.png"| relative_url }}){:class="thumbnail ml-3" style="width:85%;"}
 <p class="info ml-3">계정 이름: 여러개의 사이트에 적용할 수 있기 때문에 사이트 도메인으로 지정</p>
 
 * 속성 설정
@@ -25,7 +25,7 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 
 * 약관 동의
 
-![step1-3]({{ "/asset/images/jekyll/analytics/step1-3.png"| relative_url }}){:class="thumbnail ml-3"}
+![step1-3]({{ "/asset/images/jekyll/analytics/step1-3.png"| relative_url }}){:class="thumbnail ml-3" style="width:85%;"}
 </div>
 
 <div markdown="1" class="stepper text mt-2">
@@ -33,10 +33,10 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
     <a href="https://analytics.google.com/" target="_blank">Google Analytics 관리 콘솔</a>에서 `관리 > 데이터 스트림 > 웹 플랫폼` 탭에서 데이터 스트림을 새로 생성한 다음
 </h4>
 
-![step2-1]({{ "/asset/images/jekyll/analytics/step2-1.png"| relative_url }}){:class="thumbnail ml-3"}
-![step2-2]({{ "/asset/images/jekyll/analytics/step2-2.png"| relative_url }}){:class="thumbnail mt-1 ml-3"}
+![step2-1]({{ "/asset/images/jekyll/analytics/step2-1.png"| relative_url }}){:class="thumbnail"}
+![step2-2]({{ "/asset/images/jekyll/analytics/step2-2.png"| relative_url }}){:class="thumbnail mt-1"}
 
-<p class="info ml-3">데이터 스트림 선택 전에 원하는 계정으로 변경 가능</p>
+<p class="info">데이터 스트림 선택 전에 원하는 계정으로 변경 가능</p>
 
 </div>
 
