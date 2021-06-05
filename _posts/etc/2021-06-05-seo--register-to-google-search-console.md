@@ -13,7 +13,7 @@ thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 </h4>
 
 * [Google search console](https://search.google.com/search-console/welcome?utm_source=about-page){:target="_blank"}
-에서 `URL 접두어`유형 영역에 내 사이트 URL을 입력한 다음 `계속`을 클릭 
+에서 `URL 접두어`유형 영역에 내 사이트 URL을 입력한 다음 `계속` 클릭 
 ![step1-1]({{ "/asset/images/seo/register-google/step1-1.png"| relative_url }}){:class="thumbnail"}
 
 * 소유권 확인 레이어에서 `다른확인방법 > HTML 태그` 영역을 열어 가이드 대로 사이트에 메타데이터를 적용
