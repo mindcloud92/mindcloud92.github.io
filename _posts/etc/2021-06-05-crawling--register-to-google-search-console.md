@@ -4,7 +4,7 @@ title:  "Crawling :: 구글이 내 사이트 크롤링 잘 할 수 있게하기"
 date:   2021-06-05 18:06:39 +0900
 categories: Notes
 tags: google search-console web-crawling
-thumbnail: '/asset/images/github/leave-organization/thumbnail.png'
+thumbnail: '/asset/images/crawling/register-google/thumbnail.png'
 ---
 
 <div markdown="1" class="stepper text">
