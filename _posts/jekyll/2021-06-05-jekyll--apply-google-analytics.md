@@ -14,7 +14,7 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 * 계정 이름 입력
 
 ![step1-1]({{ "/asset/images/jekyll/analytics/step1-1.png"| relative_url }}){:class="thumbnail ml-3" style="width:85%;"}
-<p class="info ml-3">계정 이름: 여러개의 사이트에 적용할 수 있기 때문에 사이트 도메인으로 지정</p>
+<p class="info ml-3">계정 이름: 계정을 여러개 생성할 수 있기때문에 헷갈리지 않도록 사이트 도메인명으로 입력</p>
 
 * 속성 설정
     * 속성 이름: {사이트 도메인}
