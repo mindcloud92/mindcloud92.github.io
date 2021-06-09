@@ -7,7 +7,7 @@ tags: jekyll search dddd.jekyll-search javascript underscore
 thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 ---
 
-<p class="warning">페이지 템플릿, css는 필수로 구현 필요</p>
+<p class="warning">페이지 템플릿, css는 구현 필요</p>
 
 <div markdown="1" class="stepper text">
 <h4 markdown="1" data-step="1" class="title">
