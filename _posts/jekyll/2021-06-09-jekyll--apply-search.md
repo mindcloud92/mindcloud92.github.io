@@ -3,7 +3,7 @@ layout: post-detail
 title: "Jekyll :: 검색 페이지 만들기"
 date: 2021-06-09 15:21:00 +0900
 categories: Notes
-tags: jekyll search dddd.jekyll-search javascript underscore
+tags: jekyll search dddd.static-search javascript underscore
 thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 ---
 
@@ -45,7 +45,7 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     
         <!-- search library -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mindcloud92/dddd.jekyll-search@af0ec0f5a986666289dfc2b821ac57bce1f42a3a/src/static/js/dddd.jekyll-search.js"></script>
+        <script type="text/javascript" src="<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@f542b5b31a23cda9ad481c1022799a56f96d1798/src/static/js/dddd.static-search.min.js"></script>"></script>
     ```
 <br/>
 
@@ -82,7 +82,7 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
     
     ```javascript
         window.onload = () => {
-            dddd.jekyll.Search.renderResult({
+            dddd.static.Search.renderResult({
                 data: getAllPost()
             })
         }
@@ -114,4 +114,4 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 
 
 > **Reference**
-- [search library (dddd.jekyll-search)](https://github.com/mindcloud92/dddd.jekyll-search/blob/main/README.md){:target="blank"}
+- [search library (dddd.static-search)](https://github.com/mindcloud92/dddd.static-search/blob/main/README.md){:target="blank"}
