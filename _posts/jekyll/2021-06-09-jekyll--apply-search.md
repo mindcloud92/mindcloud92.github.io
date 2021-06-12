@@ -38,7 +38,7 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
     ```
 <br/>
     
-* 필수 스크립트 라이브러리 선언 
+* 필수 라이브러리 선언 
 
     ```html
         <!-- underscore template engine-->
