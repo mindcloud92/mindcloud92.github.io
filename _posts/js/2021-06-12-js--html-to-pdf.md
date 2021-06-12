@@ -37,7 +37,7 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 
 <div markdown="1" class="stepper text mt-2">
 <h4 markdown="1" data-step="2" class="title">
-    html을 이미지로 변환하는 함수를 구현하고 
+    html을 이미지로 변환하는 함수와 이미지를 pdf로 변환하는 함수를 구현 한 다음
 </h4>
 
 ```javascript
@@ -54,15 +54,7 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
           type: 'PNG'
         }
     }
-```
-</div>
 
-<div markdown="1" class="stepper text mt-2">
-<h4 markdown="1" data-step="3" class="title">
-    이미지를 pdf로 변환하는 함수를 구현 한 다음
-</h4>
-
-```javascript
     function convertToPdf (image) {
         const pageWidth = 210;
         const pageHeight = pageWidth * 1.414;
@@ -87,8 +79,9 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ```
 </div>
 
+
 <div markdown="1" class="stepper text mt-2">
-<h4 markdown="1" data-step="4" class="title">
+<h4 markdown="1" data-step="3" class="title">
    위 함수를 이용하여 `다운로드` 이벤트를 구현하면 끗
 </h4>
 
