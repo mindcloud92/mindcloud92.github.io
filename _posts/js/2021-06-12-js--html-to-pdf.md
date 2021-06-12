@@ -9,7 +9,7 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 
 <div markdown="1" class="stepper text mt-2">
 <h4 markdown="1" data-step="1" class="title">
-   필수 라이브러리 선언 
+   필수 라이브러리를 선언하고 
 </h4>
 
 * `html2canvas`: html을 canvas를 이용해 이미지로 변환시켜주는 라이브러리
