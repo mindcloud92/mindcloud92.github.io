@@ -41,6 +41,11 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 </h4>
 
 ```javascript
+    /**
+    * element inner html을 캡처하여 이미지로 변환
+    * @param {object} el 이미지로 변환할 대상 DomElement
+    * @returns 이미지 객체
+    */
     async function convertToImage (el) {
         const canvas = await html2canvas(el, {
           height: el.clientHeight + Math.floor(el.clientHeight / 7)
@@ -55,6 +60,11 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
         }
     }
 
+    /**
+    * 이미지를 Pdf로 변환
+    * @param {object} 변환할 대상 이미지
+    * @return pdf 객체
+    */
     function convertToPdf (image) {
         const pageWidth = 210;
         const pageHeight = pageWidth * 1.414;
@@ -90,6 +100,8 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
         const image = await convertToImage(document.getElementById('target'))
         
         const pdfDocument = convertToPdf(image)
+    
+        // pdf download
         pdfDocument.save('filename.pdf');
     });
 ```
