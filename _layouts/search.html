@@ -51,7 +51,10 @@
                     <li>
                         <div>
                             <div class="additional-info-wrapper">
-                                <p class="category ma-0"><%= v.categories[0].toUpperCase() %></p>
+                                <% const category = v.categories[0].toUpperCase() %>
+                                <a href="/<%= category %>" class="category ma-0">
+                                    <%= category %>
+                                </a>
                                 <i class="divider"></i>
                                 <p class="date ma-0">
                                     <%= formatDate(v.date) %>

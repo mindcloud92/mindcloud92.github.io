@@ -16,7 +16,8 @@
                                 <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" onerror="this.src='https://miro.medium.com/max/1400/1*KOAfAOQ9FwAp9i2muTkGWw.png'" />
                             </a>
                             <div class="additional-info-wrapper">
-                                <p class="category">{{ post.categories | first | upcase }}</p>
+                                {% include category-link.html categories=post.categories class="category" %}
+
                                 <i class="divider"></i>
                                 <p class="date">{{ post.date | date: "%Y.%m.%d " }}</p>
                             </div>
@@ -35,9 +36,8 @@
                     {% for post in site.posts limit: 8 %}
                         <li>
                             <div>
-                                <a href="{{ post.categories | first | downcase | relative_url }}" class="category-badge ma-0 mb-1">
-                                    {{ post.categories | first | upcase }}
-                                </a>
+                                {% include category-link.html categories=post.categories class="category-badge ma-0 mb-1" %}
+
                                 <a href="{{ post.url }}" class="title">
                                     {{ post.title }}
                                 </a>
