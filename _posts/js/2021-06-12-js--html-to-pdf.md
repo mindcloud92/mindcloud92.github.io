@@ -74,14 +74,14 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 
         const pdfDocument = new jsPDF('p', 'mm', 'a4');
 
-        let canvasLeft = 0;
+        let imageTop = 0;
         for (let i = 0; i < pageCount; i++) {
           if (i > 0) {
-            canvasLeft -= pageHeight;
+            imageTop -= pageHeight;
             pdfDocument.addPage();
           }
 
-          pdfDocument.addImage(image.dataUrl, image.type, 0, canvasLeft, pageWidth, imageHeight);
+          pdfDocument.addImage(image.dataUrl, image.type, 0, imageTop, pageWidth, imageHeight);
         }
 
         return pdfDocument;
@@ -111,60 +111,11 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
     pdf로 변환하려는 영역에 이미지가 있는 경우에는 경로를 data url로 바인딩   
 </p>
 
-### 실행 결과
-
-<div style="border:1px solid #eee; background: #fff; padding: 2em 1em; text-align: center;" class="mb-4">
-    <button id="btnPdfDownload" style="padding: 1em;">다운로드</button>
-</div>
+<h3 markdown="1" class="mb-4">
+    <i class="fas fa-play-circle"></i>
+    [예제](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank"}
+</h3>
 
 
 > **Reference**
 - [image to data url](https://ezgif.com/image-to-datauri){:target="_blank"}
-
-
-<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-<script type="text/javascript">
-      document.getElementById('btnPdfDownload').addEventListener('click', async function () {
-        const image = await convertToImage(document.getElementsByClassName('post-content')[0])
-
-        const pdfDocument = convertToPdf(image)
-        pdfDocument.save('filename.pdf');
-      });
-
-      function convertToPdf (image) {
-        const pageWidth = 210;
-        const pageHeight = pageWidth * 1.414;
-
-        const imageHeight = pageWidth * image.ratio;
-        const pageCount = Math.ceil(imageHeight / pageHeight)
-
-        const pdfDocument = new jsPDF('p', 'mm', 'a4');
-
-        let canvasLeft = 0;
-        for (let i = 0; i < pageCount; i++) {
-          if (i > 0) {
-            canvasLeft -= pageHeight;
-            pdfDocument.addPage();
-          }
-
-          pdfDocument.addImage(image.dataUrl, image.type, 0, canvasLeft, pageWidth, imageHeight);
-        }
-
-        return pdfDocument;
-      }
-
-      async function convertToImage (el) {
-        const canvas = await html2canvas(el, {
-          height: el.clientHeight + Math.floor(el.clientHeight / 7)
-        });
-
-        return {
-          dataUrl: canvas.toDataURL('image/png'),
-          width: canvas.width,
-          height: canvas.height,
-          ratio: canvas.height / canvas.width,
-          type: 'PNG'
-        }
-      }
-  </script>
