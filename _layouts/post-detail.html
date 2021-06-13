@@ -12,11 +12,8 @@
             <div class="post-content mt-5">
                 {{ page.content }}
             </div>
-            <div class="mt-3 text-left">
-                {% for tag in page.tags %}
-                <span class="tag"># {{ tag }} </span>
-                {% endfor %}
-            </div>
+
+            {% include tag-container.html tags=page.tags class="mt-3 text-left" %}
         </div>
     </body>
 </html>
