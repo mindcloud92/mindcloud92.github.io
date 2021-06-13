@@ -1,7 +1,5 @@
 <div class="{{ include.class }}">
     {% for tag in include.tags %}
-    <span class="tag">
-        <a href="/search?q={{tag}}"># {{ tag }}</a>
-    </span>
+        <a href="/search?q={{tag}}" class="tag"># {{ tag }}</a>
     {% endfor %}
 </div>

@@ -64,7 +64,7 @@
                         </div>
                         <div class="mt-2  mb-2">
                             <% _.each(v.tags, (t, j) => { %>
-                                <span class="tag ma-0"># <%= t %> </span>
+                                <a href="/search?q=<%= t %>" class="tag"># <%= t %></a>
                             <% }) %>
                         </div>
                     </li>
