@@ -28,6 +28,8 @@ profile:
 
 custom-theme: pink-theme
 
+ga-stream-id: G-JQ9TZ4W7KK
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
