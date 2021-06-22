@@ -60,7 +60,7 @@ thumbnail: '/asset/images/book/big-picture/thumbnail.jpeg'
 
     
 솔직히 말하면 기대가 너무 컸던 탓일까 기대한만큼 재미있진 않았다   
-다시 또 꺼내 읽고 싶을까라는 질문에 대답은 댓츠노노:(
+다시 또 꺼내 읽고 싶을까라는 질문을 받는다면 대답은 댓츠노노:(
 </div>
 </div>
 
