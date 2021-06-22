@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "소설 :: 빅 픽처"
 date:   2021-06-20 15:02:00 +0900
-categories: Book
+categories: book
 tags: 소설 더글라스케네디 빅픽처
 thumbnail: '/asset/images/book/big-picture/thumbnail.jpeg'
 ---

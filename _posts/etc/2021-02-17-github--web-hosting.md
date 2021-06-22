@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "GitHub :: GitHub Pages로 웹 호스팅 하기"
 date:   2021-02-17 21:34:39 +0900
-categories: Tech
+categories: tech
 tags: github pages web-hosting jekyll free
 thumbnail: '/asset/images/github/web-hosting/thumbnail.png'
 --- 

@@ -5,7 +5,7 @@
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">
-            {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' | capitalize %}
+            {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' | downcase %}
             <section>
                 <h2 class="section-title">
                     {{ currentCategoryName | upcase }}

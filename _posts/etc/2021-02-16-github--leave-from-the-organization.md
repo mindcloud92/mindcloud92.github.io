@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "GitHub :: 조직 탈퇴하기"
 date:   2021-02-16 21:34:39 +0900
-categories: Tech
+categories: tech
 tags: github organization
 thumbnail: '/asset/images/github/leave-organization/thumbnail.png'
 ---

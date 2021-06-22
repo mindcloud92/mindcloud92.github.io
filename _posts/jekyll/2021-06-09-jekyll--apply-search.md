@@ -2,7 +2,7 @@
 layout: post-detail
 title: "Jekyll :: 검색 페이지 만들기"
 date: 2021-06-09 15:21:00 +0900
-categories: Tech
+categories: tech
 tags: jekyll search dddd.static-search javascript underscore
 thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 ---

@@ -6,7 +6,8 @@
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">
-            <span class="category-badge">{{ page.categories | first | upcase }}</span>
+            {% assign category = page.categories | first %}
+            <span class="category-badge {{ site.category-color-class[category] }}">{{ category | upcase }}</span>
             <h2 class="title">{{ page.title }}</h2>
             <p class="date">{{ page.date | date: '%Y.%m.%d' }}</p>
             <div class="post-content mt-5">
