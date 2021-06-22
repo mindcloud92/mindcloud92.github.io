@@ -64,7 +64,7 @@ thumbnail: '/asset/images/book/big-picture/thumbnail.jpeg'
 
 #### # 인상깊은
 *"사진은 그리 나쁘지 않다"   
-그러나 "그리 나쁘지 않은" 정도로는 뉴욕에서 일할 수 없다는 말*
+그러나 "그리 나쁘지 않은" 정도로는 뉴욕에서 일할 수 없다*
 
 
 
