@@ -168,6 +168,35 @@
       .thumbnail
         width: 70%
 
+    .book-cover
+      border: 2px solid #d4cece
+      width: 42%
+
+    .book-evaluation-wrapper
+      display: grid
+      grid-template-columns: .85fr 1fr
+
+      .title
+        text-align: right
+        padding-right: .5em
+        margin: 0
+
+      .rating-container
+        display: flex
+        align-items: center
+        padding-left: .5em
+
+        .rating
+          font-family: var(--font-family--icon)
+          color: #f3e3a5
+
+          &.full
+            font-weight: 900
+            color: #f1c40e
+
+          &:before
+            content: '\f005'
+
 @media screen and (max-width: 768px)
   .container
     &.post-detail

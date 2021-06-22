@@ -5,26 +5,27 @@
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">
-            {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' %}
+            {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' | capitalize %}
             <section>
                 <h2 class="section-title">
                     {{ currentCategoryName | upcase }}
                 </h2>
 
                 <ul class="post-container text">
-                    {% for post in site.posts %}
-                    <li>
-                        <div>
-                            <div class="additional-info-wrapper">
-                                <p class="date ma-0 mb-1">{{ post.date | date: "%Y.%m.%d " }}</p>
+                    {% assign categorizedPosts = site.posts | where_exp: "post", "post.categories contains currentCategoryName" %}
+                    {% for post in categorizedPosts %}
+                        <li>
+                            <div>
+                                <div class="additional-info-wrapper">
+                                    <p class="date ma-0 mb-1">{{ post.date | date: "%Y.%m.%d " }}</p>
+                                </div>
+                                <a href="{{ post.url }}" class="title">
+                                    {{ post.title }}
+                                </a>
                             </div>
-                            <a href="{{ post.url }}" class="title">
-                                {{ post.title }}
-                            </a>
-                        </div>
 
-                        {% include tag-container.html tags=post.tags class="mt-3" %}
-                    </li>
+                            {% include tag-container.html tags=post.tags class="mt-3" %}
+                        </li>
                     {% endfor %}
                 </ul>
             </section>

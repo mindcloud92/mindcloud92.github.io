@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "Jekyll :: Google Analytics 적용하기"
 date:   2021-06-05 22:37:00 +0900
-categories: Notes
+categories: Tech
 tags: google GA web-analytics jekyll
 thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 ---

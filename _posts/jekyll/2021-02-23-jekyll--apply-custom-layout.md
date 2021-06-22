@@ -2,7 +2,7 @@
 layout: post-detail
 title: "Jekyll :: Custom Layout 적용하기"
 date: 2021-02-23 18:34:39 +0900
-categories: Notes
+categories: Tech
 tags: jekyll custom layout
 thumbnail: '/asset/images/jekyll/custom-layout/thumbnail.png'
 ---
