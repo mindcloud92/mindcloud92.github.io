@@ -6,6 +6,11 @@ categories: tech
 tags: javascript html2canvas jspdf html canvas pdf
 thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ---
+<h3 markdown="1">
+    <i class="fas fa-play-circle"></i>
+    [실행 해보고 싶다면 클릭](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank"}
+</h3>
+
 
 <div markdown="1" class="stepper text mt-2">
 <h4 markdown="1" data-step="1" class="title">
@@ -107,14 +112,10 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ```
 </div>
 
-<p class="warning">
+<p class="warning mb-4">
     pdf로 변환하려는 영역에 이미지가 있는 경우에는 경로를 data url로 바인딩   
 </p>
 
-<h3 markdown="1" class="mb-4">
-    <i class="fas fa-play-circle"></i>
-    [예제](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank"}
-</h3>
 
 
 > **Reference**
