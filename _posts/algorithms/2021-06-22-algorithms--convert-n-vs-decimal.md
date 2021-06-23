@@ -4,15 +4,16 @@ title: "Algorithms :: n진수 ⇄ 10진수 변환하기"
 date: "2021-06-22 23:41:00 +0900"
 categories: tech
 tags: java algorithms nToDecimal decimalToN
-thumbnail: '/asset/images/algorithms/n-vs-decimal-thumbnail.png'
+thumbnail: '/asset/images/algorithms/n-vs-decimal/thumbnail.png'
 ---
 
  
 ### # n진수를 10진수로 변환
-- 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 제곱근)`의 총합을 계산
+- 공식 = 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 제곱근)`의 총합을 계산
+    - 예시   
+    ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithms/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-
     <a href="https://ideone.com/cgUoLl" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
@@ -36,7 +37,7 @@ thumbnail: '/asset/images/algorithms/n-vs-decimal-thumbnail.png'
 
  
 ### # 10진수를 n진수로 변환 
-- `{몫}를 {진수}로 나눈 나머지`를 몫이 0이 될때까지 반복해서 나눠 연결
+- 공식: `{몫}를 {진수}로 나눈 나머지`를 몫이 0이 될때까지 반복해서 나눠 연결
     <p class="info">
         {몫}: 변환하고자 하는 수 / {진수} → (변환하고자 하는 수 / {진수})의 몫 / {진수} → ((변환하고자 하는 수 / {진수})의 몫 / {진수}) / {진수} → …  
     </p>
