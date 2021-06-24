@@ -19,7 +19,13 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
     </a>
     
     ```java
-        // Integer.parseInt(String.valueOf(number), radix)와 동일
+        /**
+        * n진수를 10진수로 변환
+        * Integer.parseInt(String.valueOf(number), radix) 와 동일
+        * @param value 변환할 n진수 값
+        * @param radix n
+        * @return 10진수로 변환된 값
+        */
         public int convertToDecimal(final int value, int radix) {
             String[] str = String.valueOf(value).split("");
             
@@ -47,10 +53,23 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     ```java
+        /**
+        * 10진수를 n진수로 변환
+        * @param value 변환할 10진수 값
+        * @param radix n
+        * @return n진수로 변환된 값
+        */
         public int convertToN(int value, final int radix) {
             return convertToN(value, radix, "");
         }
         
+        /**
+        * 10진수를 n진수로 변환
+        * @param value 변환할 10진수 값
+        * @param radix n
+        * @param tails 현재 자리 뒤에 붙힐 문자열
+        * @return n진수로 변환된 값
+        */
         public int convertToN(int value, final int radix, String tails) {
             if (value <= 0) {
                 return Integer.parseInt(tails);
