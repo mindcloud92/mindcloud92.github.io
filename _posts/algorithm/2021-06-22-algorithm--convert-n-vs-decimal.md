@@ -1,17 +1,17 @@
 ---
 layout: post-detail
-title: "Algorithms :: n진수 ⇄ 10진수 변환하기"
+title: "Algorithm :: n진수 ⇄ 10진수 변환하기"
 date: "2021-06-22 23:41:00 +0900"
 categories: tech
-tags: java algorithms nToDecimal decimalToN
-thumbnail: '/asset/images/algorithms/n-vs-decimal/thumbnail.png'
+tags: java algorithm nToDecimal decimalToN
+thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
  
 ### # n진수를 10진수로 변환
 - 공식 = 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 제곱근)`의 총합을 계산
     - 예시   
-    ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithms/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
+    ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
     <a href="https://ideone.com/cgUoLl" target="_blank">
@@ -41,7 +41,7 @@ thumbnail: '/asset/images/algorithms/n-vs-decimal/thumbnail.png'
     <p class="info mb-2">{몫}: 변환하고자 하는 수 / {진수} → (변환하고자 하는 수 / {진수})의 몫 / {진수} → ((변환하고자 하는 수 / {진수})의 몫 / {진수}) / {진수} → …  </p>
 
     - 예시   
-    ![10진수를 n진수로 변환 예시]({{ '/asset/images/algorithms/n-vs-decimal/decimal-to-n.png' | relative_url }}){:class="thumbnail mt-1"}
+    ![10진수를 n진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/decimal-to-n.png' | relative_url }}){:class="thumbnail mt-1"}
 
 
     <br/>
@@ -53,7 +53,7 @@ thumbnail: '/asset/images/algorithms/n-vs-decimal/thumbnail.png'
             return convertToN(value, radix, "");
         }
         
-        public static int convertToN(int value, final int radix, String tails) {
+        public int convertToN(int value, final int radix, String tails) {
             if (value <= 0) {
                 return Integer.parseInt(tails);
             }
