@@ -17,7 +17,7 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
     ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/TRXnSp" target="_blank">
+    <a href="https://ideone.com/8fpcLOhttps://ideone.com/8fpcLO" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
