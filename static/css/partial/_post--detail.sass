@@ -45,10 +45,26 @@
       &[class^=language]
         background: var(--background-color--file)
         border: 1px solid #eee
-        padding: .5em 0
+        padding: .8em 0
         color: #dadcf3
         overflow: auto
-        border-top-color: #ffffff00
+        border-top: 0
+        position: relative
+
+      .language-plaintext
+        font-weight: bold
+        margin: 0 .2em
+        color: #d14
+        font-size: .85em
+        font-family: var(--font-family--default)
+
+      &:before
+        position: absolute
+        top: 0
+        right: 0
+        font-weight: bold
+        padding: .18em 1.2em
+        font-size: .7em
 
       .language-yaml
         .na, .pi
@@ -57,6 +73,10 @@
           color: #4caf50
 
       .language-html
+        &:before
+          content: 'HTML'
+          background: #dd4b24
+
         code
           line-height: 1em
 
@@ -66,14 +86,11 @@
         .s
           color: #cddc39
 
-      .language-plaintext
-        font-weight: bold
-        margin: 0 .2em
-        color: #d14
-        font-size: .85em
-        font-family: var(--font-family--default)
-
       .language-java
+        &:before
+          content: 'JAVA'
+          background: #3b7bbe
+
         .c1
           color: #8fbf74
 
@@ -90,6 +107,11 @@
           color: #709a59
 
       .language-javascript
+        &:before
+          content: 'JAVASCRIPT'
+          background: #f7df1e
+          color: #423600
+
         .mi, .mf, .mi
           color: #42c4ff
 
@@ -114,6 +136,9 @@
         .p + .na
           color: #9d78e0
 
+      .filename-badge + [class^=language]
+        &:before
+          content: ''
 
     .stepper
       .title

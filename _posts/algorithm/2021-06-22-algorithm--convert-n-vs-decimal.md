@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: n진수 ⇄ 10진수 변환하기"
 date: "2021-06-22 23:41:00 +0900"
 categories: tech
-tags: java algorithm nToDecimal decimalToN
+tags: java algorithm nToDecimal decimalToN java
 thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
@@ -31,8 +31,6 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
             return result;
         }
     ``` 
- 
-
 <br/>
 
  
