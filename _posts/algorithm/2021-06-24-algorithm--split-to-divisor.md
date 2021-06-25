@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: n의 약수 구하기"
 date: "2021-06-24 16:32:00 +0900"
 categories: tech
-tags: java algorithm divisor java 
+tags: java algorithm divisor 
 thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 
@@ -17,7 +17,7 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
     ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/8fpcLOhttps://ideone.com/8fpcLO" target="_blank">
+    <a href="https://ideone.com/8fpcLO" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
