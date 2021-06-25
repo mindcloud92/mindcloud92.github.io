@@ -3,7 +3,7 @@ layout: post-detail
 title:  "SEO :: 구글이 내 사이트 크롤링 잘 할 수 있게하기"
 date:   2021-06-05 18:06:39 +0900
 categories: tech
-tags: seo google search-console web-crawling
+tags: seo google search console web crawling 
 thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 ---
 

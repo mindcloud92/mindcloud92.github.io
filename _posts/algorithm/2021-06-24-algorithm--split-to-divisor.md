@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: n의 약수 구하기"
 date: "2021-06-24 16:32:00 +0900"
 categories: tech
-tags: java algorithm divisor 
+tags: algorithm divisor 약수 알고리즘 java 
 thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 

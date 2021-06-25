@@ -3,13 +3,13 @@ layout: post-detail
 title: "Algorithm :: n진수 ⇄ 10진수 변환하기"
 date: "2021-06-22 23:41:00 +0900"
 categories: tech
-tags: java algorithm nToDecimal decimalToN
+tags: algorithm n진수 10진수 변환 알고리즘 java
 thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
  
 ### # n진수를 10진수로 변환
-- 공식 = 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 제곱근)`의 총합을 계산
+- 공식 = 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 지수)`의 총합을 계산
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 

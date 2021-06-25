@@ -3,7 +3,7 @@ layout: post-detail
 title: "Javascript :: html을 PDF로 다운로드하기"
 date: "2021-06-12 20:57:00 +0900"
 categories: tech
-tags: javascript html2canvas jspdf html canvas pdf
+tags: javascript html2canvas jspdf pdf download
 thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ---
 <h3 markdown="1">
