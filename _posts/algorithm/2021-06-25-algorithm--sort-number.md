@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Algorithm :: 목록 정렬하기(선택 정렬)"
+title: "Algorithm :: 목록 정렬하기"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
 tags: algorithm selection sort 선택 정렬 알고리즘 java
