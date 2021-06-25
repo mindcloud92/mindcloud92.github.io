@@ -16,7 +16,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 
 
     <br/>
-    <a href="https://ideone.com/kSlHnb" target="_blank">
+    <a href="https://ideone.com/otYqAI" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
@@ -52,9 +52,10 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
             for (int i = 0; i < arr.length; i++) {
               for (int j = i + 1; j < arr.length; j++) {
                 long curr = arr[i];
+                long next = arr[j];
             
-                if (comparator.apply(curr, arr[j])) {
-                  arr[i] = arr[j];
+                if (comparator.apply(curr, next)) {
+                  arr[i] = next;
                   arr[j] = curr;
                 }
               }
