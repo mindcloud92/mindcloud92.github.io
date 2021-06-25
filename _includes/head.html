@@ -18,7 +18,11 @@
     <meta name="msapplication-TileColor" content="#da532c00">
     <meta name="theme-color" content="#FFFFFF">
 
-    <meta name="og:image" content="{{site.url}}{{ page.thumbnail | default: '/static/images/apple-touch-icon.png' }}"/>
+    {% assign ogImageUrl = page.thumbnail | default: '/static/images/apple-touch-icon.png' %}
+    {% unless ogImageUrl contains '://' %}
+        {% assign ogImageUrl = site.url | append: ogImageUrl %}
+    {% endunless %}
+    <meta name="og:image" content="{{ ogImageUrl }}"/>
 
     <meta name="google-site-verification" content="e0ZWnkRm5aeF5hy4kOkDJfDZOC5Gmr5FYzgwyE2xN6k" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
