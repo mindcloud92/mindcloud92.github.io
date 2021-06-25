@@ -11,8 +11,8 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
 - 문자열을 `char` 자료형으로 변환하여 각 문자에 평행 이동시키려는 수를 합산
 - 합산한 수가 알파벳 범위를 넘어서면 알파벳 개수인 `26` 차감
 
-    - 예시   
-    ![시저 암호 예시](https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg){:class="thumbnail"}  
+    - 예시      
+    ![시저 암호 예시]({{ '/asset/images/algorithm/alphabet-parallel-move/example.png' | relative_url }}){:class="thumbnail"}  
 
     <br/>
     <a href="https://ideone.com/iV84BO" target="_blank">
