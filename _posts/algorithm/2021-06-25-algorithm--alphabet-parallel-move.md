@@ -67,4 +67,4 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
 <br/>
 <br/>
 > **Refrence**
-- [Wiki](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC){:target="_blank"}
+- [Wiki](https://ko.wikipedia.org/wiki/%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4_%EC%95%94%ED%98%B8){:target="_blank"}
