@@ -49,7 +49,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
 
     <br/>
-    <a href="https://ideone.com/6OLsUu" target="_blank">
+    <a href="https://ideone.com/KHp5aW" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     ```java
@@ -60,7 +60,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
         * @return n진수로 변환된 값
         */
         public int convertToN(int value, final int radix) {
-            return convertToN(value, radix, "");
+            return value > 0 ? convertToN(value, radix, "") : 0;
         }
         
         /**
@@ -72,11 +72,11 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
         */
         public int convertToN(int value, final int radix, String tails) {
             if (value <= 0) {
-                return Integer.parseInt(tails);
+              return Integer.valueOf(tails);
             }
             
             return convertToN(value / radix, radix, (value % radix) + tails);
-        }   
+        }
     ```
 <br/>
 <br/>

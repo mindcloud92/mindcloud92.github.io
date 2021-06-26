@@ -13,7 +13,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 - 음부호가 있는경우 -1을 총합에 곱셈
 
     <br/>
-    <a href="https://ideone.com/pBC93o" target="_blank">
+    <a href="https://ideone.com/K7xDN7" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
@@ -24,19 +24,30 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
         * @return 변환된 정수
         */
         public int parseInt(final String value) {
-            if (value == null) {
+            if (value == null || value.equals("")) {
               return 0;
             }
             
             int intValue = 0;
             for (int i = 0; i < value.length(); i++) {
-              char character = value.charAt(i);
-              if (!isMinusSign(character) && !isPlusSign(character)) {
-                intValue = (intValue * 10) + (character - '0');  // '0'을 빼는 이유는 아래 i 아이콘 설명 참고
+              int intValueByChar = parseInt(value.charAt(i));
+              if (intValueByChar > -1) {
+                intValue = (intValue * 10) + intValueByChar;
               }
             }
             
             return intValue * parseSign(value.charAt(0));
+        }
+        
+        /**
+        * 문자를 정수로 변환
+        * @param value 변환할 문자
+        * @return 변환된 정수
+        */
+        public int parseInt(final char value) {
+            int zeroDecimalNumber = '0'; // '0'을 빼는 이유는 아래 i 아이콘 설명 참고
+            
+            return isMinusSign(value) || isPlusSign(value) ? -1 : value - zeroDecimalNumber;
         }
         
         /**
@@ -65,8 +76,9 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
         public boolean isPlusSign(final char character) {
             return character == '+';
         }
+
     ```
-    <p class="info">'0'을 빼는 이유: char 자료형은 ASCII 코드 기준으로 48 ~ 57의 숫자와 대응되기 때문에 '0'을 빼면 대응되는 10진수를 얻는게 가능</p>
+    <p class="info">'0'을 빼는 이유: 수 문자(0 ~ 9) char 자료형은 ASCII 코드 48 ~ 57의 숫자와 대응되기 때문에 '0'을 빼면 대응되는 10진수를 얻는게 가능</p>
 
 <br/>
 <br/>
