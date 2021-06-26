@@ -15,7 +15,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
     ![시저 암호 예시]({{ '/asset/images/algorithm/alphabet-parallel-move/example.png' | relative_url }}){:class="thumbnail"}  
 
     <br/>
-    <a href="https://ideone.com/iV84BO" target="_blank">
+    <a href="https://ideone.com/WsAgWq" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
@@ -28,15 +28,15 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
         * @return 한 문자씩 평행이동된 문자열
         */
         public String shiftAlphabetByChar(final String value, final int count) {
+            if (value == null) {
+              return value;
+            }
+            
             StringBuilder result = new StringBuilder();
             for (int i = 0; i < value.length(); i++) {
               char character = value.charAt(i);
-              if (character == ' ') {
-                result.append(" ");
-                continue;
-              }
             
-              result.append(shiftAlphabet(character, count));
+              result.append(character == ' ' ? character : shiftAlphabet(character, count));
             }
             
             return result.toString();

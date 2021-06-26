@@ -16,7 +16,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 
 
     <br/>
-    <a href="https://ideone.com/otYqAI" target="_blank">
+    <a href="https://ideone.com/jxIMtf" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
@@ -47,7 +47,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
         * @return 비교 조건에 따라 정렬된 목록
         */
         public long[] sort(long[] numbers, final BiFunction<Long, Long, Boolean> comparator) {
-            long[] arr = numbers.clone();
+            long[] arr = numbers == null ? new long[]{} : numbers.clone();
             
             for (int i = 0; i < arr.length; i++) {
               for (int j = i + 1; j < arr.length; j++) {
