@@ -5,6 +5,33 @@
       padding: 0
 
     section
+      &.tag-section
+        .tag-container
+          background: var(--background-color--post-container)
+          border: 1px solid var(--border-color--post-container)
+          padding: 2em 1.5em
+
+          .tag
+            position: relative
+            float: left
+            margin-inline-end: 1em
+            margin-block-end: .8em
+            padding: .4em 1.2em
+            border: 1px solid #fefefe
+            border-radius: 15px
+            background: #f3eed975
+            font-size: .9em
+
+
+            &:before
+              content: attr(data-count)
+              top: 5px
+              right: 10px
+              position: absolute
+              font-size: .7em
+              font-weight: bold
+              color: #9E0022
+
       .post-container
         position: relative
 
@@ -27,19 +54,19 @@
           background: var(--background-color--post-container)
           border: 1px solid var(--border-color--post-container)
           padding: 2em 1.5em
-
-          display: flex
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr
 
           .thumbnail-wrapper
             .thumbnail
               height: calc((100vw - 18em) * 0.18)
 
           li
-            width: 32%
-            padding-left: 2em
+            padding-inline-end: 2em
+            margin-top: 3em
 
-            &:first-child
-              padding-left: 0
+            &:nth-child(-n+3)
+              margin-top: 0
 
         &.text
           display: grid
@@ -57,6 +84,8 @@
             &:nth-child(4)
               margin-right: 0
 
+
+
 @media screen and (max-width: 768px)
   .container
     &.main, &.post-list
@@ -71,11 +100,11 @@
 
             li
               width: 100%
-              padding-left: 0
-              padding-top: 2em
+              padding: 0
+              margin-bottom: 2em
 
-              &:first-child
-                padding-top: 0
+              &:last-child
+                margin-bottom: 0
 
           &.text
             display: block
