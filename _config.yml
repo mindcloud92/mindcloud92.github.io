@@ -33,7 +33,6 @@ ga-stream-id: G-JQ9TZ4W7KK
 pagination:
   enabled: true
   per_page: 12
-  limit: 0
   sort_field: date
   sort_reverse: true
 
