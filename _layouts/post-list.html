@@ -28,7 +28,7 @@
                         </li>
                     {% endfor %}
 
-                    {% assign emptySpaceCount = paginator.posts.size() | modulo: 4 | minus: 4 | abs %}
+                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}
                     {% if emptySpaceCount < 4 %}
                         {% for emptySpaceCount in (1..emptySpaceCount) %}
                             <li class="default-item"></li>
