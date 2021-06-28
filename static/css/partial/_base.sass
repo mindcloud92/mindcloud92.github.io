@@ -16,21 +16,6 @@ body
   img
     max-width: 100%
 
-  &.container
-    display: grid
-    grid-template-columns: 18% auto
-
-  .contents-wrapper
-    overflow: scroll
-    padding: var(--padding--contents-wrapper-y) var(--padding--contents-wrapper-x)
-
-    .count
-      color: var(--font-color--post-count)
-      font-size: .75em
-
-  .section-title
-    color: var(--font-color--section-title)
-
   .w-50
     width: 50%!important
 
@@ -122,6 +107,38 @@ body
       &:before
         content: '\f002'
 
+  &.container
+    display: grid
+    grid-template-columns: 18% auto
+
+    .contents-wrapper
+      overflow: scroll
+      padding: var(--padding--contents-wrapper-y) var(--padding--contents-wrapper-x)
+
+      .count
+        color: var(--font-color--post-count)
+        font-size: .75em
+
+
+    .section-title
+      color: var(--font-color--section-title)
+
+    .paginator
+      display: flex
+      justify-content: center
+      align-items: center
+      line-height: 0
+
+      .page-link
+        margin: .5em
+        padding: 0
+        opacity: .6
+
+        &.current
+          opacity: 1
+          font-weight: bold
+
+
   .tag-container
     &:before
       content: ''
@@ -131,6 +148,8 @@ body
       display: table
       content: ''
       clear: both
+
+
 
 @media screen and (max-width: 768px)
   body

@@ -36,64 +36,8 @@
                     {% endif %}
                 </ul>
 
-                {% if paginator.total_pages > 1 %}
-                    <div class="mt-2 paginator mb-1">
-
-                        {% if paginator.previous_page %}
-                            <a href="{{ paginator.previous_page_path | relative_url }}" class="page-link previous">
-                                <i class="fas fa-angle-left"></i>
-                            </a>
-                        {% endif %}
-
-
-                        {% for page in (1..paginator.total_pages) %}
-                            {% if page == paginator.page %}
-                                <span class="current page-link">
-                                    {{ page }}
-                                </span>
-                            {% elsif page == 1 %}
-                                <a href="{{ '/' | prepend: currentCategory | relative_url }}"  class="page-link">
-                                    {{ page }}
-                                </a>
-                            {% else %}
-                                <a href="{{ '/' | prepend: page | prepend: '/' | prepend: currentCategory | relative_url }}" class="page-link">
-                                    {{ page }}
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-
-                        {% if paginator.next_page %}
-                            <a href="{{ paginator.next_page_path | relative_url }}" class="page-link next">
-                                <i class="fas fa-angle-right"></i>
-                            </a>
-                        {% endif %}
-                    </div>
-                {% endif %}
+                {% include pagination.html class="mt-2 mb-1" %}
             </section>
         </div>
-        <style>
-            .paginator {
-                display: flex;
-                justify-content: center;
-                /*align-items: center;*/
-            }
-
-            .page-link {
-                margin: 0 .5em;
-                padding: 0;
-                opacity: .7;
-                vertical-align: middle;
-            }
-
-            .page-link.current {
-                opacity: 1;
-                font-weight: bold;
-            }
-
-            .page-link.next, .page-link.previous {
-            }
-
-
-        </style>
     </body>
 </html>
