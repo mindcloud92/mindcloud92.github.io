@@ -54,35 +54,25 @@
           background: var(--background-color--post-container)
           border: 1px solid var(--border-color--post-container)
           padding: 2em 1.5em
+          gap: 2em 1.5em
           display: grid
-          grid-template-columns: 1fr 1fr 1fr
+          grid-template-columns: repeat(3, 1fr)
 
           .thumbnail-wrapper
             .thumbnail
               height: calc((100vw - 18em) * 0.18)
 
-          li
-            padding-inline-end: 2em
-            margin-top: 3em
-
-            &:nth-child(-n+3)
-              margin-top: 0
-
         &.text
           display: grid
           grid-template-columns: repeat(4, 1fr)
+          gap: 1em 1.5em
 
           li
             background: var(--background-color--post-container)
             border: 1px solid var(--border-color--post-container)
             border-radius: 5px
             padding: 2em 1.5em
-            margin-right: 1.5em
-            margin-bottom: 1em
             display: grid
-
-            &:nth-child(4)
-              margin-right: 0
 
 
 
