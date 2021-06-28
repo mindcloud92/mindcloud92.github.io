@@ -70,11 +70,21 @@
           li
             background: var(--background-color--post-container)
             border: 1px solid var(--border-color--post-container)
-            border-radius: 5px
             padding: 2em 1.5em
             display: grid
 
+        .default-item
+          background: #fbfafa!important
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 2em
 
+          &:before
+            content: '\f017'
+            font-weight: 100
+            opacity: .5
+            font-family: var(--font-family--icon)
 
 @media screen and (max-width: 768px)
   .container
@@ -98,3 +108,6 @@
 
           &.text
             display: block
+
+          .default-item
+            display: none!important
