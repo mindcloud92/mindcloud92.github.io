@@ -28,12 +28,12 @@
                         </li>
                     {% endfor %}
 
-                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}
-                    {% if emptySpaceCount < 4 %}
-                        {% for emptySpaceCount in (1..emptySpaceCount) %}
-                            <li class="default-item"></li>
-                        {% endfor %}
-                    {% endif %}
+<!--                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}-->
+<!--                    {% if emptySpaceCount < 4 %}-->
+<!--                        {% for emptySpaceCount in (1..emptySpaceCount) %}-->
+<!--                            <li class="default-item"></li>-->
+<!--                        {% endfor %}-->
+<!--                    {% endif %}-->
                 </ul>
 
                 {% include pagination.html class="mt-2 mb-1" %}
