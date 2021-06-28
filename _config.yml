@@ -30,17 +30,17 @@ custom-theme: pink-theme
 
 ga-stream-id: G-JQ9TZ4W7KK
 
-pagination:
-  enabled: true
-  per_page: 12
-  sort_field: date
-  sort_reverse: true
+#pagination:
+#  enabled: true
+#  per_page: 12
+#  sort_field: date
+#  sort_reverse: true
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate-v2
+#  - jekyll-paginate-v2
 
 permalink: pretty
 

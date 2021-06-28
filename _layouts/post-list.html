@@ -13,7 +13,7 @@
                 </h2>
 
                 <ul class="post-container text">
-                    {% for post in paginator.posts %}
+                    {% for post in site.posts %}
                         <li>
                             <div>
                                 <div class="additional-info-wrapper">
@@ -28,15 +28,15 @@
                         </li>
                     {% endfor %}
 
-<!--                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}-->
-<!--                    {% if emptySpaceCount < 4 %}-->
-<!--                        {% for emptySpaceCount in (1..emptySpaceCount) %}-->
-<!--                            <li class="default-item"></li>-->
-<!--                        {% endfor %}-->
-<!--                    {% endif %}-->
+                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}
+                    {% if emptySpaceCount < 4 %}
+                        {% for emptySpaceCount in (1..emptySpaceCount) %}
+                            <li class="default-item"></li>
+                        {% endfor %}
+                    {% endif %}
                 </ul>
 
-                {% include pagination.html class="mt-2 mb-1" %}
+<!--                {% include pagination.html class="mt-2 mb-1" %}-->
             </section>
         </div>
     </body>
