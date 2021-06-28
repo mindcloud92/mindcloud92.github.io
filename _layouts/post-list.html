@@ -6,14 +6,15 @@
 
         <div class="contents-wrapper">
             <section>
-                {% assign currentCategory = page.pagination.category %}
+                {% assign currentCategory = page.category %}
+                {% assign categorizedPosts = site.posts | where_exp: 'post', 'post.categories contains currentCategory' %}
                 <h2 class="section-title">
                     {{ currentCategory | upcase }}
-                    <span class="count">{{ paginator.total_posts }}</span>
+                    <span class="count">{{ categorizedPosts.size }}</span>
                 </h2>
 
                 <ul class="post-container text">
-                    {% for post in site.posts %}
+                    {% for post in categorizedPosts %}
                         <li>
                             <div>
                                 <div class="additional-info-wrapper">
@@ -28,15 +29,13 @@
                         </li>
                     {% endfor %}
 
-                    {% assign emptySpaceCount = paginator.posts.size | modulo: 4 | minus: 4 | abs %}
+                    {% assign emptySpaceCount = categorizedPosts.size | modulo: 4 | minus: 4 | abs %}
                     {% if emptySpaceCount < 4 %}
                         {% for emptySpaceCount in (1..emptySpaceCount) %}
                             <li class="default-item"></li>
                         {% endfor %}
                     {% endif %}
                 </ul>
-
-<!--                {% include pagination.html class="mt-2 mb-1" %}-->
             </section>
         </div>
     </body>
