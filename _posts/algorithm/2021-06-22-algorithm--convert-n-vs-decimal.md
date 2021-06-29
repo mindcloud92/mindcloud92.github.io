@@ -20,7 +20,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/cgUoLl" target="_blank">
+    <a href="https://ideone.com/mdzT5g" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -37,7 +37,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
             
             int result = 0;
             for (int i = 0; i < str.length; i++) {
-              result += Integer.parseInt(str[i]) * Math.pow(radix, i);
+              result += Integer.parseInt(str[i]) * Math.pow(radix, str.length - i - 1);
             }
             
             return result;
