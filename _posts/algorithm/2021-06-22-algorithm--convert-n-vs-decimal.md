@@ -8,9 +8,9 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
 ### # 알아둬야 할
-- n진법: `0 ~ (n -1)`까지의 수를 사용해서 수를 표현하는 방법
+- *n진법* : `0 ~ (n -1)`까지의 수를 사용해서 수를 표현하는 방법
     - n진법의 기수 = n
-- n진수: n진법으로 표현되는 수
+- *n진수* : n진법으로 표현되는 수
 
 
  

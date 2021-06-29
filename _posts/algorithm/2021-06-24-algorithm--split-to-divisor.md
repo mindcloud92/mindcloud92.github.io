@@ -8,7 +8,7 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 
 ### # 알아둬야 할
-- 약수: 자연수 n을 `나누어떨어지게 하는` 모든 수 = `n % divisor == 0`
+- *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
 
 ### # 공식
 자연수`n`을 `1부터 n`까지의 수로 나눴을 때 나머지가 `0`이 되는 수를 수집       

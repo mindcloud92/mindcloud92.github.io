@@ -8,7 +8,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
 ---
 
 ### # 알아둬야 할
-- char 자료형: 문자 1개를 저장할 수 있는 8비트 `정수` 자료형   
+- *char 자료형* : 문자 1개를 저장할 수 있는 8비트 `정수` 자료형   
     ∴ 수 연산이 가능
 
 ### # 공식
