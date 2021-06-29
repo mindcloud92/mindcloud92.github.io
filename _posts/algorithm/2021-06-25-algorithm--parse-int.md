@@ -7,10 +7,22 @@ tags: 알고리즘 문자열 정수 변환 parseInt java
 thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 ---
 
+### # 알아둬야 할
+- char 자료형: 문자 `1개`를 저장할 수 있는 8비트 `정수 자료형`   
+    - 숫자를 나타내는 문자인 경우 정수 48부터 대응    
+    ex> '0' = 48, '9' = 57   
+
+<p markdown="1" class="ml-2">∴ char형 문자 `s - '0' = s의 정수값`</p>    
+    
+    
+    
+    
  
 ### # 공식
-- 문자열을 한 문자씩 쪼개 `10진수`로 변환하여 총합을 계산 
-- 음부호가 있는경우 -1을 총합에 곱셈
+- `글자 수만큼` 반복해서 부호를 제외한 `x번째 자리 문자와 대응되는 정수 * 10의 (x - 1)제곱`을 합산
+    <p class="info">진법 변환 참고 <a href="/tech/2021/06/22/algorithm-convert-n-vs-decimal/" target="_blank"><i class="fas fa-external-link-alt"></i></a></p> 
+- 음부호가 있는 경우 -1을 총합에 곱셈
+
 
     <br/>
     <a href="https://ideone.com/K7xDN7" target="_blank">
@@ -32,7 +44,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
             for (int i = 0; i < value.length(); i++) {
               int intValueByChar = parseInt(value.charAt(i));
               if (intValueByChar > -1) {
-                intValue = (intValue * 10) + intValueByChar;
+                intValue += intValueByChar * Math.pow(10, value.length() - i - 1);
               }
             }
             
@@ -45,7 +57,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
         * @return 변환된 정수
         */
         public int parseInt(final char value) {
-            int zeroDecimalNumber = '0'; // '0'을 빼는 이유는 아래 i 아이콘 설명 참고
+            int zeroDecimalNumber = '0'; // '0'을 빼는 이유는 # 알아둬야할 내용 참고
             
             return isMinusSign(value) || isPlusSign(value) ? -1 : value - zeroDecimalNumber;
         }
@@ -78,12 +90,12 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
         }
 
     ```
-    <p class="info">'0'을 빼는 이유: 수 문자(0 ~ 9) char 자료형은 ASCII 코드 48 ~ 57의 숫자와 대응되기 때문에 '0'을 빼면 대응되는 10진수를 얻는게 가능</p>
 
 <br/>
 <br/>
 
 > **Reference**
+* [char 자료형이란?](https://ko.wikipedia.org/wiki/Char){:target="_blank"}
 * [ASCII 코드란?](https://ko.wikipedia.org/wiki/ASCII){:target="_blank"}
 * [char to int 원리](https://2atom.tistory.com/53){:target="_blank"}
 * [문자 자료형 사용법](https://dojang.io/mod/page/view.php?id=60){:target="_blank"}
