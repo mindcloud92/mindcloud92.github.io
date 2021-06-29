@@ -115,4 +115,4 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 
 > **Reference**
 - [dddd.static-search Docs](https://github.com/mindcloud92/dddd.static-search/blob/main/README.md){:target="blank"}
-- [underscore.js Docs](https://underscorejs.org/){:target="_blank"}
+- [underscore.js 공식 사이트](https://underscorejs.org/){:target="_blank"}

@@ -68,5 +68,6 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 
 <br/>
 <br/>
+
 > **Refrence**
-- [Wiki](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC){:target="_blank"}
+- [선택 정렬이란?](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%83%9D_%EC%A0%95%EB%A0%AC){:target="_blank"}

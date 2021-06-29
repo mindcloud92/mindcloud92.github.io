@@ -84,5 +84,6 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 <br/>
 
 > **Reference**
-* [char to int 설명](https://2atom.tistory.com/53){:target="_blank"}
-* [ASCII 코드 대응표](https://dojang.io/mod/page/view.php?id=60){:target="_blank"}
+* [ASCII 코드란?](https://ko.wikipedia.org/wiki/ASCII){:target="_blank"}
+* [char to int 원리](https://2atom.tistory.com/53){:target="_blank"}
+* [문자 자료형 사용법](https://dojang.io/mod/page/view.php?id=60){:target="_blank"}

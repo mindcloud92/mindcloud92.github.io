@@ -43,5 +43,5 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 <br/>
 
 > **Reference**
-- [약수 정의 1](https://ko.wikipedia.org/wiki/%EC%95%BD%EC%88%98){:target="_blank"}
-- [약수 정의 2](https://www.scienceall.com/%EC%95%BD%EC%88%98divisor/){:target="_blank"}
+- [약수란? (1)](https://ko.wikipedia.org/wiki/%EC%95%BD%EC%88%98){:target="_blank"}
+- [약수란? (2)](https://www.scienceall.com/%EC%95%BD%EC%88%98divisor/){:target="_blank"}

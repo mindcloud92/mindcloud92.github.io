@@ -26,7 +26,7 @@ thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 
 <div markdown="1" class="stepper text mb-4">
 <h4 markdown="1" data-step="2" class="title">
-    `색인 > Sitemaps`탭 선택 한 다음 사이트 맵도 등록해주면 끗
+    `색인 > Sitemaps`탭 선택 한 다음 사이트 맵도 등록해주면 끗w
 </h4>
 
 ![step2]({{ "/asset/images/seo/register-google/step2.png"| relative_url }}){:class="thumbnail"}

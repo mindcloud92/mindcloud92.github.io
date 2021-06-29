@@ -44,6 +44,6 @@ thumbnail: '/asset/images/github/web-hosting/thumbnail.png'
 
     
 > **Reference**
-* [GitHub Pages 공식 사이트](https://pages.github.com/){:target="_blank"}
 * [GitHub Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
-* [Jekyll Docs. 단계별 튜토리얼](https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/){:target="_blank"}
+* [Jekyll 단계별 튜토리얼1. Setup](https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/){:target="_blank"}
+* [GitHub Pages 공식 사이트](https://pages.github.com/){:target="_blank"}

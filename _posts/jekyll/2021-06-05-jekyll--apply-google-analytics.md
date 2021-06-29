@@ -51,8 +51,7 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 
 > **Reference**
 * [Google Analytics 구성 방식](https://support.google.com/analytics/answer/9303323?hl=ko&utm_id=ad#zippy=%2C%EC%9D%B4-%EB%8F%84%EC%9B%80%EB%A7%90%EC%97%90%EC%84%9C%EB%8A%94-%EB%8B%A4%EC%9D%8C-%EB%82%B4%EC%9A%A9%EC%9D%84-%EB%8B%A4%EB%A3%B9%EB%8B%88%EB%8B%A4){:target="_blank"}
-* [참고 블로그1. 데이터 스트림 추가하기](https://learnandcreate.tistory.com/562){:target="_blank"}
-* [참고 블로그2. GA 완벽 가이드](https://www.hedleyonline.com/ko/blog/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4-ga-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81/){:target="_blank"}
-* [참고 블로그3. 블로그에 GA 적용하는 법](https://mingnol2.tistory.com/70){:target="_blank"}
+* [데이터 스트림 추가 방법](https://learnandcreate.tistory.com/562){:target="_blank"}
+* [Google Analytics란?](https://www.hedleyonline.com/ko/blog/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4-ga-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81/){:target="_blank"}
 
 
