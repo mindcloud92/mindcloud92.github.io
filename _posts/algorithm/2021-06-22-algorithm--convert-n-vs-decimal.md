@@ -15,7 +15,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
  
 ### # n진수를 10진수로 변환
-- 공식 = n진법으로 표기된 숫자를 `자리수만큼` 반복해서 `x번째 자리 숫자 * n 진법의 기수의 (x - 1) 제곱`을 합계
+- 공식 = n진법으로 표기된 숫자를 `자리수만큼` 반복해서 `x번째 자리 숫자 * n 진법의 기수의 (x - 1) 제곱`을 합산
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
