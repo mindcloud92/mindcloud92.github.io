@@ -9,10 +9,8 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 
 ### # 알아둬야 할
 - char 자료형: 문자 `1개`를 저장할 수 있는 8비트 `정수 자료형`   
-    - 숫자를 나타내는 문자인 경우 정수 48부터 대응    
-    ex> '0' = 48, '9' = 57   
-
-<p markdown="1" class="ml-2">∴ char형 문자 `s - '0' = s의 정수값`</p>    
+    - 숫자를 나타내는 문자인 경우 정수 48부터 대응    ex> '0' = 48   
+    ∴ char형 문자 `s - '0' = s의 정수값`
     
     
     
