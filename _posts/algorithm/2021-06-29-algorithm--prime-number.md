@@ -114,6 +114,9 @@ thumbnail: ''
 
     ```
 
+<br/>
+<br/>
+
 > **Reference**
 - [소수란?](https://ko.wikipedia.org/wiki/%EC%86%8C%EC%88%98_(%EC%88%98%EB%A1%A0)){:target="_blank"}
 - [합성수란?](https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EC%88%98){:target="_blank"}
