@@ -88,5 +88,5 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
 
 > **Reference**
-- [진법 설명 Wiki](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"} 
+- [진법 Wiki](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"} 
 

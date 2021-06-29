@@ -3,7 +3,7 @@ layout: post-detail
 title: "Jekyll :: 검색 페이지 만들기"
 date: 2021-06-09 15:21:00 +0900
 categories: tech
-tags: jekyll static search dddd javascript underscore template engine
+tags: jekyll static search dddd javascript underscore template
 thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 ---
 
@@ -114,4 +114,5 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 
 
 > **Reference**
-- [search library (dddd.static-search)](https://github.com/mindcloud92/dddd.static-search/blob/main/README.md){:target="blank"}
+- [dddd.static-search Docs](https://github.com/mindcloud92/dddd.static-search/blob/main/README.md){:target="blank"}
+- [underscore.js Docs](https://underscorejs.org/){:target="_blank"}

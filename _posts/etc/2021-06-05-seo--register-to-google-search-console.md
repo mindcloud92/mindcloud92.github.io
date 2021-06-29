@@ -35,4 +35,4 @@ thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 
 
 > **Reference**
-* [Google 검색 정보 구성 방법](https://www.google.com/intl/ko/search/howsearchworks/seo-indexing/){:target="_blank"}
+* [Google 검색 정보 구성 방법](https://www.google.com/intl/ko/search/howsearchworks/crawling-indexing/){:target="_blank"}

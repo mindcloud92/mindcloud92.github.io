@@ -119,4 +119,8 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 
 
 > **Reference**
-- [image to data url](https://ezgif.com/image-to-datauri){:target="_blank"}
+- [html2canvas 공식 사이트](https://html2canvas.hertzen.com/){:target="_blank"}
+- [jspdf 공식 사이트](https://parall.ax/products/jspdf){:target="_blank"}
+- [Image to Data URI converter](https://ezgif.com/image-to-datauri){:target="_blank"}
+
+

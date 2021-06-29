@@ -3,7 +3,7 @@ layout: post-detail
 title:  "GitHub :: GitHub Pages로 웹 호스팅 하기"
 date:   2021-02-17 21:34:39 +0900
 categories: tech
-tags: github pages free web hosting jekyll 
+tags: github pages web hosting jekyll free 
 thumbnail: '/asset/images/github/web-hosting/thumbnail.png'
 --- 
 
@@ -44,6 +44,6 @@ thumbnail: '/asset/images/github/web-hosting/thumbnail.png'
 
     
 > **Reference**
-* [GitHub Pages Official Site](https://pages.github.com/){:target="_blank"}
+* [GitHub Pages 공식 사이트](https://pages.github.com/){:target="_blank"}
 * [GitHub Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
 * [Jekyll tutorial](https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/){:target="_blank"}
