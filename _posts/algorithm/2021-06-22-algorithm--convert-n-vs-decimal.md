@@ -3,13 +3,19 @@ layout: post-detail
 title: "Algorithm :: n진수 ⇄ 10진수 변환하기"
 date: "2021-06-22 23:41:00 +0900"
 categories: tech
-tags: algorithm n진수 10진수 변환 알고리즘 java
+tags: 알고리즘 n진수 10진수 진법변환 java
 thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
+### # 알아야 할
+- n진법: `0 ~ (n -1)`까지의 수를 사용해서 수를 표현하는 방법
+    - n진법의 기수 = n
+- n진수: n진법으로 표현되는 수
+
+
  
 ### # n진수를 10진수로 변환
-- 공식 = 변환하고자 하는 수를 한 자리 단위로 쪼개 각 자리에 해당하는 `{수} * ({진수}의 {자리} 지수)`의 총합을 계산
+- 공식 = n진법으로 표기된 숫자를 `자리수만큼` 반복해서 `x번째 자리 숫자 * n 진법의 기수의 (x - 1) 제곱`을 합계
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
@@ -41,8 +47,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
  
 ### # 10진수를 n진수로 변환 
-- 공식 = `{몫}를 {진수}로 나눈 나머지`를 몫이 0이 될때까지 반복해서 나눠 연결
-    <p class="info mb-2">{몫}: 변환하고자 하는 수 / {진수} → (변환하고자 하는 수 / {진수})의 몫 / {진수} → ((변환하고자 하는 수 / {진수})의 몫 / {진수}) / {진수} → …  </p>
+- 공식 = `10진법으로 표기된 숫자 % (n진법의 기수)`의 `나머지`를 `몫이 0이 될 때까지` 반복해서 연결
 
     - 예시   
     ![10진수를 n진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/decimal-to-n.png' | relative_url }}){:class="thumbnail mt-1"}
@@ -80,3 +85,8 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
     ```
 <br/>
 <br/>
+
+
+> **Reference**
+- [진법 설명 Wiki](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"} 
+
