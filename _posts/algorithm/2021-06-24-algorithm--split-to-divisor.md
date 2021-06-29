@@ -3,15 +3,15 @@ layout: post-detail
 title: "Algorithm :: n의 약수 구하기"
 date: "2021-06-24 16:32:00 +0900"
 categories: tech
-tags: algorithm divisor 약수 알고리즘 java 
+tags: 알고리즘 약수 divisor java 
 thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 
-### # 약수란?
-`n`을 `n보다 작은 수`로 나눴을 때 나머지가 `0`이 되는 모든 수
+### # 알아둬야 할
+- 약수: 자연수 n을 `나누어떨어지게 하는` 모든 수 = `n % divisor == 0`
 
 ### # 공식
-`1부터 n`까지의 수를 n으로 나눴을 때 나머지가 `0`이 되는 수를 수집       
+자연수`n`을 `1부터 n`까지의 수로 나눴을 때 나머지가 `0`이 되는 수를 수집       
 
 - 예시   
     ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
@@ -41,3 +41,7 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
     ``` 
 <br/>
 <br/>
+
+> **Reference**
+- [약수 정의 1](https://ko.wikipedia.org/wiki/%EC%95%BD%EC%88%98){:target="_blank"}
+- [약수 정의 2](https://www.scienceall.com/%EC%95%BD%EC%88%98divisor/){:target="_blank"}
