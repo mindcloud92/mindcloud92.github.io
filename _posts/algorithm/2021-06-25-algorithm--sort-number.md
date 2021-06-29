@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: 목록 정렬하기"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
-tags: algorithm selection sort 선택 정렬 알고리즘 java
+tags: 알고리즘 선택 정렬 selection sort java
 thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif'
 ---
 

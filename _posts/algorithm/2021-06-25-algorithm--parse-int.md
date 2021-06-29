@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: 문자열을 정수로 변환하기"
 date: "2021-06-25 11:20:00 +0900"
 categories: tech
-tags: algorithm parseInt 문자열 정수 변환 알고리즘 java 
+tags: 알고리즘 문자열 정수 변환 parseInt java 
 thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 ---
 
