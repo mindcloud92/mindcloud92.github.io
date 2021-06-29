@@ -126,6 +126,65 @@ thumbnail: ''
     ```
 
 <br/>
+
+### # 공식1 vs 공식2
+
+<table class="text-center">
+    <thead>
+        <tr>
+            <th></th>
+            <th>효율성</th>
+            <th>복잡도</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>공식1</th>
+            <td>
+                <div class="rating-container">
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating"></i>
+                    <i class="icon rating"></i>
+                </div>
+            </td>
+            <td>
+                <div class="rating-container">
+                    <i class="icon rating full"></i>
+                    <i class="icon rating"></i>
+                    <i class="icon rating"></i>
+                    <i class="icon rating"></i>
+                    <i class="icon rating"></i>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>공식2</th>
+            <td>
+                <div class="rating-container">
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                </div>
+            </td>
+            <td>
+                <div class="rating-container">
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating full"></i>
+                    <i class="icon rating"></i>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br/>
 <br/>
 
 > **Reference**

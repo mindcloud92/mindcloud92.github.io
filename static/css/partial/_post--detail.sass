@@ -35,6 +35,9 @@
         margin-block-start: .5em
         margin-block-end: .5em
 
+      table
+        width: 100%
+
     .thumbnail
       border-radius: 0
 
@@ -224,21 +227,23 @@
         font-size: .95em
         opacity: .8
 
-      .rating-container
-        display: flex
-        align-items: center
-        padding-left: .5em
+    .rating-container
+      display: flex
+      align-items: center
+      padding-left: .5em
 
-        .rating
-          font-family: var(--font-family--icon)
-          color: #f3e3a5
+      .rating
+        font-family: var(--font-family--icon)
+        color: #f3e3a5
 
-          &.full
-            font-weight: 900
-            color: #f1c40e
+        &.full
+          font-weight: 900
+          color: #f1c40e
 
-          &:before
-            content: '\f005'
+        &:before
+          content: '\f005'
+
+
 
 @media screen and (max-width: 768px)
   .container
