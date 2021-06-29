@@ -33,14 +33,21 @@
                 <h2 class="section-title">Tags</h2>
 
                 <div class="tag-container">
-                    {%  for tag in site.tags %}
-                        {% capture tag_name %}{{ tag | first }}{% endcapture %}
-                        {% capture tag_size %}{{ tag | last | size }}{% endcapture %}
-                        {% capture font_size %}{{ tag_size | times: site.tags.size | divided_by : site.tags.size | plus: 14 }}{% endcapture %}
+                    {% capture tags %}
+                        {% for tag in site.tags %}
+                            {{ tag | last |size }}|{{ tag | first }}
+                        {% endfor %}
+                    {% endcapture %}
 
-                        <a href="/search?q={{ tag_name }}" class="tag" data-count="{{ tag_size }}">
-                            {{ tag_name }}
-                        </a>
+                    {% assign sorted_tags = tags | split:' ' | sort %}
+                    {% for tag in sorted_tags reversed %}
+                        {% assign arr = tag | split: '|' %}
+                            {% capture tag_size %}{{ arr[0] }}{% endcapture %}
+                            {% capture tag_name %}{{ arr[1] }}{% endcapture %}
+
+                            <a href="/search?q={{ tag_name }}" class="tag" data-count="{{ tag_size }}">
+                                {{ tag_name }}
+                            </a>
                     {% endfor %}
                 </div>
             </section>
