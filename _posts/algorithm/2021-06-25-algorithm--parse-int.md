@@ -19,7 +19,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
  
 ### # 공식
 - `글자 수만큼` 반복해서 부호를 제외한 `x번째 자리 문자와 대응되는 정수 * 10의 (x - 1)제곱`을 합산
-    <p class="info">진법 변환 참고 <a href="/tech/2021/06/22/algorithm-convert-n-vs-decimal/" target="_blank"><i class="fas fa-external-link-alt"></i></a></p> 
+    <p class="info mb-2">진법 변환 참고 <a href="/tech/2021/06/22/algorithm-convert-n-vs-decimal/" target="_blank"><i class="fas fa-external-link-alt"></i></a></p> 
 - 음부호가 있는 경우 -1을 총합에 곱셈
 
 
