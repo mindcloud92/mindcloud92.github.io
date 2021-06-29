@@ -7,39 +7,13 @@ tags: 알고리즘 선택 정렬 selection sort java
 thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif'
 ---
 
+### # 알아둬야 할
+이 글은 숫자를 대상으로 작성되었지만 다른 자료형에도 활용 가능 
+
 ### # 공식
-- 오름차순 정렬
-    - 현재 선택된 값보다 뒤에 위치한 값들 중 현재 선택된 값보다 `작은` 값이 있으면 두 값의 위치를 교체   
-<br/>
-- 내림차순 정렬
-    - 현재 선택된 값보다 뒤에 위치한 값들 중 현재 선택된 값보다 `큰` 값이 있으면 두 값의 위치를 교체
-
-
-    <br/>
-    <a href="https://ideone.com/jxIMtf" target="_blank">
-        <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
-    </a>
-
+- 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 `비교조건을 만족하는` 값의 위치를 `교환`
 
     ```java
-        /***
-        * 오름차순으로 정렬
-        * @param numbers 정렬 대상
-        * @return 오름차순으로 정렬된 목록
-        */
-        public long[] sortAsc(long[] numbers) {
-            return sort(numbers, (curr, next) -> curr > next);
-        }
-        
-        /**
-        * 내림차순으로 정렬
-        * @param numbers 정렬 대상
-        * @return 내림차순으로 정렬된 목록
-        */
-        public long[] sortDesc(long[] numbers) {
-            return sort(numbers, (curr, next) -> curr < next);
-        }
-        
         /**
         * 비교 조건에 따라 정렬
         * @param numbers 정렬 대상
@@ -63,8 +37,45 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
             
             return arr;
         }
-    
     ```
+
+    <br/>
+    
+    - 오름차순 정렬
+        - 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 n보다 `작은` 값의 위치를 `교환`   
+        <a href="https://ideone.com/ce12a8" target="_blank">
+            <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
+        </a>
+        
+            ```java
+                /***
+                * 오름차순으로 정렬
+                * @param numbers 정렬 대상
+                * @return 오름차순으로 정렬된 목록
+                */
+                public long[] sortAsc(long[] numbers) {
+                    return sort(numbers, (curr, next) -> curr > next);
+                }
+            ```
+        
+    <br/>
+    
+    - 내림차순 정렬
+        - 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 n보다 `큰` 값의 위치를 `교환`   
+        <a href="https://ideone.com/4sCQmX" target="_blank">
+            <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
+        </a>
+        
+            ```java
+                /**
+                * 내림차순으로 정렬
+                * @param numbers 정렬 대상
+                * @return 내림차순으로 정렬된 목록
+                */
+                public long[] sortDesc(long[] numbers) {
+                  return sort(numbers, (curr, next) -> curr < next);
+                }
+            ```
 
 <br/>
 <br/>
