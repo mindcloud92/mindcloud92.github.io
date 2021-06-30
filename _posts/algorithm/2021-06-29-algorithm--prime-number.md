@@ -20,7 +20,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
     i. `반환할 목록 A의 크기`만큼 반복해서 `판별할 대상인 수 x % A의 원소`의 값이 `0`인 경우가 `없으면` A에 추가   
     ii. i를 `(n - 2) - 1`만큼 반복   
     
-    <p class="info ml-2">(n - 2) -1 = 가장 작은 소수인 2부터 n까지 반복되는 횟수</p>
+    <p class="info mt-2">(n - 2) -1 = 가장 작은 소수인 2부터 n까지 반복되는 횟수</p>
 
     <br/>
     <a href="https://ideone.com/KCAN9w" target="_blank">
@@ -68,11 +68,11 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 ### # 공식2 - 에라토스테네스의 체
 - 1과 n 사이의 `합성수`를 찾아 `제거`   
     i. 첫번째 원소를 제외한 모든 원소가 `false`인 목록 A를 생성   
-    ii. `판별할 대상인 수 x의 승수 최대값 - 최소값`만큼 반복해서 A에서 x의 배수 위치를 `true`로 채움   
+    ii. `판별할 대상인 수 x의 승수 최대값 - 최소값`만큼 반복해서 A에서 x의 배수 위치를 `true`로 채움
     iii. ii를 `((n - 2) - 1) - 합성수 개수`만큼 반복   
-    <p class="info ml-2">(n - 2) - 1 = 가장 작은 소수인 2부터 n까지 반복되는 횟수, 합성수 개수 = 배수로 판별되어 반복문에서 통과되는 횟수</p>
-        
     iv. A의 원소 중 값이 `false`인 원소의 위치를 대응되는 숫자로 대치
+    <p class="info mt-2">(n - 2) - 1 = 가장 작은 소수인 2부터 n까지 반복되는 횟수, 합성수 개수 = 배수로 판별되어 반복문에서 통과되는 횟수</p>
+    <p class="info">x * 승수 = x의 배수 = 합성수</p>
     
     <br/>
     <a href="https://ideone.com/mJ1EOo" target="_blank">
