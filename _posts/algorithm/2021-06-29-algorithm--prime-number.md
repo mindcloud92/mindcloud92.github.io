@@ -10,12 +10,13 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 ### # 알아둬야 할
 - *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
 - *소수* : 1과 자기 자신만을 `약수`로 가지는 `1보다 큰` 수
-- *합성수* : `소수`가 아닌 수
-- *승수* : 곱셈 연산을 하는 경우 곱해지는 수를 지칭
+- *합성수* : 둘 이상의 소수를 곱한 자연수 = `소수`가 아닌 수 
+- *승수* : 곱셈 연산 시 곱해지는 수
+
 
 
 ### # 공식1 - 메모이제이션
-- 1과 n 사이의 `소수`를 찾아 수집   
+- 1과 n 사이의 `소수`를 찾아 `수집`   
     i. `반환할 목록 A의 크기`만큼 반복해서 `판별할 대상인 수 x % A의 원소`의 값이 `0`인 경우가 `없으면` A에 추가   
     ii. i를 `(n - 2) - 1`만큼 반복   
     
@@ -65,13 +66,13 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 <br/>
 
 ### # 공식2 - 에라토스테네스의 체
-- 1과 n 사이의 `합성수`를 찾아 제거   
+- 1과 n 사이의 `합성수`를 찾아 `제거`   
     i. 첫번째 원소를 제외한 모든 원소가 `false`인 목록 A를 생성   
     ii. `판별할 대상인 수 x의 승수 최대값 - 최소값`만큼 반복해서 A에서 x의 배수 위치를 `true`로 채움   
     iii. ii를 `((n - 2) - 1) - 합성수 개수`만큼 반복   
     <p class="info ml-2">(n - 2) - 1 = 가장 작은 소수인 2부터 n까지 반복되는 횟수, 합성수 개수 = 배수로 판별되어 반복문에서 통과되는 횟수</p>
         
-    iv. A의 원소 중 값이 `false`인 원소의 위치를 숫자로 대치
+    iv. A의 원소 중 값이 `false`인 원소의 위치를 대응되는 숫자로 대치
     
     <br/>
     <a href="https://ideone.com/mJ1EOo" target="_blank">
@@ -135,6 +136,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
             <th></th>
             <th>효율성</th>
             <th>복잡도</th>
+            <th>연산 횟수</th>
         </tr>
     </thead>
     <tbody>
@@ -158,6 +160,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating"></i>
                 </div>
             </td>
+            <td>증가</td>
         </tr>
         <tr>
             <th>공식2</th>
@@ -179,6 +182,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating"></i>
                 </div>
             </td>
+            <td>감소</td>
         </tr>
     </tbody>
 </table>
