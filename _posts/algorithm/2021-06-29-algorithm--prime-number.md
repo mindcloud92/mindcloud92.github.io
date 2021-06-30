@@ -133,14 +133,16 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 <table class="text-center">
     <colgroup>
         <col width="10%"/>
-        <col width="50%"/>
-        <col width="40%"/>
+        <col width="30%"/>
+        <col width="30%"/>
+        <col width="20%"/>
     </colgroup>
     <thead>
         <tr>
             <th></th>
             <th>효율성</th>
             <th>복잡도</th>
+            <th>연산 횟수</th>
         </tr>
     </thead>
     <tbody>
@@ -154,7 +156,6 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating"></i>
                     <i class="icon rating"></i>
                 </div>
-                <p class="text-left mt-1" style="opacity: .8">&nbsp;&nbsp;&nbsp;∵ 연산 횟수: 점진적 <strong>증가</strong></p>
             </td>
             <td>
                 <div class="rating-container">
@@ -165,6 +166,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating"></i>
                 </div>
             </td>
+            <td>점차 <strong>증가</strong></td>
         </tr>
         <tr>
             <th>공식2</th>
@@ -176,7 +178,6 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating full"></i>
                     <i class="icon rating full"></i>
                 </div>
-                <p class="text-left mt-1" style="opacity: .8">&nbsp;&nbsp;&nbsp;∵ 연산 횟수: 점진적 <strong>감소</strong></p>
             </td>
             <td>
                 <div class="rating-container">
@@ -187,6 +188,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating"></i>
                 </div>
             </td>
+            <td>점차 <strong>감소</strong></td>
         </tr>
     </tbody>
 </table>
