@@ -8,10 +8,11 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 
 ### # 알아둬야 할
-- *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
+- *자연수* : 양의 정수
+- *n의 약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수
 
 ### # 공식
-- 자연수`n`을 `1부터 n`까지의 수로 나눴을 때 나머지가 `0`이 되는 수를 수집       
+- n을 `n보다 작은 자연수`로 나눴을 때 `나머지가 0`이 되는 수를 `수집`
     - 예시   
         ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
     
@@ -40,6 +41,8 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
         ``` 
 <br/>
 <br/>
+
+
 
 > **Reference**
 - [약수란? (1)](https://ko.wikipedia.org/wiki/%EC%95%BD%EC%88%98){:target="_blank"}
