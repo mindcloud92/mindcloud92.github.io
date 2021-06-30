@@ -39,9 +39,25 @@
       table
         width: 100%
         border-spacing: 0
+        border: 1px solid #eee
+        border-width: 1px 1px 0 1px
 
         th, td
           padding: 1em
+          border: 1px solid #eee
+          border-width: 0 0 1px 1px
+
+          &:first-child
+            border-left-width: 0
+
+        th
+          background: #f7f6f5
+
+        td
+          background: #fff
+
+        tr
+          border: 1px solid red
 
     .thumbnail
       border-radius: 0

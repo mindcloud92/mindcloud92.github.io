@@ -8,9 +8,9 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 ---
 
 ### # 알아둬야 할
+- *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
 - *소수* : 1과 자기 자신만을 `약수`로 가지는 `1보다 큰` 수
 - *합성수* : `소수`가 아닌 수
-- *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
 - *승수* : 곱셈 연산을 하는 경우 곱해지는 수를 지칭
 
 
