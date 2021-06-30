@@ -92,7 +92,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 <blockquote markdown="1">
 **Footnote**
 <p id="footnote-1" class="footnote-desc">
-    <strong class="number">1.</strong>= i번째 자리 숫자 * n의 (i - 1) 제곱<
+    <strong class="number">1.</strong>= i번째 자리 숫자 * n의 (i - 1) 제곱
 </p>
 <p id="footnote-2" class="footnote-desc">
     <strong class="number">2.</strong> 첫번째 반복: 10진수 X / n → ?번째 반복: 이전 연산의 몫 / n
