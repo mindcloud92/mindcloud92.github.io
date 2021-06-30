@@ -15,7 +15,9 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
  
 ### # n진수를 10진수로 변환
-- 공식 = n진법으로 표기된 숫자를 `자리수만큼` 반복해서 `x번째 자리 숫자 * n 진법의 기수의 (x - 1) 제곱`을 합산
+- 공식 = n진법으로 표기된 숫자를 자리수만큼 반복해서 `i번째 자리 숫자의 10진수`<a href="#footnote-1" class="footnote">[1]</a>를 합산
+      
+    
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
@@ -83,10 +85,18 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
             return convertToN(value / radix, radix, (value % radix) + tails);
         }
     ```
+
 <br/>
 <br/>
 
+<blockquote markdown="1">
+**Footnote**
+<p id="footnote-1" class="footnote-desc"><strong class="number">1.</strong>= i번째 자리 숫자 * n진법 기수의 (i - 1) 제곱</p>
+<br/>
 
-> **Reference**
-- [진법이란?](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"} 
+**Reference**
+- [진법이란?](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"}
+</blockquote>
+
+
 
