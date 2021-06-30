@@ -144,7 +144,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                 </div>
             </td>
             <td class="text-left">
-                반복 횟수가 늘어날 수록 반환할 목록에 담긴 소수의 개수가 증가 하기 때문에 연산 횟수는 점차 `증가` 
+                반복이 계속될수록 반환할 <i>목록에 담긴 소수의 개수가 증가</i>하기 때문에 연산 횟수는 <strong>증가</strong> 
             </td>
         </tr>
         <tr>
@@ -158,7 +158,9 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                     <i class="icon rating full"></i>
                 </div>
             </td>
-            <td>점차 <strong>감소</strong></td>
+            <td class="text-left">
+                반복이 계속될수록 특정 수의 배수가 걸러져 배수의 값을 찾지 않고 <i>반복문을 통과하는 수가 증가</i>하기 때문에 연산 횟수는 <strong>감소</strong>
+            </td>
         </tr>
     </tbody>
 </table>
