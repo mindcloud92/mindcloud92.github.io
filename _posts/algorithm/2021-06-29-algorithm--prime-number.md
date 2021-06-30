@@ -20,7 +20,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
     
 
     <br/>
-    <a href="https://ideone.com/KCAN9w" target="_blank">
+    <a href="https://ideone.com/rtg5cf" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
@@ -51,7 +51,8 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         */
         public boolean isPrimeNumber(final int value, final List<Integer> previousPrimeNumbers) {
             for (int i = 0; i < previousPrimeNumbers.size(); i++) {
-              if (value % previousPrimeNumbers.get(i) == 0) {
+              boolean hasDivisor = value % previousPrimeNumbers.get(i) == 0;
+              if (hasDivisor) {
                 return false;
               }
             }
@@ -67,7 +68,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 
     
     <br/>
-    <a href="https://ideone.com/mJ1EOo" target="_blank">
+    <a href="https://ideone.com/6ZqN0f" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -80,7 +81,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         * @param n
         * @return 1과 n 사이의 소수 목록
         */
-        public int[] extractPrimeNumber(final int n) {
+        public int[] filterPrimeNumber(final int n) {
             int[] natualNumbers = new int[n];
             
             natualNumbers[0] = INVALID_NUMBER;
@@ -90,7 +91,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
               }
             
               natualNumbers[i - 1] = i;
-              invalidateMultipleNumber(natualNumbers, i);
+              invalidateMultipleNumber(i, natualNumbers);
             }
             
             return IntStream.of(natualNumbers).filter(i -> i > 0).toArray();
@@ -98,10 +99,10 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         
         /**
         * 원본 배열에서 기준이 되는 값의 배수 값을 의미 없는 수로 할당
-        * @param source   원본 배열
         * @param criteria 배수 위치를 구할 기준 값
+        * @param source   원본 배열
         */
-        public void invalidateMultipleNumber(int[] source, final int criteria) {
+        public void invalidateMultipleNumber(final int criteria, int[] source) {
             if (source == null) {
               return;
             }
