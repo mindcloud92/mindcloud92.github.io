@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Algorithm :: 목록 정렬하기"
+title: "Algorithm :: 숫자 정렬하기"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
 tags: 알고리즘 선택 정렬 selection sort java
@@ -8,10 +8,11 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 ---
 
 ### # 알아둬야 할
-*이 글은 숫자를 대상으로 작성되었지만 다른 자료형에도 활용 가능* 
+*이 글은 정수형을 대상으로 작성되었지만 다른 자료형에도 활용 가능* 
 
 ### # 공식
-- 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 `비교조건을 만족하는` 값의 위치를 `교환`
+- `정렬할 배열 A의 크기`만큼 반복해서 i번째의 수 n보다 뒤에 위치한 수 중 `비교조건을 만족하는` 수를 탐색하여 두 값의 위치를 `교환` 
+               
 
     ```java
         /**
@@ -21,28 +22,28 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
         * @return 비교 조건에 따라 정렬된 목록
         */
         public long[] sort(long[] numbers, final BiFunction<Long, Long, Boolean> comparator) {
-            long[] arr = numbers == null ? new long[]{} : numbers.clone();
+            long[] sortedNumbers = numbers == null ? new long[]{} : numbers.clone();
             
-            for (int i = 0; i < arr.length; i++) {
-              for (int j = i + 1; j < arr.length; j++) {
-                long curr = arr[i];
-                long next = arr[j];
+            for (int i = 0; i < sortedNumbers.length; i++) {
+              for (int j = i + 1; j < sortedNumbers.length; j++) {
+                long curr = sortedNumbers[i];
+                long next = sortedNumbers[j];
             
                 if (comparator.apply(curr, next)) {
-                  arr[i] = next;
-                  arr[j] = curr;
+                  sortedNumbers[i] = next;
+                  sortedNumbers[j] = curr;
                 }
               }
             }
             
-            return arr;
+            return sortedNumbers;
         }
     ```
 
     <br/>
     
     - 오름차순 정렬
-        - 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 n보다 `작은` 값의 위치를 `교환`   
+        - 비교조건: `n > next`   
         <a href="https://ideone.com/ce12a8" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
@@ -61,7 +62,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
     <br/>
     
     - 내림차순 정렬
-        - 현재 선택된 값 n의 위치와 n보다 `뒤`에 위치한 n보다 `큰` 값의 위치를 `교환`   
+        - 비교조건: `n < next`   
         <a href="https://ideone.com/4sCQmX" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
