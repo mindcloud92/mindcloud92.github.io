@@ -9,10 +9,11 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 
 ### # 알아둬야 할
 - *자연수* : 양의 정수
-- *n의 약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수
+- *n의 약수* : n을 `나누어떨어지게` 하는 수
 
 ### # 공식
-- n을 `n보다 작은 자연수`로 나눴을 때 `나머지가 0`이 되는 수를 `수집`
+- `1부터 n까지` 반복해서 `n % i == 0`이 되는 수를 `수집`
+ 
     - 예시   
         ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
     
