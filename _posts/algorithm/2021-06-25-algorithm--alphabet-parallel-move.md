@@ -12,8 +12,8 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
     ∴ 수 연산이 가능
 
 ### # 공식
-- 문자 c에 평행 이동시키려는 수를 `합산`
-- 합산한 수가 알파벳 범위를 넘어서면 알파벳 개수인 `26` 차감
+- `문자 c`에 `평행 이동시키려는 수`를 `합산`
+- 합산한 수가 `유효하지 않은 알파벳 범위`에 속하면 알파벳 개수인 `26` 차감
 
     - 예시      
     ![시저 암호 예시]({{ '/asset/images/algorithm/alphabet-parallel-move/example.png' | relative_url }}){:class="thumbnail"}  
