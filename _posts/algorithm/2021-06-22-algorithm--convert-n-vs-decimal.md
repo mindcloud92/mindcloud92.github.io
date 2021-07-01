@@ -8,16 +8,14 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
 ### # 알아둬야 할
-- *n진법* : `0 ~ (n -1)`까지의 수를 사용해서 수를 표현하는 방법
-    - n진법의 기수 = n
+- *n진법* : `0 ~ {n -1}`까지의 수를 사용해서 수를 표현하는 방법
 - *n진수* : n진법으로 표현되는 수
 
 
  
 ### # n진수를 10진수로 변환
-- 공식 = n진수 X의 `자리수`만큼 반복해서 `i번째 자리 숫자의 10진수`<a href="#footnote-1" class="footnote">[1]</a>를 `합산`
+- 공식 = n진수 X의 `자리수`만큼 반복해서 `i번째 자리 숫자`를 `10진수로 변환`<a href="#footnote-1" class="footnote">[1]</a>하여 `합산`
       
-    
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal.png' | relative_url }}){:class="thumbnail mt-1"}
 
@@ -49,7 +47,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
  
 ### # 10진수를 n진수로 변환 
-- 공식 = `10진수 X / n`<a href="#footnote-2" class="footnote">[2]</a>의 `몫이 0이 될때까지` 반복해서 얻은 `나머지`를 `연결` 
+- 공식 = 10진수 X를 반복해서 `몫이 0`이 될 때까지 `n으로 나누고` `나머지`를 `뒤`에서부터 연결  
 
     - 예시   
     ![10진수를 n진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/decimal-to-n.png' | relative_url }}){:class="thumbnail mt-1"}
@@ -92,10 +90,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 <blockquote markdown="1">
 **Footnote**
 <p id="footnote-1" class="footnote-desc">
-    <strong class="number">1.</strong>= i번째 자리 숫자 * n의 (i - 1) 제곱
-</p>
-<p id="footnote-2" class="footnote-desc">
-    <strong class="number">2.</strong> 첫번째 반복: 10진수 X / n → ?번째 반복: 이전 연산의 몫 / n
+    <strong class="number">1.</strong>= i번째 자리 숫자 * n^(i - 1)
 </p>
 <br/>
 
