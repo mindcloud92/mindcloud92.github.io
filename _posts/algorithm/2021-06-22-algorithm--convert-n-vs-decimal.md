@@ -88,14 +88,16 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 <br/>
 
 <blockquote markdown="1">
+**Reference**
+- [진법이란?](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"}
+
+<br/>
+
+
 **Footnote**
 <p id="footnote-1" class="footnote-desc">
     <strong class="number">1.</strong>= i번째 자리 숫자 * n^(i - 1)
 </p>
-<br/>
-
-**Reference**
-- [진법이란?](https://namu.wiki/w/%EC%A7%84%EB%B2%95){:target="_blank"}
 </blockquote>
 
 
