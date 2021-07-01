@@ -18,21 +18,20 @@ thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
         ![약수 구하기 예시]({{ '/asset/images/algorithm/split-to-divisor/example.png' | relative_url }}){:class="thumbnail mt-1"}
     
         <br/>
-        <a href="https://ideone.com/8fpcLO" target="_blank">
+        <a href="https://ideone.com/QXpVUZ" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         
         ```java
             /***
-            * 특정 값을 약수 목록으로 분할
-            * @param value
-            * @return 약수 목록
+            * n의 약수를 탐색
+            * @param n
+            * @return n의 약수 배열
             */
-            public List<Integer> splitToDivisor(final int value) {
+            public List<Integer> findAllDivisor(final int n) {
                 List<Integer> divisors = new ArrayList<>();
-                
-                for (int i = 1; i < value + 1; i++) {
-                  if (value % i == 0) {
+                for (int i = 1; i < n + 1; i++) {
+                  if (n % i == 0) {
                     divisors.add(i);
                   }
                 }
