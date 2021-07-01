@@ -12,7 +12,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
     ∴ 수 연산이 가능
 
 ### # 공식
-- `글자수`만큼 반복해서 각 문자에 평행 이동시키려는 수를 합산
+- 문자 c에 평행 이동시키려는 수를 `합산`
 - 합산한 수가 알파벳 범위를 넘어서면 알파벳 개수인 `26` 차감
 
     - 예시      
@@ -26,33 +26,16 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
 
     ```java
         /**
-        * 한 문자씩 입력받은 이동할 수 만큼 평행 이동
-        * @param value 평행이동시킬 문자열
-        * @param count 이동할 수
-        * @return 한 문자씩 평행이동된 문자열
-        */
-        public String shiftAlphabetByChar(final String value, final int count) {
-            if (value == null) {
-              return value;
-            }
-            
-            StringBuilder result = new StringBuilder();
-            for (int i = 0; i < value.length(); i++) {
-              char character = value.charAt(i);
-            
-              result.append(character == ' ' ? character : shiftAlphabet(character, count));
-            }
-            
-            return result.toString();
-        }
-        
-        /**
         * 입력받은 이동할 수 만큼 평행 이동
         * @param value 평행이동시킬 문자
         * @param count 이동할 수
         * @return 평행이동 된 문자
         */
         public char shiftAlphabet(final char value, final int count) {
+            if (value == ' ') {
+                return value; 
+            }
+        
             int result = value + count;
             
             boolean isOverUpperAlphabetRange = (value <= 'Z' && result > 'Z');
