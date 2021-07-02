@@ -12,7 +12,7 @@ thumbnail: '/asset/images/book/world-of-children/thumbnail.jpeg'
 </div>
 
 <div class="book-evaluation-wrapper mt-2">
-    <p class="title">책 구성</p> 
+    <p class="title">구성</p> 
     <div class="rating-container">
         <i class="icon rating full"></i>
         <i class="icon rating full"></i>
