@@ -36,8 +36,8 @@ thumbnail: '/asset/images/book/world-of-children/thumbnail.jpeg'
     <div class="rating-container">
         <i class="icon rating full"></i>
         <i class="icon rating full"></i>
-        <i class="icon rating full"></i>
-        <i class="icon rating full"></i>
+        <i class="icon rating"></i>
+        <i class="icon rating"></i>
         <i class="icon rating"></i>
     </div>
 </div>
