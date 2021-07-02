@@ -46,7 +46,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
     - 오름차순 정렬
         - 비교조건: `curr > next`
         - 예시   
-        ![오름차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-asc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2"}
+        ![오름차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-asc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2" style="width: 50%;"}
         
         <br/>
         <a href="https://ideone.com/yvJvWM" target="_blank">
@@ -69,7 +69,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
     - 내림차순 정렬
         - 비교조건: `curr < next`
         - 예시   
-        ![내림차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-desc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2"}
+        ![내림차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-desc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2" style="width: 50%;"}
         
         <br/>   
         <a href="https://ideone.com/Vlc04q" target="_blank">
