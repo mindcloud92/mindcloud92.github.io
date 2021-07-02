@@ -12,7 +12,6 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 
 ### # 공식
 - `숫자 배열 A의 크기`만큼 반복해서 i번째의 수 n보다 뒤에 위치한 수 중 `비교조건을 만족하는` 수를 탐색하여 두 값의 위치를 `교환` 
-               
 
     ```java
         import java.util.function.BiFunction;
@@ -45,40 +44,47 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
     <br/>
     
     - 오름차순 정렬
-        - 비교조건: `curr > next`   
+        - 비교조건: `curr > next`
+        - 예시   
+        ![오름차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-asc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2"}
+        
+        <br/>
         <a href="https://ideone.com/yvJvWM" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         
-            ```java
-                /***
-                * 배열 a를 오름차순으로 정렬
-                * @param a
-                * @return 정렬 결과
-                */
-                public long[] sortAsc(final long[] a) {
-                    return sort(a, (curr, next) -> curr > next);
-                }
-            ```
+        ```java
+            /***
+            * 배열 a를 오름차순으로 정렬
+            * @param a
+            * @return 정렬 결과
+            */
+            public long[] sortAsc(final long[] a) {
+                return sort(a, (curr, next) -> curr > next);
+            }
+        ```
         
     <br/>
     
     - 내림차순 정렬
-        - 비교조건: `curr < next`   
+        - 비교조건: `curr < next`
+        - 예시   
+        ![내림차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-desc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2"}
+        
+        <br/>   
         <a href="https://ideone.com/Vlc04q" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
-        
-            ```java
-                /**
-                * 배열 a를 내림차순으로 정렬
-                * @param a
-                * @return 정렬 결과
-                */
-                public long[] sortDesc(final long[] a) {
-                  return sort(a, (curr, next) -> curr < next);
-                }
-            ```
+        ```java
+            /**
+            * 배열 a를 내림차순으로 정렬
+            * @param a
+            * @return 정렬 결과
+            */
+            public long[] sortDesc(final long[] a) {
+              return sort(a, (curr, next) -> curr < next);
+            }
+        ```
 
 <br/>
 <br/>
