@@ -21,70 +21,70 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
 - 음부호가 있는 경우 총합에 `-1`을 곱셈
 
 
-    <a href="https://ideone.com/K7xDN7" target="_blank">
+    <a href="https://ideone.com/4OXink" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
     ```java
         /**
-        * 문자열을 정수로 변환
-        * @param value 변환할 문자열
-        * @return 변환된 정수
+        * 문자열 s를 정수로 변환
+        * @param s
+        * @return 문자열 s의 정수 값
         */
-        public int parseInt(final String value) {
-            if (value == null || value.equals("")) {
+        public int parseInt(final String s) {
+            if (s == null || s.equals("")) {
               return 0;
             }
             
-            int intValue = 0;
-            for (int i = 0; i < value.length(); i++) {
-              int intValueByChar = parseInt(value.charAt(i));
-              if (intValueByChar > -1) {
-                intValue += intValueByChar * Math.pow(10, value.length() - i - 1);
+            int sum = 0;
+            for (int i = 0; i < s.length(); i++) {
+              int decimalNumber = parseInt(s.charAt(i));
+              if (decimalNumber > -1) {
+                // sum = (sum * 10) + decimalNumber와 동일
+                sum += decimalNumber * Math.pow(10, s.length() - i - 1); 
               }
             }
             
-            return intValue * parseSign(value.charAt(0));
+            return sum * parseSign(s.charAt(0));
         }
         
         /**
-        * 문자를 정수로 변환
-        * @param value 변환할 문자
-        * @return 변환된 정수
+        * 문자 c를 정수로 변환
+        * @param c
+        * @return 문자 c의 정수 값
         */
-        public int parseInt(final char value) {
+        public int parseInt(final char c) {
             int zeroDecimalNumber = '0'; // '0'을 빼는 이유는 # 알아둬야할 내용 참고
             
-            return isMinusSign(value) || isPlusSign(value) ? -1 : value - zeroDecimalNumber;
+            return isMinusSign(c) || isPlusSign(c) ? -1 : c - zeroDecimalNumber;
         }
         
         /**
-        * 부호 문자를 숫자로 변환
-        * @param character 부호 문자
-        * @return 변환된 부호 숫자(음수: -1 / 양수: 1 / 없는 경우: 1)
+        * 문자 c를 부호 정수로 변환
+        * @param c
+        * @return 음수인 경우 -1, 그외 1
         */
-        public int parseSign(final char character) {
-            return isMinusSign(character) ? -1 : 1;
+        public int parseSign(final char c) {
+            return isMinusSign(c) ? -1 : 1;
         }
         
         /**
         * 음부호 문자인지 판별
-        * @param character 부호 문자
+        * @param c
         * @return 음부호 문자인지 여부
         */
-        public boolean isMinusSign(final char character) {
-            return character == '-';
+        public boolean isMinusSign(final char c) {
+            return c == '-';
         }
         
         /**
         * 양부호 문자인지 판별
-        * @param character 부호 문자
+        * @param c 부호 문자
         * @return 양부호 문자인지 여부
         */
-        public boolean isPlusSign(final char character) {
-            return character == '+';
+        public boolean isPlusSign(final char c) {
+            return c == '+';
         }
-
     ```
 
 <br/>
