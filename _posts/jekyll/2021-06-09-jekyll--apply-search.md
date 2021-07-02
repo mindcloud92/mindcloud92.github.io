@@ -71,6 +71,7 @@ thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 <br/>
 
 * 검색 결과 template 추가
+
     ```html
         <script id="{검색결과 템플릿 id}" type="text/template">
             <!-- supported properties:  data, keyword, renderOptions -->

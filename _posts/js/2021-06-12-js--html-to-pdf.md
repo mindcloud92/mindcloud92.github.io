@@ -18,6 +18,7 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 </h4>
 
 * `html2canvas`: html을 canvas를 이용해 이미지로 변환시켜주는 라이브러리
+
     ```html
       <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     ```

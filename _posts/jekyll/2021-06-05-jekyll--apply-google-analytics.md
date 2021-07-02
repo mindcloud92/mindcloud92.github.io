@@ -18,7 +18,8 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 
 * 속성 설정
     * 속성 이름: {사이트 도메인}
-    * 보고 시간대, 통화: 원하는 나라   
+    * 보고 시간대, 통화: 원하는 나라
+    <br/>   
 ![step1-2]({{ "/asset/images/jekyll/analytics/step1-2.png"| relative_url }}){:class="thumbnail"}
 
 * 비지니스 정보 설정(optional)
