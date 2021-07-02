@@ -15,7 +15,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 
 
 ### # 공식1 - 메모이제이션
-- 1과 n 사이의 `소수`를 찾아 `수집`   
+- `1부터 n까지` 반복해서 `소수`를 찾아<a href="#footnote-1" class="footnote">[1]</a> `수집`   
 
     <br/>
     <a href="https://ideone.com/N2FMWL" target="_blank">
@@ -143,7 +143,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                 </div>
             </td>
             <td class="text-left">
-                반복이 계속될수록 반환할 <i>목록에 담긴 소수의 개수가 증가</i>하기 때문에 연산 횟수는 <strong>증가</strong> 
+                반복이 계속될수록 <i>탐색된 소수의 개수가 증가</i>하기 때문에 연산 횟수는 <strong>증가</strong> 
             </td>
         </tr>
         <tr>
@@ -158,7 +158,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
                 </div>
             </td>
             <td class="text-left">
-                반복이 계속될수록 특정 수의 배수가 걸러져 배수의 값을 찾지 않고 <i>반복문을 통과하는 수가 증가</i>하기 때문에 연산 횟수는 <strong>감소</strong>
+                반복이 계속될수록 특정 수의 배수가 걸러져 <i>반복문을 통과하는 수가 증가</i>하기 때문에 연산 횟수는 <strong>감소</strong>
             </td>
         </tr>
     </tbody>
@@ -168,8 +168,20 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 <br/>
 <br/>
 
-> **Reference**
+
+
+<blockquote markdown="1">
+**Reference**
 - [소수란?](https://ko.wikipedia.org/wiki/%EC%86%8C%EC%88%98_(%EC%88%98%EB%A1%A0)){:target="_blank"}
 - [합성수란?](https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EC%88%98){:target="_blank"}
 - [메모이제이션이란?](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98){:target="_blank"}
 - [에라토스테네스의 체란?](https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4){:target="_blank"}
+
+<br/>
+
+
+**Footnote**
+<p id="footnote-1" class="footnote-desc">
+    <strong class="number">1.</strong>= (n / i번째 수)를 n보다 작은 소수가 담긴 배열의 크기만큼 반복했을 때 전부 나누어 떨어지지 않는 경우 소수로 판별     
+</p>
+</blockquote>
