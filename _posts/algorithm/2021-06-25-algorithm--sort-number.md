@@ -15,66 +15,68 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
                
 
     ```java
+        import java.util.function.BiFunction;
+    
         /**
-        * 비교 조건에 따라 정렬
-        * @param numbers 정렬 대상
+        * 배열 A를 특정 비교 조건 기준으로 정렬
+        * @param a
         * @param comparator 비교 조건
-        * @return 비교 조건에 따라 정렬된 목록
+        * @return 정렬 결과
         */
-        public long[] sort(long[] numbers, final BiFunction<Long, Long, Boolean> comparator) {
-            long[] sortedNumbers = numbers == null ? new long[]{} : numbers.clone();
+        public long[] sort(final long[] a, final BiFunction<Long, Long, Boolean> comparator) {
+            long[] result = a == null ? new long[]{} : a.clone();
             
-            for (int i = 0; i < sortedNumbers.length; i++) {
-              for (int j = i + 1; j < sortedNumbers.length; j++) {
-                long curr = sortedNumbers[i];
-                long next = sortedNumbers[j];
+            for (int i = 0; i < result.length; i++) {
+              for (int j = i + 1; j < result.length; j++) {
+                long curr = result[i];
+                long next = result[j];
             
                 if (comparator.apply(curr, next)) {
-                  sortedNumbers[i] = next;
-                  sortedNumbers[j] = curr;
+                  result[i] = next;
+                  result[j] = curr;
                 }
               }
             }
             
-            return sortedNumbers;
+            return result;
         }
     ```
 
     <br/>
     
     - 오름차순 정렬
-        - 비교조건: `n > next`   
-        <a href="https://ideone.com/ce12a8" target="_blank">
+        - 비교조건: `curr > next`   
+        <a href="https://ideone.com/yvJvWM" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         
             ```java
                 /***
-                * 오름차순으로 정렬
-                * @param numbers 정렬 대상
-                * @return 오름차순으로 정렬된 목록
+                * 배열 a를 오름차순으로 정렬
+                * @param a
+                * @return 정렬 결과
                 */
-                public long[] sortAsc(long[] numbers) {
-                    return sort(numbers, (curr, next) -> curr > next);
+                public long[] sortAsc(final long[] a) {
+                    return sort(a, (curr, next) -> curr > next);
                 }
             ```
         
     <br/>
     
     - 내림차순 정렬
-        - 비교조건: `n < next`   
-        <a href="https://ideone.com/4sCQmX" target="_blank">
+        - 비교조건: `curr < next`   
+        <a href="https://ideone.com/Vlc04q" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         
             ```java
                 /**
-                * 내림차순으로 정렬
-                * @param numbers 정렬 대상
-                * @return 내림차순으로 정렬된 목록
+                * 배열 a를 내림차순으로 정렬
+                * @param a
+                * @return 정렬 결과
                 */
-                public long[] sortDesc(long[] numbers) {
-                  return sort(numbers, (curr, next) -> curr < next);
+                public long[] sortDesc(final long[] a) {
+                  return sort(a, (curr, next) -> curr < next);
                 }
             ```
 
