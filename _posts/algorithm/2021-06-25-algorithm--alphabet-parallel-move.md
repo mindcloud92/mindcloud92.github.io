@@ -19,36 +19,37 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
     ![시저 암호 예시]({{ '/asset/images/algorithm/alphabet-parallel-move/example.png' | relative_url }}){:class="thumbnail"}  
 
     <br/>
-    <a href="https://ideone.com/WsAgWq" target="_blank">
+    <a href="https://ideone.com/XfJcGI" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
 
     ```java
-        /**
-        * 입력받은 이동할 수 만큼 평행 이동
-        * @param value 평행이동시킬 문자
-        * @param count 이동할 수
-        * @return 평행이동 된 문자
-        */
-        public char shiftAlphabet(final char value, final int count) {
-            if (value == ' ') {
-                return value; 
-            }
+        private static final int ALPHABET_TOTAL_COUNT = 26;
         
-            int result = value + count;
+        private static final char LAST_LOWER_CASE_ALPHABET = 'z';
+        private static final char LAST_UPPER_CASE_ALPHABET = 'Z';
+        
+        /**
+        * 문자 c를 특정 숫자만큼 오른쪽으로 이동 (대소문자 구별)
+        * @param c
+        * @param shiftCount 이동할 수
+        * @return 특정 숫자만큼 오른쪽으로 이동된 위치의 문자
+        */
+        public char shiftAlphabet(final char c, final int shiftCount) {
+            boolean isUpperCaseAlphabet = c >= 'A' && c <= LAST_UPPER_CASE_ALPHABET;
+            boolean isLowerCaseAlphabet = c >= 'a' && c <= LAST_LOWER_CASE_ALPHABET;
+            if (!isUpperCaseAlphabet && !isLowerCaseAlphabet) {
+              return c;
+            }
             
-            boolean isOverUpperAlphabetRange = (value <= 'Z' && result > 'Z');
-            boolean isOverLowerAlphabetRange = (value >= 'a' && result > 'z');
-            
-            int alphabetTotalCount = 26;
-            if (isOverLowerAlphabetRange || isOverUpperAlphabetRange) {
-              result -= alphabetTotalCount;
+            int result = c + shiftCount;
+            if ((isUpperCaseAlphabet && result > LAST_UPPER_CASE_ALPHABET) || (isLowerCaseAlphabet && result > LAST_LOWER_CASE_ALPHABET)) {
+              result -= ALPHABET_TOTAL_COUNT;
             }
             
             return (char) result;
         }
-    
     ```
 
 <br/>
