@@ -11,30 +11,29 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 - *약수* : 자연수 n을 `나누어떨어지게` 하는 모든 수 = `n % divisor == 0`
 - *소수* : 1과 자기 자신만을 `약수`로 가지는 `1보다 큰` 수
 - *합성수* : 둘 이상의 소수를 곱한 자연수 = 소수의 배수 = `소수`가 아닌 수
-- *승수* : 곱셈 연산 시 곱해지는 수
-
+- *자연수* : 양의 정수 → 구성: `1, 소수, 합성수`
 
 
 ### # 공식1 - 메모이제이션
 - 1과 n 사이의 `소수`를 찾아 `수집`   
-    
 
     <br/>
-    <a href="https://ideone.com/rtg5cf" target="_blank">
+    <a href="https://ideone.com/N2FMWL" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 
     ```java
+        private final static int MIN_PRIME_NUMBER = 2;
+        
         /***
-        * 1과 n 사이의 소수를 수집
+        * 1과 n 사이의 소수를 탐색
         * @param n
-        * @return 1과 n 사이의 소수 목록
+        * @return 1과 n 사이의 소수 배열
         */
-        public int[] collectPrimeNumber(final int n) {
+        public int[] findAllPrimeNumber(final int n) {
             List<Integer> primeNumbers = new ArrayList<>();
             
-            int minPrimeNumber = 2;
-            for (int i = minPrimeNumber; i < n + 1; i++) {
+            for (int i = MIN_PRIME_NUMBER; i < n + 1; i++) {
               if (isPrimeNumber(i, primeNumbers)) {
                 primeNumbers.add(i);
               }
@@ -44,14 +43,14 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         }
         
         /**
-        * 소수인지 판별
-        * @param value 판별할 수
-        * @param previousPrimeNumbers 판별할 수 보다 작은 소수 목록
+        * 숫자 n이 소수인지 판별
+        * @param n
+        * @param previousPrimeNumbers n보다 작은 소수가 담긴 배열
         * @return 소수 여부
         */
-        public boolean isPrimeNumber(final int value, final List<Integer> previousPrimeNumbers) {
-            for (int i = 0; i < previousPrimeNumbers.size(); i++) {
-              boolean hasDivisor = value % previousPrimeNumbers.get(i) == 0;
+        public boolean isPrimeNumber(final int n, final List<Integer> previousPrimeNumbers) {
+            for (Integer previousPrimeNumber : previousPrimeNumbers) {
+              boolean hasDivisor = n % previousPrimeNumber == 0;
               if (hasDivisor) {
                 return false;
               }
@@ -68,7 +67,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 
     
     <br/>
-    <a href="https://ideone.com/6ZqN0f" target="_blank">
+    <a href="https://ideone.com/nMP8sN" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -77,11 +76,11 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         private final static int INVALID_NUMBER = -1;
         
         /**
-        * 1과 n 사이의 소수를 추출
+        * 1과 n 사이의 소수를 탐색
         * @param n
-        * @return 1과 n 사이의 소수 목록
+        * @return 1과 n 사이의 소수 배열
         */
-        public int[] filterPrimeNumber(final int n) {
+        public int[] findAllPrimeNumber(final int n) {
             int[] natualNumbers = new int[n];
             
             natualNumbers[0] = INVALID_NUMBER;
@@ -98,18 +97,18 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
         }
         
         /**
-        * 원본 배열에서 기준이 되는 값의 배수 값을 의미 없는 수로 할당
-        * @param criteria 배수 위치를 구할 기준 값
-        * @param source   원본 배열
+        * 원본 배열에서 숫자 n의 배수 위치에 의미 없는 수를 할당
+        * @param n
+        * @param source 원본 배열
         */
-        public void invalidateMultipleNumber(final int criteria, int[] source) {
+        public void invalidateMultipleNumber(final int n, int[] source) {
             if (source == null) {
               return;
             }
             
-            double maxMultiplier = source.length / criteria;
+            double maxMultiplier = source.length / n;
             for (int multiplier = MIN_PRIME_NUMBER; multiplier <= maxMultiplier; multiplier++) {
-              source[(criteria * multiplier) - 1] = INVALID_NUMBER;
+              source[(n * multiplier) - 1] = INVALID_NUMBER;
             }
         }
     ```
@@ -172,6 +171,5 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 > **Reference**
 - [소수란?](https://ko.wikipedia.org/wiki/%EC%86%8C%EC%88%98_(%EC%88%98%EB%A1%A0)){:target="_blank"}
 - [합성수란?](https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EC%88%98){:target="_blank"}
-- [승수란?](https://www.scienceall.com/%EC%8A%B9%EC%88%98multiplier-multiplicator/){:target="_blank"}
 - [메모이제이션이란?](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98){:target="_blank"}
 - [에라토스테네스의 체란?](https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4){:target="_blank"}
