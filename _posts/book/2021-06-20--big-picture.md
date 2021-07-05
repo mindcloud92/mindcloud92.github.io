@@ -56,7 +56,7 @@ thumbnail: '/asset/images/book/big-picture/thumbnail.jpeg'
 <div markdown="1" class="d-flex justify-center mt-3 mb-4">
 <div markdown="1">
 #### # 블라블라   
-책을 다 읽고 바로 든 생각은 주인공은 불사신인가?
+다 읽고 바로 든 생각은 주인공은 불사신인가?
 
     
 솔직히 말하면 기대가 너무 컸던 탓일까 기대한만큼 재미있진 않았다   
