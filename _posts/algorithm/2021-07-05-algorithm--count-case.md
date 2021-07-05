@@ -16,7 +16,7 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
     `= nCr =  n! / ((n - r)! * r!)`<a href="#footnote-1" class="footnote">[1]</a>
     
     - 예시   
-    ![경우의 수 예시]({{ '/asset/images/algorithm/count-case/example.png' | relative_url }}){:class="thumbnail pa-1 mt-1"}
+    ![경우의 수 예시]({{ '/asset/images/algorithm/count-case/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
     <a href="https://ideone.com/N2FMWL" target="_blank">
