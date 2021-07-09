@@ -48,7 +48,8 @@ thumbnail: '/asset/images/algorithm/gcd/thumbnail.png'
         <br/>
 
    - n개 이상의 자연수의 최대 공약수 구하기
-        - 예시
+        - 예시   
+        ![n개 이상의 자연수의 최대 공약수 구하기 예시]({{ '/asset/images/algorithm/gcd/n-example.png' | relative_url }}){:class="thumbnail mt-1"}
         
         <br/>
         <a href="https://ideone.com/e3Rojj" target="_blank">
