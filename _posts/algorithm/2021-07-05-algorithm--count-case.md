@@ -60,9 +60,6 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
 
 
 
-**Footnotes**
-
-
 
 <blockquote markdown="1">
 **Reference**
