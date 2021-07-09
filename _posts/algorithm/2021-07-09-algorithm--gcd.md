@@ -18,8 +18,9 @@ thumbnail: '/asset/images/algorithm/gcd/thumbnail.png'
 - 두 자연수 `A % B(<= A )`가 `0`이 될 때까지 반복해서 `가장 마지막 나머지`를 `탐색`
    
    - 두 개의 자연수의 최대 공약수 구하기
-        - 예시
-                
+        - 예시   
+        ![두 개의 자연수의 최대 공약수 구하기 예시]({{ '/asset/images/algorithm/gcd/a-b-example.png' | relative_url }}){:class="thumbnail mt-1"}
+         
         <br/>
         <a href="https://ideone.com/IsELsp" target="_blank">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
