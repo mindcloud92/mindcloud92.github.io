@@ -14,7 +14,7 @@ thumbnail: '/asset/images/algorithm/gcd/thumbnail.png'
      
 
 
-### # 공식 
+### # 공식 - 유클리드
 - 두 자연수 `A % B(<= A )`가 `0`이 될 때까지 반복해서 `가장 마지막 나머지`를 `탐색`
    
    - 두 개의 자연수의 최대 공약수 구하기

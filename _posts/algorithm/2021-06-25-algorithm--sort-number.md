@@ -10,7 +10,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 ### # 알아둬야 할
 *이 글은 정수형을 대상으로 작성되었지만 다른 자료형에도 활용 가능* 
 
-### # 공식
+### # 공식 - 선택 정렬
 - `숫자 배열 A의 크기`만큼 반복해서 i번째의 수 n보다 뒤에 위치한 수 중 `비교조건을 만족하는` 수를 탐색하여 두 값의 위치를 `교환` 
 
     ```java
