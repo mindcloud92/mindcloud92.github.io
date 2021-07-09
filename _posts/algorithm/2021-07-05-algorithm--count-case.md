@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Algorithm :: 경우의 수 구하기 “조합"
+title: "Algorithm :: 경우의 수 구하기"
 date: "2021-07-05 10:26:00 +0900"
 categories: tech
 tags: 알고리즘 경우의 수 조합 java
@@ -11,9 +11,9 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
 - *경우의 수* : 어떤 사건이 일어날 수 있는 경우의 가짓수
 
 
-### # 공식 - 크기가 n인 배열에서 임의의 원소 r개 뽑기
-- 크기가 n인 임의의 배열 A를 만들고 뽑을 개수인 `r만큼` A를 `중첩 반복`하여 가짓수 `집계`   
-    `= nCr =  n! / ((n - r)! * r!)`<a href="#footnote-1" class="footnote">[1]</a>
+### # 크기가 n인 배열에서 임의의 원소 r개 뽑기
+- 공식 = 크기가 n인 임의의 배열 A를 만들고 뽑을 개수인 `r만큼` A를 `중첩 반복`하여 가짓수 `집계`   
+    <i class="ml-2"></i>`= nCr =  n! / ((n - r)! * r!)`<a href="#footnote-1" class="footnote">[1]</a>
     
     - 예시   
     ![경우의 수 예시]({{ '/asset/images/algorithm/count-case/example.png' | relative_url }}){:class="thumbnail mt-1"}
