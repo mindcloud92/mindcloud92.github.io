@@ -19,7 +19,7 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
     ![경우의 수 예시]({{ '/asset/images/algorithm/count-case/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/N2FMWL" target="_blank">
+    <a href="https://ideone.com/xLuN84" target="_blank">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -44,7 +44,7 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
         public int countCase(final boolean[] arr, final int r, final int depth) {
             int count = 0;
             for (int i = depth; i < arr.length; i++) {
-              count += r == 1 ? 1 : countTotalCase(arr, r - 1, i + 1);
+              count += r == 1 ? 1 : countCase(arr, r - 1, i + 1);
             }
             
             return count;
