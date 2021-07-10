@@ -82,6 +82,7 @@ thumbnail: 'https://www.yeongnam.com/mnt/file/201004/20100412.010160809360001i1.
 - [정수론 - 최대공약수, 최소공배수, 유클리드 호제법](https://dimenchoi.tistory.com/46){:target="_blank"}
 - [자연수의 성질](http://trsketch.dothome.co.kr/a11002){:target="_blank"}
 - [최대 공약수와 최대 공배수](http://trsketch.dothome.co.kr/a11002){:target="_blank"}
+
 <br/>
 
 **Footnote**
