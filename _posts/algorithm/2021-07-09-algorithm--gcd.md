@@ -3,7 +3,7 @@ layout: post-detail
 title: "Algorithm :: 최대 공약수 구하기"
 date: "2021-07-09 22:50:00 +0900"
 categories: tech
-tags: 알고리즘 최대 공약수 유클리드 gcd java
+tags: 알고리즘 최대공약수 유클리드 gcd java
 thumbnail: 'https://www.yeongnam.com/mnt/file/201004/20100412.010160809360001i1.jpg'
 ---
 
