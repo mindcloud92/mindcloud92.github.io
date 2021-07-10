@@ -10,16 +10,27 @@
 
         <ul class="category-container mt-3">
             {% assign currentCategoryName = page.url | replace: '.html', '' | replace: '/', '' %}
-            {% for category in site.categories %}
+
+            {% capture categories %}
+            {% for category in site.category %}
+                {% assign additionalInfo = category | last %}
+                {{ additionalInfo.priority }}|{{ category | first }}
+                {% endfor %}
+            {% endcapture %}
+
+            {% assign sorted_categories = categories | split: ' ' | sort_reverse %}
+            {% for category in sorted_categories %}
             <li>
-                {% assign categoryName = category | first | downcase %}
+                {% assign arr = category | split: '|' %}
+
+                {% assign categoryName = arr | last | downcase %}
                 {% if currentCategoryName contains categoryName %}
                     <a href="/{{ categoryName }}" class="{{ categoryName }} active">
-                        {{ category | first | upcase }}
+                        {{ categoryName | upcase }}
                     </a>
                 {% else %}
                     <a href="/{{ categoryName }}" class="{{ categoryName }}">
-                        {{ category | first | upcase }}
+                        {{ categoryName | upcase }}
                     </a>
                 {% endif %}
             </li>

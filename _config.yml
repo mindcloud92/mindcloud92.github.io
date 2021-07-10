@@ -41,8 +41,15 @@ sass:
   sass_dir: static/css/partial
   style: compressed
 
-category-color-class:
-  book : brown
+category:
+  tech:
+    priority: 0
+  book:
+    priority: 1
+    color-class: brown
+  scribble:
+    priority: 2
+
 
 
 # Exclude from processing.
