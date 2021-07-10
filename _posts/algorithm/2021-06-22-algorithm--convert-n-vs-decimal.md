@@ -10,7 +10,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ### # 알아둬야 할
 - *n진법* : `0 ~ {n -1}`까지의 수를 사용해서 수를 표현하는 방법
 - *n진수* : n진법으로 표현되는 수
-    <p class="info">n < 10</p>
+- *이 글은 정수형 대상으로 작성되어 10이상의 진법 변환은 대응되지 않지만 문자형으로 변경하여 활용 가능*
 
 
  
