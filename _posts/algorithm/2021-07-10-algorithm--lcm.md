@@ -25,6 +25,8 @@ thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
 ### # 공식
 - 두 자연수 A와 B의 `곱한` 값을 A와 B의 `최대 공약수`<a href="#footnote-2" class="footnote">[2]</a>로 `나눗셈`  
     - 두 개의 자연수의 최소 공배수 구하기
+        - 예시   
+        ![두 개의 자연수의 최소 공배수 구하기 예시]({{ '/asset/images/algorithm/lcm/a-b-example.png' | relative_url }}){:class="thumbnail mt-1"}
     
         <br/>
         <a href="https://ideone.com/J4pFgp" target="_blank">
@@ -63,6 +65,8 @@ thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
         <br/>
       
   - n개 이상의 자연수의 최소 공배수 구하기
+    - 예시   
+      ![n개 이상의 자연수의 최소 공배수 구하기 예시]({{ '/asset/images/algorithm/lcm/n-example.png' | relative_url }}){:class="thumbnail mt-1"}
         
     <br/>
     <a href="https://ideone.com/V2xIT6" target="_blank">
