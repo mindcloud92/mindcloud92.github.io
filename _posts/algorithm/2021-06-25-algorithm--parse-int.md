@@ -17,7 +17,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
  
 ### # 공식
 
-- `문자열 s의 크기만큼` 반복해서 부호를 제외한 `i번째 자리 문자`를 `10진수로 변환`<a href="#footnote-1" class="footnote">[1]</a>하여 `합산`
+- `문자열 s의 크기`만큼 반복해서 부호를 제외한 `i번째 자리 문자`를 `10진수로 변환`<a href="#footnote-1" class="footnote">[1]</a>하여 `합산`
 - 음부호가 있는 경우 총합에 `-1`을 곱셈
 
     - 예시   

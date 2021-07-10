@@ -12,7 +12,7 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
 
 
 ### # 크기가 n인 배열에서 임의의 원소 r개 뽑기
-- 공식 = 크기가 n인 임의의 배열 A를 만들고 뽑을 개수인 `r만큼` A를 `중첩 반복`하여 가짓수 `집계`   
+- 공식 = 크기가 n인 임의의 배열 A를 만들고 `뽑을 개수인 r`만큼 `A`를 `중첩 반복`하여 가짓수 `집계`   
     <i class="ml-2"></i>`= nCr =  n! / ((n - r)! * r!)`<a href="#footnote-1" class="footnote">[1]</a>
     
     - 예시   
