@@ -14,7 +14,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
  
 ### # n진수를 10진수로 변환
-- 공식 = n진수 X의 `자리수`만큼 반복해서 `i번째 자리 숫자`를 `10진수로 변환`<a href="#footnote-1" class="footnote">[1]</a>하여 `합산`
+- 공식 = n진수 X의 `자리수만큼` 반복해서 `i번째 자리 숫자`를 `10진수로 변환`<a href="#footnote-1" class="footnote">[1]</a>하여 `합산`
       
     - 예시   
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal-example.png' | relative_url }}){:class="thumbnail mt-1"}

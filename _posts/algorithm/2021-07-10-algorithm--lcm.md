@@ -27,7 +27,7 @@ thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
     - 두 개의 자연수의 최소 공배수 구하기
     
         <br/>
-        <a href="https://ideone.com/BQt43Z" target="_blank">
+        <a href="https://ideone.com/J4pFgp" target="_blank">
            <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
     
