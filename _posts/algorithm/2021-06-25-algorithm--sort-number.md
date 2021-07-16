@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Algorithm :: 숫자 정렬하기"
+title: "Algorithm :: 숫자 정렬하기 [선택 정렬]"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
 tags: 알고리즘 선택 정렬 selection sort java
@@ -10,7 +10,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
 ### # 알아둬야 할
 *이 글은 정수형을 대상으로 작성되었지만 다른 자료형에도 활용 가능* 
 
-### # 공식 - 선택 정렬
+### # 공식
 - `숫자 배열 A의 크기`만큼 반복해서 `i번째의 수 n보다 뒤`에 위치한 수 중 `비교조건을 만족하는` 수를 탐색하여 두 값의 위치를 `교환` 
 
     ```java
