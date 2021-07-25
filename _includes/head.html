@@ -9,7 +9,10 @@
     {% seo %}
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+
+    {% unless page.exclude_base_css %}
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    {% endunless %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
