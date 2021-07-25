@@ -1,0 +1,653 @@
+---
+permalink: /career
+---
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+<style type="text/css">
+    @font-face {
+        font-family: 'YanoljaYacheR';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'YanoljaYacheR';
+        margin: 0;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        min-width: 50vw;
+        max-width: 70%;
+    }
+
+    .navigator {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigator button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navigator button:hover {
+        opacity: .5;
+    }
+
+    .text-primary {
+        color: #fe3478;
+    }
+
+    section {
+        height: 80vh;
+        display: none;
+        background: #fff;
+        border: 1px solid #eee;
+        padding: 1em 3em;
+        margin: 0 auto;
+    }
+
+    section:target {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+    }
+
+    .section-title .sub {
+        font-size: .6em;
+        font-weight: normal;
+        color: #717171;
+    }
+
+    .section-title .sub:before {
+        content: '\00B7';
+        margin: .5em;
+        font-family: cursive;
+    }
+
+    .rounded-icon {
+        background: #fe3478;
+        border-radius: 50%;
+        color: #fff;
+        font-size: .6em;
+        padding: .5em;
+    }
+
+    .fa-lightbulb.rounded-icon {
+        padding-left: .6em;
+        padding-right: .6em;
+    }
+
+    .mr-half {
+        margin-right: .5em;
+    }
+
+    .mt-1 {
+        margin-top: 1em!important;
+    }
+
+    .mt-4 {
+        margin-top: 4em!important;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .collapse {
+        visibility: collapse;
+    }
+
+    section > .contents {
+        padding: 1em 0;
+    }
+
+    div.tech-container.language-badge {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2.5em;
+        font-size: 1.15em;
+    }
+
+    .timeline {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding-inline-start: 0;
+    }
+
+    .timeline > li {
+        width: 50%;
+    }
+
+    .timeline .timestamp {
+        margin-bottom: 20px;
+        padding: 0 50px;
+        color: #34537b8a;
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+    .timeline .contents {
+        padding: 0 0 0 50px;
+        border-top: 2px solid #D6DCE0;
+        position: relative;
+    }
+
+    .timeline li:last-child .contents {
+        padding: 0 50px;
+    }
+
+    .timeline h4 {
+        font-size: 1.35em;
+    }
+
+    .timeline h4:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: #34537b;
+        border: 1px solid #2F4858;
+        position: absolute;
+        top: -12px;
+        left: 50px;
+        transform: rotate(45deg)
+    }
+
+    .timeline li .contents{
+        border-top: 2px solid #34537b;
+    }
+
+    .timeline .contents ul {
+        list-style: disc;
+        padding-inline-start: 20px;
+        font-size: 1.05em;
+        color: #525252;
+    }
+
+    .timeline .contents li {
+        padding: .4em 0;
+    }
+
+    .timeline .contents ul > ul {
+        list-style: circle;
+    }
+
+    .tech-container:not(.language-badge), div.tech-container.language-badge div {
+        background: #34537b08;
+        padding: 1em;
+        border: 1px solid #f5f5f5;
+        position: relative;
+    }
+
+    div.tech-container.language-badge div {
+        padding-top: 1.2em;
+        color: #525252;
+    }
+
+    div.tech-container.language-badge h3 {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        background: #35537B;
+        padding: .4em 1.2em;
+        font-size: 1.02em;
+        color: #fff;
+    }
+
+    div.tech-container.language-badge h3.text {
+        font-size: .9em;
+    }
+
+    .curly-bracket-wrapper {
+        position: relative;
+        color: #1f35526e;
+    }
+
+    .curly-bracket-wrapper .curly-bracket {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+    }
+
+    .bracket {
+        border-bottom: 5px solid;
+        margin: 0 10%;
+        width: 30%;
+        height: 20px;
+        float: left;
+    }
+
+    .bracket:before,
+    .bracket:after {
+        content: "";
+        width: 10%;
+        height: 50px;
+        position: absolute;
+        display: block;
+    }
+
+    .bracket.left:before {
+        border-bottom: 5px solid;
+        border-bottom-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: -30px;
+    }
+
+    .bracket.left:after {
+        border-top: 5px solid;
+        border-top-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: 20px;
+    }
+
+    .bracket.right:before {
+        border-top: 5px solid;
+        border-top-left-radius: 20px;
+        margin-left: -10%;
+        margin-top: 20px;
+    }
+
+    .bracket.right:after {
+        border-bottom: 5px solid;
+        border-bottom-right-radius: 20px;
+        margin-left: 30%;
+        margin-top: -30px;
+    }
+
+    .total-project-count {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 1.2em;
+        color: #9ea8b4;
+    }
+
+    .impressive-project-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        font-size: 7em;
+        padding: 1.8em 0;
+        grid-gap: .5em;
+        color: #2F4858;
+    }
+
+    #finish {
+        font-size: 1.8em;
+        padding: .55em 1em;
+    }
+
+    #finish h1 {
+        font-size: 2.5em;
+        margin: 0;
+        margin-block-end: .5em;
+        margin-block-start: 3.5em;
+    }
+
+    #intro {
+        font-size: 1.5em;
+        padding: .5em 1em;
+    }
+
+    #intro h2:first-child {
+        margin-top: 4em;
+    }
+
+    #intro .text-primary {
+        font-size: 1.5em;
+    }
+</style>
+
+
+<div class="container">
+    <section id="intro" class="text-center" data-page="1">
+        <h2>“효율적으로 일하는 걸 좋아하는”</h2>
+        <h2>9년차 개발자 <span class="text-primary">김미라</span></h2>
+
+        <img src="/asset/images/career/step1-cover.jpg" width="400"/>
+    </section>
+
+    <section id="careers" data-page="2">
+        <h1 class="section-title">
+            <i class="fas fa-shoe-prints rounded-icon mr-half"></i>
+            CAREERS
+        </h1>
+
+        <div class="contents">
+            <ul class="timeline" id="timeline">
+                <li style="width: 40%">
+                    <div class="timestamp">
+                        2013.03
+                    </div>
+                    <div class="contents">
+                        <h4>Blender</h4>
+
+                        <div class="tech-container">
+                            <ul>
+                                <li>Windows</li>
+                                <ul>
+                                    <li>.Net Framework + xaml</li>
+                                </ul>
+                                <li>QT</li>
+                                <ul>
+                                    <li>qss, qml</li>
+                                </ul>
+                                <li>Android</li>
+                                <ul>
+                                    <li>xml</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li style="width: 60%">
+                    <div class="timestamp">
+                        2014.04 ~
+                    </div>
+                    <div class="contents">
+                        <h4>Web Developer</h4>
+
+                        <div class="tech-container">
+                            <ul>
+                                <li>Spring Framework + Java</li>
+                                <li>.Net Framework + C#</li>
+                                <li>AWS Lambda + nodeJS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="curly-bracket-wrapper">
+            <div class="curly-bracket">
+                <div class="bracket left"></div>
+                <div class="bracket right"></div>
+            </div>
+        </div>
+        <p class="total-project-count">총 <strong>21</strong>개 프로젝트 수행<br/> (e-commerce: 4 of 21)</p>
+    </section>
+
+    <section id="experiences-web" data-page="3">
+        <h1 class="section-title">
+            <i class="fas fa-history rounded-icon mr-half"></i>
+            EXPERIENCES
+            <span class="sub">Web</span>
+            <span class="sub">Application</span>
+        </h1>
+
+        <div class="contents mt-4">
+            <div class="chart"></div>
+        </div>
+    </section>
+
+    <section id="experiences-tech-1" data-page="4">
+        <h1 class="section-title">
+            <i class="fas fa-history rounded-icon mr-half"></i>
+            EXPERIENCES
+            <span class="sub">Web</span>
+            <span class="sub">Tech (1)</span>
+        </h1>
+
+        <div class="contents">
+            <div class="tech-container language-badge">
+                <div>
+                    <h3><i class="fab fa-java"></i></h3>
+
+                    <ul>
+                        <li>Framework</li>
+                        <ul>
+                            <li>Spring</li>
+                        </ul>
+                        <li class="mt-1">ORM</li>
+                        <ul>
+                            <li>iBatis</li>
+                            <li>myBatis</li>
+                            <li>JPA</li>
+                        </ul>
+                        <li class="mt-1">View template engine</li>
+                        <ul>
+                            <li>jsp</li>
+                            <li>thymeleaf</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text">C<sup>#</sup></h3>
+                    <ul>
+                        <li>Framework</li>
+                        <ul>
+                            <li>.Net</li>
+                        </ul>
+                        <li class="mt-1">ORM</li>
+                        <ul>
+                            <li>Entity framework</li>
+                        </ul>
+                        <li class="mt-1">View template engine</li>
+                        <ul>
+                            <li>Razor</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3><i class="fas fa-database"></i></h3>
+                    <ul>
+                        <li>RDBMS</li>
+                        <ul>
+                            <li>MySql</li>
+                            <li>Oracle</li>
+                        </ul>
+                        <li class="mt-1">Document DB</li>
+                        <ul>
+                            <li>Dynamo DB</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3><i class="fab fa-js-square"></i></h3>
+                    <ul>
+                        <li>Framework</li>
+                        <ul>
+                            <li>vue</li>
+                            <li>react</li>
+                        </ul>
+                        <li class="mt-1">Library</li>
+                        <ul>
+                            <li>jQuery</li>
+                            <li>prototypeJS</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences-tech-2" data-page="5">
+        <h1 class="section-title">
+            <i class="fas fa-history rounded-icon mr-half"></i>
+            EXPERIENCES
+            <span class="sub">Web</span>
+            <span class="sub">Tech (2)</span>
+        </h1>
+
+        <div class="contents">
+            <div class="tech-container">
+                <ul>
+                    <li>Language</li>
+                    <ul>
+                        <li>Typescript</li>
+                    </ul>
+                    <li class="mt-1">CI / CD</li>
+                    <ul>
+                        <li>svn</li>
+                        <li>git</li>
+                        <li>Jenkins</li>
+                        <li>AWS CodePipeline: CodeCommit + CodeBuild + CodeDeploy</li>
+                    </ul>
+                    <li class="mt-1">Package manager</li>
+                    <ul>
+                        <li>nuget</li>
+                        <li>gradle</li>
+                        <li>maven</li>
+                        <li>npm</li>
+                    </ul>
+                    <li class="mt-1">Project Tracking</li>
+                    <ul>
+                        <li>Jira (+ Confluence)</li>
+                        <li>Redmine</li>
+                    </ul>
+                    <li class="mt-1">AWS service</li>
+                    <ul>
+                        <li>S3</li>
+                        <li>CloudWatch</li>
+                        <li>API Gateway</li>
+                        <li>Lambda</li>
+                        <li>Step Functions ...</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="impressive-projects" data-page="6">
+        <h1 class="section-title">
+            <i class="far fa-lightbulb rounded-icon mr-half"></i>
+            IMPRESSIVE PROJECTS
+        </h1>
+
+        <div class="impressive-project-container">
+            <i class="fas fa-user-plus"></i>
+
+            <i class="fab fa-aws"></i>
+        </div>
+    </section>
+
+    <section id="finish" data-page="7" class="text-center">
+        <h1 class="text-primary">끗</h1>
+        들어주셔서 감사합니다 :D
+    </section>
+
+    <div class="navigator">
+        <button id="btnPrevious" class="collapse">
+            <i class="fas fa-long-arrow-alt-left"></i> Previous
+        </button>
+        <button id="btnNext" class="collapse">
+            Next <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+<script type="text/javascript">
+    (function($) {
+        $(function() {
+            const $firstSection = $('section:first');
+            const currentSectionId = location.hash || `#${$firstSection.attr('id')}`;
+
+            if (location.hash) {
+                setNavigatorVisibility();
+            } else {
+                setHash($(`section${currentSectionId}`));
+            }
+
+            renderApplicationDoughnutChart();
+            bindEvent();
+        });
+
+        function renderApplicationDoughnutChart () {
+            if (location.hash.indexOf('experiences-web') < 0) {
+                return;
+            }
+
+            const options = {
+                animationEnabled: true,
+                data: [{
+                    type: 'doughnut',
+                    innerRadius: '30%',
+                    showInLegend: true,
+                    legendText: '{label}',
+                    indexLabel: "{label}: #percent%",
+                    dataPoints: [
+                        { label: "MVC", y: 7 },
+                        { label: "API + SPA", y: 6 }
+                    ]
+                }]
+            };
+
+            $('#experiences-web .chart').CanvasJSChart(options);
+        }
+
+        function bindEvent () {
+            $('#btnNext').on('click', function () {
+                const nextPage = getCurrentPage() + 1;
+
+                setHash($(`section[data-page=${nextPage}]`));
+            });
+
+            $('#btnPrevious').on('click', function () {
+                const previousPage = getCurrentPage() - 1;
+
+                setHash($(`section[data-page=${previousPage}]`));
+            });
+
+            window.onhashchange = function () {
+                setNavigatorVisibility();
+                renderApplicationDoughnutChart();
+            }
+        }
+
+        function setHash ($currentSection) {
+            location.hash = $currentSection.attr('id');
+        }
+
+        function getCurrentPage () {
+            return $('section:target').data('page');
+        }
+
+        function setNavigatorVisibility () {
+            const firstPage = 1;
+            const lastPage = $('section').length;
+
+            const currentPage = getCurrentPage();
+
+            setNavigatorVisibilityBy($('#btnPrevious'), currentPage == firstPage);
+            setNavigatorVisibilityBy($('#btnNext'), currentPage == lastPage);
+        }
+
+        function setNavigatorVisibilityBy ($target, condition) {
+            const collapseClassName = 'collapse';
+            if (condition) {
+                $target.addClass(collapseClassName);
+                return;
+            }
+
+            $target.removeClass(collapseClassName);
+        }
+
+    })(jQuery);
+</script>
