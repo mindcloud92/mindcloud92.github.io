@@ -55,11 +55,11 @@ exclude_base_css: true
     }
 
     section {
-        height: 80vh;
+        height: 85vh;
         display: none;
         background: #fff;
         border: 1px solid #eee;
-        padding: 1em 3em;
+        padding: 0 3em;
         margin: 0 auto;
     }
 
@@ -71,6 +71,7 @@ exclude_base_css: true
         font-size: 2em;
         display: flex;
         align-items: center;
+        padding: .5em 0;
     }
 
     .section-title .sub {
@@ -118,10 +119,6 @@ exclude_base_css: true
         visibility: collapse;
     }
 
-    section > .contents {
-        padding: 1em 0;
-    }
-
     div.tech-container.language-badge {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -146,6 +143,10 @@ exclude_base_css: true
         color: #34537b8a;
         font-size: 1.25em;
         font-weight: bold;
+    }
+
+    .contents {
+        padding: 2em 0;
     }
 
     .timeline .contents {
@@ -292,25 +293,27 @@ exclude_base_css: true
         color: #2F4858;
     }
 
+    #finish:target, #intro:target {
+        display: flex;
+    }
+
+    #finish, #intro {
+        justify-content: center;
+        align-items: center;
+    }
+
     #finish {
         font-size: 1.8em;
-        padding: .55em 1em;
     }
 
     #finish h1 {
         font-size: 2.5em;
         margin: 0;
         margin-block-end: .5em;
-        margin-block-start: 3.5em;
     }
 
     #intro {
         font-size: 1.5em;
-        padding: .5em 1em;
-    }
-
-    #intro h2:first-child {
-        margin-top: 4em;
     }
 
     #intro .text-primary {
@@ -321,10 +324,12 @@ exclude_base_css: true
 
 <div class="container">
     <section id="intro" class="text-center" data-page="1">
-        <h2>“효율적으로 일하는 걸 좋아하는”</h2>
-        <h2>9년차 개발자 <span class="text-primary">김미라</span></h2>
+        <div>
+            <h2>“효율적으로 일하는 걸 좋아하는”</h2>
+            <h2>9년차 개발자 <span class="text-primary">김미라</span></h2>
 
-        <img src="/asset/images/career/step1-cover.jpg" width="400"/>
+            <img src="/asset/images/career/step1-cover.jpg" width="400"/>
+        </div>
     </section>
 
     <section id="careers" data-page="2">
@@ -377,15 +382,15 @@ exclude_base_css: true
                     </div>
                 </li>
             </ul>
-        </div>
 
-        <div class="curly-bracket-wrapper">
-            <div class="curly-bracket">
-                <div class="bracket left"></div>
-                <div class="bracket right"></div>
+            <div class="curly-bracket-wrapper">
+                <div class="curly-bracket">
+                    <div class="bracket left"></div>
+                    <div class="bracket right"></div>
+                </div>
             </div>
+            <p class="total-project-count">총 <strong>21</strong>개 프로젝트 수행<br/> (e-commerce: 4 of 21)</p>
         </div>
-        <p class="total-project-count">총 <strong>21</strong>개 프로젝트 수행<br/> (e-commerce: 4 of 21)</p>
     </section>
 
     <section id="experiences-web" data-page="3">
@@ -546,8 +551,10 @@ exclude_base_css: true
     </section>
 
     <section id="finish" data-page="7" class="text-center">
-        <h1 class="text-primary">끗</h1>
-        들어주셔서 감사합니다 :D
+        <div>
+            <h1 class="text-primary">끗</h1>
+            들어주셔서 감사합니다 :D
+        </div>
     </section>
 
     <div class="navigator">
