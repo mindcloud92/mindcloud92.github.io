@@ -1,7 +1,7 @@
 ---
 layout: post-detail
 title:  "Design Pattern :: 개요"
-date:   2021-07-20 17:40:39 +0900
+date:   2021-09-20 17:40:39 +0900
 categories: tech
 tags: design pattern
 thumbnail: '/asset/images/design-pattern/overview/thumbnail.png'
