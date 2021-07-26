@@ -601,21 +601,25 @@ exclude_base_css: true
 
         function bindEvent () {
             $('#btnNext').on('click', function () {
-                const nextPage = getCurrentPage() + 1;
-
-                setHash($(`section[data-page=${nextPage}]`));
+                movePage(getCurrentPage() + 1);
             });
 
             $('#btnPrevious').on('click', function () {
-                const previousPage = getCurrentPage() - 1;
-
-                setHash($(`section[data-page=${previousPage}]`));
+                movePage(getCurrentPage() - 1);
             });
 
             window.onhashchange = function () {
                 setNavigatorVisibility();
                 renderApplicationDoughnutChart();
             }
+        }
+
+        function movePage (page) {
+            if (!page) {
+                return;
+            }
+
+            setHash($(`section[data-page=${page}]`));
         }
 
         function setHash ($currentSection) {
