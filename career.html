@@ -322,27 +322,33 @@ exclude_base_css: true
 
     #table-of-contents [data-step] {
         font-size: 1.4em;
-        padding: 0;
-        margin-block-end: 3em;
+        padding: 1em;
+        border-radius: 10px;
+        margin-block-start: 1.5em;
+        border: 1px solid #c1c3c5f5;
+        background: #34537b0a;
     }
 
     #table-of-contents [data-step]:before {
         content: attr(data-step);
-        border: 1px solid #f5f5f5;
-        background: #34537b29;
-        padding: .25em .5em;
         margin-right: .8em;
-        border-radius: 5px;
     }
 
-    #table-of-contents [data-step]:first-child:before {
-        padding: .25em .6em;
-    }
-
-    #table-of-contents [data-step] ul {
-        margin-left: 1.5em;
-        font-size: .85em;
+    #table-of-contents ul {
+        margin-left: 2em;
+        font-size: 1.1em;
         opacity: .8;
+        padding-inline-start: 0;
+        list-style: none;
+    }
+
+    #table-of-contents ul li {
+        padding: 1em;
+        border-radius: 10px;
+        border: 1px solid #c1c3c5f5;
+        background: #34537b0a;
+        margin-block-end: 1em;
+        color: #39393a;
     }
 
 </style>
@@ -364,17 +370,20 @@ exclude_base_css: true
             TABLE OF CONTENTS
         </h1>
 
-        <div class="contents mt-4">
-            <div data-step="1">Careers</div>
-            <div data-step="2">
+        <div class="contents">
+            <div data-step="1.">Careers</div>
+            <div data-step="2.">
                 Experiences
+            </div>
 
+            <div>
                 <ul>
-                    <li>Web - Application</li>
-                    <li>Web - Tech</li>
+                    <li>i.  Web - Application</li>
+                    <li>ii. Web - Tech</li>
                 </ul>
             </div>
-            <div data-step="3">Impressive Projects</div>
+
+            <div data-step="3.">Impressive Projects</div>
         </div>
     </section>
 
