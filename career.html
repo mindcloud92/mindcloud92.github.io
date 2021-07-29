@@ -353,7 +353,6 @@ exclude_base_css: true
 
 </style>
 
-
 <div class="container">
     <section id="intro" class="text-center" data-page="1">
         <div>
@@ -608,7 +607,6 @@ exclude_base_css: true
     </div>
 </div>
 
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
@@ -640,10 +638,10 @@ exclude_base_css: true
                     innerRadius: '30%',
                     showInLegend: true,
                     legendText: '{label}',
-                    indexLabel: "{label}: #percent%",
+                    indexLabel: '{label}: #percent%',
                     dataPoints: [
-                        { label: "MVC", y: 7 },
-                        { label: "API + SPA", y: 6 }
+                        { label: 'MVC', y: 7 },
+                        { label: 'API + SPA', y: 6 }
                     ]
                 }]
             };
@@ -688,8 +686,8 @@ exclude_base_css: true
 
             const currentPage = getCurrentPage();
 
-            setNavigatorVisibilityBy($('#btnPrevious'), currentPage == firstPage);
-            setNavigatorVisibilityBy($('#btnNext'), currentPage == lastPage);
+            setNavigatorVisibilityBy($('#btnPrevious'), currentPage === firstPage);
+            setNavigatorVisibilityBy($('#btnNext'), currentPage === lastPage);
         }
 
         function setNavigatorVisibilityBy ($target, condition) {
