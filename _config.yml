@@ -44,9 +44,10 @@ sass:
 category:
   tech:
     priority: 0
+    color-class: black
   book:
     priority: 1
-    color-class: brown
+    color-class: green
   xyz+:
     priority: 2
 
