@@ -292,11 +292,16 @@
           content: '\f005'
 
     .translation-article-wrapper
+      &:not(:first-child)
+        border-top: 1px solid #eee
+        margin-top: 4em
+        padding-top: 2em
+
       h1
         line-height: 1.5em
         font-size: 1em
         font-weight: normal
-        margin-block-start: 2.5em
+        margin-block-start: 2em
 
       h2
         line-height: 1.5em
