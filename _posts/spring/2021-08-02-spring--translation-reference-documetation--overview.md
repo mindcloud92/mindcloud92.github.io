@@ -47,9 +47,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 <section class="translation-article-wrapper" markdown="1">
+<div markdown="1" class="title">
 # **1. "Spring"의 의미**
 ## 1. What We Mean by "Spring"
+</div>
 
+<div markdown="1" class="contents">
 # "Spring"이라는 단어는 다른 맥락에서 다른 것을 의미한다.
 ## The term "Spring" means different things in different contexts.
 
@@ -91,9 +94,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 <section class="translation-article-wrapper" markdown="1">
+<div markdown="1" class="title">
 # **2. Spring과 Spring Framework의 역사**
 ## 2. History of Spring and the Spring Framework
+</div>
 
+<div markdown="1" class="contents">
 # Spring은 초기 [J2EE](https://en.wikipedia.org/wiki/Jakarta_EE){:target="_blank"} 사양의 복잡성에 대응하기 위해 2003년에 등장했다.
 ## Spring came into being in 2003 as a response to the complexity of the early J2EE specifications. 
 
@@ -148,12 +154,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Spring 프로젝트의 전체 목록을 보려면 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고
 ## See spring.io/projects for the complete list of Spring projects.
+</div>
 </section>
 
 <section class="translation-article-wrapper" markdown="1">
+<div markdown="1" class="title">
 # **3. 설계 철학**
 ## 3. Design Philosophy
+</div>
 
+<div markdown="1" class="contents">
 # Framework에 대해 배울 때는 Framework가 무엇을 하는지 뿐만 아니라 어떤 원리를 따르는지 아는 게 중요하다.
 ## When you learn about a framework, it’s important to know not only what it does but what principles it follows. 
 
@@ -195,12 +205,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The Spring Framework puts a strong emphasis on meaningful, current, and accurate javadoc.
 # 패키지 간의 순환 종속성이 없는 깨끗한 코드 구조를 주장할 수 있는 몇 안되는 프로젝트 중 하나이다.
 ## It is one of very few projects that can claim clean code structure with no circular dependencies between packages.
+</div>
 </section>
 
 <section class="translation-article-wrapper" markdown="1">
+<div markdown="1" class="title">
 # **4. 피드백 및 기여**
 ## 4. Feedback and Contributions
+</div>
 
+<div markdown="1" class="contents">
 # 사용 방법에 대한 질문이나 진단 또는 디버깅 문제에는 Stack Overflow를 사용하는 게 좋다. 
 ## For how-to questions or diagnosing or debugging issues, we suggest using Stack Overflow. 
 
@@ -218,12 +232,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 더 자세한 내용은 [CONTRIBUTING](https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md){:target="_blank"}, 최상위 프로젝트의 지침을 참조. 
 ## For more details see the guidelines at the CONTRIBUTING, top-level project page.
+</div>
 </section>
 
 <section class="translation-article-wrapper mb-4" markdown="1">
+<div markdown="1" class="title">
 # **5. 시작하기**
 ## 5. Getting Started
+</div>
 
+<div markdown="1" class="contents">
 # Spring을 이제 막 시작한다면 [Spring Boot](https://spring.io/projects/spring-boot){:target="_blank"} 기반 어플리케이션을 생성해서 Spring Framework를 쓸 수 있다.
 ## If you are just getting started with Spring, you may want to begin using the Spring Framework by creating a Spring Boot-based application. 
 
@@ -241,6 +259,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 또한 특정 문제를 해결할 때 고려할 수 있는 Spring 포트폴리오의 다른 프로젝트들에 대한 내용도 다루기도 한다.
 ## They also cover other projects from the Spring portfolio that you might want to consider when solving a particular problem.
+</div>
 </section>
 
 >**Reference**
