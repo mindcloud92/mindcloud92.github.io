@@ -29,7 +29,7 @@ thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
         ![두 개의 자연수의 최소 공배수 구하기 예시]({{ '/asset/images/algorithm/lcm/a-b-example.png' | relative_url }}){:class="thumbnail mt-1"}
     
         <br/>
-        <a href="https://ideone.com/J4pFgp" target="_blank">
+        <a href="https://ideone.com/J4pFgp" target="_blank" class="btn-debugger">
            <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
     
@@ -69,7 +69,7 @@ thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
       ![n개 이상의 자연수의 최소 공배수 구하기 예시]({{ '/asset/images/algorithm/lcm/n-example.png' | relative_url }}){:class="thumbnail mt-1"}
         
     <br/>
-    <a href="https://ideone.com/V2xIT6" target="_blank">
+    <a href="https://ideone.com/V2xIT6" target="_blank" class="btn-debugger">
        <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 

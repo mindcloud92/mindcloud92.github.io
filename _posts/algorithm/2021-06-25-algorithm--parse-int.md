@@ -24,7 +24,7 @@ thumbnail: '/asset/images/algorithm/parse-int/thumbnail.png'
     ![문자열 정수 변환 예시]({{ '/asset/images/algorithm/parse-int/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/4OXink" target="_blank">
+    <a href="https://ideone.com/4OXink" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 

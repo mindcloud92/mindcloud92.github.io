@@ -18,7 +18,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
 - 가장 작은 소수인 `2부터 n까지` 반복해서 `소수`를 찾아<a href="#footnote-1" class="footnote">[1]</a> `수집`   
 
     <br/>
-    <a href="https://ideone.com/N2FMWL" target="_blank">
+    <a href="https://ideone.com/N2FMWL" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -67,7 +67,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratost
     - 이미 합성수로 판별된 경우는 반복문 통과   
     
     <br/>
-    <a href="https://ideone.com/nMP8sN" target="_blank">
+    <a href="https://ideone.com/nMP8sN" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     

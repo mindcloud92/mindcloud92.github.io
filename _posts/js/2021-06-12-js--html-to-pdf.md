@@ -8,7 +8,7 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ---
 <h3 markdown="1">
     <i class="fas fa-play-circle"></i>
-    [실행 해보고 싶다면 클릭](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank"}
+    [실행 해보고 싶다면 클릭](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank" class="btn-debugger"}
 </h3>
 
 

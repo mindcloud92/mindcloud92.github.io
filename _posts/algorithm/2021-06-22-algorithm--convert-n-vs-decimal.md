@@ -21,7 +21,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
     ![n진수를 10진수로 변환 예시]({{ '/asset/images/algorithm/n-vs-decimal/n-to-decimal-example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/58fICM" target="_blank">
+    <a href="https://ideone.com/58fICM" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     
@@ -55,7 +55,7 @@ thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 
 
     <br/>
-    <a href="https://ideone.com/NTDiak" target="_blank">
+    <a href="https://ideone.com/NTDiak" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     ```java

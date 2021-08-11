@@ -19,7 +19,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Caesar3.svg'
     ![시저 암호 예시]({{ '/asset/images/algorithm/alphabet-parallel-move/example.png' | relative_url }}){:class="thumbnail"}  
 
     <br/>
-    <a href="https://ideone.com/XfJcGI" target="_blank">
+    <a href="https://ideone.com/XfJcGI" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
 

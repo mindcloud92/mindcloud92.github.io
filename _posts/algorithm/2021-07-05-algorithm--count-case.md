@@ -19,7 +19,7 @@ thumbnail: '/asset/images/algorithm/count-case/thumbnail.png'
     ![경우의 수 예시]({{ '/asset/images/algorithm/count-case/example.png' | relative_url }}){:class="thumbnail mt-1"}
 
     <br/>
-    <a href="https://ideone.com/xLuN84" target="_blank">
+    <a href="https://ideone.com/xLuN84" target="_blank" class="btn-debugger">
         <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
     </a>
     

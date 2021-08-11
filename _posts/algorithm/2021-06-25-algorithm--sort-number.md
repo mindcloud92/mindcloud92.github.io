@@ -49,7 +49,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
         ![오름차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-asc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2" style="width: 50%;"}
         
         <br/>
-        <a href="https://ideone.com/yvJvWM" target="_blank">
+        <a href="https://ideone.com/yvJvWM" target="_blank" class="btn-debugger">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         
@@ -72,7 +72,7 @@ thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-A
         ![내림차순 정렬 예시]({{ '/asset/images/algorithm/sort-number/sort-desc-example.png' | relative_url }}){:class="thumbnail mt-1 pr-2" style="width: 50%;"}
         
         <br/>   
-        <a href="https://ideone.com/Vlc04q" target="_blank">
+        <a href="https://ideone.com/Vlc04q" target="_blank" class="btn-debugger">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
         ```java

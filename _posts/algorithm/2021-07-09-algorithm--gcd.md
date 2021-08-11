@@ -22,7 +22,7 @@ thumbnail: 'https://www.yeongnam.com/mnt/file/201004/20100412.010160809360001i1.
         ![두 개의 자연수의 최대 공약수 구하기 예시]({{ '/asset/images/algorithm/gcd/a-b-example.png' | relative_url }}){:class="thumbnail mt-1"}
          
         <br/>
-        <a href="https://ideone.com/CwZ6i5" target="_blank">
+        <a href="https://ideone.com/CwZ6i5" target="_blank" class="btn-debugger">
             <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a>
     
@@ -52,7 +52,7 @@ thumbnail: 'https://www.yeongnam.com/mnt/file/201004/20100412.010160809360001i1.
         ![n개 이상의 자연수의 최대 공약수 구하기 예시]({{ '/asset/images/algorithm/gcd/n-example.png' | relative_url }}){:class="thumbnail mt-1"}
         
         <br/>
-        <a href="https://ideone.com/JiCKFf" target="_blank">
+        <a href="https://ideone.com/JiCKFf" target="_blank" class="btn-debugger">
            <strong><i class="fas fa-play-circle"></i> 실행 해보고 싶다면 클릭</strong>
         </a> 
         
