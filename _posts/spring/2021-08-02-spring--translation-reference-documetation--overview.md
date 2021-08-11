@@ -153,7 +153,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 각 프로젝트에는 각각 고유한 소스 코드 repository, issue tracker, release 주기가 있다는 것을 기억하는 게 중요하다. 
 ## It’s important to remember that each project has its own source code repository, issue tracker, and release cadence. 
 
-# Spring 프로젝트의 전체 목록을 보려면 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고
+# Spring 프로젝트의 전체 목록을 보려면 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고.
 ## See spring.io/projects for the complete list of Spring projects.
 </div>
 </section>
@@ -219,7 +219,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 사용 방법에 대한 질문이나 진단 또는 디버깅 문제에는 Stack Overflow를 사용하는 게 좋다. 
 ## For how-to questions or diagnosing or debugging issues, we suggest using Stack Overflow. 
 
-# Stack Overflow에서 제안한 태그 목록을 보려면 [여기](https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop){:target="_blank"}를 클릭
+# Stack Overflow에서 제안한 태그 목록을 보려면 [여기](https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop){:target="_blank"}를 클릭.
 ## Click here for a list of the suggested tags to use on Stack Overflow.
 
 # 만약 Spring framework에 문제가 있다고 확신하거나 기능을 제안하고 싶다면 [Github Issues](https://github.com/spring-projects/spring-framework/issues){:target="_blank"}에 올려주길 바란다.
