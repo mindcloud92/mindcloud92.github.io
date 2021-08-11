@@ -93,6 +93,15 @@
         .highlight
           overflow: auto
 
+        &:before
+          line-height: 2em
+          position: absolute
+          top: 0
+          right: 0
+          font-weight: bold
+          padding: 0 1em
+          font-size: .68em
+
       .language-plaintext
         font-weight: bold
         margin: 0 .2em
@@ -102,15 +111,6 @@
         background: #efefef
         padding: .2em .5em
         border-radius: 5px
-
-      &:before
-        line-height: 2em
-        position: absolute
-        top: 0
-        right: 0
-        font-weight: bold
-        padding: 0 1em
-        font-size: .68em
 
       .language-yaml
         .na, .pi
@@ -294,8 +294,8 @@
     .translation-article-wrapper
       &:not(:first-child)
         border-top: 1px solid #eee
-        margin-top: 4em
-        padding-top: 2em
+        margin-top: 2em
+        padding-top: 1em
 
       h1
         line-height: 1.5em
@@ -309,6 +309,32 @@
         margin-block-start: 0
         font-weight: normal
         opacity: .6
+
+    .accordion-wrapper
+      .contents
+        display: none
+
+      .handler.active + .contents
+        display: block
+
+      .handler
+        position: relative
+        padding-left: 2em
+        cursor: pointer
+
+        &:hover
+          opacity: .8
+
+        &:before
+          content: '\f078'
+          font-family: var(--font-family--icon)
+          font-weight: 900
+          position: absolute
+          left: 0
+
+        &.active
+          &:before
+            content: '\f077'
 
 
 

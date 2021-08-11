@@ -46,8 +46,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 </section>
 
-<section class="translation-article-wrapper" markdown="1">
-<div markdown="1" class="title">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
 # **1. "Spring"의 의미**
 ## 1. What We Mean by "Spring"
 </div>
@@ -90,11 +90,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## For use in Jigsaw-enabled applications, the Spring Framework 5 jars come with "Automatic-Module-Name" manifest entries which define stable language-level module names ("spring.core", "spring.context" etc) independent from jar artifact names (the jars follow the same naming pattern with "-" instead of ".", e.g. "spring-core" and "spring-context"). 
     
 # 물론 JDK 8과 9 이상의 classpath 에서도 잘 동작한다.
-## Of course, Spring’s framework jars keep working fine on the classpath on both JDK 8 and 9+.    
+## Of course, Spring’s framework jars keep working fine on the classpath on both JDK 8 and 9+.
+</div>    
 </section>
 
-<section class="translation-article-wrapper" markdown="1">
-<div markdown="1" class="title">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
 # **2. Spring과 Spring Framework의 역사**
 ## 2. History of Spring and the Spring Framework
 </div>
@@ -157,8 +158,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 </section>
 
-<section class="translation-article-wrapper" markdown="1">
-<div markdown="1" class="title">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
 # **3. 설계 철학**
 ## 3. Design Philosophy
 </div>
@@ -208,8 +209,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 </section>
 
-<section class="translation-article-wrapper" markdown="1">
-<div markdown="1" class="title">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
 # **4. 피드백 및 기여**
 ## 4. Feedback and Contributions
 </div>
@@ -235,8 +236,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 </section>
 
-<section class="translation-article-wrapper mb-4" markdown="1">
-<div markdown="1" class="title">
+<section class="translation-article-wrapper mb-4 accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
 # **5. 시작하기**
 ## 5. Getting Started
 </div>
@@ -264,3 +265,6 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 >**Reference**
 - [원문](https://docs.spring.io/spring-framework/docs/current/reference/html/overview.html#overview){:target="_blank"}
+
+
+<script type="text/javascript" src="{{ '/static/script/accordion.js' | relative_url }}"></script>
