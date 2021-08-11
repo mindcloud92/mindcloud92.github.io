@@ -1,43 +1,27 @@
 ---
 layout: post-detail
-title: "Spring :: 한 줄씩 읽는 Documentation [Core]"
-date: "2021-08-11 16:13:00 +0900"
+title: "Spring :: 한 줄씩 읽는 Documentation [Core # IoC container]"
+date: "2021-08-11 23:13:00 +0900"
 categories: xyz+
-tags: spring framework documentation core translation 5.3.9v
+tags: spring framework documentation core Ioc container translation 5.3.9v
 thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg'
 ---
 
-<section class="translation-article-wrapper mt-6" markdown="1">
-# 이 Reference 문서는 Spring Framework에 반드시 필요한 모든 기술에 대해 다루고 있으며 
-## This part of the reference documentation covers all the technologies that are absolutely integral to the Spring Framework.
+<section class="translation-article-wrapper" markdown="1">
+# **1. IoC Container**
+## 1. The IoC Container
 
-# 이 중 가장 핵심이 되는 기술은 `IoC container`이다.
-## Foremost amongst these is the Spring Framework’s Inversion of Control (IoC) container. 
-
-# Spring Framework의 IoC container에 대한 철저한 처리는 Spring의 AOP 기술에 대한 포괄적인 범위로 밀접하게 이어진다.
-## A thorough treatment of the Spring Framework’s IoC container is closely followed by comprehensive coverage of Spring’s Aspect-Oriented Programming (AOP) technologies. 
-
-# Spring Framework에는 개념적으로 이해하기 쉽고 Java 엔터프라이즈 프로그래밍에서 80%의 AOP 요구사항을 성공적이고 효율적으로 해결하는 자체 AOP framework가 있으며
-## The Spring Framework has its own AOP framework, which is conceptually easy to understand and which successfully addresses the 80% sweet spot of AOP requirements in Java enterprise programming.
-
-# Spring의 AspectJ<a href="#footnote-1" class="footnote">[1]</a>와의 통합에 대한 커버리지 또한 제공된다. 
-## Coverage of Spring’s integration with AspectJ (currently the richest — in terms of features — and certainly most mature AOP implementation in the Java enterprise space) is also provided.
+# 이 장에서는 Spring의 IoC Container에 대한 내용을 다룬다.
+## This chapter covers Spring’s Inversion of Control (IoC) container.
 </section>
 
 <section class="translation-article-wrapper accordion-wrapper mb-4" markdown="1">
 <div markdown="1" class="handler">
-# **1. IoC Container**
-## 1. The IoC Container
+# **1.1. Spring IoC Container 및 Beans 소개**
+## 1.1. Introduction to the Spring IoC Container and Beans
 </div>
 
 <div markdown="1" class="contents">
-# 이 장에서는 Spring의 IoC Container에 대한 내용을 다룬다.
-## This chapter covers Spring’s Inversion of Control (IoC) container.
-
-<br/>
-# **1.1. Spring IoC Container 및 Beans 소개**
-## 1.1. Introduction to the Spring IoC Container and Beans
-
 # 이 장에서는 Spring Framwork가 구현한 IoC 원칙에 대해 다룬다.
 ## This chapter covers the Spring Framework implementation of the Inversion of Control (IoC) principle. 
 
@@ -99,6 +83,9 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Bean들과 이들 간의 의존성은 container에서 사용는 구성 메타데이터에 반영된다.
 ## Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.
+
+<br/>
+
 </div>
 </section>
 
