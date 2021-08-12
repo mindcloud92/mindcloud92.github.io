@@ -67,7 +67,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## In short, the `BeanFactory` provides the configuration framework and basic functionality, and the `ApplicationContext` adds more enterprise-specific functionality. 
 
 # `ApplicationContext`는 `BeanFactory`의 완벽한 상위 집합이며 이 장에서 Spring의 IoC container에 대한 설명에서 독점적으로 사용된다.   
-## The `ApplicationContext` is a complete superset of the BeanFactory and is used exclusively in this chapter in descriptions of Spring’s IoC container. 
+## The `ApplicationContext` is a complete superset of the `BeanFactory` and is used exclusively in this chapter in descriptions of Spring’s IoC container. 
 
 # `ApplicationContext` 대신 `BeanFactory`를 사용하는 방법에 대한 자세한 내용은 [`The BeanFactory`](#beans-beanfactory)를 참고.
 ## For more information on using the `BeanFactory` instead of the `ApplicationContext`, see `The BeanFactory`.
@@ -112,7 +112,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 독립 실행형 어플리케이션에서는 일반적으로 [`ClassPathXmlApplicationContext`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [`FileSystemXmlApplicationContext`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"} 인스턴스를 만들어 사용한다.
 ## In stand-alone applications, it is common to create an instance of `ClassPathXmlApplicationContext` or `FileSystemXmlApplicationContext`.
 
-# 구성 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 이 외에도 Java annotation나 코드로 선언하여 컨테이너에서 부가적인 메타데이터 형식<a href="#footnote-1" class="footnote">[1]</a>을 사용하도록 할 수 도 있다. 
+# 구성 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 이 외에도 Java annotation나 코드로 선언하는 부가적인 메타데이터 형식<a href="#footnote-1" class="footnote">[1]</a>도 있다. 
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 
 # 대부분의 어플리케이션 시나리오에서 명시적으로 작성되는 코드는 Spring IoC container에 정의된 인스턴스를 인스턴스화하지 않아도 된다. 
@@ -121,7 +121,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 예를 들어 웹 어플리케이션 시나리오에서는 일반적으로 어플리케이션의 `web.xml` 파일에 있는 상용구 웹 descriptor XML의 단 8줄 정도로도 충분하다.<a href="#footnote-2" class="footnote">[2]</a>
 ## For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor XML in the web.xml file of the application typically suffices (see Convenient ApplicationContext Instantiation for Web Applications).
 
-#  만약 Eclipse 기반인 [STS](https://spring.io/tools){:target="_blank"}를 쓰고 있다면 몇번의 클릭이나 키 입력으로 상용구 구성을 쉽게할 수 있다.
+#  만약 [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 쓰고 있다면 몇번의 클릭이나 키 입력으로 상용구 구성을 쉽게할 수 있다.
 ## If you use the Spring Tools for Eclipse (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.
 
 # 다음 다이어그램은 Spring이 작동하는 방식을 개괄적으로 보여준다.
@@ -131,8 +131,49 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <p class="thumbnail-description">Figure 1. The Spring IoC container</p>
 
 <br/>
-# 어플리케이션의 클래스가 구성 메타데이터와 결합되어 ApplicationContext가 생성되고 초기화된 후에야 시스템 또는 어플리케이션은 완전히 구성되고 실행이 가능해진다.
-## Your application classes are combined with configuration metadata so that, after the ApplicationContext is created and initialized, you have a fully configured and executable system or application.
+# 시스템 또는 어플리케이션은 어플리케이션의 클래스가 구성 메타데이터와 결합되어 `ApplicationContext`가 생성되고 초기화된 후에야 완전히 구성되고 실행이 가능해진다.
+## Your application classes are combined with configuration metadata so that, after the `ApplicationContext` is created and initialized, you have a fully configured and executable system or application.
+
+<br/>
+# 1.2.1. 구성 메타데이터
+## 1.2.1. Configuration Metadata
+
+# 위에 있는 다이어그램에서 볼 수 있듯이 Spring IoC container는 구성 메타데이터의 형식을 사용한다.
+## As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. 
+
+# 구성 메타데이터는 어플리케이션 개발자가 Spring container에게 어플리케이션의 객체를 인스턴스화, 구성 및 조립하도록 지시하는 방법을 나타내며
+## This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure, and assemble the objects in your application.
+
+# 전통적으로 간단하고 직관적인 XML 형식으로 제공된다. 덧붙어 이 장에서는 Spring IoC container의 주요 컨셉과 기능을 전달하는데 대부분 사용된다. 
+## Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.
+
+<div class="spring info-wrapper mt-2 pb-2 mb-2">
+<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div markdown="1">
+# XML 기반 메타데이터가 유일한 구성 메타데이터 형식은 아니다.
+## XML-based metadata is not the only allowed form of configuration metadata.
+
+# 구성 메타데이터가 실제로 작성되는 형식에서 Spring IoC container 자체는 완전히 분리된다. 
+## The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written.
+ 
+# 요즘 많은 개발자들이 Spring 어플리케이션을 만들기 위해 [Java 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java)을 선택한다.
+## These days, many developers choose Java-based configuration for their Spring applications.
+</div>
+</div>
+
+# Spring container에서 다른 메타데이터 형식을 사용하는 방법은 다음과 같다.
+## For information about using other forms of metadata with the Spring container, see:
+
+- # [Annotattion 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-annotation-config): `Spring 2.5`에서 annotation 기반 구성 메타데이터 지원을 도입했다.  
+## Annotation-based configuration: Spring 2.5 introduced support for annotation-based configuration metadata.
+- # [Java 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java): `Spring 3.0`부터 Spring JavaConfig 프로젝트에서 제공하는 많은 기능이 핵심 Spring Framework의 일부가 되면서  
+## Java-based configuration: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework. 
+# XML 대신 Java를 사용하여 어플리케이션 클래스 외부에 Bean을 정의할 수 있게 되었다.
+## Thus, you can define beans external to your application classes by using Java rather than XML files.
+# 이러한 새로운 기능을 사용하려면 [`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html){:target="_blan"}, [`@Bean`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html){:target="_blan"}, [`@Import`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html){:target="_blan"}, [`@DependsOn`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html){:target="_blan"} annotation을 참고. 
+## To use these new features, see the `@Configuration`, `@Bean`, `@Import`, and `@DependsOn` annotations.
+
+
 </div>
 </section>
 
