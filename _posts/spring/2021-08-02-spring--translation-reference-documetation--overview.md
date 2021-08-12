@@ -162,7 +162,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <div markdown="1" class="contents">
-# Framework에 대해 배울 때는 Framework가 무엇을 하는지 뿐만 아니라 어떤 원리를 따르는지 아는 게 중요하다.
+# 프레임워크에 대해 배울 때는 프레임워크가 무엇을 하는지 뿐만 아니라 어떤 원리를 따르는지 아는 게 중요하다.
 ## When you learn about a framework, it’s important to know not only what it does but what principles it follows. 
 
 # 다음은 Spring Framework의 기본 원칙이다.
