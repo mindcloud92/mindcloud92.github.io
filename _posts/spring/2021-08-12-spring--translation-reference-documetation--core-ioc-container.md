@@ -11,13 +11,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **1. IoC Container**
 ## 1. The IoC Container
 
-# 이 장에서는 Spring의 IoC Container에 대한 내용을 다룬다.
+# 이 장에서는 Spring의 IoC container에 대한 내용을 다룬다.
 ## This chapter covers Spring’s Inversion of Control (IoC) container.
 </section>
 
 <section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
-# **1.1. Spring IoC Container 및 Beans 소개**
+# **1.1. Spring IoC Container 및 Bean 소개**
 ## 1.1. Introduction to the Spring IoC Container and Beans
 </div>
 
