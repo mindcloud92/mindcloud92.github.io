@@ -11,23 +11,20 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Spring을 사용하면 Java 엔터프라이즈 어플리케이션을 쉽게 만들 수 있다.
 ## Spring makes it easy to create Java enterprise applications.
 
-# Spring은 JVM에서 대체 언어로 Groovy와 Kotlin을 지원하고 어플리케이션의 요구 사항에 따라 다양한 종류의 아키텍처를 생성할 수 있는 유연성을 통해 엔터프라이즈 환경에서 Java 언어를 수용하는 데 필요한 모든 것을 제공한다.
+# Spring은 JVM에서 대체 언어로 Groovy와 Kotlin을 지원하고 어플리케이션의 요구 사항에 따라 다양한 종류의 아키텍처를 생성할 수 있는 유연성을 통해 엔터프라이즈 환경에서 Java를 수용하는 데 필요한 모든 것을 제공한다.
 ## It provides everything you need to embrace the Java language in an enterprise environment, with support for Groovy and Kotlin as alternative languages on the JVM, and with the flexibility to create many kinds of architectures depending on an application’s needs. 
 
 # `Spring Framework 5.1`부터 Spring은 `JDK 8 이상`을 필요로 하고 JDK 11 LTS에 대한 기본 지원을 제공한다.
 ## As of Spring Framework 5.1, Spring requires JDK 8+ (Java SE 8+) and provides out-of-the-box support for JDK 11 LTS. 
 
-
 # Java SE 8 update 60은 Java 8의 최소 패치 릴리즈로 제안되지만 일반적으로는 최신 패치 릴리즈 사용을 권장한다.
 ## Java SE 8 update 60 is suggested as the minimum patch release for Java 8, but it is generally recommended to use a recent patch release.
-
 
 # Spring은 광범위한 어플리케이션 시나리오를 지원한다.
 ## Spring supports a wide range of application scenarios. 
 
 # 대기업에서는 어플리케이션이 오랫동안 존재하기도 하고 개발자가 제어할 수 없는 업그레이드 주기를 가진 JDK나 어플리케이션 서버에서 실행되어야 하는 경우도 많고
 ## In a large enterprise, applications often exist for a long time and have to run on a JDK and application server whose upgrade cycle is beyond developer control. 
-
 
 # 단일 서버가 내장된 jar나 cloud 환경에서 실행되기도 하지만
 ## Others may run as a single jar with the server embedded, possibly in a cloud environment. 
@@ -74,13 +71,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 어플리케이션은 필요한 모듈을 선택할 수 있다.
 ## Applications can choose which modules they need. 
 
-# 여러가지 모듈의 중심에는 의존성 주입 매커니즘과 구성 모델을 포함한 core container 모듈이 있다.
+# 여러가지 모듈의 중심에는 의존성 주입 매커니즘과 구성 모델을 포함한 핵심 container 모듈이 있다.
 ## At the heart are the modules of the core container, including a configuration model and a dependency injection mechanism. 
 
-# 그 외에도 Spring Framework는 messaging, transactional data and persistence 그리고 web을 포함한 다양한 어플리케이션 아키텍처를 위한 기본적인 지원을 제공하기도 한다. 
+# 그 외에도 Spring Framework는 messaging, transactional data and persistence 그리고 웹을 포함한 다양한 어플리케이션 아키텍처를 위한 기본적인 지원을 제공하기도 한다. 
 ## Beyond that, the Spring Framework provides foundational support for different application architectures, including messaging, transactional data and persistence, and web.
 
-# 여기에는 Servlet 기반 Spring MVC web framework와 Spring WebFlux reactive web framework도 포함된다.
+# 여기에는 Servlet 기반 Spring MVC 웹 프레임워크와 Spring WebFlux reactive 웹 프레임워크도 포함된다.
 ## It also includes the Servlet-based Spring MVC web framework and, in parallel, the Spring WebFlux reactive web framework.
 
 # 모듈에 대한 참고: Spring의 Framework jar를 사용하면 JDK 9의 모듈 경로 "Jigsaw"에 배포할 수 있다.
@@ -89,7 +86,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Jigsaw 지원 어플리케이션에서 사용되는 Spring Framework 5 jar에는 jar 아티팩트 이름과 독립적이고 안정적인 언어 수준 모듈 이름을 정의하는 "Automatic-Module-Name" 매니페스트 항목이 함께 제공되며
 ## For use in Jigsaw-enabled applications, the Spring Framework 5 jars come with "Automatic-Module-Name" manifest entries which define stable language-level module names ("spring.core", "spring.context" etc) independent from jar artifact names (the jars follow the same naming pattern with "-" instead of ".", e.g. "spring-core" and "spring-context"). 
     
-# 물론 JDK 8과 9 이상의 classpath 에서도 잘 동작한다.
+# 물론 JDK 8과 9 이상의 classpath에서도 잘 동작한다.
 ## Of course, Spring’s framework jars keep working fine on the classpath on both JDK 8 and 9+.
 </div>    
 </section>
@@ -138,7 +135,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Java EE와 Spring의 초기에 어플리케이션은 어플리케이션 서버에 배포하기 위해 만들어졌지만
 ## In the early days of Java EE and Spring, applications were created to be deployed to an application server. 
 
-# 요즘에는 Spring Boot의 도움을 받아 Servlet conatiner를 내장하고 변경하기 쉬운 devops 및 cloud 친화적인 방식으로 만들어진다. 
+# 요즘에는 Spring Boot의 도움을 받아 Servlet conatiner를 내장하고 변경하기 쉬운 Devops 및 Cloud 친화적인 방식으로 만들어진다. 
 ## Today, with the help of Spring Boot, applications are created in a devops- and cloud-friendly way, with the Servlet container embedded and trivial to change. 
 
 # WebFlux 어플리케이션은 Spring Framework 5부터 Servlet API를 직접 사용하지 않고 Netty와 같은 Servlet container가 아닌 서버로도 실행할 수 있다.
@@ -202,7 +199,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 - # 코드 품질에 대한 높은 표준을 설정한다.
 ## Set high standards for code quality.
-# Spring framework는 의미 있고 정확하며 최신화된 javadoc에 중점을 두며
+# Spring Framework는 의미 있고 정확하며 최신화된 javadoc에 중점을 두며
 ## The Spring Framework puts a strong emphasis on meaningful, current, and accurate javadoc.
 # 패키지 간의 순환 종속성이 없는 깨끗한 코드 구조를 주장할 수 있는 몇 안되는 프로젝트 중 하나이다.
 ## It is one of very few projects that can claim clean code structure with no circular dependencies between packages.
@@ -222,13 +219,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Stack Overflow에서 제안한 태그 목록을 보려면 [여기](https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop){:target="_blank"}를 클릭.
 ## Click here for a list of the suggested tags to use on Stack Overflow.
 
-# 만약 Spring framework에 문제가 있다고 확신하거나 기능을 제안하고 싶다면 [Github Issues](https://github.com/spring-projects/spring-framework/issues){:target="_blank"}에 올려주길 바란다.
+# 만약 Spring Framework에 문제가 있다고 확신하거나 기능을 제안하고 싶다면 [Github Issues](https://github.com/spring-projects/spring-framework/issues){:target="_blank"}에 올려주길 바란다.
 ## If you’re fairly certain that there is a problem in the Spring Framework or would like to suggest a feature, please use the GitHub Issues.
 
-# 해결책이나 제안할 수정 사항이 있다면 [Github](https://github.com/spring-projects/spring-framework){:target="_blank"}에 pull request를 제출할 수 있다.
+# 해결책이나 제안할 수정 사항이 있다면 [Github](https://github.com/spring-projects/spring-framework){:target="_blank"}에 Pull Request를 제출할 수 있다.
 ## If you have a solution in mind or a suggested fix, you can submit a pull request on Github. 
 
-# 그러나 가장 사소한 문제를 제외한 모든 것들에 대해서는 토론이 이루어지는 issue tracker에 티켓을 보관해서 향후에 참조할 수 있도록 기록을 남겨 둘 것을 기대한다.
+# 그러나 가장 사소한 문제를 제외한 모든 것들에 대해서는 토론이 이루어지는 이슈 트래커에 티켓을 보관해서 향후에 참조할 수 있도록 기록을 남겨 둘 것을 기대한다.
 ## However, please keep in mind that, for all but the most trivial issues, we expect a ticket to be filed in the issue tracker, where discussions take place and leave a record for future reference.
 
 # 더 자세한 내용은 [CONTRIBUTING](https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md){:target="_blank"}, 최상위 프로젝트의 지침을 참조. 
