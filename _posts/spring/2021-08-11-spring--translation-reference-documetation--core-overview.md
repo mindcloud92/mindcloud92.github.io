@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Spring :: 한 줄씩 읽는 Documentation [Core #Overview]"
+title: "Spring :: 한 줄씩 읽는 Documentation [core.Overview]"
 date: "2021-08-11 16:13:00 +0900"
 categories: xyz+
 tags: spring framework documentation core overview translation 5.3.9v

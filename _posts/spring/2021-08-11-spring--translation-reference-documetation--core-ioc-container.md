@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Spring :: 한 줄씩 읽는 Documentation [Core # IoC container]"
+title: "Spring :: 한 줄씩 읽는 Documentation [core.IoC container]"
 date: "2021-08-11 23:13:00 +0900"
 categories: xyz+
 tags: spring framework documentation core Ioc container translation 5.3.9v
@@ -93,12 +93,6 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <blockquote markdown="1">
 **Reference**
 - [원문](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core){:target="_blank"}
-
-<br/>
-**Footnote**
-<p id="footnote-1" class="footnote-desc">
-    <strong class="number">1.</strong>현재 기능 면에서 가장 풍부하고 Java 엔터프라이즈 공간에서 가장 성숙한 AOP 구현체
-</p>
 </blockquote>
 
 <script type="text/javascript" src="{{ '/static/script/accordion.js' | relative_url }}"></script>
