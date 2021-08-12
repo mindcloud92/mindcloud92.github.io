@@ -15,7 +15,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## This chapter covers Spring’s Inversion of Control (IoC) container.
 </section>
 
-<section class="translation-article-wrapper accordion-wrapper mb-4" markdown="1">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
 # **1.1. Spring IoC Container 및 Beans 소개**
 ## 1.1. Introduction to the Spring IoC Container and Beans
@@ -93,10 +93,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <div markdown="1" class="contents">
-# `org.springframework.context.ApplicationContext` 인터페이스는 Spring IoC container를 나타내고 Bean의 인스턴스화, 구성 및 조립을 담당한다.
+# `org.springframework.context.ApplicationContext` 인터페이스는 Spring IoC container를 나타낸다.    
+그리고 Bean의 인스턴스화, 구성 및 조립을 담당하며
 ## The `org.springframework.context.ApplicationContext` interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans.
  
-# 이 container는 구성 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다. 
+# 구성 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다. 
 ## The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata.
 
 # 구성 메타데이터는 XML이나 Java annotation, Java 코드 형태로 사용할 수 있고
@@ -111,7 +112,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 독립 실행형 어플리케이션에서는 일반적으로 [`ClassPathXmlApplicationContext`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [`FileSystemXmlApplicationContext`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"} 인스턴스를 만들어 사용한다.
 ## In stand-alone applications, it is common to create an instance of `ClassPathXmlApplicationContext` or `FileSystemXmlApplicationContext`.
 
-# 구성 메타데이터를 정의하기 위한 전통적인 형식은 XML이고 부가적인 메타데이터 형식<a href="#footnote-1" class="footnote">[1]</a>을 Java annotation나 코드를 선언하여 컨테이너에 정의할 수도 있다.
+# 구성 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 이 외에도 Java annotation나 코드로 선언하여 컨테이너에서 부가적인 메타데이터 형식<a href="#footnote-1" class="footnote">[1]</a>을 사용하도록 할 수 도 있다. 
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 
 # 대부분의 어플리케이션 시나리오에서 명시적으로 작성되는 코드는 Spring IoC container에 정의된 인스턴스를 인스턴스화하지 않아도 된다. 
@@ -120,15 +121,17 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 예를 들어 웹 어플리케이션 시나리오에서는 일반적으로 어플리케이션의 `web.xml` 파일에 있는 상용구 웹 descriptor XML의 단 8줄 정도로도 충분하다.<a href="#footnote-2" class="footnote">[2]</a>
 ## For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor XML in the web.xml file of the application typically suffices (see Convenient ApplicationContext Instantiation for Web Applications).
 
-#  만약 Eclipse 기반인 STS를 사용한다면 몇번의 클릭이나 키 입력으로 상용구 구성을 쉽게할 수 있다.
+#  만약 Eclipse 기반인 [STS](https://spring.io/tools){:target="_blank"}를 쓰고 있다면 몇번의 클릭이나 키 입력으로 상용구 구성을 쉽게할 수 있다.
 ## If you use the Spring Tools for Eclipse (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.
 
 # 다음 다이어그램은 Spring이 작동하는 방식을 개괄적으로 보여준다.
 ## The following diagram shows a high-level view of how Spring works. 
 
-![container magic](https://docs.spring.io/spring-framework/docs/current/reference/html/images/container-magic.png){:class="thumbnail mt-1 pa-1"}
+![container magic](https://docs.spring.io/spring-framework/docs/current/reference/html/images/container-magic.png){:class="thumbnail mt-1 pa-1"} 
+<p class="thumbnail-description">Figure 1. The Spring IoC container</p>
 
-# 어플리케이션의 클래스는 구성 메타데이터와 결합되어 ApplicationContext가 생성되고 초기화된 후 완전히 구성되고 실행가능한 시스템 또는 어플리케이션을 갖게된다.
+<br/>
+# 어플리케이션의 클래스가 구성 메타데이터와 결합되어 ApplicationContext가 생성되고 초기화된 후에야 시스템 또는 어플리케이션은 완전히 구성되고 실행이 가능해진다.
 ## Your application classes are combined with configuration metadata so that, after the ApplicationContext is created and initialized, you have a fully configured and executable system or application.
 </div>
 </section>
@@ -140,7 +143,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 **Footnote**
 <p id="footnote-1" class="footnote-desc">
-    <strong class="number">1.</strong> 소량의 XML 구성에 의해 제공
+    <strong class="number">1.</strong> 소량의 XML 구성에 의해 제공됨
 </p>
 <p id="footnote-2" class="footnote-desc" markdown="1">
     <strong class="number">2.</strong> [웹 어플리케이션을 위한 ApplicationContext 인스턴스화 참조](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#context-create)
