@@ -40,7 +40,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Spring은 다양한 실 사용 사례를 기반으로 지속적인 피드백을 제공하는 크고 활동적인 커뮤니티를 가지고 있고
 ## It has a large and active community that provides continuous feedback based on a diverse range of real-world use cases. 
 
-# 해당 커뮤니티는 오랜시간에 걸쳐 Spring이 성공적으로 진화할 수 있는데 도움이 되었다.
+# 해당 커뮤니티는 오랜 시간에 걸쳐 Spring이 성공적으로 진화할 수 있는데 도움이 되었다.
 ## This has helped Spring to successfully evolve over a very long time.
 
 </section>
@@ -55,7 +55,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # "Spring"이라는 단어는 다른 맥락에서 다른 것을 의미한다.
 ## The term "Spring" means different things in different contexts.
 
-# 모든 것이 시작된 Spring Framework 프로젝트 자체를 일컫는 용어로 쓰일 수 있다.
+# Spring Framework 프로젝트 자체를 말하기도 한다.
 ## It can be used to refer to the Spring Framework project itself, which is where it all started. 
 
 # 오랜 시간에 걸쳐 Spring Framework 위에는 여러 가지 Spring 프로젝트들이 구축되었다.
@@ -74,7 +74,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 어플리케이션은 필요한 모듈을 선택할 수 있다.
 ## Applications can choose which modules they need. 
 
-# 여러가지 모듈의 중심에는 의존성 주입 매커니즘과 구성 모델을 포함한 핵심 container 모듈이 있다.
+# 여러 가지 모듈의 중심에는 의존성 주입 매커니즘과 구성 모델을 포함한 핵심 container 모듈이 있다.
 ## At the heart are the modules of the core container, including a configuration model and a dependency injection mechanism. 
 
 # 그 외에도 Spring Framework는 messaging, transactional data and persistence 그리고 웹을 포함한 다양한 어플리케이션 아키텍처를 위한 기본적인 지원을 제공하기도 한다. 
@@ -203,14 +203,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 - # API 설계에 대해 신경 써라.
 ## Care about API design.
-# Spring 팀은 여러 버전과 수년에 걸쳐 유지되고 직관적인 API를 만드는 데에 많은 생각과 시간을 투자한다.
+# Spring 팀은 API를 여러 버전과 수년에 걸쳐 유지하고 직관적으로 만드는 데에 많은 생각과 시간을 투자한다.
 ## The Spring team puts a lot of thought and time into making APIs that are intuitive and that hold up across many versions and many years.
 
 - # 코드 품질에 대한 높은 표준을 설정한다.
 ## Set high standards for code quality.
 # Spring Framework는 의미 있고 정확하며 최신화된 javadoc에 중점을 두며
 ## The Spring Framework puts a strong emphasis on meaningful, current, and accurate javadoc.
-# 패키지 간의 순환 종속성이 없는 깨끗한 코드 구조를 주장할 수 있는 몇 안되는 프로젝트 중 하나이다.
+# 패키지 간의 순환 종속성이 없는 깨끗한 코드 구조를 주장할 수 있는 몇 안 되는 프로젝트 중 하나이다.
 ## It is one of very few projects that can claim clean code structure with no circular dependencies between packages.
 </div>
 </section>
