@@ -29,7 +29,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `IoC`는 의존성 주입(DI)이라 하기도 한다.
 ## IoC is also known as dependency injection (DI).
  
-# `IoC`는 팩토리 메소드에서 생성되거나 반환된 객체의 인스턴스에 설정된 속성이나 객체의 생성자 인자, 팩토리 메소드의 인자를 통해서 의존성을 정의하는 프로세스를 말하며
+# `IoC`는 팩토리 메소드에서 생성되거나 반환된 객체의 인스턴스에 선언된 속성이나 객체의 생성자 인자, 팩토리 메소드의 인자를 통해서 의존성을 정의하는 프로세스를 말하며
 ## It is a process whereby objects define their dependencies (that is, the other objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. 
 
 # 이렇게 정의된 의존성은 `Bean`을 생성할 때 주입된다. 
@@ -44,7 +44,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The `org.springframework.beans` and `org.springframework.context` packages are the basis for Spring Framework’s IoC container. 
 
 
-# [`BeanFactory`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/beans/factory/BeanFactory.html){:target="_blank"}<a href="#footnote-2" class="footnote">[2]</a> 인터페이스는 모든 유형의 객체를 관리할 수 있는 고급 구성 매커니즘을 제공하며
+# [`BeanFactory`](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/beans/factory/BeanFactory.html){:target="_blank"}<a href="#footnote-2" class="footnote">[2]</a> 인터페이스는 모든 유형의 객체를 관리할 수 있는 고급 환경 설정 매커니즘을 제공하며
 ## The `BeanFactory` interface provides an advanced configuration mechanism capable of managing any type of object. 
 
 
@@ -66,7 +66,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - # 웹 어플리케이션에서 사용할 `WebApplicationContext`와 같은 어플리케이션 계층별 컨텍스트
 ## Application-layer specific contexts such as the `WebApplicationContext` for use in web applications.
 
-# 간단히 말해서 `BeanFactory`는 구성 프레임워크와 기본 기능을 제공하고 `ApplicationContext`는 더 많은 엔터프라이즈별 기능을 추가 제공한다.
+# 간단히 말해서 `BeanFactory`는 환경 설정 프레임워크와 기본 기능을 제공하고 `ApplicationContext`는 더 많은 엔터프라이즈별 기능을 추가 제공한다.
 ## In short, the `BeanFactory` provides the configuration framework and basic functionality, and the `ApplicationContext` adds more enterprise-specific functionality. 
 
 # `ApplicationContext`는 `BeanFactory`의 완벽한 상위 집합이며 이 장에서 Spring의 `IoC container`에 대한 설명에서 독점적으로 사용된다.   
@@ -86,7 +86,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 그렇지 않았다면 `Bean`은 어플리케이션에 있는 많은 객체 중 하나에 불과했을 것이다.
 ## Otherwise, a bean is simply one of many objects in your application. 
 
-# `Bean`과 이들 간의 의존성은 구성 메타데이터에 반영된다.
+# `Bean`과 이들 간의 의존성은 환경 설정 메타데이터에 반영된다.
 ## Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.
 </div>
 </section>
@@ -102,10 +102,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `ApplicationContext`<a href="#footnote-3" class="footnote">[3]</a> 인터페이스는 Spring `IoC container`를 나타내며 `Bean`의 인스턴스화, 구성 및 조립을 담당하고
 ## The `org.springframework.context.ApplicationContext` interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans.
  
-# 구성 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다. 
+# 환경 설정 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다. 
 ## The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata.
 
-# 구성 메타데이터는 XML이나 Java annotation 또는 코드 형태로 사용할 수 있고
+# 환경 설정 메타데이터는 XML이나 Java annotation 또는 코드 형태로 사용할 수 있고
 ## The configuration metadata is represented in XML, Java annotations, or Java code.
 
 # 어플리케이션을 구성하는 객체와 이러한 객체 간의 풍부한 상호 의존성을 표현할 수 있게 해준다.
@@ -119,7 +119,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 일반적으로 독립 실행형 어플리케이션에서는 [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [FileSystemXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"}를 사용한다.
 ## In stand-alone applications, it is common to create an instance of `ClassPathXmlApplicationContext` or `FileSystemXmlApplicationContext`.
 
-# 구성 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 Java annotation나 코드로 선언하는 부가적인 메타데이터 형식<a href="#footnote-4" class="footnote">[4]</a>도 있다. 
+# 환경 설정 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 Java annotation나 코드로 선언하는 부가적인 메타데이터 형식<a href="#footnote-4" class="footnote">[4]</a>도 있다. 
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 <br/>
 
@@ -129,7 +129,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 예를 들어 웹 어플리케이션 시나리오에서는 일반적으로 어플리케이션의 `web.xml` 파일에 있는 상용구 웹 descriptor XML의 단 8줄 정도로도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
 ## For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor XML in the web.xml file of the application typically suffices (see Convenient ApplicationContext Instantiation for Web Applications).
 
-# 이러한 상용구 구성은 [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 사용하는 경우 몇 번의 클릭이나 키 입력으로 손쉽게 할 수 있다.
+# 이러한 상용구 환경 설정은 [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 사용하는 경우 몇 번의 클릭이나 키 입력으로 손쉽게 할 수 있다.
 ## If you use the Spring Tools for Eclipse (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.
 
 <br/>
@@ -143,7 +143,102 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 시스템 또는 어플리케이션은 어플리케이션의 클래스가 구성 메타데이터와 결합되어 `ApplicationContext`가 생성되고 초기화된 후에야 완전히 구성되고 실행이 가능해진다.
 ## Your application classes are combined with configuration metadata so that, after the `ApplicationContext` is created and initialized, you have a fully configured and executable system or application.
 
+<br/>
+# 1.2.1. 구성 메타데이터
+## 1.2.1. Configuration Metadata
 
+# 위에 있는 다이어그램에서 볼 수 있듯이 Spring IoC container는 환경 설정 메타데이터의 형식을 사용한다.
+## As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. 
+
+# 환경 설정 메타데이터는 어플리케이션 개발자가 Spring container에게 어플리케이션의 객체를 인스턴스화, 구성 및 조립하도록 지시하는 방법을 나타내며
+## This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure, and assemble the objects in your application.
+
+# 전통적으로 간단하고 직관적인 XML 형식으로 제공된다. 덧붙어 이 장에서는 Spring IoC container의 주요 컨셉과 기능을 전달하는데 대부분 사용된다. 
+## Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.
+
+<div class="spring info-wrapper mt-2 pb-2 mb-2">
+<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div markdown="1">
+# XML 기반 메타데이터가 유일한 구성 메타데이터 형식은 아니다.
+## XML-based metadata is not the only allowed form of configuration metadata.
+
+# 구성 메타데이터가 실제로 작성되는 형식에서 Spring IoC container 자체는 완전히 분리된다. 
+## The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written.
+ 
+# 요즘 많은 개발자들이 Spring 어플리케이션을 만들기 위해 [Java 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java)을 선택한다.
+## These days, many developers choose Java-based configuration for their Spring applications.
+</div>
+</div>
+
+# Spring container에서 다른 메타데이터 형식을 사용하는 방법은 다음과 같다.
+## For information about using other forms of metadata with the Spring container, see:
+
+- # [Annotattion 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-annotation-config): `Spring 2.5`에서 annotation 기반 구성 메타데이터 지원을 도입했다.  
+## Annotation-based configuration: Spring 2.5 introduced support for annotation-based configuration metadata.
+- # [Java 기반 구성](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java): `Spring 3.0`부터 Spring JavaConfig 프로젝트에서 제공하는 많은 기능이 핵심 Spring Framework의 일부가 되면서  
+## Java-based configuration: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework. 
+# XML 대신 Java를 사용하여 어플리케이션 클래스 외부에 Bean을 정의할 수 있게 되었다.
+## Thus, you can define beans external to your application classes by using Java rather than XML files.
+# 이러한 새로운 기능을 사용하려면 [`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html){:target="_blan"}, [`@Bean`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html){:target="_blan"}, [`@Import`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html){:target="_blan"}, [`@DependsOn`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html){:target="_blan"} annotation을 참고. 
+## To use these new features, see the `@Configuration`, `@Bean`, `@Import`, and `@DependsOn` annotations.
+
+# Spring 환경 설정은 container가 관리해야하는 일반적으로 하나 이상의 Bean 정의로 구성된다.   
+## Spring configuration consists of at least one and typically more than one bean definition that the container must manage. 
+
+# XML 기반의 환경 설정 메타데이터는 이러한 Bean을 최상위 `<beans/>` 요소 내부의 `<bean/>` 요소로 구성한다. 
+## XML-based configuration metadata configures these beans as `<bean/>` elements inside a top-level `<beans/>` element.
+
+# 일반적으로 Java기반 환경 설정 메타데이터는 @Configuration 클래스 내부의 @Bean annotation이 붙혀진 메소드를 사용한다. 
+## Java configuration typically uses @Bean-annotated methods within a @Configuration class.
+
+# 이러한 Bean 정의는 어플리케이션을 구성하는 실제 객체에 해당한다.
+## These bean definitions correspond to the actual objects that make up your application. 
+
+# 일반적으로 서비스 게층의 객체, DAO, Structs Action instances와 같은 presentation 객체, Hibernate SessionFactories, JMS Queues등과 같은 infrastructure 객체를 정의한다. 
+## Typically, you define service layer objects, data access objects (DAOs), presentation objects such as Struts Action instances, infrastructure objects such as Hibernate SessionFactories, JMS Queues, and so forth. 
+
+# 보통 도메인 개체를 만들고 로드하는 것은 DAO 및 비즈니스 로직의 책임이기 때문에 일반적으로 컨테이너에 세분화된 도메인 객체를 구성하지 않는다. 
+## Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. 
+
+# 하지만 AspectJ와 Spring의 통합을 사용하여 IoC container의 제어 밖에서 생성된 객체를 구성할 수 있다. 
+## However, you can use Spring’s integration with AspectJ to configure objects that have been created outside the control of an IoC container.
+
+# AspectJ를 사용하여 Spring으로 도메인 객체 종속성 주입을 참조.
+## See Using AspectJ to dependency-inject domain objects with Spring.
+
+# XML 기반 환경 설정 구성의 기본 구조는 다음 예제와 같다.
+## The following example shows the basic structure of XML-based configuration metadata:
+
+```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+        <!-- id = The id attribute is a string that identifies the individual bean definitio -->
+        <!-- class = The class attribute defines the type of the bean and uses the fully qualified classname. -->
+        <bean id="..." class="...">  
+            <!-- collaborators and configuration for this bean go here -->
+        </bean>
+    
+        <bean id="..." class="...">
+            <!-- collaborators and configuration for this bean go here -->
+        </bean>
+    
+        <!-- more bean definitions go here -->
+    
+    </beans>
+```
+
+# id 속성의 값은 협업 개체를 나타냅니다.
+## The value of the id attribute refers to collaborating objects.
+ 
+# 협업 개체를 참조하기 위한 XML은 이 예에서 표시되지 않습니다. 
+## The XML for referring to collaborating objects is not shown in this example. 
+
+# 자세한 내용은 종속성을 참조하세요.
+## See Dependencies for more information.
 </div>
 </section>
 
