@@ -143,7 +143,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 시스템 또는 어플리케이션은 어플리케이션의 클래스가 구성 메타데이터와 결합되어 `ApplicationContext`가 생성되고 초기화된 후에야 완전히 구성되고 실행이 가능해진다.
 ## Your application classes are combined with configuration metadata so that, after the `ApplicationContext` is created and initialized, you have a fully configured and executable system or application.
 
-<br/>
+<div markdown="1" class="mt-5">
 # **1.2.1. 환경 설정 메타데이터**
 ## 1.2.1. Configuration Metadata
 
@@ -252,6 +252,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 자세한 내용은 [의존성](#dependencies) 참조.
 ## See Dependencies for more information.
+</div>
+
 </div>
 </section>
 
