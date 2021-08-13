@@ -92,7 +92,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 
-<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<section class="translation-article-wrapper accordion-wrapper mb-4" markdown="1">
 <div markdown="1" class="handler">
 # **1.2. Container 개요**
 ## 1.2. Container Overview
