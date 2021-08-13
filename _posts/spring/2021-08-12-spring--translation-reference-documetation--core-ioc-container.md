@@ -92,10 +92,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 
-<section class="translation-article-wrapper accordion-wrapper mb-4" markdown="1">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
 # **1.2. Container 개요**
-## 1.1. Container Overview
+## 1.2. Container Overview
 </div>
 
 <div markdown="1" class="contents">
@@ -254,6 +254,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## See Dependencies for more information.
 </div>
 </section>
+
 
 <blockquote markdown="1">
 **Reference**
