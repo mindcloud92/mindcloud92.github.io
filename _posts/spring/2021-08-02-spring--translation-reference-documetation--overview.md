@@ -159,7 +159,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 각 프로젝트에는 각각 고유한 소스 코드 repository, issue tracker, release 주기가 있다는 것을 기억하는 게 중요하다. 
 ## It’s important to remember that each project has its own source code repository, issue tracker, and release cadence. 
 
-# Spring 프로젝트의 전체 목록을 보려면 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고.
+# Spring 프로젝트의 전체 목록은 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고.
 ## See spring.io/projects for the complete list of Spring projects.
 </div>
 </section>
