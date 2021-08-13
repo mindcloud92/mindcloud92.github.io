@@ -257,7 +257,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Spring Boot는 Spring 기반의 상용 어플리케이션을 빠르고 확실하게 만드는 방법을 제공하고
 ## Spring Boot provides a quick (and opinionated) way to create a production-ready Spring-based application. 
 
-# Spring Framework 기반으로 환경 설정 보다 규약을 선호하고 가능한 한 빨리 시작하고 실행할 수 있도록 설계되었다.
+# Spring Framework 기반으로 설정 보다는 규약을 선호하고 가능한 한 빨리 시작하고 실행할 수 있도록 설계되었다.
 ## It is based on the Spring Framework, favors convention over configuration, and is designed to get you up and running as quickly as possible.
 
 <br/>
