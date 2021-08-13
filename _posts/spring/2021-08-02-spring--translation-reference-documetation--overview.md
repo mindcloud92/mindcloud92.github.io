@@ -19,6 +19,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Java SE 8 update 60은 Java 8의 최소 패치 릴리즈로 제안되지만 일반적으로는 최신 패치 릴리즈 사용을 권장한다.
 ## Java SE 8 update 60 is suggested as the minimum patch release for Java 8, but it is generally recommended to use a recent patch release.
+<br/>
 
 # Spring은 광범위한 어플리케이션 시나리오를 지원한다.
 ## Spring supports a wide range of application scenarios. 
@@ -31,6 +32,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 서버가 필요하지 않은 배치나 통합 워크 로드와 같은 독립적인 어플리케이션으로 실행되는 경우도 있다.
 ## Yet others may be standalone applications (such as batch or integration workloads) that do not need a server.
+<br/>
 
 # Spring은 오픈 소스다.
 ## Spring is open source. 
@@ -64,6 +66,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 이 Reference 문서는 기초인 Spring Framework 자체를 중점으로 다룬다.
 ## This reference documentation focuses on the foundation: the Spring Framework itself.
+<br/>
 
 # Spring Framework는 여러 가지 모듈로 나눠져 있어서
 ## The Spring Framework is divided into modules. 
@@ -79,6 +82,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 여기에는 Servlet 기반 Spring MVC 웹 프레임워크와 Spring WebFlux reactive 웹 프레임워크도 포함된다.
 ## It also includes the Servlet-based Spring MVC web framework and, in parallel, the Spring WebFlux reactive web framework.
+<br/>
+
 
 # 모듈에 대한 참고: Spring의 Framework jar를 사용하면 JDK 9의 모듈 경로 "Jigsaw"에 배포할 수 있다.
 ## A note about modules: Spring’s framework jars allow for deployment to JDK 9’s module path ("Jigsaw"). 
@@ -123,12 +128,15 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 또한 어플리케이션 개발자들이 Spring Framework에서 제공하는 매커니즘 대신 선택하여 사용할 수 있는 DI([JSR 330](https://www.jcp.org/en/jsr/detail?id=330){:target="_blank"})와 공통 Annotation([JSR 250](https://jcp.org/en/jsr/detail?id=250){:target="_blank"}) 사양도 지원한다.
 ## The Spring Framework also supports the Dependency Injection (JSR 330) and Common Annotations (JSR 250) specifications, which application developers may choose to use instead of the Spring-specific mechanisms provided by the Spring Framework.
 
+<br/>
+
 # `Spring Framework 5.0`부터 Spring은 `Java EE 7 이상`(예: Servlet 3.1+, JPA 2.1+)을 필요로 하는 동시에 런타임 시 Java EE 8 (예: Servlet 4.0, JSON Binding API) 레벨에서 최신 API와 즉시 사용 가능한 통합을 제공한다. 
 ## As of Spring Framework 5.0, Spring requires the Java EE 7 level (e.g. Servlet 3.1+, JPA 2.1+) as a minimum - while at the same time providing out-of-the-box integration with newer APIs at the Java EE 8 level (e.g. Servlet 4.0, JSON Binding API) when encountered at runtime. 
 
 # 이렇게 하면 Spring과 완벽하게 호환된다. (예: Tomcat 8 and 9, WebSphere 9, JBoss EAP 7)
 ## This keeps Spring fully compatible with e.g. Tomcat 8 and 9, WebSphere 9, and JBoss EAP 7.
 
+<br/>
 # 오랜 시간에 걸쳐 어플리케이션 개발에 있어 Java EE의 역할은 진화했다.
 ## Over time, the role of Java EE in application development has evolved. 
 
@@ -141,6 +149,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # WebFlux 어플리케이션은 Spring Framework 5부터 Servlet API를 직접 사용하지 않고 Netty와 같은 Servlet container가 아닌 서버로도 실행할 수 있다.
 ## As of Spring Framework 5, a WebFlux application does not even use the Servlet API directly and can run on servers (such as Netty) that are not Servlet containers.
 
+<br/>
 # 이처럼 Spring은 계속해서 혁신하고 진화하고 있다.
 ## Spring continues to innovate and to evolve. 
 
@@ -218,6 +227,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Stack Overflow에서 제안한 태그 목록을 보려면 [여기](https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop){:target="_blank"}를 클릭.
 ## Click here for a list of the suggested tags to use on Stack Overflow.
+<br/>
 
 # 만약 Spring Framework에 문제가 있다고 확신하거나 기능을 제안하고 싶다면 [Github Issues](https://github.com/spring-projects/spring-framework/issues){:target="_blank"}에 올려주길 바란다.
 ## If you’re fairly certain that there is a problem in the Spring Framework or would like to suggest a feature, please use the GitHub Issues.
@@ -227,6 +237,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 그러나 가장 사소한 문제를 제외한 모든 것들에 대해서는 토론이 이루어지는 이슈 트래커에 티켓을 보관해서 향후에 참조할 수 있도록 기록을 남겨 둘 것을 기대한다.
 ## However, please keep in mind that, for all but the most trivial issues, we expect a ticket to be filed in the issue tracker, where discussions take place and leave a record for future reference.
+<br/>
 
 # 더 자세한 내용은 [CONTRIBUTING](https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md){:target="_blank"}, 최상위 프로젝트의 지침을 참조. 
 ## For more details see the guidelines at the CONTRIBUTING, top-level project page.
@@ -249,6 +260,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Spring Framework 기반으로 구성 보다 규약을 선호하고 가능한 한 빨리 시작하고 실행할 수 있도록 설계되었다.
 ## It is based on the Spring Framework, favors convention over configuration, and is designed to get you up and running as quickly as possible.
 
+<br/>
 # [start.spring.io](https://start.spring.io/){:target="_blank"}를 사용해서 기본 프로젝트를 만들거나 [Restful Web Service 구축 시작하기](https://spring.io/guides/gs/rest-service/){:target="_blank"}와 같은 ["Getting Started" 가이드](https://spring.io/guides){:target="_blank"} 중 하나를 따라 프로젝트를 만들 수도 있다.
 ## You can use start.spring.io to generate a basic project or follow one of the "Getting Started" guides, such as Getting Started Building a RESTful Web Service. 
 
