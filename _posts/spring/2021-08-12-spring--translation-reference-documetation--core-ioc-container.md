@@ -258,7 +258,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **1.2.2. Container 인스턴스화** 
 ## 1.2.2. Instantiating a Container
 
-# `ApplicationContext` 생성자에 제공되는 위치 경로는 container가 로컬 파일 시스템, Java `CLASSPATH` 등과 같은 다양한 외부 리소스에서 환경설정 메타데이터를 로드할 수 있도록 하는 리소스 문자열이다.  
+# `ApplicationContext` 생성자에 사용하는 위치 경로는 container가 로컬 파일 시스템, Java `CLASSPATH` 등과 같은 다양한 외부 리소스에서 환경설정 메타데이터를 로드할 수 있도록 하는 리소스 문자열이다.  
 ## The location path or paths supplied to an `ApplicationContext` constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system, the Java `CLASSPATH`, and so on.
 
 <div class="mt-2"></div>
