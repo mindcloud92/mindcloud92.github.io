@@ -74,7 +74,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 어플리케이션은 필요한 모듈을 선택할 수 있다.
 ## Applications can choose which modules they need. 
 
-# 여러 가지 모듈의 중심에는 의존성 주입 매커니즘과 환경 설정 모델을 포함한 핵심 container 모듈이 있다.
+# 여러 가지 모듈의 중심에는 의존성 주입 매커니즘과 configuration 모델을 포함한 핵심 container 모듈이 있다.
 ## At the heart are the modules of the core container, including a configuration model and a dependency injection mechanism. 
 
 # 그 외에도 Spring Framework는 messaging, transactional data and persistence 그리고 웹을 포함한 다양한 어플리케이션 아키텍처를 위한 기본적인 지원을 제공하기도 한다. 
@@ -181,7 +181,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Provide choice at every level.
 # Spring은 설계에 대한 결정을 최대한 미룰 수 있게 해준다.
 ## Spring lets you defer design decisions as late as possible.
-# 예를 들면 코드 변경 없이 환경 설정을 통해 persistence provider를 전환할 수 있다.
+# 예를 들면 코드 변경 없이 설정을 통해 persistence provider를 전환할 수 있다.
 ## For example, you can switch persistence providers through configuration without changing your code.
 # 다른 많은 인프라 문제와 third party API와의 통합도 마찬가지다. 
 ## The same is true for many other infrastructure concerns and integration with third-party APIs.
