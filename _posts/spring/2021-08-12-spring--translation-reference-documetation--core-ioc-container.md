@@ -66,7 +66,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - # 웹 어플리케이션에서 사용할 `WebApplicationContext`와 같은 어플리케이션 계층별 컨텍스트
 ## Application-layer specific contexts such as the `WebApplicationContext` for use in web applications.
 
-# 간단히 말해서 `BeanFactory`는 환경 설정 프레임워크와 기본 기능을 제공하고 `ApplicationContext`는 더 많은 엔터프라이즈별 기능을 추가 제공한다.
+# 간단히 말해서 `BeanFactory`는 configuration 프레임워크와 기본 기능을 제공하고 `ApplicationContext`는 더 많은 엔터프라이즈별 기능을 추가 제공한다.
 ## In short, the `BeanFactory` provides the configuration framework and basic functionality, and the `ApplicationContext` adds more enterprise-specific functionality. 
 
 # `ApplicationContext`는 `BeanFactory`의 완벽한 상위 집합이며 이 장에서 Spring의 `IoC container`에 대한 설명에서 독점적으로 사용된다.   
@@ -86,7 +86,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 그렇지 않았다면 `Bean`은 어플리케이션에 있는 많은 객체 중 하나에 불과했을 것이다.
 ## Otherwise, a bean is simply one of many objects in your application. 
 
-# `Bean`과 이들 간의 의존성은 환경 설정 메타데이터에 반영된다.
+# `Bean`과 이들 간의 의존성은 configuration 메타데이터에 반영된다.
 ## Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.
 </div>
 </section>
