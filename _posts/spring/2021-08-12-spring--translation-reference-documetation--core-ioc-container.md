@@ -401,13 +401,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# `<import />` 요소에 정의된 경로는 전부 상대경로이기 때문에 `service.xml`은 해당 configuration과 동일한 디렉토리 또는 classpath애 있어야 하고 `messageSource.xml` 및 `themeSource.xml`은 해당 configuration 하위 디렉토리인 `resources` 디렉토리 안에 있어야한다.
+# `<import />` 요소에 정의된 경로는 전부 상대 경로이기 때문에 `service.xml`은 해당 configuration 파일과 동일한 디렉토리 또는 classpath애 있어야 하고 `messageSource.xml`과 `themeSource.xml`은 해당 configuration 하위 디렉토리인 `resources` 디렉토리 안에 있어야 한다.
 ## All location paths are relative to the definition file doing the importing, so `services.xml` must be in the same directory or classpath location as the file doing the importing, while `messageSource.xml` and `themeSource.xml` must be in a resources location below the location of the importing file.
 
 # 경로 문자열에서 가장 앞의 "/"는 무시되므로
 ## As you can see, a leading slash is ignored.
  
-# 사용하지 않는 것을 권장하지않는다.  
+# 사용하지 않는 것을 권장한다.  
 ## However, given that these paths are relative, it is better form not to use the slash at all.
 
 # 리소스 경로로 가져오는 `Bean` 정의는 Spring 스키마에 따른 유효한 XML `Bean` 정의여야만 한다.
@@ -418,25 +418,25 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper pb-1">
 <i class="fa fa-info-circle icon mr-half mt-1"></i>
 <div markdown="1">
-# 상대 경로 "../"를 사용하여 상위 디렉토리에 있는 파일을 참조하는 것은 가능하지만 권장하지는 않는다. 
+# 상대 경로 "../"를 사용하여 상위 디렉토리에 있는 파일을 참조하는 것은 가능하지만  
 ## It is possible, but not recommended, to reference files in parent directories using a relative "../" path.
 
-# 이렇게 하면 현재 어플리케이션 외부에 있는 파일에 의존성이 생긴다. 
+# 현재 어플리케이션 외부에 있는 파일에 의존성이 생기기 때문에 권장하지는 않는다.
 ## Doing so creates a dependency on a file that is outside the current application.
 
- # 특히 이 참조는 런타임 확인 프로세스가 "가장 가까운" classpath root를 선택한 다음 상위 디렉토리를 조사하는 classpath: URL(예: classpath:../services.xml)에 대해 권장되지 않는다.
+# 특히 현재 경로에서 "가장 가까운" classpath root를 선택한 다음 상위 디렉토리를 찾는 **classpath:URL**(예: classpath:../services.xml)는 더더욱 권장하지 않는다.
 ## In particular, this reference is not recommended for classpath: URLs (for example, classpath:../services.xml), where the runtime resolution process chooses the “nearest” classpath root and then looks into its parent directory. 
 
-# Classpath 구성 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있다.
+# Classpath 구성의 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있다.
 ## Classpath configuration changes may lead to the choice of a different, incorrect directory.
 
-# 상대 경로 대신 항상 정규화된 리소스 위치를 사용할 수 있다.(예: file:C:/config/services.xml 또는 classpath:/config/services.xml).
+# 상대 경로 대신 정규화된 리소스 경로를 사용할 수도 있지만(예: file:C:/config/services.xml 또는 classpath:/config/services.xml)
 ## You can always use fully qualified resource locations instead of relative paths: for example, file:C:/config/services.xml or classpath:/config/services.xml.
 
-# 그러나 어플리케이션 구성을 특정 절대 경로에 연결하고 있다는 점에 유의해야한다. 
+# 이렇게 할 경우 어플리케이션 configuration이 특정 절대 경로에 연결된다는 점에 유의해야 한다. 
 ## However, be aware that you are coupling your application’s configuration to specific absolute locations.
 
-# 일반적으로 런타임 시 JVM 시스템 속성에 대해 확인되는 "${… }" 자리 표시자를 통해 절대 위치에 대한 참조를 유지하는 것이 좋다.
+# 일반적으로 런타임 시 JVM 시스템 속성에 대해 확인되는 "${… }"를 통해 절대 경로에 대한 참조를 유지하는 것이 좋다.
 ## It is generally preferable to keep an indirection for such absolute locations — for example, through "${…​}" placeholders that are resolved against JVM system properties at runtime.
 </div>
 </div>
