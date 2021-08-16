@@ -454,7 +454,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **Groovy Bean 정의 DSL**
 ## The Groovy Bean Definition DSL
 
-# configuration 메타데이터는 Grails 프레임워크로 알려진 Groovy `Bean` 정의 DSL으로도 `Bean` 정의를 할 수 있으며
+# Grails 프레임워크로 알려진 Groovy `Bean` 정의 DSL으로도 configuration 메타데이터에 `Bean` 정의를 할 수 있으며
 ## As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring’s Groovy Bean Definition DSL, as known from the Grails framework.
 
 # 이 경우 ".groovy" 파일으로 만들어진다. 다음은 Groovy `Bean` DSL configuration 예제다.
