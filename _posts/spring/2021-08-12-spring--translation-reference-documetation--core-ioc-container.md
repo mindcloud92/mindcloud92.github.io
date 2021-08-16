@@ -128,7 +128,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 대부분의 어플리케이션 시나리오에서는 Spring `IoC container`에 정의된 객체를 명시적인 코드로 직접 인스턴스화하지 않아도 된다. 
 ## In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container.
 
-# 예를 들어 일반적으로 웹 어플리케이션 시나리오에서는 어플리케이션의 `web.xml` 파일에 상용구 코드 8줄 정도만 작성해도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
+# 예를 들어 일반적으로 웹 어플리케이션 시나리오에서는 어플리케이션의 `web.xml`에 상용구 코드 8줄 정도만 작성해도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
 ## For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor XML in the web.xml file of the application typically suffices (see Convenient ApplicationContext Instantiation for Web Applications).
 
 # [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 사용하는 경우에는 상용구를 사용한 설정을 몇 번의 클릭이나 키 입력으로 손쉽게 할 수 있다.
@@ -357,26 +357,28 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## For details of configuring an object’s dependencies, see Dependencies.
 <br/>
 
-# **XML 기반 환경 설정 메타데이터 구성**
+# **XML 기반 configuration 메타데이터 구성**
 ## Composing XML-based Configuration Metadata
 
-# 여러 XML 파일에 `Bean` 정의를 하는 것이 유용할 수 있다. 
+# XML을 여러 개로 나누어 `Bean`을 정의하는 것은 유용할 수 있다. 
 ## It can be useful to have bean definitions span multiple XML files.
 
-# 종종 각 개별 XML 구성 파일은 아키텍처의 논리적 계층 또는 모듈을 나타낸다. 
+# 이렇게 하면 각각의 XML configuration은 아키텍처의 논리적 계층 또는 모듈을 나타낼 수 있으며
 ## Often, each individual XML configuration file represents a logical layer or module in your architecture.
 
-# 어플리케이션 컨텍스트 생성자를 사용해서 이러한 모든 XML 조각에서 `Bean` 정의를 로드할 수 있다. 
+# 분리된 XML configuration에 있는 `Bean` 정의는 `ApplicationContext` 생성자를 통해 전부 로드할 수 있다. 
 ## You can use the application context constructor to load bean definitions from all these XML fragments.
 <br/>
 
-# 이 생성자는 [이전 섹션](#instantiating-a-container)에서 보여준 것 처럼 여러가지 `Resource` 위치경로를 사용한다.
+# `ApplicationContext`는 [이전 섹션](#instantiating-a-container)에서 보여준 것처럼 생성자를 통해 하나 이상의 `Resource` 경로를 인자로 받거나
 ## This constructor takes multiple `Resource` locations, as was shown in the previous section.
 
-# 또는 `<import/>` 요소를 하나 이상 사용하여 다른 파일에서 `Bean` 정의를 로드한다. 
+# `<import/>` 요소를 사용하여 다른 리소스 경로에서 `Bean` 정의를 가져온다. 
 ## Alternatively, use one or more occurrences of the `<import/>` element to load bean definitions from another file or files.
 
-# 다음 예제에서는 그렇게 하는 방법을 보여준다. 
+<br/>
+
+# 다음은 `<import/>` 요소를 사용하는 예제다. 
 ## The following example shows how to do so:
 
 <div class="mt-2"></div>
@@ -394,19 +396,21 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 앞의 예제에서 외부 `Bean` 정의는 세 개의 파일(`services.xml`, `messageSource.xml`, `themeSource.xml`)에서 로드된다  
+# 앞의 예제에서 `Bean` 정의는 `services.xml`, `messageSource.xml`, `themeSource.xml` 세 개의 리소스 경로에서 로드된다.
 ## In the preceding example, external bean definitions are loaded from three files: `services.xml`, `messageSource.xml`, and `themeSource.xml`.
 
-# 모든 위치 경로는 가져오기를 수행하는 정의 파일에 상대적이므로 `service.xml`은 가져오기를 수행하는 파일과 동일한 디렉토리 또는 classpath 위치에 있어야 하며 `messageSource.xml` 및 `themeSource.xml`은 위치 아래의 가져오기 파일 리소스 위치에 있어야 한다.
+<br/>
+
+# `<import />` 요소에 정의된 경로는 전부 상대경로이기 때문에 `service.xml`은 해당 configuration과 동일한 디렉토리 또는 classpath애 있어야 하고 `messageSource.xml` 및 `themeSource.xml`은 해당 configuration 하위 디렉토리인 `resources` 디렉토리 안에 있어야한다.
 ## All location paths are relative to the definition file doing the importing, so `services.xml` must be in the same directory or classpath location as the file doing the importing, while `messageSource.xml` and `themeSource.xml` must be in a resources location below the location of the importing file.
 
-# 보다시피 선행 슬래시는 무시된다.
+# 경로 문자열에서 가장 앞의 "/"는 무시되므로
 ## As you can see, a leading slash is ignored.
  
-# 그러나 이러한 경로는 상대적이므로 슬래시를 전혀 사용하지 않는 것이 더 낫다.  
+# 사용하지 않는 것을 권장하지않는다.  
 ## However, given that these paths are relative, it is better form not to use the slash at all.
 
-# 최상위 요소 `<beans/>` 요소를 포함하여 가져오는 파일의 내용은 Spring 스키마에 따라 유효한 XML `Bean` 정의여야 한다.
+# 리소스 경로로 가져오는 `Bean` 정의는 Spring 스키마에 따른 유효한 XML `Bean` 정의여야만 한다.
 ## The contents of the files being imported, including the top level `<beans/>` element, must be valid XML bean definitions, according to the Spring Schema.
 
 <br/>
