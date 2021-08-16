@@ -260,7 +260,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **1.2.2. Container 인스턴스화** 
 ## 1.2.2. Instantiating a Container
 
-# `ApplicationContext` 생성자에 사용하는 위치 경로는 container가 로컬 파일 시스템, Java `CLASSPATH` 등과 같은 다양한 외부 리소스에서 환경설정 메타데이터를 로드할 수 있도록 하는 리소스 문자열이다.  
+# `ApplicationContext` 생성자가 인자로 받는 경로 값은 container가 다양한 외부 리소스(로컬 파일 시스템, Java `CLASSPATH` 등)에서 configuration 메타데이터를 로드할 수 있도록 하는 리소스 문자열이다.  
 ## The location path or paths supplied to an `ApplicationContext` constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system, the Java `CLASSPATH`, and so on.
 
 <div class="mt-2"></div>
@@ -290,7 +290,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 다음은 서비스 계층 객체 구성 파일(`services.xml`) 예제다.
+# 다음은 서비스 계층 객체 configuration(`services.xml`) 예제다.
 ## The following example shows the service layer objects (`services.xml`) configuration file:
 
 <div class="mt-2"></div>
@@ -316,7 +316,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 
 <br/>
-# 다음은 데이터 액세스 객체 구성 파일(`daos.xml`) 예제다.
+# 다음은 데이터 액세스 객체 configuration(`daos.xml`) 예제다.
 ## The following example shows the data access objects `daos.xml` file:
 
 <div class="mt-2"></div>
@@ -345,13 +345,15 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 앞의 예제에서 서비스 계층은 `PetStoreServiceImpl` 클래스와 데이터 액세스 객체<a href="#footnote-8" class="footnote">[8]</a>인 `JpaAccountDao`와 `JpaItemDao `두 개로 구성된다. 
 ## In the preceding example, the service layer consists of the `PetStoreServiceImpl` class and two data access objects of the types `JpaAccountDao` and `JpaItemDao` (based on the JPA Object-Relational Mapping standard).
 
-# `<property />`요소의 `name` 속성은 JavaBean 속성의 이름을 참조하고 `ref` 속성은 다른 `Bean` 정의의 이름을 참조하며 
+<br/>
+
+# `<property />`요소의 `name` 속성은 해당 `Bean`에서 사용할 속성의 이름을 나타내고 `ref` 속성은 다른 `Bean` 정의의 `id`를 참조하며 
 ## The `property name` element refers to the name of the JavaBean property, and the `ref` element refers to the name of another bean definition.
 
-# `id`와 `ref` 속성 간의 연결은 객체 간의 의존성을 나타낸다.
+# `<bean />` 요소의 `id`와 `<property />` 요소의 `ref` 속성으로 객체 간의 의존성을 나타낸다.
 ## This linkage between id and ref elements expresses the dependency between collaborating objects.
 
-# 객체의 의존성을 구성하는 방법에 대한 더 자세한 내용은 [의존성](#dependencies) 참조.
+# 객체의 의존성을 설정하는 방법에 대한 더 자세한 내용은 [의존성](#dependencies) 참조.
 ## For details of configuring an object’s dependencies, see Dependencies.
 <br/>
 
