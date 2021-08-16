@@ -446,7 +446,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 네임스페이스 자체는 가져오기 지시문 기능을 제공한다.
 ## The namespace itself provides the import directive feature.
 
-#  더 나아가 Spring에서 제공하는 XML 네임스페이스(예: 컨텍스트 및 util 네임스페이스) 선택에서 일반적인 Bean 정의 이상의 추가 환경설정 기능을 사용할 수 있다 
+# 게다가 일반적인 `Bean` 정의 이상의 추가 configuration 기능을 제공하는 XML 네임스페이스(예: 컨텍스트 및 util 네임스페이스)를 선택해서 사용할 수도 있다. 
 ## Further configuration features beyond plain bean definitions are available in a selection of XML namespaces provided by Spring — for example, the context and util namespaces.
 
 <br/>
@@ -454,10 +454,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **Groovy Bean 정의 DSL**
 ## The Groovy Bean Definition DSL
 
-# 외부화된 환결설정 메타데이터의 추가 예로서 Grails 프레임워크로 알려진 것처럼 Bean 정의는 Spring의 Grooby Bean 정의 DSL로 표현된 표현될 수 있다.
+# configuration 메타데이터는 Grails 프레임워크로 알려진 Groovy `Bean` 정의 DSL으로도 `Bean` 정의를 할 수 있으며
 ## As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring’s Groovy Bean Definition DSL, as known from the Grails framework.
 
-# 일반적으로 이러한 구성은 다음 예제와 같은 구조의 ".groovy" 파일에 있다.
+# ".groovy" 파일으로 만들어진다. 다음은 Groovy `Bean` DSL configuration 예제다.
 ## Typically, such configuration live in a ".groovy" file with the structure shown in the following example:
 
 <br/>
@@ -484,10 +484,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 이 구성 스타일은 XML Bean 정의와 거의 동일하고 Spring의 XML 구성 네임스페이스도 지원한다.
+# 이 configuration 스타일은 XML `Bean` 정의와 유사하고 Spring의 XML 네임스페이스도 지원한다.
 ## This configuration style is largely equivalent to XML bean definitions and even supports Spring’s XML configuration namespaces.
 
-# 또한 importBeans 지시문을 통해 XML 빈 정의 파일을 가져올 수도 있다.
+# 또한 `importBeans` 지시문을 통해 XML `Bean` 정의 파일을 가져올 수도 있다.
 ## It also allows for importing XML bean definition files through an importBeans directive.
 </div>
 
