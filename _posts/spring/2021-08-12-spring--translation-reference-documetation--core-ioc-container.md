@@ -254,7 +254,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## See Dependencies for more information.
 </div>
 
-<div markdown="1" class="mt-5">
+<div id="instantiating-a-container" markdown="1" class="mt-5">
 # **1.2.2. Container 인스턴스화** 
 ## 1.2.2. Instantiating a Container
 
@@ -353,26 +353,29 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## For details of configuring an object’s dependencies, see Dependencies.
 <br/>
 
-# **XML 기반 구성 메타데이터 작성**
+# **XML 기반 환경 설정 메타데이터 구성**
 ## Composing XML-based Configuration Metadata
 
-# 빈 정의가 여러 XML 파일에 걸쳐 있도록 하는 것이 유용할 수 있습니다.
+# 여러 XML 파일에 `Bean` 정의를 하는 것이 유용할 수 있다. 
 ## It can be useful to have bean definitions span multiple XML files.
 
-# 종종 각 개별 XML 구성 파일은 아키텍처의 논리적 계층 또는 모듈을 나타냅니다. 
+# 종종 각 개별 XML 구성 파일은 아키텍처의 논리적 계층 또는 모듈을 나타낸다. 
 ## Often, each individual XML configuration file represents a logical layer or module in your architecture.
 
-# 애플리케이션 컨텍스트 생성자를 사용하여 이러한 모든 XML 조각에서 빈 정의를 로드할 수 있습니다.
+# 어플리케이션 컨텍스트 생성자를 사용해서 이러한 모든 XML 조각에서 `Bean` 정의를 로드할 수 있다. 
 ## You can use the application context constructor to load bean definitions from all these XML fragments.
+<br/>
 
-# 이 생성자는 이전 섹션에 표시된 것처럼 여러 리소스 위치를 사용합니다.
-## This constructor takes multiple Resource locations, as was shown in the previous section.
+# 이 생성자는 [이전 섹션](#instantiating-a-container)에서 보여준 것 처럼 여러가지 `Resource` 위치경로를 사용한다.
+## This constructor takes multiple `Resource` locations, as was shown in the previous section.
 
-# 또는 요소의 하나 이상의 발생을 사용하여 다른 파일에서 빈 정의를 로드합니다. 
-## Alternatively, use one or more occurrences of the <import/> element to load bean definitions from another file or files.
+# 또는 `<import/>` 요소를 하나 이상 사용하여 다른 파일에서 `Bean` 정의를 로드한다. 
+## Alternatively, use one or more occurrences of the `<import/>` element to load bean definitions from another file or files.
 
-# 다음 예에서는 그렇게 하는 방법을 보여줍니다. 
+# 다음 예제에서는 그렇게 하는 방법을 보여준다. 
 ## The following example shows how to do so:
+
+<div class="mt-2"></div>
 
 ```xml
     <beans>
@@ -385,51 +388,57 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     </beans>
 ```
 
-# 앞의 예에서 외부 Bean 정의는 services.xml, messageSource.xml 및 themeSource.xml의 세 파일에서 로드됩니다. 
-## In the preceding example, external bean definitions are loaded from three files: services.xml, messageSource.xml, and themeSource.xml.
+<div class="mt-2"></div>
 
-# 모든 위치 경로는 가져오기를 수행하는 정의 파일에 상대적이므로 services.xml은 가져오기를 수행하는 파일과 동일한 디렉토리 또는 클래스 경로 위치에 있어야 하며 messageSource.xml 및 themeSource.xml은 위치 아래의 리소스 위치에 있어야 합니다. 가져오기 파일의.
-## All location paths are relative to the definition file doing the importing, so services.xml must be in the same directory or classpath location as the file doing the importing, while messageSource.xml and themeSource.xml must be in a resources location below the location of the importing file.
+# 앞의 예제에서 외부 `Bean` 정의는 세 개의 파일(`services.xml`, `messageSource.xml`, `themeSource.xml`)에서 로드된다  
+## In the preceding example, external bean definitions are loaded from three files: `services.xml`, `messageSource.xml`, and `themeSource.xml`.
 
-# 보시다시피 선행 슬래시는 무시됩니다.
+# 모든 위치 경로는 가져오기를 수행하는 정의 파일에 상대적이므로 `service.xml`은 가져오기를 수행하는 파일과 동일한 디렉토리 또는 classpath 위치에 있어야 하며 `messageSource.xml` 및 `themeSource.xml`은 위치 아래의 가져오기 파일 리소스 위치에 있어야 한다.
+## All location paths are relative to the definition file doing the importing, so `services.xml` must be in the same directory or classpath location as the file doing the importing, while `messageSource.xml` and `themeSource.xml` must be in a resources location below the location of the importing file.
+
+# 보다시피 선행 슬래시는 무시된다.
 ## As you can see, a leading slash is ignored.
  
-# 그러나 이러한 경로는 상대적이므로 슬래시를 전혀 사용하지 않는 것이 더 나은 형식입니다.  
+# 그러나 이러한 경로는 상대적이므로 슬래시를 전혀 사용하지 않는 것이 더 낫다.  
 ## However, given that these paths are relative, it is better form not to use the slash at all.
 
-# 최상위 요소를 포함하여 가져오는 파일의 내용은 Spring 스키마에 따라 유효한 XML 빈 정의여야 합니다.
-## The contents of the files being imported, including the top level <beans/> element, must be valid XML bean definitions, according to the Spring Schema.
+# 최상위 요소 `<beans/>` 요소를 포함하여 가져오는 파일의 내용은 Spring 스키마에 따라 유효한 XML `Bean` 정의여야 한다.
+## The contents of the files being imported, including the top level `<beans/>` element, must be valid XML bean definitions, according to the Spring Schema.
+
+<br/>
 
 <div class="spring info-wrapper pb-1">
 <i class="fa fa-info-circle icon mr-half mt-1"></i>
 <div markdown="1">
-# 상대 "../" 경로를 사용하여 상위 디렉토리의 파일을 참조하는 것은 가능하지만 권장되지는 않습니다.
+# 상대 경로 "../"를 사용하여 상위 디렉토리에 있는 파일을 참조하는 것은 가능하지만 권장하지는 않는다. 
 ## It is possible, but not recommended, to reference files in parent directories using a relative "../" path.
 
-# 이렇게 하면 현재 응용 프로그램 외부에 있는 파일에 대한 종속성이 생성됩니다. 
+# 이렇게 하면 현재 어플리케이션 외부에 있는 파일에 의존성이 생긴다. 
 ## Doing so creates a dependency on a file that is outside the current application.
 
-# 특히 이 참조는 런타임 확인 프로세스가 "가장 가까운" 클래스 경로 루트를 선택한 다음 상위 디렉토리를 조사하는 classpath: URL(예: classpath:../services.xml)에 대해 권장되지 않습니다.
+ # 특히 이 참조는 런타임 확인 프로세스가 "가장 가까운" classpath root를 선택한 다음 상위 디렉토리를 조사하는 classpath: URL(예: classpath:../services.xml)에 대해 권장되지 않는다.
 ## In particular, this reference is not recommended for classpath: URLs (for example, classpath:../services.xml), where the runtime resolution process chooses the “nearest” classpath root and then looks into its parent directory. 
 
-# 클래스 경로 구성 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있습니다.
+# Classpath 구성 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있다.
 ## Classpath configuration changes may lead to the choice of a different, incorrect directory.
 
-# 상대 경로 대신 항상 정규화된 리소스 위치를 사용할 수 있습니다(예: file:C:/config/services.xml 또는 classpath:/config/services.xml).
+# 상대 경로 대신 항상 정규화된 리소스 위치를 사용할 수 있다.(예: file:C:/config/services.xml 또는 classpath:/config/services.xml).
 ## You can always use fully qualified resource locations instead of relative paths: for example, file:C:/config/services.xml or classpath:/config/services.xml.
 
-# 그러나 애플리케이션의 구성을 특정 절대 위치에 연결하고 있다는 점에 유의하십시오. 
+# 그러나 어플리케이션 구성을 특정 절대 경로에 연결하고 있다는 점에 유의해야한다. 
 ## However, be aware that you are coupling your application’s configuration to specific absolute locations.
 
-# 일반적으로 런타임 시 JVM 시스템 속성에 대해 확인되는 "${… }" 자리 표시자를 통해 절대 위치 에 대한 간접 참조를 유지하는 것이 좋습니다. 
+# 일반적으로 런타임 시 JVM 시스템 속성에 대해 확인되는 "${… }" 자리 표시자를 통해 절대 위치에 대한 참조를 유지하는 것이 좋다.
 ## It is generally preferable to keep an indirection for such absolute locations — for example, through "${…​}" placeholders that are resolved against JVM system properties at runtime.
 </div>
 </div>
 
-# 네임스페이스 자체는 가져오기 지시문 기능을 제공합니다.
+<br/>
+
+# 네임스페이스 자체는 가져오기 지시문 기능을 제공한다.
 ## The namespace itself provides the import directive feature.
 
-# Spring 에서 제공하는 XML 네임스페이스(예: 컨텍스트 및 util 네임스페이스) 선택에서 일반 빈 정의 이상의 추가 구성 기능을 사용할 수 있습니다. 참조 
+#  더 나아가 Spring에서 제공하는 XML 네임스페이스(예: 컨텍스트 및 util 네임스페이스) 선택에서 일반적인 Bean 정의 이상의 추가 환경설정 기능을 사용할 수 있다 
 ## Further configuration features beyond plain bean definitions are available in a selection of XML namespaces provided by Spring — for example, the context and util namespaces.
 
 <br/>
@@ -437,11 +446,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **Groovy Bean 정의 DSL**
 ## The Groovy Bean Definition DSL
 
-# 외부화된 구성 메타데이터의 추가 예로서, Grails 프레임워크에서 알려진 것처럼 빈 정의는 Spring의 Groovy Bean Definition DSL로 표현될 수도 있습니다.
+# 외부화된 환결설정 메타데이터의 추가 예로서 Grails 프레임워크로 알려진 것처럼 Bean 정의는 Spring의 Grooby Bean 정의 DSL로 표현된 표현될 수 있다.
 ## As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring’s Groovy Bean Definition DSL, as known from the Grails framework.
 
-# 일반적으로 이러한 구성은 다음 예제와 같은 구조의 ".groovy" 파일에 있습니다.
+# 일반적으로 이러한 구성은 다음 예제와 같은 구조의 ".groovy" 파일에 있다.
 ## Typically, such configuration live in a ".groovy" file with the structure shown in the following example:
+
+<br/>
 
 ```groovy
     beans {
@@ -463,10 +474,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     }
 ```
 
-# 이 구성 스타일은 XML 빈 정의와 거의 동일하며 Spring의 XML 구성 네임스페이스도 지원합니다.
+<br/>
+
+# 이 구성 스타일은 XML Bean 정의와 거의 동일하고 Spring의 XML 구성 네임스페이스도 지원한다.
 ## This configuration style is largely equivalent to XML bean definitions and even supports Spring’s XML configuration namespaces.
 
-# 또한 importBeans 지시문을 통해 XML 빈 정의 파일을 가져올 수 있습니다.
+# 또한 importBeans 지시문을 통해 XML 빈 정의 파일을 가져올 수도 있다.
 ## It also allows for importing XML bean definition files through an importBeans directive.
 </div>
 
