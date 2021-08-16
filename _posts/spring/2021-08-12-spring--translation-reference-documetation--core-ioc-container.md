@@ -99,37 +99,37 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <div markdown="1" class="contents">
-# `ApplicationContext`<a href="#footnote-3" class="footnote">[3]</a> 인터페이스는 Spring `IoC container`를 나타내며 `Bean`의 인스턴스화, 구성 및 조립을 담당하고
+# `ApplicationContext`<a href="#footnote-3" class="footnote">[3]</a> 인터페이스는 Spring `IoC container`를 나타내고 `Bean`의 인스턴스화, 구성 및 조립을 담당한다.
 ## The `org.springframework.context.ApplicationContext` interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans.
  
-# 환경 설정 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다. 
+# 또한 환경 설정 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다.
 ## The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata.
 
 # 환경 설정 메타데이터는 XML이나 Java annotation 또는 코드 형태로 사용할 수 있고
 ## The configuration metadata is represented in XML, Java annotations, or Java code.
 
-# 어플리케이션을 구성하는 객체와 이러한 객체 간의 풍부한 상호 의존성을 표현할 수 있게 해준다.
+# 어플리케이션을 구성하는 객체 간의 풍부한 상호 의존성을 표현할 수 있게 해준다.
 ## It lets you express the objects that compose your application and the rich interdependencies between those objects.
 <br/>
 
 
-# `ApplicationContext` 인터페이스의 구현체 중 몇 가지는 Spring과 함께 제공되고
+# `ApplicationContext` 인터페이스의 구현체 중 몇 가지는 Spring과 함께 제공되며
 ## Several implementations of the `ApplicationContext` interface are supplied with Spring.
 
 # 일반적으로 독립 실행형 어플리케이션에서는 [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [FileSystemXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"}를 사용한다.
 ## In stand-alone applications, it is common to create an instance of `ClassPathXmlApplicationContext` or `FileSystemXmlApplicationContext`.
 
-# 환경 설정 메타데이터를 정의하기 위한 전통적인 형식은 XML이지만 Java annotation나 코드로 선언하는 부가적인 메타데이터 형식<a href="#footnote-4" class="footnote">[4]</a>도 있다. 
+# 환경 설정 메타데이터를 정의하기 위한 형식으로는 전통 형식인 XML과 Java annotation이나 코드로 선언하는 부가적인 형식<a href="#footnote-4" class="footnote">[4]</a>이 있다. 
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 <br/>
 
-# 대부분의 어플리케이션 시나리오에서 명시적으로 작성되는 코드는 Spring `IoC container`에 정의된 인스턴스를 인스턴스화하지 않아도 된다. 
+# 대부분의 어플리케이션 시나리오에서는 Spring `IoC container`에 정의된 객체를 명시적인 코드로 직접 인스턴스화하지 않아도 된다. 
 ## In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container.
 
-# 예를 들어 웹 어플리케이션 시나리오에서는 일반적으로 어플리케이션의 `web.xml` 파일에 있는 상용구 웹 descriptor XML의 단 8줄 정도로도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
+# 예를 들어 일반적으로 웹 어플리케이션 시나리오에서는 어플리케이션의 `web.xml` 파일에 상용구 코드 8줄 정도만 작성해도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
 ## For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor XML in the web.xml file of the application typically suffices (see Convenient ApplicationContext Instantiation for Web Applications).
 
-# 이러한 상용구 환경 설정은 [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 사용하는 경우 몇 번의 클릭이나 키 입력으로 손쉽게 할 수 있다.
+# [STS](https://spring.io/tools){:target="_blank"}(Eclipse 기반 개발 환경)를 사용하는 경우 이러한 상용구를 사용한 환경 설정을 몇 번의 클릭이나 키 입력으로 손쉽게 할 수 있다.
 ## If you use the Spring Tools for Eclipse (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.
 
 <br/>
