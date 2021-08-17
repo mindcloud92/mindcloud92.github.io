@@ -216,7 +216,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## See Using AspectJ to dependency-inject domain objects with Spring.
 
 <br/>
-# XML 기반 configuration 구성의 기본 구조는 다음 예제와 같다.
+# XML 기반 configuration 구성의 기본 구조는 다음 예시와 같다.
 ## The following example shows the basic structure of XML-based configuration metadata:
 
 <div markdown="1" class="mt-2 mb-2">
@@ -249,7 +249,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `id` 속성의 값은 객체를 나타내며
 ## The value of the id attribute refers to collaborating objects.
  
-# 객체를 참조하기 위한 XML은 위 예제에 포함되어 있지 않다. 
+# 객체를 참조하기 위한 XML은 위 예시에 포함되어 있지 않다. 
 ## The XML for referring to collaborating objects is not shown in this example. 
 
 # 자세한 내용은 [의존성](#dependencies) 참조.
@@ -290,7 +290,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 다음은 서비스 계층 객체 configuration(`services.xml`) 예제다.
+# 다음은 서비스 계층 객체 configuration(`services.xml`) 예시다.
 ## The following example shows the service layer objects (`services.xml`) configuration file:
 
 <div class="mt-2"></div>
@@ -316,7 +316,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 
 <br/>
-# 다음은 데이터 액세스 객체 configuration(`daos.xml`) 예제다.
+# 다음은 데이터 액세스 객체 configuration(`daos.xml`) 예시다.
 ## The following example shows the data access objects `daos.xml` file:
 
 <div class="mt-2"></div>
@@ -342,7 +342,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     </beans>
 ```
 
-# 앞의 예제에서 서비스 계층은 `PetStoreServiceImpl` 클래스와 데이터 액세스 객체<a href="#footnote-8" class="footnote">[8]</a>인 `JpaAccountDao`와 `JpaItemDao `두 개로 구성된다. 
+# 앞의 예시에서 서비스 계층은 `PetStoreServiceImpl` 클래스와 데이터 액세스 객체<a href="#footnote-8" class="footnote">[8]</a>인 `JpaAccountDao`와 `JpaItemDao `두 개로 구성된다. 
 ## In the preceding example, the service layer consists of the `PetStoreServiceImpl` class and two data access objects of the types `JpaAccountDao` and `JpaItemDao` (based on the JPA Object-Relational Mapping standard).
 
 <br/>
@@ -378,7 +378,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 다음은 `<import/>` 요소를 사용하는 예제다. 
+# 다음은 `<import/>` 요소를 사용하는 예시다. 
 ## The following example shows how to do so:
 
 <div class="mt-2"></div>
@@ -396,7 +396,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 앞의 예제에서 `Bean` 정의는 `services.xml`, `messageSource.xml`, `themeSource.xml` 세 개의 리소스 경로에서 로드된다.
+# 앞의 예시에서 `Bean` 정의는 `services.xml`, `messageSource.xml`, `themeSource.xml` 세 개의 리소스 경로에서 로드된다.
 ## In the preceding example, external bean definitions are loaded from three files: `services.xml`, `messageSource.xml`, and `themeSource.xml`.
 
 <br/>
@@ -457,7 +457,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Grails 프레임워크로 알려진 Groovy `Bean` 정의 DSL으로도 configuration 메타데이터에 `Bean` 정의를 할 수 있으며
 ## As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring’s Groovy Bean Definition DSL, as known from the Grails framework.
 
-# 이 경우 ".groovy" 파일으로 만들어진다. 다음은 Groovy `Bean` DSL configuration 예제다.
+# 이 경우 ".groovy" 파일으로 만들어진다. 다음은 Groovy `Bean` DSL configuration 예시다.
 ## Typically, such configuration live in a ".groovy" file with the structure shown in the following example:
 
 <br/>
@@ -503,7 +503,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 다음 예제와 같이 `ApplicationContext`를 사용하여 XML configuration의 `Bean` 정의를 읽고 액세스할 수 있다.
+# 다음 예시와 같이 `ApplicationContext`를 사용하여 XML configuration의 `Bean` 정의를 읽고 액세스할 수 있다.
 ## The `ApplicationContext` lets you read bean definitions and access them, as the following example shows:
 
 <div class="mt-2"></div>
@@ -541,7 +541,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 파일을 인식하는 컨텍스트 구현 클래스는 다르지만 매우 유사한 형태로 `ApplicationContext`를 사용할 수 있다. 
 ## It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions).
 
-# 다음은 Groovy configuration을 사용한 경우의 예제다.
+# 다음은 Groovy configuration을 사용한 경우의 예시다.
 ## The following example shows Groovy configuration:
 <div class="mt-2"></div>
 ```java
@@ -554,7 +554,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# `ApplicationContext` 구현체 중 확장성이 좋은 구현체는 다음 예제와 같이 `XmlBeanDefinitionReader`과 같은 리더 델리케이트와 함께 사용되는 `GenericApplicationContext`다. 
+# `GenericApplicationContext`는 `Bean`정의를 가져오는 책임을 `XmlBeanDefinitionReader`와 같은 리더에 위임하고 이러한 리더와 결합하여 사용한다. 예시는 다음과 같다.   
 ## The most flexible variant is `GenericApplicationContext` in combination with reader delegates — for example, with `XmlBeanDefinitionReader` for XML files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -573,7 +573,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 다음 예제와 같이 리더 델리케이트를 `GroovyBeanDefinitionReader`를 사용할 수도있다.
+# 다음 예시와 같이 리더로 `GroovyBeanDefinitionReader`를 사용할 수도있다.
 ## You can also use the `GroovyBeanDefinitionReader` for Groovy files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -591,7 +591,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 
 <br/>
-# 다양한 configuration 소스에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에서 이러한 리더 델리게이트를 섞고 매치시킬 수 있다.
+
+# 다양한 configuration 소스에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에서 이러한 리더 델리게이터를 섞고 매치시킬 수 있다.
 ## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
 
 # 그런 다음 `getBean`을 사용하여 `Bean` 인스턴스를 찾을 수 있다.
