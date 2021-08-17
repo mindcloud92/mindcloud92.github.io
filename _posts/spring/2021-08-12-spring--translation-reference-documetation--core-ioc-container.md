@@ -491,7 +491,123 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## It also allows for importing XML bean definition files through an importBeans directive.
 </div>
 
+<div markdown="1" class="mt-5">
+# **1.2.3. Container 사용**
+## 1.2.3. Using the Container
+
+# `ApplicationContext`는 서로 다른 `Bean`과 그들간의 의존성 레지스트리를 유지할 수 있는 고급 팩토리용 인터페이스다.
+## The `ApplicationContext` is the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
+
+# `T getBean(String name, Class<T> requiredType)` 메소드로 `Bean` 인스턴스를 찾을 수 있다.
+## By using the method `T getBean(String name, Class<T> requiredType)`, you can retrieve instances of your beans.
+
+<br/>
+
+# 다음 예제와 같이 `ApplicationContext`를 사용하면 `Bean` 정의를 읽고 액세스할 수 있다.
+## The `ApplicationContext` lets you read bean definitions and access them, as the following example shows:
+
+<div class="mt-2"></div>
+
+```java
+    // create and configure beans
+    ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
+    
+    // retrieve configured instance
+    PetStoreService service = context.getBean("petStore", PetStoreService.class);
+    
+    // use configured instance
+    List<String> userList = service.getUsernameList();
+```
+<div class="mt-1"></div>
+
+```kotlin
+    import org.springframework.beans.factory.getBean
+    
+    // create and configure beans
+    val context = ClassPathXmlApplicationContext("services.xml", "daos.xml")
+    
+    // retrieve configured instance
+    val service = context.getBean<PetStoreService>("petStore")
+    
+    // use configured instance
+    var userList = service.getUsernameList()
+```
+
+<br/>
+
+# Groovy configuration을 사용하면 부트스트래핑이 매우 유사해 보인다.
+## With Groovy configuration, bootstrapping looks very similar.
+
+# 그것은 Groovy 인식 컨텍스트 구현 클래스가 다르지만 XML bean 정의를 이해한다.
+## It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions).
+
+# 다음은 Groovy configuration 예제다.
+## The following example shows Groovy configuration:
+<div class="mt-2"></div>
+```java
+    ApplicationContext context = new GenericGroovyApplicationContext("services.groovy", "daos.groovy");
+```
+<div class="mt-1"></div>
+```kotlin
+    val context = GenericGroovyApplicationContext("services.groovy", "daos.groovy")
+```
+
+<br/>
+
+# 가장 유연한 변형은 다음 예제와 같은 XML 파일용 `XmlBeanDefinitionReader`와 같이 리더 델리케이트와 결합된 `GenericApplicationContext`이다.
+## The most flexible variant is `GenericApplicationContext` in combination with reader delegates — for example, with `XmlBeanDefinitionReader` for XML files, as the following example shows:
+
+<div class="mt-2"></div>
+```java
+    GenericApplicationContext context = new GenericApplicationContext();
+    new XmlBeanDefinitionReader(context).loadBeanDefinitions("services.xml", "daos.xml");
+    context.refresh();
+```
+<div class="mt-1"></div>
+
+```kotlin
+    val context = GenericApplicationContext()
+    XmlBeanDefinitionReader(context).loadBeanDefinitions("services.xml", "daos.xml")
+    context.refresh()
+```
+
+<br/>
+
+# 다음 예제와 같이 Groovy에 `GroovyBeanDefinitionReader`를 사용할 수도있다.
+## You can also use the `GroovyBeanDefinitionReader` for Groovy files, as the following example shows:
+
+<div class="mt-2"></div>
+```java
+    GenericApplicationContext context = new GenericApplicationContext();
+    new GroovyBeanDefinitionReader(context).loadBeanDefinitions("services.groovy", "daos.groovy");
+    context.refresh();
+```
+<div class="mt-1"></div>
+
+```kotlin
+    val context = GenericApplicationContext()
+    GroovyBeanDefinitionReader(context).loadBeanDefinitions("services.groovy", "daos.groovy")
+    context.refresh()
+```
+
+# 다양한 configuration 소스에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에서 이러한 리더 델리게이트를 섞고 매치시킬 수 있다.
+## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
+
+# 그런 다음 `getBean`을 사용하여 `Bean` 인스턴스를 찾을 수 있다.
+## You can then use `getBean` to retrieve instances of your beans. 
+
+# `ApplicationContext` 인터페이스는 `Bean`을 검색하기 위한 몇몇 다른 메소드를 가지고 있지만 이상적으로는 어플리케이션 코드에서 이러한 메소드를 사용해서는 안된다. 
+## The `ApplicationContext` interface has a few other methods for retrieving beans, but, ideally, your application code should never use them.
+
+# 실제로 어플리케이션 코드는 `getBean()` 메소드에 대한 호출이 전혀 없어야 하므로 Spring API에 대한 의존성이 전혀 없어야 한다.
+## Indeed, your application code should have no calls to the `getBean()` method at all and thus have no dependency on Spring APIs at all.
+
+# 예를 들어 웹 프페임워크와 Spring의 통합은 컨트롤러 및 JSF 관리 `Bean`과 같은 웹 프레임워크 component에 대한 의존성 주입을 제공하여 메타데이터(예: autowiring annotation)를 통해 특정 `Bean`에 대한 의존성을 선언할 수 있도록 한다.
+## For example, Spring’s integration with web frameworks provides dependency injection for various web framework components such as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).
 </div>
+</div>
+
+
 </section>
 
 
