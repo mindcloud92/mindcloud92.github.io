@@ -495,15 +495,15 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # **1.2.3. Container 사용**
 ## 1.2.3. Using the Container
 
-# `ApplicationContext`는 서로 다른 `Bean`과 그들간의 의존성 레지스트리를 유지할 수 있는 고급 팩토리용 인터페이스다.
+# `ApplicationContext`는 서로 다른 `Bean`의 레지스트리와 의존성을 유지할 수 있는 고급 팩토리 인터페이스로
 ## The `ApplicationContext` is the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
 
-# `T getBean(String name, Class<T> requiredType)` 메소드로 `Bean` 인스턴스를 찾을 수 있다.
+# 내부 메소드 `T getBean(String name, Class<T> requiredType)`를 사용하여 원하는 클래스 타입의 `Bean` 인스턴스를 찾을 수 있다.
 ## By using the method `T getBean(String name, Class<T> requiredType)`, you can retrieve instances of your beans.
 
 <br/>
 
-# 다음 예제와 같이 `ApplicationContext`를 사용하면 `Bean` 정의를 읽고 액세스할 수 있다.
+# 다음 예제와 같이 `ApplicationContext`를 사용하여 XML configuration의 `Bean` 정의를 읽고 액세스할 수 있다.
 ## The `ApplicationContext` lets you read bean definitions and access them, as the following example shows:
 
 <div class="mt-2"></div>
@@ -535,13 +535,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# Groovy configuration을 사용하면 부트스트래핑이 매우 유사해 보인다.
+# Groovy configuration을 사용하는 경우에는 XML configuration을 사용하는 경우와 
 ## With Groovy configuration, bootstrapping looks very similar.
 
-# 그것은 Groovy 인식 컨텍스트 구현 클래스가 다르지만 XML bean 정의를 이해한다.
+# 파일을 인식하는 컨텍스트 구현 클래스는 다르지만 매우 유사한 형태로 `ApplicationContext`를 사용할 수 있다. 
 ## It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions).
 
-# 다음은 Groovy configuration 예제다.
+# 다음은 Groovy configuration을 사용한 경우의 예제다.
 ## The following example shows Groovy configuration:
 <div class="mt-2"></div>
 ```java
