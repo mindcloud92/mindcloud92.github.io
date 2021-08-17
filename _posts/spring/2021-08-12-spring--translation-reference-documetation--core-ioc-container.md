@@ -256,7 +256,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## See Dependencies for more information.
 </div>
 
-<div id="instantiating-a-container" markdown="1" class="mt-5">
+<div id="instantiating-a-container" markdown="1" class="pt-3">
 # **1.2.2. Container 인스턴스화** 
 ## 1.2.2. Instantiating a Container
 
@@ -370,7 +370,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## You can use the application context constructor to load bean definitions from all these XML fragments.
 <br/>
 
-# `ApplicationContext`는 [이전 섹션](#instantiating-a-container)에서 보여준 것처럼 생성자를 통해 하나 이상의 `Resource` 경로를 인자로 받거나
+# `ApplicationContext`는 [1.2.2. Container 인스턴스화](#instantiating-a-container)에서 보여준 것처럼 생성자를 통해 하나 이상의 `Resource` 경로를 인자로 받거나
 ## This constructor takes multiple `Resource` locations, as was shown in the previous section.
 
 # `<import/>` 요소를 사용하여 다른 리소스 경로에서 `Bean` 정의를 가져온다. 
