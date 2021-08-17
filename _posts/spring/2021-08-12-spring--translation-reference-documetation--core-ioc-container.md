@@ -590,21 +590,23 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     context.refresh()
 ```
 
-<br/>
+<div class="mt-2"></div>
 
-# 다양한 configuration 소스에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에서 이러한 리더 델리게이터를 섞고 매치시킬 수 있다.
+# 이렇게 하면 다양한 configuration에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에 리더를 알맞게 짝지을 수 있다.
 ## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
 
-# 그런 다음 `getBean`을 사용하여 `Bean` 인스턴스를 찾을 수 있다.
+<br/>
+
+# `ApplicationContext`의 `getBean()`메소드를 통해 원하는 `Bean` 인스턴스를 찾을 수 있다.
 ## You can then use `getBean` to retrieve instances of your beans. 
 
-# `ApplicationContext` 인터페이스는 `Bean`을 검색하기 위한 몇몇 다른 메소드를 가지고 있지만 이상적으로는 어플리케이션 코드에서 이러한 메소드를 사용해서는 안된다. 
+# 이외에도 `ApplicationContext` 인터페이스는 `Bean`을 찾기 위한 몇몇 다른 메소드를 가지고 있지만 어플리케이션 코드에서 이러한 메소드는 사용하지 않는 게 이상적이다. 
 ## The `ApplicationContext` interface has a few other methods for retrieving beans, but, ideally, your application code should never use them.
 
-# 실제로 어플리케이션 코드는 `getBean()` 메소드에 대한 호출이 전혀 없어야 하므로 Spring API에 대한 의존성이 전혀 없어야 한다.
+# 그렇기 때문에 실제로 어플리케이션 코드는 Spring API에 전혀 의존하지 않게 된다.
 ## Indeed, your application code should have no calls to the `getBean()` method at all and thus have no dependency on Spring APIs at all.
 
-# 예를 들어 웹 프페임워크와 Spring의 통합은 컨트롤러 및 JSF 관리 `Bean`과 같은 웹 프레임워크 component에 대한 의존성 주입을 제공하여 메타데이터(예: autowiring annotation)를 통해 특정 `Bean`에 대한 의존성을 선언할 수 있도록 한다.
+# 예를 들어 웹 프레임워크와 Spring의 통합은 컨트롤러 및 JSF 관리 `Bean`과 같은 웹 프레임워크 컴포넌트에 대한 의존성 주입을 제공하여 메타데이터(예: autowiring annotation)를 통해 특정 `Bean`에 대한 의존성을 선언할 수 있도록 한다.
 ## For example, Spring’s integration with web frameworks provides dependency injection for various web framework components such as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).
 </div>
 </div>
