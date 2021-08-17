@@ -554,7 +554,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# 가장 유연한 변형은 다음 예제와 같은 XML 파일용 `XmlBeanDefinitionReader`와 같이 리더 델리케이트와 결합된 `GenericApplicationContext`이다.
+# `ApplicationContext` 구현체 중 확장성이 좋은 구현체는 다음 예제와 같이 `XmlBeanDefinitionReader`과 같은 리더 델리케이트와 함께 사용되는 `GenericApplicationContext`다. 
 ## The most flexible variant is `GenericApplicationContext` in combination with reader delegates — for example, with `XmlBeanDefinitionReader` for XML files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -571,9 +571,9 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     context.refresh()
 ```
 
-<br/>
+<div class="mt-2"></div>
 
-# 다음 예제와 같이 Groovy에 `GroovyBeanDefinitionReader`를 사용할 수도있다.
+# 다음 예제와 같이 리더 델리케이트를 `GroovyBeanDefinitionReader`를 사용할 수도있다.
 ## You can also use the `GroovyBeanDefinitionReader` for Groovy files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -590,6 +590,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     context.refresh()
 ```
 
+<br/>
 # 다양한 configuration 소스에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에서 이러한 리더 델리게이트를 섞고 매치시킬 수 있다.
 ## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
 
