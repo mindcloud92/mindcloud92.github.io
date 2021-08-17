@@ -92,7 +92,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 
-<section class="translation-article-wrapper accordion-wrapper mb-4" markdown="1">
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
 # **1.2. Container 개요**
 ## 1.2. Container Overview
@@ -139,7 +139,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The following diagram shows a high-level view of how Spring works. 
 
 ![container magic](https://docs.spring.io/spring-framework/docs/current/reference/html/images/container-magic.png){:class="thumbnail mt-1 pa-1"} 
-<p class="thumbnail-description">Figure 1. The Spring IoC container</p>
+<p class="details-description">Figure 1. The Spring IoC container</p>
 
 <br/>
 # 시스템 또는 어플리케이션은 어플리케이션의 클래스가 configuration 메타데이터와 결합되어 `ApplicationContext`가 생성되고 초기화된 후에야 완전히 구성되고 실행이 가능해진다.
@@ -610,12 +610,142 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## For example, Spring’s integration with web frameworks provides dependency injection for various web framework components such as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).
 </div>
 </div>
+</section>
 
+<section class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
+# **1.3. Bean 개요**
+## 1.3. Bean Overview
+</div>
 
+<div markdown="1" class="contents">
+# Spring IoC 컨테이너는 하나 이상의 빈을 관리헌다.
+## A Spring IoC container manages one or more beans.
+
+# 이러한 빈은 컨테이너에 제공하는 구성 메타데이터로 생성됩니다(예: XML `<bean/>` 정의 형식).
+## These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML `<bean/>` definitions).
+
+<br/>
+
+# 컨테이너 자체 내에서 이러한 빈 정의는 다음 메타데이터를 포함하는 `BeanDefinition` 객체로 표시된다.
+## Within the container itself, these bean definitions are represented as `BeanDefinition` objects, which contain (among other information) the following metadata:
+
+<br/>
+
+- # 패키지 수식 클래스 이름: 일반적으로 정의되는 빈의 실제 구현 클래스이다.
+## A package-qualified class name: typically, the actual implementation class of the bean being defined.
+- # Bean이 컨테이너에서 어떻게 동작해야 하는지를 나타내는 Bean 동작 구성 요소(범위, 수명 주기 콜백 등).
+## Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).
+- # Bean이 작업을 수행하는 데 필요한 다른 Bean에 대한 참조다. 이러한 참조를 협력자 또는 종속성이라고도 한다.
+## References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.
+- # 새로 생성된 개체에서 설정할 기타 구성 설정 — 예: 연결 풀을 관리하는 Bean에서 사용할 연결 수 또는 풀 크기 제한.
+## Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
+
+# 이 메타데이터는 각 빈 정의를 구성하는 속성 집합으로 변환된다. 
+## This metadata translates to a set of properties that make up each bean definition. 
+
+# 다음 표에서는 이러한 속성에 대해 설명한다.
+## The following table describes these properties:
+
+<div class="mt-2 mb-2">
+    <p class="details-description">Table 1. The bean definition</p>
+    <table style="width:auto;">
+        <colgroup>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Explained in…​</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Class</td>
+                <td>
+                    <a href="#instantiating-beans">Instantiating Beans</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <a href="#naming-beans">Naming Beans</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Scope</td>
+                <td>
+                    <a href="#bean-scopes">Bean Scopes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Constructor arguments</td>
+                <td>
+                    <a href="#dependency-injection">Dependency Injection</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Properties</td>
+                <td>
+                    <a href="#dependency-injection">Dependency Injection</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Autowiring mode</td>
+                <td>
+                    <a href="#autowiring-collaborators ">Autowiring Collaborators</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Lazy initialization mode</td>
+                <td>
+                    <a href="#lazy-initialized-beans">Lazy-initialized Beans</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Initialization method</td>
+                <td>
+                    <a href="#initialization-callbacks">Initialization Callbacks</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Destruction method</td>
+                <td>
+                    <a href="#destruction-callbacks">Destruction Callbacks</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<br/>
+# 특정 빈을 생성하는 방법에 대한 정보를 포함하는 빈 정의 외에도 ApplicationContext 구현은 컨테이너 외부에서 (사용자에 의해) 생성된 기존 객체의 등록도 허용한다.
+## In addition to bean definitions that contain information on how to create a specific bean, the ApplicationContext implementations also permit the registration of existing objects that are created outside the container (by users). 
+
+# 이것은 BeanFactory DefaultListableBeanFactory 구현을 반환하는 getBeanFactory() 메소드를 통해 ApplicationContext의 BeanFactory에 액세스하여 수행된다.
+## This is done by accessing the ApplicationContext’s BeanFactory through the getBeanFactory() method, which returns the BeanFactory DefaultListableBeanFactory implementation. 
+
+# DefaultListableBeanFactory는 registerSingleton(..) 및 registerBeanDefinition(..) 메소드를 통해 이 등록을 지원한다. 
+## DefaultListableBeanFactory supports this registration through the registerSingleton(..) and registerBeanDefinition(..) methods.
+
+# 그러나 일반적인 응용 프로그램은 일반 빈 정의 메타데이터를 통해 정의된 빈으로만 작동한다. 
+## However, typical applications work solely with beans defined through regular bean definition metadata.
+
+<br/>
+<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
+<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div markdown="1">
+# Bean 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스는 가능한 한 빨리 등록해야 컨테이너가 autowiring 및 기타 내부 검사 단계에서 이에 대해 적절하게 추론할 수 있다.
+## Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps.
+
+# 기존 메타데이터 및 기존 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원되지만 런타임 시 새 Bean 등록(팩토리에 대한 실시간 액세스와 동시에)은 공식적으로 지원되지 않으며 동시 액세스 예외, Bean 컨테이너의 일관성 없는 상태 또는 둘 다.
+## While overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.
+</div>
+</div>
+</div>
 </section>
 
 
-<blockquote markdown="1">
+<blockquote markdown="1" class="mt-4">
 **Reference**
 - [원문](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core){:target="_blank"}
 
