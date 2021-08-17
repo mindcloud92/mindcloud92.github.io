@@ -242,7 +242,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - `<bean />` 필수 속성
     - # `id`: 개별 `Bean` 정의의 식별자   
       ## The id attribute is a string that identifies the individual bean definition.
-    - # `class`: `Bean`의 class type을 정의 & full classname을 사용   
+    - # `class`: `Bean`의 클래스 타입을 정의 & full classname을 사용   
       ## The class attribute defines the type of the bean and uses the fully qualified classname.
 
 
