@@ -731,7 +731,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `registerSingleton(..)` 및 `registerBeanDefinition(..)` 메소드로 사용자에 의해 생성되는 객체를 등록할 수 있다.
 ## `DefaultListableBeanFactory` supports this registration through the `registerSingleton(..)` and `registerBeanDefinition(..)` methods.
 
-# 그러나 일반적인 응용 프로그램은 일반 빈 정의 메타데이터를 통해 정의된 빈으로만 작동한다. 
+# 하지만 일반적인 어플리케이션은 `Bean` 정의 메타데이터를 통해서 `Bean`을 정의한다.
 ## However, typical applications work solely with beans defined through regular bean definition metadata.
 
 <br/>
