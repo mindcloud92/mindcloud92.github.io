@@ -734,14 +734,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 하지만 일반적인 어플리케이션은 `Bean` 정의 메타데이터를 통해서 `Bean`을 정의한다.
 ## However, typical applications work solely with beans defined through regular bean definition metadata.
 
-<br/>
 <div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
 <i class="fa fa-info-circle icon mr-half mt-1"></i>
 <div markdown="1">
-# Bean 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스는 가능한 한 빨리 등록해야 컨테이너가 autowiring 및 기타 내부 검사 단계에서 이에 대해 적절하게 추론할 수 있다.
+# container가 autowiring 및 깉 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 `Bean` 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야한다.
 ## Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps.
 
-# 기존 메타데이터 및 기존 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원되지만 런타임 시 새 Bean 등록(팩토리에 대한 실시간 액세스와 동시에)은 공식적으로 지원되지 않으며 동시 액세스 예외, Bean 컨테이너의 일관성 없는 상태 또는 둘 다.
+# 기존 메타데이터 및 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원된다. 하지만 런타임 시 새로운 `Bean`을 등록하는 것은 동시 액세스 예외 발생, `Bean` container 불일치 상태로 이어질 수 있어 공식적으는 지원되지 않는다.
 ## While overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.
 </div>
 </div>
