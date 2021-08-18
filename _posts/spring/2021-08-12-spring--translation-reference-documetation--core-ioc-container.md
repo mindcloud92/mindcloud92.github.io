@@ -722,7 +722,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <br/>
-# `ApplicationContext` 구현은 특정 `Bean`을 생성하는 방법에 대한 정보를 포함하는 `Bean` 정의 외에도 container 외부에서 사용자에 의해 생성되는 객체 등록 또한 할 수 있게 해준다.
+# `ApplicationContext` 구현은 특정 `Bean`을 생성하는 방법에 대한 정보를 포함하는 `Bean` 정의 외에 container 외부에서 사용자에 의해 생성되는 객체도 등록 할 수 있게 해준다.
 ## In addition to bean definitions that contain information on how to create a specific bean, the `ApplicationContext` implementations also permit the registration of existing objects that are created outside the container (by users). 
 
 # `ApplicationContext`의 `getBeanFactory()` 메소드를 통해 얻은 BeanFactory 구현체인 `DefaultListableBeanFactory`의
