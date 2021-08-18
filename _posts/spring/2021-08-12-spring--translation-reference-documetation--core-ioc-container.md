@@ -722,7 +722,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <br/>
-# `ApplicationContext` 구현은 특정 `Bean`을 생성하는 방법에 대한 정보를 포함하는 `Bean` 정의 외에 container 외부에서 사용자에 의해 생성되는 객체도 등록 할 수 있게 해준다.
+# `ApplicationContext` 구현은 특정 `Bean`을 생성하는 방법에 대한 정보를 포함하는 `Bean` 정의 외에 container 외부에서 사용자에 의해 생성되는 객체도 등록할 수 있게 해준다.
 ## In addition to bean definitions that contain information on how to create a specific bean, the `ApplicationContext` implementations also permit the registration of existing objects that are created outside the container (by users). 
 
 # `ApplicationContext`의 `getBeanFactory()` 메소드를 통해 얻은 `DefaultListableBeanFactory`(BeanFactory 구현체)의
@@ -737,10 +737,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
 <i class="fa fa-info-circle icon mr-half mt-1"></i>
 <div markdown="1">
-# container가 autowiring 및 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 `Bean` 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야한다.
+# container가 autowiring 및 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 `Bean` 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야 한다.
 ## Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps.
 
-# 기존 메타데이터 및 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원된다. 하지만 런타임 시 새로운 `Bean`을 등록하는 것은 동시 액세스 예외 발생, `Bean` container 불일치 상태로 이어질 수 있어 공식적으는 지원되지 않는다.
+# 기존 메타데이터 및 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원된다. 하지만 런타임 시 새로운 `Bean`을 등록하는 것은 동시 액세스 예외 발생, `Bean` container 불일치 상태로 이어질 수 있어 공식적으로는 지원되지 않는다.
 ## While overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.
 </div>
 </div>
