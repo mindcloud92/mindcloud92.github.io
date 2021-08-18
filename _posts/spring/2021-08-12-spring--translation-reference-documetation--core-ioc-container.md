@@ -643,7 +643,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - # 새로 생성된 객체에서 설정할 기타 구성 설정(예: connection 풀을 관리하는 `Bean`에서 사용할 connection 수 또는 풀 크기 제한)
 ## Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
 
-# 위와 같은 메타데이터는 각각 `Bean` 정의를 구성하는 속성으로 변환되며 
+# 위와 같은 메타데이터는 각각 `Bean`의 정의를 구성하는 속성으로 변환되며 
 ## This metadata translates to a set of properties that make up each bean definition. 
 
 # 자세한 내용은 다음 표와 같다.
