@@ -649,7 +649,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 자세한 내용은 다음 표와 같다.
 ## The following table describes these properties:
 
-<div class="mt-2 mb-2">
+<div class="mt-4 mb-2">
     <p class="details-description">Table 1. The bean definition</p>
     <table style="width:auto;">
         <colgroup>
