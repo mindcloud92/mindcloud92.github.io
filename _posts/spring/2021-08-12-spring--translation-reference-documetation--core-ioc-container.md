@@ -630,7 +630,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `Bean` 정의는 `BeanDefinition` 객체로 표현되며 이 객체가 포함하는 메타데이터는 다음과 같다.
 ## Within the container itself, these bean definitions are represented as `BeanDefinition` objects, which contain (among other information) the following metadata:
 
-<br/>
+
 
 - # 패키지 클래스 이름: 일반적으로 정의되는 `Bean`의 구현 클래스다.
 ## A package-qualified class name: typically, the actual implementation class of the bean being defined.
