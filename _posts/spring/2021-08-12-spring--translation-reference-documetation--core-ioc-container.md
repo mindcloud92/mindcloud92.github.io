@@ -619,32 +619,34 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <div markdown="1" class="contents">
-# Spring IoC 컨테이너는 하나 이상의 빈을 관리헌다.
+#  Spring `IoC container`는 하나 이상의 `Bean`을 관리하며
 ## A Spring IoC container manages one or more beans.
 
-# 이러한 빈은 컨테이너에 제공하는 구성 메타데이터로 생성됩니다(예: XML `<bean/>` 정의 형식).
+# `Bean`은 container가 제공하는 configuration 메타데이터를 통해 생성된다. (예: XML `<bean/>` 정의 형식)
 ## These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML `<bean/>` definitions).
 
 <br/>
 
-# 컨테이너 자체 내에서 이러한 빈 정의는 다음 메타데이터를 포함하는 `BeanDefinition` 객체로 표시된다.
+# `Bean` 정의는 `BeanDefinition` 객체로 표현되며 이 객체가 포함하는 메타데이터는 다음과 같다.
 ## Within the container itself, these bean definitions are represented as `BeanDefinition` objects, which contain (among other information) the following metadata:
 
 <br/>
 
-- # 패키지 수식 클래스 이름: 일반적으로 정의되는 빈의 실제 구현 클래스이다.
+- # 패키지 클래스 이름: 일반적으로 정의되는 `Bean`의 구현 클래스다.
 ## A package-qualified class name: typically, the actual implementation class of the bean being defined.
-- # Bean이 컨테이너에서 어떻게 동작해야 하는지를 나타내는 Bean 동작 구성 요소(범위, 수명 주기 콜백 등).
+- # `Bean` 동작 구성 요소: `Bean`의 scope, 수명 주기 콜백 등 어떻게 동작해야 하는지를 나타낸다.
 ## Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).
-- # Bean이 작업을 수행하는 데 필요한 다른 Bean에 대한 참조다. 이러한 참조를 협력자 또는 종속성이라고도 한다.
-## References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.
-- # 새로 생성된 개체에서 설정할 기타 구성 설정 — 예: 연결 풀을 관리하는 Bean에서 사용할 연결 수 또는 풀 크기 제한.
+- # 다른 `Bean`에 대한 참조: `Bean`이 작업을 수행하는 데 필요한 다른 Bean에 대한 참조다.
+## References to other beans that are needed for the bean to do its work.
+# 이러한 참조를 협력자 또는 의존성이라고도 한다. 
+## These references are also called collaborators or dependencies.
+- # 새로 생성된 객체에서 설정할 기타 구성 설정(예: connection 풀을 관리하는 `Bean`에서 사용할 connection 수 또는 풀 크기 제한)
 ## Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
 
-# 이 메타데이터는 각 빈 정의를 구성하는 속성 집합으로 변환된다. 
+# 위와 같은 메타데이터는 각각 `Bean` 정의를 구성하는 속성으로 변환되며 
 ## This metadata translates to a set of properties that make up each bean definition. 
 
-# 다음 표에서는 이러한 속성에 대해 설명한다.
+# 자세한 내용은 다음 표와 같다.
 ## The following table describes these properties:
 
 <div class="mt-2 mb-2">
