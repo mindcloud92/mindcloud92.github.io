@@ -632,7 +632,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 
 
-- # 패키지 클래스 이름: 일반적으로 정의되는 `Bean`의 구현 클래스다.
+- # 패키지 클래스 이름: 일반적으로 정의되는 `Bean` 구현 클래스다.
 ## A package-qualified class name: typically, the actual implementation class of the bean being defined.
 - # `Bean` 동작 구성 요소: `Bean`의 scope, 수명 주기 콜백 등 어떻게 동작해야 하는지를 나타낸다.
 ## Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).
