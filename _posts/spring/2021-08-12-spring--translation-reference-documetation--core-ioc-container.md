@@ -722,14 +722,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 
 <br/>
-# 특정 빈을 생성하는 방법에 대한 정보를 포함하는 빈 정의 외에도 ApplicationContext 구현은 컨테이너 외부에서 (사용자에 의해) 생성된 기존 객체의 등록도 허용한다.
-## In addition to bean definitions that contain information on how to create a specific bean, the ApplicationContext implementations also permit the registration of existing objects that are created outside the container (by users). 
+# `ApplicationContext` 구현은 특정 `Bean`을 생성하는 방법에 대한 정보를 포함하는 `Bean` 정의 외에도 container 외부에서 사용자에 의해 생성되는 객체 등록 또한 할 수 있게 해준다.
+## In addition to bean definitions that contain information on how to create a specific bean, the `ApplicationContext` implementations also permit the registration of existing objects that are created outside the container (by users). 
 
-# 이것은 BeanFactory DefaultListableBeanFactory 구현을 반환하는 getBeanFactory() 메소드를 통해 ApplicationContext의 BeanFactory에 액세스하여 수행된다.
-## This is done by accessing the ApplicationContext’s BeanFactory through the getBeanFactory() method, which returns the BeanFactory DefaultListableBeanFactory implementation. 
+# `ApplicationContext`의 `getBeanFactory()` 메소드를 통해 얻은 BeanFactory 구현체인 `DefaultListableBeanFactory`의
+## This is done by accessing the ApplicationContext’s BeanFactory through the `getBeanFactory()` method, which returns the BeanFactory DefaultListableBeanFactory implementation. 
 
-# DefaultListableBeanFactory는 registerSingleton(..) 및 registerBeanDefinition(..) 메소드를 통해 이 등록을 지원한다. 
-## DefaultListableBeanFactory supports this registration through the registerSingleton(..) and registerBeanDefinition(..) methods.
+# `registerSingleton(..)` 및 `registerBeanDefinition(..)` 메소드로 사용자에 의해 생성되는 객체를 등록할 수 있다.
+## `DefaultListableBeanFactory` supports this registration through the `registerSingleton(..)` and `registerBeanDefinition(..)` methods.
 
 # 그러나 일반적인 응용 프로그램은 일반 빈 정의 메타데이터를 통해 정의된 빈으로만 작동한다. 
 ## However, typical applications work solely with beans defined through regular bean definition metadata.
