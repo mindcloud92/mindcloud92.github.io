@@ -744,6 +744,88 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## While overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.
 </div>
 </div>
+
+<div id="naming-beans" markdown="1" class="pt-3">
+# **1.3.1.Bean 이름 지정하기**
+## 1.3.1. Naming Beans
+
+# 모든 빈에는 하나 이상의 식별자가 있습니다.
+## Every bean has one or more identifiers.
+
+# 이러한 식별자는 Bean을 호스팅하는 컨테이너 내에서 고유해야 합니다. 
+## These identifiers must be unique within the container that hosts the bean.
+
+#  빈에는 일반적으로 하나의 식별자만 있습니다.
+## A bean usually has only one identifier.
+
+# 그러나 둘 이상이 필요한 경우 추가 항목은 별칭으로 간주될 수 있습니다. 
+## However, if it requires more than one, the extra ones can be considered aliases.
+
+# XML 기반 구성 메타데이터에서 id 속성, name 속성 또는 둘 다를 사용하여 빈 식별자를 지정합니다.
+## In XML-based configuration metadata, you use the id attribute, the name attribute, or both to specify the bean identifiers.
+
+# id 속성을 사용하면 정확히 하나의 id를 지정할 수 있습니다. 일반적으로 이러한 이름은 영숫자('myBean', 'someService' 등)이지만 특수 문자도 포함할 수 있습니다.  
+## The id attribute lets you specify exactly one id. Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
+
+# 빈에 대한 다른 별칭을 도입하려는 경우 쉼표(,), 세미콜론(;) 또는 공백으로 구분하여 이름 속성에 지정할 수도 있습니다.
+## If you want to introduce other aliases for the bean, you can also specify them in the name attribute, separated by a comma (,), semicolon (;), or white space.
+
+# 역사적 참고로, Spring 3.1 이전 버전에서 id 속성은 가능한 문자를 제한하는 xsd:ID 유형으로 정의되었습니다.  
+## As a historical note, in versions prior to Spring 3.1, the id attribute was defined as an xsd:ID type, which constrained possible characters.
+
+# 3.1부터는 xsd:string 형식으로 정의됩니다.
+## As of 3.1, it is defined as an xsd:string type.
+
+# Bean id 고유성은 더 이상 XML 파서가 아니지만 컨테이너에 의해 여전히 적용된다는 점에 유의하십시오.  
+## Note that bean id uniqueness is still enforced by the container, though no longer by XML parsers.
+
+# Bean의 이름이나 ID를 제공할 필요가 없습니다.
+## You are not required to supply a name or an id for a bean.
+
+# 이름이나 ID를 명시적으로 제공하지 않으면 컨테이너는 해당 빈에 대해 고유한 이름을 생성합니다. 
+## If you do not supply a name or id explicitly, the container generates a unique name for that bean.
+
+# 그러나 ref 요소 또는 Service Locator 스타일 조회를 사용하여 이름으로 해당 빈을 참조하려면 이름을 제공해야 합니다.
+## However, if you want to refer to that bean by name, through the use of the ref element or a Service Locator style lookup, you must provide a name.
+
+# 이름을 제공하지 않는 동기는 내부 빈 및 자동 연결 공동 작업자 사용과 관련이 있습니다.  
+## Motivations for not supplying a name are related to using inner beans and autowiring collaborators.
+
+<br/>
+
+<div class="spring guide-wrapper pb-2" markdown="1">
+<h1 class="text-center title">Bean 이름 짓기 규칙</h1>
+<h2 class="text-center">Bean Naming Conventions</h2> 
+# 규칙은 빈의 이름을 지정할 때 인스턴스 필드 이름에 대한 표준 Java 규칙을 사용하는 것입니다.
+## The convention is to use the standard Java convention for instance field names when naming beans.
+
+# 즉, 빈 이름은 소문자로 시작하고 거기에서 카멜 케이스입니다.
+## That is, bean names start with a lowercase letter and are camel-cased from there.
+
+# 이러한 이름의 예로는 accountManager, accountService, userDao, loginController 등이 있습니다. 
+## Examples of such names include accountManager, accountService, userDao, loginController, and so forth.
+
+# 빈의 이름을 일관되게 지정하면 구성을 더 쉽게 읽고 이해할 수 있습니다. 
+## Naming beans consistently makes your configuration easier to read and understand.
+
+# 또한 Spring AOP를 사용한다면 이름으로 관련된 빈들의 집합에 어드바이스를 적용할 때 많은 도움이 된다.  
+## Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.
+</div>
+
+<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
+<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div markdown="1">
+# 클래스 경로에서 컴포넌트 스캐닝을 통해 Spring은 앞에서 설명한 규칙에 따라 이름 없는 컴포넌트에 대한 빈 이름을 생성합니다. 본질적으로 간단한 클래스 이름을 취하고 초기 문자를 소문자로 바꾸는 것입니다.
+## With component scanning in the classpath, Spring generates bean names for unnamed components, following the rules described earlier: essentially, taking the simple class name and turning its initial character to lower-case.
+
+# 그러나 두 개 이상의 문자가 있고 첫 번째와 두 번째 문자가 모두 대문자인 (비정상적) 특수한 경우에는 원래 대소문자가 유지됩니다.  
+## However, in the (unusual) special case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved.
+
+# 이것들은 java.beans.Introspector.decapitalize(여기서 Spring이 사용하는)에 의해 정의된 것과 동일한 규칙입니다.
+## These are the same rules as defined by java.beans.Introspector.decapitalize (which Spring uses here).
+</div>
+</div>
+</div>
 </div>
 </section>
 
