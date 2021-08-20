@@ -21,6 +21,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Java SE 8 update 60 is suggested as the minimum patch release for Java 8, but it is generally recommended to use a recent patch release.
 <br/>
 
+
 # Spring은 광범위한 어플리케이션 시나리오를 지원한다.
 ## Spring supports a wide range of application scenarios. 
 
@@ -42,8 +43,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 해당 커뮤니티는 오랜 시간에 걸쳐 Spring이 성공적으로 진화할 수 있는데 도움이 되었다.
 ## This has helped Spring to successfully evolve over a very long time.
-
 </section>
+
+
+
 
 <section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
@@ -51,6 +54,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 1. What We Mean by "Spring"
 </div>
 
+<!-- section content start -->
 <div markdown="1" class="contents">
 # "Spring"이라는 단어는 다른 맥락에서 다른 것을 의미한다.
 ## The term "Spring" means different things in different contexts.
@@ -93,8 +97,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     
 # 물론 JDK 8과 9 이상의 classpath에서도 잘 동작한다.
 ## Of course, Spring’s framework jars keep working fine on the classpath on both JDK 8 and 9+.
-</div>    
+</div>
+<!-- // section content end -->
 </section>
+
+
+
 
 <section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
@@ -102,18 +110,22 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 2. History of Spring and the Spring Framework
 </div>
 
+<!-- section content start -->
 <div markdown="1" class="contents">
 # Spring은 초기 [J2EE](https://en.wikipedia.org/wiki/Jakarta_EE){:target="_blank"} 사양의 복잡성에 대응하기 위해 2003년에 등장했다.
 ## Spring came into being in 2003 as a response to the complexity of the early J2EE specifications. 
 
 # 일각에서는 Spring과 Java EE를 경쟁관계로 보기도 하지만 사실 Spring은 Java EE를 보완하는 역할을 한다.
-## While some consider Java EE and Spring to be in competition, Spring is, in fact, complementary to Java EE. 
+## While some consider Java EE and Spring to be in competition, Spring is, in fact, complementary to Java EE.
+<br/> 
 
 # Spring 프로그래밍 모델은 Java EE 플랫폼 사양을 채택하지 않고 
 ## The Spring programming model does not embrace the Java EE platform specification; 
 
 # 아래와 같이 Java EE의 포괄적인 사양에서 신중하게 선택한 개별 사양과 통합된다.
 ## rather, it integrates with carefully selected individual specifications from the EE umbrella:
+
+<div class="mt-2"></div>
 
 - Servlet API ([JSR 340](https://jcp.org/en/jsr/detail?id=340){:target="_blank"})
 - WebSocket API ([JSR 356](https://www.jcp.org/en/jsr/detail?id=356){:target="_blank"})
@@ -124,10 +136,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - JMS ([JSR 914](https://jcp.org/en/jsr/detail?id=914){:target="_blank"})
 - JTA/JCA setups for transaction coordination (conditional)
 
-
 # 또한 어플리케이션 개발자들이 Spring Framework에서 제공하는 매커니즘 대신 선택하여 사용할 수 있는 DI([JSR 330](https://www.jcp.org/en/jsr/detail?id=330){:target="_blank"})와 공통 Annotation([JSR 250](https://jcp.org/en/jsr/detail?id=250){:target="_blank"}) 사양도 지원한다.
 ## The Spring Framework also supports the Dependency Injection (JSR 330) and Common Annotations (JSR 250) specifications, which application developers may choose to use instead of the Spring-specific mechanisms provided by the Spring Framework.
-
 <br/>
 
 # `Spring Framework 5.0`부터 Spring은 `Java EE 7 이상`(예: Servlet 3.1+, JPA 2.1+)을 필요로 하는 동시에 런타임 시 Java EE 8 (예: Servlet 4.0, JSON Binding API) 레벨에서 최신 API와 즉시 사용 가능한 통합을 제공한다. 
@@ -135,8 +145,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 이렇게 하면 Spring과 완벽하게 호환된다. (예: Tomcat 8 and 9, WebSphere 9, JBoss EAP 7)
 ## This keeps Spring fully compatible with e.g. Tomcat 8 and 9, WebSphere 9, and JBoss EAP 7.
-
 <br/>
+
 # 오랜 시간에 걸쳐 어플리케이션 개발에 있어 Java EE의 역할은 진화했다.
 ## Over time, the role of Java EE in application development has evolved. 
 
@@ -148,8 +158,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # WebFlux 어플리케이션은 Spring Framework 5부터 Servlet API를 직접 사용하지 않고 Netty와 같은 Servlet container가 아닌 서버로도 실행할 수 있다.
 ## As of Spring Framework 5, a WebFlux application does not even use the Servlet API directly and can run on servers (such as Netty) that are not Servlet containers.
-
 <br/>
+
 # 이처럼 Spring은 계속해서 혁신하고 진화하고 있다.
 ## Spring continues to innovate and to evolve. 
 
@@ -162,7 +172,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Spring 프로젝트의 전체 목록은 [spring.io/projects](https://spring.io/projects){:target="_blank"}를 참고.
 ## See spring.io/projects for the complete list of Spring projects.
 </div>
+<!-- // section contents end -->
 </section>
+
+
+
 
 <section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
@@ -170,9 +184,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 3. Design Philosophy
 </div>
 
+<!-- section content start -->
 <div markdown="1" class="contents">
 # 프레임워크에 대해 배울 때는 프레임워크가 무엇을 하는지 뿐만 아니라 어떤 원리를 따르는지 아는 게 중요하다.
 ## When you learn about a framework, it’s important to know not only what it does but what principles it follows. 
+<br/>
 
 # 다음은 Spring Framework의 기본 원칙이다.
 ## Here are the guiding principles of the Spring Framework:
@@ -213,7 +229,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 패키지 간의 순환 종속성이 없는 깨끗한 코드 구조를 주장할 수 있는 몇 안 되는 프로젝트 중 하나이다.
 ## It is one of very few projects that can claim clean code structure with no circular dependencies between packages.
 </div>
+<!-- // section contents end -->
 </section>
+
+
+
 
 <section class="translation-article-wrapper accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
@@ -221,6 +241,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 4. Feedback and Contributions
 </div>
 
+<!-- section content start -->
 <div markdown="1" class="contents">
 # 사용 방법에 대한 질문이나 진단 또는 디버깅 문제에는 Stack Overflow를 사용하는 게 좋다. 
 ## For how-to questions or diagnosing or debugging issues, we suggest using Stack Overflow. 
@@ -242,7 +263,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 더 자세한 내용은 [CONTRIBUTING](https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md){:target="_blank"}, 최상위 프로젝트의 지침을 참조. 
 ## For more details see the guidelines at the CONTRIBUTING, top-level project page.
 </div>
+<!-- // section contents end -->
 </section>
+
+
+
 
 <section class="translation-article-wrapper mb-4 accordion-wrapper" markdown="1">
 <div markdown="1" class="handler">
@@ -250,6 +275,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 5. Getting Started
 </div>
 
+<!-- section content start -->
 <div markdown="1" class="contents">
 # Spring을 이제 막 시작한다면 [Spring Boot](https://spring.io/projects/spring-boot){:target="_blank"} 기반 어플리케이션을 생성해서 Spring Framework를 쓸 수 있다.
 ## If you are just getting started with Spring, you may want to begin using the Spring Framework by creating a Spring Boot-based application. 
@@ -259,8 +285,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Spring Framework 기반으로 설정 보다는 규약을 선호하고 가능한 한 빨리 시작하고 실행할 수 있도록 설계되었다.
 ## It is based on the Spring Framework, favors convention over configuration, and is designed to get you up and running as quickly as possible.
-
 <br/>
+
 # [start.spring.io](https://start.spring.io/){:target="_blank"}를 사용해서 기본 프로젝트를 만들거나 [Restful Web Service 구축 시작하기](https://spring.io/guides/gs/rest-service/){:target="_blank"}와 같은 ["Getting Started" 가이드](https://spring.io/guides){:target="_blank"} 중 하나를 따라 프로젝트를 만들 수도 있다.
 ## You can use start.spring.io to generate a basic project or follow one of the "Getting Started" guides, such as Getting Started Building a RESTful Web Service. 
 
@@ -270,6 +296,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 또한 특정 문제를 해결할 때 고려할 수 있는 Spring 포트폴리오의 다른 프로젝트들에 대한 내용도 다루기도 한다.
 ## They also cover other projects from the Spring portfolio that you might want to consider when solving a particular problem.
 </div>
+<!-- // section contents end -->
 </section>
 
 >**Reference**
