@@ -740,16 +740,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야한다.
 ## These identifiers must be unique within the container that hosts the bean.
-
-<div class="mt-2"></div>
+<br/>
 
 # 보통 `Bean`에 대한 식별자는 하나뿐이지만.
 ## A bean usually has only one identifier.
 
 # 한개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
 ## However, if it requires more than one, the extra ones can be considered aliases.
-
-<div class="mt-2"></div>
+<br/>
 
 # XML 기반 configuration 메타데이터인 경우 `id`나 `name` 속성을 사용해서 `Bean`에 대한 식별자를 지정한다. 
 ## In XML-based configuration metadata, you use the `id` attribute, the `name` attribute, or both to specify the bean identifiers.
