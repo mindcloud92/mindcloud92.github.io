@@ -785,7 +785,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Motivations for not supplying a name are related to using inner beans and autowiring collaborators.
 
 <!-- guide wrapper start -->
-<div class="spring guide-wrapper mt-2 mb-2" markdown="1">
+<div class="spring guide-wrapper mt-4 mb-4" markdown="1">
 <h1 class="text-center title">Bean 이름 짓기 규칙</h1>
 <h2 class="text-center">Bean Naming Conventions</h2> 
 # 규칙은 빈의 이름을 지정할 때 인스턴스 필드 이름에 대한 표준 Java 규칙을 사용하는 것입니다.
