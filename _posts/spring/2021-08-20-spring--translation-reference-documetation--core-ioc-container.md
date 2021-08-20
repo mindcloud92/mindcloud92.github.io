@@ -754,8 +754,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # XML 기반 configuration 메타데이터인 경우 `id`나 `name` 속성을 사용해서 `Bean`에 대한 식별자를 지정한다. 
 ## In XML-based configuration metadata, you use the `id` attribute, the `name` attribute, or both to specify the bean identifiers.
 
-# id 속성을 사용하면 정확히 하나의 id를 지정할 수 있습니다. 일반적으로 이러한 이름은 영숫자('myBean', 'someService' 등)이지만 특수 문자도 포함할 수 있습니다.  
-## The id attribute lets you specify exactly one id. Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
+# id 속성을 사용하면 정확히 하나의 id를 지정할 수 있습니다. 
+## The id attribute lets you specify exactly one id. 
+
+# 일반적으로 이러한 이름은 영숫자('myBean', 'someService' 등)이지만 특수 문자도 포함할 수 있습니다.  
+## Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
 
 # 빈에 대한 다른 별칭을 도입하려는 경우 쉼표(,), 세미콜론(;) 또는 공백으로 구분하여 이름 속성에 지정할 수도 있습니다.
 ## If you want to introduce other aliases for the bean, you can also specify them in the name attribute, separated by a comma (,), semicolon (;), or white space.
