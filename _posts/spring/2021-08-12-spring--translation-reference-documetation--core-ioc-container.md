@@ -886,9 +886,303 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 자세한 내용은 @Bean 주석 사용을 참조하십시오.
 ## See Using the @Bean Annotation for details.
 </div>
+</div>
+
+<div id="instantiating-beans" markdown="1" class="pt-3">
+# **1.3.2. 빈 인스턴스화**
+## 1.3.2. Instantiating Beans
+
+# 빈 정의는 본질적으로 하나 이상의 객체를 생성하기 위한 레시피입니다.
+## A bean definition is essentially a recipe for creating one or more objects. 
+
+# 컨테이너는 요청 시 명명된 빈에 대한 레시피를 살펴보고 해당 빈 정의에 의해 캡슐화된 구성 메타데이터를 사용하여 실제 객체를 생성(또는 획득)합니다.
+## The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or acquire) an actual object.
+
+# XML 기반 구성 메타데이터를 사용하는 경우 <bean/> 요소의 class 속성에 인스턴스화할 객체의 유형(또는 클래스)을 지정합니다. 
+## If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the class attribute of the `<bean/>` element. 
+
+# 이 클래스 속성(내부적으로 BeanDefinition 인스턴스의 Class 속성임)은 일반적으로 필수입니다. 
+## This class attribute (which, internally, is a Class property on a BeanDefinition instance) is usually mandatory. 
+
+# (예외의 경우 인스턴스 팩토리 메소드 및 Bean 정의 상속을 사용하여 인스턴스화를 참조하십시오.) 
+## (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) 
+
+# 다음 두 가지 방법 중 하나로 Class 속성을 사용할 수 있습니다.
+## You can use the Class property in one of two ways:
+
+- # 일반적으로 컨테이너 자체가 생성자를 반사적으로 호출하여 Bean을 직접 생성하는 경우 생성할 Bean 클래스를 지정합니다. 이는 new 연산자를 사용하는 Java 코드와 다소 동일합니다. 
+## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the new operator.
+
+- # 컨테이너가 Bean을 생성하기 위해 클래스에서 정적 팩토리 메소드를 호출하는 덜 일반적인 경우에 개체를 생성하기 위해 호출되는 정적 팩토리 메소드를 포함하는 실제 클래스를 지정합니다. 
+## To specify the actual class containing the static factory method that is invoked to create the object, in the less common case where the container invokes a static factory method on a class to create the bean.
+# 정적 팩토리 메서드 호출에서 반환된 개체 유형은 완전히 동일한 클래스이거나 다른 클래스일 수 있습니다.
+## The object type returned from the invocation of the static factory method may be the same class or another class entirely.
+
+<div class="spring guide-wrapper mt-2" markdown="1">
+<h1 class="text-center title">중첩된 클래스 이름</h1>
+<h2 class="text-center">Nested class names</h2>
+
+# 중첩 클래스에 대한 빈 정의를 구성하려면 중첩 클래스의 바이너리 이름이나 소스 이름을 사용할 수 있습니다. 
+## If you want to configure a bean definition for a nested class, you may use either the binary name or the source name of the nested class.
+
+# 예를 들어, com.example 패키지에 SomeThing이라는 클래스가 있고 이 SomeThing 클래스에 OtherThing이라는 정적 중첩 클래스가 있는 경우 달러 기호($) 또는 점(.)으로 구분할 수 있습니다.
+## For example, if you have a class called SomeThing in the com.example package, and this SomeThing class has a static nested class called OtherThing, they can be separated by a dollar sign ($) or a dot (.).
+
+# 따라서 빈 정의에서 클래스 속성의 값은 com.example.SomeThing$OtherThing 또는 com.example.SomeThing.OtherThing이 됩니다.
+## So the value of the class attribute in a bean definition would be com.example.SomeThing$OtherThing or com.example.SomeThing.OtherThing.
+</div>
+</div>
+
+<div markdown="1" class="pt-3">
+# **생성자를 사용한 인스턴스화**
+## Instantiation with a Constructor
+
+# 생성자 접근 방식으로 Bean을 생성하면 모든 일반 클래스가 Spring에서 사용 가능하고 호환됩니다. 
+## When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring. 
+
+# 즉, 개발 중인 클래스는 특정 인터페이스를 구현하거나 특정 방식으로 코딩할 필요가 없습니다. 
+## That is, the class being developed does not need to implement any specific interfaces or to be coded in a specific fashion. 
+
+# 단순히 빈 클래스를 지정하는 것으로 충분합니다. 
+## Simply specifying the bean class should suffice. 
+
+# 그러나 특정 빈에 사용하는 IoC 유형에 따라 기본(빈) 생성자가 필요할 수 있습니다. 
+## However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.
+
+# Spring IoC 컨테이너는 관리하고자 하는 거의 모든 클래스를 관리할 수 있습니다. 
+## The Spring IoC container can manage virtually any class you want it to manage. 
+
+# 진정한 JavaBeans 관리에만 국한되지 않습니다. 대부분의 Spring 사용자는 기본(인수 없는) 생성자와 컨테이너의 속성을 따라 모델링된 적절한 설정자 및 게터만 있는 실제 JavaBeans를 선호합니다. 
+## It is not limited to managing true JavaBeans. Most Spring users prefer actual JavaBeans with only a default (no-argument) constructor and appropriate setters and getters modeled after the properties in the container. 
+
+# 또한 컨테이너에 더 이국적인 비-빈 스타일 클래스를 가질 수 있습니다. 
+## You can also have more exotic non-bean-style classes in your container. 
+
+# 예를 들어 JavaBean 사양을 절대적으로 준수하지 않는 레거시 연결 풀을 사용해야 하는 경우 Spring에서도 이를 관리할 수 있습니다. 
+## If, for example, you need to use a legacy connection pool that absolutely does not adhere to the JavaBean specification, Spring can manage it as well.
+
+# XML 기반 구성 메타데이터를 사용하여 다음과 같이 빈 클래스를 지정할 수 있습니다.
+## With XML-based configuration metadata you can specify your bean class as follows:
+
+
+```xml
+    <bean id="exampleBean" class="examples.ExampleBean"/>
+    
+    <bean name="anotherExample" class="examples.ExampleBeanTwo"/>
+```
+
+# 생성자에 인수를 제공하고(필요한 경우) 개체가 생성된 후 개체 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 종속성 주입을 참조하세요.
+## For details about the mechanism for supplying arguments to the constructor (if required) and setting object instance properties after the object is constructed, see Injecting Dependencies.
+</div>
+
+
+<div markdown="1" class="pt-3">
+# **정적 팩토리 메소드를 사용한 인스턴스화**
+## Instantiation with a Static Factory Method
+
+# 정적 팩토리 메소드로 생성하는 Bean을 정의할 때 클래스 속성을 사용하여 정적 팩토리 메소드를 포함하는 클래스를 지정하고 factory-method라는 속성을 사용하여 팩토리 메소드 자체의 이름을 지정하십시오. 
+## When defining a bean that you create with a static factory method, use the class attribute to specify the class that contains the static factory method and an attribute named factory-method to specify the name of the factory method itself.
+
+# 이 메서드를 호출하고(나중에 설명하는 선택적 인수를 사용하여) 라이브 개체를 반환할 수 있어야 합니다. 이 개체는 이후에 생성자를 통해 생성된 것처럼 처리됩니다. 
+## You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created through a constructor. 
+
+# 이러한 빈 정의의 한 가지 용도는 레거시 코드에서 정적 팩토리를 호출하는 것입니다. 
+## One use for such a bean definition is to call static factories in legacy code.
+
+# 다음 빈 정의는 팩토리 메소드를 호출하여 빈을 생성하도록 지정합니다. 
+## The following bean definition specifies that the bean be created by calling a factory method.
+
+# 정의는 반환된 객체의 유형(클래스)을 지정하지 않고 팩토리 메서드를 포함하는 클래스만 지정합니다. 
+## The definition does not specify the type (class) of the returned object, only the class containing the factory method.
+
+# 이 예에서 createInstance() 메서드는 정적 메서드여야 합니다. 
+## In this example, the createInstance() method must be a static method. 
+
+# 다음 예는 팩토리 메소드를 지정하는 방법을 보여줍니다.
+## The following example shows how to specify a factory method:
+
+```xml
+    <bean id="clientService"
+        class="examples.ClientService"
+        factory-method="createInstance"/>
+```
+
+# 다음 예제는 앞의 빈 정의와 함께 작동하는 클래스를 보여줍니다.
+## The following example shows a class that would work with the preceding bean definition:
+
+```java
+    public class ClientService {
+        private static ClientService clientService = new ClientService();
+        private ClientService() {}
+    
+        public static ClientService createInstance() {
+            return clientService;
+        }
+    }
+```  
+
+<div class="mt-2"></div>
+
+```kotlin
+    class ClientService private constructor() {
+        companion object {
+            private val clientService = ClientService()
+            fun createInstance() = clientService
+        }
+    }
+``` 
+
+# 팩토리 메서드에 인수(선택 사항)를 제공하고 객체가 팩토리에서 반환된 후 객체 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 종속성 및 구성 세부 정보를 참조하세요.
+## For details about the mechanism for supplying (optional) arguments to the factory method and setting object instance properties after the object is returned from the factory, see Dependencies and Configuration in Detail.
 
 </div>
 
+<div markdown="1" class="pt-3">
+# **인스턴스 팩토리 메소드를 사용한 인스턴스화**
+## Instantiation by Using an Instance Factory Method
+
+# 정적 팩토리 메소드를 통한 인스턴스화와 유사하게 인스턴스 팩토리 메소드를 사용한 인스턴스화는 컨테이너에서 기존 Bean의 비정적 메소드를 호출하여 새 Bean을 생성합니다. 
+## Similar to instantiation through a static factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. 
+
+# 이 메커니즘을 사용하려면 클래스 속성을 비워두고 factory-bean 속성에서 객체를 생성하기 위해 호출될 인스턴스 메소드를 포함하는 현재(또는 상위 또는 상위) 컨테이너의 빈 이름을 지정하십시오. 
+## To use this mechanism, leave the class attribute empty and, in the factory-bean attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. 
+
+# factory-method 속성으로 팩토리 메서드 자체의 이름을 설정합니다. 
+## Set the name of the factory method itself with the factory-method attribute. 
+
+# 다음 예제는 이러한 빈을 구성하는 방법을 보여줍니다.
+## The following example shows how to configure such a bean:
+
+```xml
+    <!-- the factory bean, which contains a method called createInstance() -->
+    <bean id="serviceLocator" class="examples.DefaultServiceLocator">
+        <!-- inject any dependencies required by this locator bean -->
+    </bean>
+    
+    <!-- the bean to be created via the factory bean -->
+    <bean id="clientService"
+        factory-bean="serviceLocator"
+        factory-method="createClientServiceInstance"/>
+```
+
+# 다음 예제에서는 해당 클래스를 보여줍니다. 
+## The following example shows the corresponding class:
+
+```java
+    public class DefaultServiceLocator {
+    
+        private static ClientService clientService = new ClientServiceImpl();
+    
+        public ClientService createClientServiceInstance() {
+            return clientService;
+        }
+    }
+```
+
+<div class="mt-2"></div>
+
+```kotlin
+    class DefaultServiceLocator {
+        companion object {
+            private val clientService = ClientServiceImpl()
+        }
+        fun createClientServiceInstance(): ClientService {
+            return clientService
+        }
+    }
+```
+
+# 다음 예제와 같이 하나의 팩토리 클래스는 둘 이상의 팩토리 메소드를 보유할 수도 있습니다.
+## One factory class can also hold more than one factory method, as the following example shows:
+
+```xml
+    <bean id="serviceLocator" class="examples.DefaultServiceLocator">
+        <!-- inject any dependencies required by this locator bean -->
+    </bean>
+    
+    <bean id="clientService"
+        factory-bean="serviceLocator"
+        factory-method="createClientServiceInstance"/>
+    
+    <bean id="accountService"
+        factory-bean="serviceLocator"
+        factory-method="createAccountServiceInstance"/>
+```
+
+# 다음 예제에서는 해당 클래스를 보여줍니다.
+## The following example shows the corresponding class:
+
+```java
+    public class DefaultServiceLocator {
+    
+        private static ClientService clientService = new ClientServiceImpl();
+    
+        private static AccountService accountService = new AccountServiceImpl();
+    
+        public ClientService createClientServiceInstance() {
+            return clientService;
+        }
+    
+        public AccountService createAccountServiceInstance() {
+            return accountService;
+        }
+    }
+```
+
+<div class="mt-2"></div>
+
+```kotlin
+    class DefaultServiceLocator {
+        companion object {
+            private val clientService = ClientServiceImpl()
+            private val accountService = AccountServiceImpl()
+        }
+    
+        fun createClientServiceInstance(): ClientService {
+            return clientService
+        }
+    
+        fun createAccountServiceInstance(): AccountService {
+            return accountService
+        }
+    }
+```
+
+# 이 접근 방식은 팩토리 빈 자체가 종속성 주입(DI)을 통해 관리 및 구성될 수 있음을 보여줍니다. 
+## This approach shows that the factory bean itself can be managed and configured through dependency injection (DI). 
+
+# 자세한 내용은 종속성 및 구성을 참조하십시오.
+## See Dependencies and Configuration in Detail.
+
+<div class="spring info-wrapper mt-3 mb-3 mb-2">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
+<div markdown="1">
+# Spring 문서에서 "factory bean"은 Spring 컨테이너에 설정되어 인스턴스 또는 정적 factory메소드를 통해 객체를 생성하는 bean을 의미한다. 
+## In Spring documentation, "factory bean" refers to a bean that is configured in the Spring container and that creates objects through an instance or static factory method.
+
+# 대조적으로 FactoryBean(대문자에 주의)은 Spring 고유의 FactoryBean 구현 클래스를 참조합니다. 
+## By contrast, FactoryBean (notice the capitalization) refers to a Spring-specific FactoryBean implementation class.
+</div>
+</div>
+
+</div>
+
+<div markdown="1" class="pt-3">
+# **Bean의 런타임 유형 결정하기** 
+## Determining a Bean’s Runtime Type
+
+# 특정 Bean의 런타임 유형은 결정하기 쉽지 않습니다. 
+## The runtime type of a specific bean is non-trivial to determine. 
+
+# 빈 메타데이터 정의에서 지정된 클래스는 초기 클래스 참조일 뿐이며 선언된 팩토리 메소드와 잠재적으로 결합되거나 빈의 다른 런타임 유형으로 이어질 수 있는 FactoryBean 클래스이거나 인스턴스의 경우 전혀 설정되지 않습니다. -레벨 팩토리 메소드(대신 지정된 팩토리 빈 이름을 통해 확인됨). 또한 AOP 프록시는 대상 빈의 실제 유형(구현된 인터페이스만)의 제한된 노출로 인터페이스 기반 프록시로 빈 인스턴스를 래핑할 수 있습니다.  
+## A specified class in the bean metadata definition is just an initial class reference, potentially combined with a declared factory method or being a FactoryBean class which may lead to a different runtime type of the bean, or not being set at all in case of an instance-level factory method (which is resolved via the specified factory-bean name instead). Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean’s actual type (just its implemented interfaces).
+
+# 특정 Bean의 실제 런타임 유형을 찾는 권장 방법은 지정된 Bean 이름에 대한 BeanFactory.getType 호출입니다. 
+## The recommended way to find out about the actual runtime type of a particular bean is a BeanFactory.getType call for the specified bean name. 
+
+# 이것은 위의 모든 경우를 고려하고 BeanFactory.getBean 호출이 동일한 빈 이름에 대해 반환할 객체 유형을 반환합니다.
+## This takes all of the above cases into account and returns the type of object that a BeanFactory.getBean call is going to return for the same bean name.
+</div>
 
 </div>
 </section>
