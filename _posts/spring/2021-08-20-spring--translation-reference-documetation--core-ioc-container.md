@@ -500,6 +500,95 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </div>
 <!-- // section inner contents end -->
 
+
+<!-- section inner content start -->
+<div markdown="1" class="inner-contents">
+# **1.2.3. Container 사용**
+## 1.2.3. Using the Container
+<br/>
+
+# `ApplicationContext`는 서로 다른 `Bean`의 레지스트리와 의존성을 유지할 수 있는 고급 팩토리 인터페이스로
+## The `ApplicationContext` is the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
+
+# 내부 메소드 `T getBean(String name, Class<T> requiredType)`를 사용하여 원하는 클래스 타입의 `Bean` 인스턴스를 찾을 수 있다.
+## By using the method `T getBean(String name, Class<T> requiredType)`, you can retrieve instances of your beans.
+<br/>
+
+# 다음 예시와 같이 `ApplicationContext`를 사용하여 XML configuration의 `Bean` 정의를 읽고 액세스할 수 있다.
+## The `ApplicationContext` lets you read bean definitions and access them, as the following example shows:
+
+<div class="mt-2"></div>
+
+```java
+    // create and configure beans
+    ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
+    
+    // retrieve configured instance
+    PetStoreService service = context.getBean("petStore", PetStoreService.class);
+    
+    // use configured instance
+    List<String> userList = service.getUsernameList();
+```
+
+# Groovy configuration을 사용하는 경우에는 XML configuration을 사용하는 경우와 
+## With Groovy configuration, bootstrapping looks very similar.
+
+# 파일을 인식하는 컨텍스트 구현 클래스는 다르지만 매우 유사한 형태로 `ApplicationContext`를 사용할 수 있다. 
+## It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions).
+
+# 다음은 Groovy configuration을 사용한 경우의 예시다.
+## The following example shows Groovy configuration:
+
+<div class="mt-2"></div>
+
+```java
+    ApplicationContext context = new GenericGroovyApplicationContext("services.groovy", "daos.groovy");
+```
+<br/>
+
+# `GenericApplicationContext`는 `Bean`정의를 가져오는 책임을 `XmlBeanDefinitionReader`와 같은 리더에 위임하고 이러한 리더와 결합하여 사용한다. 예시는 다음과 같다.   
+## The most flexible variant is `GenericApplicationContext` in combination with reader delegates — for example, with `XmlBeanDefinitionReader` for XML files, as the following example shows:
+
+<div class="mt-2"></div>
+
+```java
+    GenericApplicationContext context = new GenericApplicationContext();
+    new XmlBeanDefinitionReader(context).loadBeanDefinitions("services.xml", "daos.xml");
+    context.refresh();
+```
+
+<div class="mt-2"></div>
+
+# 다음 예시와 같이 리더로 `GroovyBeanDefinitionReader`를 사용할 수도있다.
+## You can also use the `GroovyBeanDefinitionReader` for Groovy files, as the following example shows:
+
+<div class="mt-2"></div>
+
+```java
+    GenericApplicationContext context = new GenericApplicationContext();
+    new GroovyBeanDefinitionReader(context).loadBeanDefinitions("services.groovy", "daos.groovy");
+    context.refresh();
+```
+
+<div class="mt-2"></div>
+
+# 이렇게 하면 다양한 configuration에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에 리더를 알맞게 짝지을 수 있다.
+## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
+<br/>
+
+# `ApplicationContext`의 `getBean()`메소드를 통해 원하는 `Bean` 인스턴스를 찾을 수 있다.
+## You can then use `getBean` to retrieve instances of your beans. 
+
+# 이외에도 `ApplicationContext` 인터페이스는 `Bean`을 찾기 위한 몇몇 다른 메소드를 가지고 있지만 어플리케이션 코드에서 이러한 메소드는 사용하지 않는 게 이상적이다. 
+## The `ApplicationContext` interface has a few other methods for retrieving beans, but, ideally, your application code should never use them.
+
+# 그렇기 때문에 실제로 어플리케이션 코드는 Spring API에 전혀 의존하지 않게 된다.
+## Indeed, your application code should have no calls to the `getBean()` method at all and thus have no dependency on Spring APIs at all.
+
+# 예를 들어 웹 프레임워크와 Spring의 통합은 컨트롤러 및 JSF 관리 `Bean`과 같은 웹 프레임워크 컴포넌트에 대한 의존성 주입을 제공하여 메타데이터(예: autowiring annotation)를 통해 특정 `Bean`에 대한 의존성을 선언할 수 있도록 한다.
+## For example, Spring’s integration with web frameworks provides dependency injection for various web framework components such as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).
+</div>
+<!-- // section inner contents end -->
 </div>
 <!-- // section contents end -->
 
