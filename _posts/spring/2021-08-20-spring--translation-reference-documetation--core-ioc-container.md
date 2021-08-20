@@ -604,7 +604,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section content start -->
 <div markdown="1" class="contents">
-#  Spring `IoC container`는 하나 이상의 `Bean`을 관리하며
+#  Spring `IoC container`는 하나 이상의 `Bean`을 관리하고
 ## A Spring IoC container manages one or more beans.
 
 # `Bean`은 container가 제공하는 configuration 메타데이터를 통해 생성된다. (예: XML `<bean/>` 정의 형식)
@@ -712,17 +712,17 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `registerSingleton(..)` 및 `registerBeanDefinition(..)` 메소드로 사용자에 의해 생성되는 객체를 등록할 수 있다.
 ## `DefaultListableBeanFactory` supports this registration through the `registerSingleton(..)` and `registerBeanDefinition(..)` methods.
 
-# 하지만 일반적인 어플리케이션은 `Bean` 정의 메타데이터를 통해서 `Bean`을 정의한다.
+# 하지만 일반적으로는 `Bean` 정의 메타데이터를 통해서 `Bean`을 정의한다.
 ## However, typical applications work solely with beans defined through regular bean definition metadata.
 
 <!-- info wrapper start -->
 <div class="spring info-wrapper mt-2">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# container가 autowiring 및 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 `Bean` 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야 한다.
+# container가 autowiring 및 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 **Bean** 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야 한다.
 ## Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps.
 
-# 기존 메타데이터 및 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원된다. 하지만 런타임 시 새로운 `Bean`을 등록하는 것은 동시 액세스 예외 발생, `Bean` container 불일치 상태로 이어질 수 있어 공식적으로는 지원되지 않는다.
+# 기존 메타데이터 및 싱글톤 인스턴스를 재정의하는 것은 어느 정도 지원된다. 하지만 런타임 시 새로운 **Bean**을 등록하는 것은 동시 액세스 예외 발생, **Bean** container 불일치 상태로 이어질 수 있어 공식적으로는 지원되지 않는다.
 ## While overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.
 </div>
 </div>
@@ -735,20 +735,24 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 1.3.1. Naming Beans
 <br/>
 
-# 모든 빈에는 하나 이상의 식별자가 있습니다.
+# 모든 `Bean`은 하나 이상의 식별자를 가진다.
 ## Every bean has one or more identifiers.
 
-# 이러한 식별자는 Bean을 호스팅하는 컨테이너 내에서 고유해야 합니다. 
+# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야한다.
 ## These identifiers must be unique within the container that hosts the bean.
 
-#  빈에는 일반적으로 하나의 식별자만 있습니다.
+<div class="mt-2"></div>
+
+# 보통 `Bean`에 대한 식별자는 하나뿐이지만.
 ## A bean usually has only one identifier.
 
-# 그러나 둘 이상이 필요한 경우 추가 항목은 별칭으로 간주될 수 있습니다. 
+# 한개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
 ## However, if it requires more than one, the extra ones can be considered aliases.
 
-# XML 기반 구성 메타데이터에서 id 속성, name 속성 또는 둘 다를 사용하여 빈 식별자를 지정합니다.
-## In XML-based configuration metadata, you use the id attribute, the name attribute, or both to specify the bean identifiers.
+<div class="mt-2"></div>
+
+# XML 기반 configuration 메타데이터인 경우 `id`나 `name` 속성을 사용해서 `Bean`에 대한 식별자를 지정한다. 
+## In XML-based configuration metadata, you use the `id` attribute, the `name` attribute, or both to specify the bean identifiers.
 
 # id 속성을 사용하면 정확히 하나의 id를 지정할 수 있습니다. 일반적으로 이러한 이름은 영숫자('myBean', 'someService' 등)이지만 특수 문자도 포함할 수 있습니다.  
 ## The id attribute lets you specify exactly one id. Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
