@@ -1,7 +1,7 @@
 ---
 layout: post-detail
 title: "Spring :: 한 줄씩 읽는 Documentation [core.IoC container]"
-date: "2021-08-12 23:13:00 +0900"
+date: "2021-08-20 12:13:00 +0900"
 categories: xyz+
 tags: spring framework documentation core Ioc container translation 5.3.9v
 thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg'
