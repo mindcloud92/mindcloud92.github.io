@@ -770,6 +770,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # Bean id 고유성은 더 이상 XML 파서가 아니지만 컨테이너에 의해 여전히 적용된다는 점에 유의하십시오.  
 ## Note that bean `id` uniqueness is still enforced by the container, though no longer by XML parsers.
+<br/>
 
 # Bean의 이름이나 ID를 제공할 필요가 없습니다.
 ## You are not required to supply a `name` or an `id` for a bean.
