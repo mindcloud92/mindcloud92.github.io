@@ -768,20 +768,20 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `Spring 3.1`부터는 `xsd:string` 유형으로 정의된다.
 ## As of 3.1, it is defined as an `xsd:string` type.
 
-# Bean id 고유성은 더 이상 XML 파서가 아니지만 컨테이너에 의해 여전히 적용된다는 점에 유의하십시오.  
+# `Bean`의 `id`는 XML 파서가 아닌 container에 의해 고유성이 강요된다는 점에 유의해라.
 ## Note that bean `id` uniqueness is still enforced by the container, though no longer by XML parsers.
 <br/>
 
-# Bean의 이름이나 ID를 제공할 필요가 없습니다.
+# `Bean`의 `id`나 `name`속성은 필수가 아니다.
 ## You are not required to supply a `name` or an `id` for a bean.
 
-# 이름이나 ID를 명시적으로 제공하지 않으면 컨테이너는 해당 빈에 대해 고유한 이름을 생성합니다. 
+#  `id`나 `name`속성을 명시적으로 지정하지 않으면 container는 해당 `Bean`에 대한 고유 이름을 만든다.
 ## If you do not supply a name or id explicitly, the container generates a unique name for that bean.
 
-# 그러나 ref 요소 또는 Service Locator 스타일 조회를 사용하여 이름으로 해당 빈을 참조하려면 이름을 제공해야 합니다.
+# 하지만 `ref` 요소나 Service Locator 스타일 조회를 사용하여 `Bean`의 이름으로 해당 `Bean`을 참조하려면 이름을 제공해야한다..
 ## However, if you want to refer to that bean by name, through the use of the `ref` element or a Service Locator style lookup, you must provide a name.
 
-# 이름을 제공하지 않는 동기는 내부 빈 및 자동 연결 공동 작업자 사용과 관련이 있습니다.  
+# 이 경우 이름을 제공하지 않는 동기는 내부 Bean과 autowiring 협력자 사용과 관련이 있다.
 ## Motivations for not supplying a name are related to using inner beans and autowiring collaborators.
 
 <!-- guide wrapper start -->
