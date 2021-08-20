@@ -778,7 +778,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 #  `id`나 `name`속성을 명시적으로 지정하지 않으면 container는 해당 `Bean`에 대한 고유 이름을 만들어주지만
 ## If you do not supply a name or id explicitly, the container generates a unique name for that bean.
 
-# 하지만 `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려면 고유 이름을 지정해야한다.
+# `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려는 경우에는 고유 이름을 지정해야한다.
 ## However, if you want to refer to that bean by name, through the use of the `ref` element or a Service Locator style lookup, you must provide a name.
 
 # 이는 내부 `Bean`을 사용하는 것과 협력자 autowiring과 관련이 있다.
@@ -1220,7 +1220,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <strong class="number">9.</strong> 예: ‘myBean’, ‘someService’ 등
 </p>
 <p id="footnote-10" class="footnote-desc" markdown="1">
-    <strong class="number">9.</strong> 특수문자 사용 불가
+    <strong class="number">10.</strong> 특수문자 사용 불가
 </p>
 </blockquote>
 
