@@ -159,8 +159,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 전통적으로 간단하고 직관적인 XML 형식으로 제공된다. 덧붙어 이 장에서는 대부분 Spring `IoC container`의 주요 컨셉과 기능을 전달하는 데 사용된다. 
 ## Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.
 
-<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
-<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div class="spring info-wrapper mt-3 mb-3 mb-2">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
 # XML 기반 메타데이터가 유일한 configuration 메타데이터 형식은 아니다.
 ## XML-based metadata is not the only allowed form of configuration metadata.
@@ -275,8 +275,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     val context = ClassPathXmlApplicationContext("services.xml", "daos.xml")
 ```
 
-<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
-<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div class="spring info-wrapper mt-3 mb-3 mb-2">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
 
 <div markdown="1">
 
@@ -415,8 +415,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-<div class="spring info-wrapper pb-1">
-<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div class="spring info-wrapper">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
 # 상대 경로 "../"를 사용하여 상위 디렉토리에 있는 파일을 참조하는 것은 가능하지만  
 ## It is possible, but not recommended, to reference files in parent directories using a relative "../" path.
@@ -734,8 +734,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 하지만 일반적인 어플리케이션은 `Bean` 정의 메타데이터를 통해서 `Bean`을 정의한다.
 ## However, typical applications work solely with beans defined through regular bean definition metadata.
 
-<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
-<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div class="spring info-wrapper mt-3 mb-3 mb-2">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
 # container가 autowiring 및 내부 검사 과정에서 이에 대해 제대로 판단하기 위해서는 `Bean` 메타데이터 및 수동으로 제공되는 싱글톤 인스턴스가 가능한 한 빨리 등록되어야 한다.
 ## Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps.
@@ -793,7 +793,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-<div class="spring guide-wrapper pb-2" markdown="1">
+<div class="spring guide-wrapper" markdown="1">
 <h1 class="text-center title">Bean 이름 짓기 규칙</h1>
 <h2 class="text-center">Bean Naming Conventions</h2> 
 # 규칙은 빈의 이름을 지정할 때 인스턴스 필드 이름에 대한 표준 Java 규칙을 사용하는 것입니다.
@@ -812,8 +812,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.
 </div>
 
-<div class="spring info-wrapper mt-3 mb-3 pb-1 mb-2">
-<i class="fa fa-info-circle icon mr-half mt-1"></i>
+<div class="spring info-wrapper mt-3 mb-3 mb-2">
+<i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
 # 클래스 경로에서 컴포넌트 스캐닝을 통해 Spring은 앞에서 설명한 규칙에 따라 이름 없는 컴포넌트에 대한 빈 이름을 생성합니다. 본질적으로 간단한 클래스 이름을 취하고 초기 문자를 소문자로 바꾸는 것입니다.
 ## With component scanning in the classpath, Spring generates bean names for unnamed components, following the rules described earlier: essentially, taking the simple class name and turning its initial character to lower-case.
@@ -825,7 +825,71 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## These are the same rules as defined by java.beans.Introspector.decapitalize (which Spring uses here).
 </div>
 </div>
+
+<br/>
+
+# **Bean 정의 외부에서 Bean 별칭 지정**
+## Aliasing a Bean outside the Bean Definition
+
+# Bean 정의 자체에서 id 속성에 의해 지정된 최대 하나의 이름과 name 속성에 있는 임의의 수의 다른 이름의 조합을 사용하여 Bean에 대해 둘 이상의 이름을 제공할 수 있습니다. 
+## In a bean definition itself, you can supply more than one name for the bean, by using a combination of up to one name specified by the id attribute and any number of other names in the name attribute. 
+
+# 이러한 이름은 동일한 빈에 대한 동일한 별칭이 될 수 있으며 응용 프로그램의 각 구성 요소가 해당 구성 요소 자체에 고유한 빈 이름을 사용하여 공통 종속성을 참조하도록 하는 것과 같은 일부 상황에 유용합니다. 
+## These names can be equivalent aliases to the same bean and are useful for some situations, such as letting each component in an application refer to a common dependency by using a bean name that is specific to that component itself.
+
+# 그러나 Bean이 실제로 정의되는 모든 별칭을 지정하는 것이 항상 적절한 것은 아닙니다. 
+## Specifying all aliases where the bean is actually defined is not always adequate, however. It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. 
+
+# 다른 곳에서 정의된 빈에 대한 별칭을 도입하는 것이 때때로 바람직합니다. 
+## This is commonly the case in large systems where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. 
+
+# 이는 일반적으로 구성이 각 하위 시스템 간에 분할되고 각 하위 시스템에 고유한 개체 정의 집합이 있는 대규모 시스템의 경우입니다. 
+## In XML-based configuration metadata, you can use the <alias/> element to accomplish this. 
+
+# XML 기반 구성 메타데이터에서 요소를 사용하여 이를 수행할 수 있습니다. 다음 예에서는 그렇게 하는 방법을 보여줍니다.
+## The following example shows how to do so:
+
+```xml
+    <alias name="fromName" alias="toName"/>
+```
+
+# 이 경우 이름이 fromName인 빈(동일한 컨테이너에 있음)은 이 별칭 정의를 사용한 후 toName으로 참조될 수도 있습니다. 
+## In this case, a bean (in the same container) named fromName may also, after the use of this alias definition, be referred to as toName.
+
+# 예를 들어, 서브시스템 A에 대한 구성 메타데이터는 서브시스템 A-dataSource라는 이름으로 DataSource를 참조할 수 있습니다. 
+## For example, the configuration metadata for subsystem A may refer to a DataSource by the name of subsystemA-dataSource. 
+
+# 서브시스템 B에 대한 구성 메타데이터는 서브시스템B-dataSource라는 이름으로 DataSource를 참조할 수 있습니다. 
+## The configuration metadata for subsystem B may refer to a DataSource by the name of subsystemB-dataSource. 
+
+# 이 두 하위 시스템을 모두 사용하는 기본 응용 프로그램을 구성할 때 기본 응용 프로그램은 myApp-dataSource라는 이름으로 DataSource를 참조합니다. 
+## When composing the main application that uses both these subsystems, the main application refers to the DataSource by the name of myApp-dataSource. 
+
+# 세 이름이 모두 동일한 개체를 참조하도록 하려면 구성 메타데이터에 다음 별칭 정의를 추가할 수 있습니다.
+## To have all three names refer to the same object, you can add the following alias definitions to the configuration metadata:
+
+```xml
+    <alias name="myApp-dataSource" alias="subsystemA-dataSource"/>
+    <alias name="myApp-dataSource" alias="subsystemB-dataSource"/>
+```
+
+# 이제 각 구성 요소와 기본 응용 프로그램은 고유한 이름을 통해 dataSource를 참조할 수 있고 다른 정의와 충돌하지 않도록 보장되지만(효과적으로 네임스페이스 생성) 동일한 빈을 참조합니다.
+## Now each component and the main application can refer to the dataSource through a name that is unique and guaranteed not to clash with any other definition (effectively creating a namespace), yet they refer to the same bean.
+
+<div class="spring guide-wrapper mt-2" markdown="1">
+<h1 class="text-center title">Java-configuration</h1>
+<h2 class="text-center">Java configuration</h2>
+
+# Java 구성을 사용하는 경우 @Bean 주석을 사용하여 별칭을 제공할 수 있습니다. 
+## If you use Javaconfiguration, the @Bean annotation can be used to provide aliases.
+
+# 자세한 내용은 @Bean 주석 사용을 참조하십시오.
+## See Using the @Bean Annotation for details.
 </div>
+
+</div>
+
+
 </div>
 </section>
 
