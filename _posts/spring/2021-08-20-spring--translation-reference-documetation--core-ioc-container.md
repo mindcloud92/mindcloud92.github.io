@@ -756,16 +756,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `id` 속성을 사용하면 정확히 하나의 `Bean` 가르키는 식별자로 지정할 수 있다.
 ## The id attribute lets you specify exactly one id. 
 
-# `id` 속성의 값은 일반적으로 영숫자<a href="#footnote-9" class="footnote">[9]</a>와 특수문자를 사용할 수 있으며
+# `id` 속성에는 일반적으로 영숫자<a href="#footnote-9" class="footnote">[9]</a>와 특수문자를 사용할 수 있으며
 ## Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
 
-# `Bean`에 대한 별칭을 여러개 지정하고 싶으면 `name` 속성의 값을 공백, 세미콜론, 콤마로 구분된 문자열을 사용하면 된다.
+# `Bean`에 대한 별칭을 여러개 지정하고 싶은 경우에는 `name` 속성에 공백, 세미콜론, 콤마로 구분된 문자열을 사용하면 된다.
 ## If you want to introduce other aliases for the bean, you can also specify them in the `name` attribute, separated by a comma (`,`), semicolon (`;`), or white space.
 
 # 참고로 `id` 속성은 `Spring 3.1`까지는 `xsd:ID`<a href="#footnote-10" class="footnote">[10]</a> 유형으로 정의되고
 ## As a historical note, in versions prior to Spring 3.1, the `id` attribute was defined as an `xsd:ID` type, which constrained possible characters.
 
-# `Spring 3.1`부터는 xsd:string` 유형으로 정의된다.
+# `Spring 3.1`부터는 `xsd:string` 유형으로 정의된다.
 ## As of 3.1, it is defined as an `xsd:string` type.
 
 # Bean id 고유성은 더 이상 XML 파서가 아니지만 컨테이너에 의해 여전히 적용된다는 점에 유의하십시오.  
