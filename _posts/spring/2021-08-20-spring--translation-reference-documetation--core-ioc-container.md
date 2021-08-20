@@ -742,7 +742,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## These identifiers must be unique within the container that hosts the bean.
 <br/>
 
-# 보통 `Bean`에 대한 식별자는 하나뿐이지만.
+# `Bean`에 대한 식별자는 보통 하나만 지정하지만
 ## A bean usually has only one identifier.
 
 # 한개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
