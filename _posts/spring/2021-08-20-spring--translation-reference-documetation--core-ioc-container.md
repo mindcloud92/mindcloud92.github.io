@@ -738,11 +738,12 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 모든 `Bean`은 하나 이상의 식별자를 가진다.
 ## Every bean has one or more identifiers.
 
-# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야한다.
-## These identifiers must be unique within the container that hosts the bean.
 <br/>
 
-# `Bean`에 대한 식별자는 보통 하나만 지정하지만
+# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야하기 때문에
+## These identifiers must be unique within the container that hosts the bean.
+
+# 보통 하나만 지정하지만
 ## A bean usually has only one identifier.
 
 # 한개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
