@@ -788,19 +788,19 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring guide-wrapper mt-4 mb-4" markdown="1">
 <h1 class="text-center title">Bean 이름 짓기 규칙</h1>
 <h2 class="text-center">Bean Naming Conventions</h2> 
-# 규칙은 빈의 이름을 지정할 때 인스턴스 필드 이름에 대한 표준 Java 규칙을 사용하는 것입니다.
+# `Bean`의 이름을 지을때는 인스턴스 필드에 대한 Java 표준 규약을 사용해야한다.
 ## The convention is to use the standard Java convention for instance field names when naming beans.
 
-# 즉, 빈 이름은 소문자로 시작하고 거기에서 카멜 케이스입니다.
+# 즉 `Bean`의 이름은 소문자로 시작하는 카멜 케이스 표기법을 사용해야한다.
 ## That is, bean names start with a lowercase letter and are camel-cased from there.
 
-# 이러한 이름의 예로는 accountManager, accountService, userDao, loginController 등이 있습니다. 
-## Examples of such names include accountManager, accountService, userDao, loginController, and so forth.
+# (예: **accountManager**, **accountService**, **userDao**, **loginController** 등)
+## Examples of such names include **accountManager**, **accountService**, **userDao**, **loginController**, and so forth.
 
-# 빈의 이름을 일관되게 지정하면 구성을 더 쉽게 읽고 이해할 수 있습니다. 
+# `Bean`의 이름을 일관되게 만들면 configuration을 좀 더 쉽게 읽고 이해할수 있으며
 ## Naming beans consistently makes your configuration easier to read and understand.
 
-# 또한 Spring AOP를 사용한다면 이름으로 관련된 빈들의 집합에 어드바이스를 적용할 때 많은 도움이 된다.  
+# Spring `AOP`를 사용하는 경우에는 동일한 이름을 가진 하나 이상의 `Bean`들 advice를 적용할 때 많은 도움이 된다.
 ## Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.
 </div>
 <!-- // guide wrapper end -->
