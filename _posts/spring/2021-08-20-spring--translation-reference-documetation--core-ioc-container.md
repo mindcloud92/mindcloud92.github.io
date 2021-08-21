@@ -815,8 +815,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 하나 이상의 문자가 있고 첫번째와 두번째 문자가 모두 대문자인 (비정상적인)특수한 경우에는 원래 대소문자가 유지된다.
 ## However, in the (unusual) special case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved.
 
-# 이는 `java.beans.Introspector.decapitalize`에 의해 정의된 것과 동일한 규칙이다.
-## These are the same rules as defined by `java.beans.Introspector.decapitalize` (which Spring uses here).
+# 이는 **java.beans.Introspector.decapitalize**에 의해 정의된 것과 동일한 규칙이다.
+## These are the same rules as defined by **java.beans.Introspector.decapitalize** (which Spring uses here).
 </div>
 </div>
 <!-- // info wrapper end -->
