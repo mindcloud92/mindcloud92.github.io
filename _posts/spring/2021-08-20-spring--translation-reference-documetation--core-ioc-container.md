@@ -740,13 +740,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야하기 때문에
+# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야 하기 때문에
 ## These identifiers must be unique within the container that hosts the bean.
 
 # 보통 하나만 지정하지만
 ## A bean usually has only one identifier.
 
-# 한개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
+# 한 개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
 ## However, if it requires more than one, the extra ones can be considered aliases.
 <br/>
 
@@ -759,7 +759,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `id` 속성에는 일반적으로 영숫자<a href="#footnote-9" class="footnote">[9]</a>와 특수문자를 사용할 수 있으며
 ## Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
 
-# `Bean`에 대한 별칭을 여러개 지정하고 싶은 경우에는 `name` 속성에 공백, 세미콜론, 콤마로 구분된 문자열을 사용하면 된다.
+# `Bean`에 대한 별칭을 여러 개 지정하고 싶은 경우에는 `name` 속성에 공백, 세미콜론, 콤마로 구분된 문자열을 사용하면 된다.
 ## If you want to introduce other aliases for the bean, you can also specify them in the `name` attribute, separated by a comma (`,`), semicolon (`;`), or white space.
 
 # 참고로 `id` 속성은 `Spring 3.1`까지는 `xsd:ID`<a href="#footnote-10" class="footnote">[10]</a> 유형으로 정의되고
@@ -778,7 +778,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 #  `id`나 `name`속성을 명시적으로 지정하지 않으면 container는 해당 `Bean`에 대한 고유 이름을 만들어주지만
 ## If you do not supply a name or id explicitly, the container generates a unique name for that bean.
 
-# `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려는 경우에는 고유 이름을 지정해야한다.
+# `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려는 경우에는 고유 이름을 지정해야 한다.
 ## However, if you want to refer to that bean by name, through the use of the `ref` element or a Service Locator style lookup, you must provide a name.
 
 # 이는 내부 `Bean`을 사용하는 것과 협력자 autowiring과 관련이 있다.
@@ -788,16 +788,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring guide-wrapper mt-4 mb-4" markdown="1">
 <h1 class="text-center title">Bean 이름 짓기 규칙</h1>
 <h2 class="text-center">Bean Naming Conventions</h2> 
-# **Bean**의 이름을 지을때는 인스턴스 필드에 대한 Java 표준 규약을 사용해야한다.
+# **Bean**의 이름을 지을 때는 인스턴스 필드에 대한 Java 표준 규약을 사용해야 한다.
 ## The convention is to use the standard Java convention for instance field names when naming beans.
 
-# 즉 **Bean**의 이름은 소문자로 시작하는 카멜 케이스 표기법을 사용해야한다.
+# 즉 **Bean**의 이름은 소문자로 시작하는 카멜 케이스 표기법을 사용해야 한다.
 ## That is, bean names start with a lowercase letter and are camel-cased from there.
 
 # (예: **accountManager**, **accountService**, **userDao**, **loginController** 등)
 ## Examples of such names include **accountManager**, **accountService**, **userDao**, **loginController**, and so forth.
 
-# **Bean**의 이름을 일관되게 만들면 configuration을 좀 더 쉽게 읽고 이해할수 있으며
+# **Bean**의 이름을 일관되게 만들면 configuration을 좀 더 쉽게 읽고 이해할 수 있으며
 ## Naming beans consistently makes your configuration easier to read and understand.
 
 # Spring **AOP**를 사용하는 경우에는 동일한 이름을 가진 하나 이상의 **Bean**에 advice를 적용할 때 많은 도움이 된다.
@@ -809,10 +809,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# Spring은 앞에서 설명한 규칙에 따라 classpath에서 컴포넌트 스캐닝을 통해 이름 없는 컴포넌트에 대한 **Bean**의 이름을 생성한다. 기본적으로는 클래스 이름을 가져와 첫번째 문자를 소문자로 바꾸지만
+# Spring은 앞에서 설명한 규칙에 따라 classpath에서 컴포넌트 스캐닝을 통해 이름 없는 컴포넌트에 대한 **Bean**의 이름을 생성한다. 기본적으로는 클래스 이름을 가져와 첫 번째 문자를 소문자로 바꾸지만
 ## With component scanning in the classpath, Spring generates bean names for unnamed components, following the rules described earlier: essentially, taking the simple class name and turning its initial character to lower-case.
 
-# 하나 이상의 문자가 있고 첫번째와 두번째 문자가 모두 대문자인 (비정상적인)특수한 경우에는 원래 대소문자가 유지된다.
+# 하나 이상의 문자가 있고 첫 번째와 두 번째 문자가 모두 대문자인 특수한(비정상적인) 경우에는 원래 대소문자가 유지된다.
 ## However, in the (unusual) special case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved.
 
 # 이는 **java.beans.Introspector.decapitalize**에 의해 정의된 것과 동일한 규칙이다.
