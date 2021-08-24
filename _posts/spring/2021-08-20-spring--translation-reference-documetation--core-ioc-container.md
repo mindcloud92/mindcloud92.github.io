@@ -838,13 +838,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 
 
-# `Bean`에 대한 별칭을 해당 `Bean`이 정의되는 configuration에 지정하는 것이 항상 적절한 것은 아니다.
+# `Bean`에 대한 별칭을 해당 `Bean`이 정의된 configuration에 지정하는 것이 항상 적절한 것은 아니다.
 ## Specifying all aliases where the bean is actually defined is not always adequate, however. 
 
-# `Bean`에 대한 별칭을 해당 `Bean`을 참조하는 configuration에 지정하는 것이 바람직한 경우도 있다.
+# 해당 `Bean`을 참조하는 configuration에 지정하는 것이 바람직한 경우도 있다.
 ## It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. 
 
-# 일반적으로 configuration이 하위시스템 별로 되는 대규모 시스템인 경우에 해당하며
+# 일반적으로 하위 시스템을 가지고 있고 각각의 시스템별로 분리된 configuration을 가진 대규모 시스템인 경우에 해당하며
 ## This is commonly the case in large systems where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. 
 
 # 이 경우 XML 기반 configuration 메타데이터에서 `<alias/>` 요소를 사용하면 된다. 
