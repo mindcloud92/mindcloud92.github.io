@@ -863,7 +863,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## In this case, a bean (in the same container) named `fromName` may also, after the use of this alias definition, be referred to as `toName`.
 <br/>
 
-# 예를 들어 DataSource를 하위시스템 A의 configuration 메타데이터는 `subsystemA-dataSource` 라는 이름으로 
+# 예를 들어 하위시스템 A의 configuration 메타데이터는 `subsystemA-dataSource` 라는 이름으로 
 ## For example, the configuration metadata for subsystem A may refer to a DataSource by the name of `subsystemA-dataSource`. 
 
 # 하위시스템 B의 configuration 메타데이터는 `subsystemB-dataSource`라는 이름으로
@@ -872,7 +872,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 이 두 하위시스템을 가진 어플리케이션은 `myApp-dataSource`라는 이름으로
 ## When composing the main application that uses both these subsystems, the main application refers to the DataSource by the name of `myApp-dataSource`. 
 
-# 동일한 객체를 참조하도록 하려면 configuration 메타데이터에 다음과 같은 별칭을 정의하면 된다.
+# 지정하고 모두 동일한 DataSource 객체를 참조하도록 하려면 configuration 메타데이터에 다음과 같은 별칭을 정의하면 된다.
 ## To have all three names refer to the same object, you can add the following alias definitions to the configuration metadata:
 
 <div class="mt-2"></div>
