@@ -830,22 +830,25 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Aliasing a Bean outside the Bean Definition
 <br/>
 
-# Bean 정의 자체에서 id 속성에 의해 지정된 최대 하나의 이름과 name 속성에 있는 임의의 수의 다른 이름의 조합을 사용하여 Bean에 대해 둘 이상의 이름을 제공할 수 있습니다. 
+# `Bean`에 대한 이름은 `id` 속성과 `name` 속성을 사용하여 두 개 이상 정의할 수 있다. 
 ## In a bean definition itself, you can supply more than one name for the bean, by using a combination of up to one name specified by the id attribute and any number of other names in the name attribute. 
 
-# 이러한 이름은 동일한 빈에 대한 동일한 별칭이 될 수 있으며 응용 프로그램의 각 구성 요소가 해당 구성 요소 자체에 고유한 빈 이름을 사용하여 공통 종속성을 참조하도록 하는 것과 같은 일부 상황에 유용합니다. 
+# 이렇게 정의되는 이름은 동일한 `Bean`에 대한 별칭이 될 수 있으며 어플리케이션의 각 컴포넌트가 해당 컴포넌트와 관련된 `Bean`의 이름을 사용하여 공통된 의존성을 참조하는 경우와 같이 특정 상황에 유용하게 사용할 수 있다..
 ## These names can be equivalent aliases to the same bean and are useful for some situations, such as letting each component in an application refer to a common dependency by using a bean name that is specific to that component itself.
 
 # 그러나 Bean이 실제로 정의되는 모든 별칭을 지정하는 것이 항상 적절한 것은 아닙니다. 
-## Specifying all aliases where the bean is actually defined is not always adequate, however. It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. 
+## Specifying all aliases where the bean is actually defined is not always adequate, however. 
 
-# 다른 곳에서 정의된 빈에 대한 별칭을 도입하는 것이 때때로 바람직합니다. 
-## This is commonly the case in large systems where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. 
+## 다른 곳에서 정의된 빈에 대한 별칭을 도입하는 것이 때때로 바람직합니다. 
+# It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. 
 
 # 이는 일반적으로 구성이 각 하위 시스템 간에 분할되고 각 하위 시스템에 고유한 개체 정의 집합이 있는 대규모 시스템의 경우입니다. 
+## This is commonly the case in large systems where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. 
+
+# XML 기반 구성 메타데이터에서 요소를 사용하여 이를 수행할 수 있습니다.
 ## In XML-based configuration metadata, you can use the <alias/> element to accomplish this. 
 
-# XML 기반 구성 메타데이터에서 요소를 사용하여 이를 수행할 수 있습니다. 다음 예에서는 그렇게 하는 방법을 보여줍니다.
+# 다음 예에서는 그렇게 하는 방법을 보여줍니다.
 ## The following example shows how to do so:
 
 <div class="mt-2"></div>
