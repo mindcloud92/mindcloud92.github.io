@@ -903,7 +903,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section inner content start -->
 <div id="instantiating-beans" markdown="1" class="inner-contents">
-# **1.3.2. 빈 인스턴스화**
+# **1.3.2. Bean 인스턴스화**
 ## 1.3.2. Instantiating Beans
 <br/>
 
