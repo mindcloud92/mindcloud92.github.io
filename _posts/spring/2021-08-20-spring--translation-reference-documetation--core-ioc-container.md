@@ -781,7 +781,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려는 경우에는 고유 이름을 지정해야 한다.
 ## However, if you want to refer to that bean by name, through the use of the `ref` element or a Service Locator style lookup, you must provide a name.
 
-# 이는 내부 `Bean`을 사용하는 것과 협력자 autowiring과 관련이 있다.
+# 이는 <a href="#inner-beans">내부 `Bean`</a>을 사용하는 것과 <a href="#autowiring-collaborators">협력자 autowiring</a>과 관련이 있다.
 ## Motivations for not supplying a name are related to using inner beans and autowiring collaborators.
 
 <!-- guide wrapper start -->
@@ -826,7 +826,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section inner content start -->
 <div markdown="1" class="inner-contents">
-# **Bean 정의 외부에서 Bean 별칭 지정**
+# **Bean 별칭 지정**
 ## Aliasing a Bean outside the Bean Definition
 <br/>
 
