@@ -888,14 +888,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- guide wrapper start -->
 <div class="spring guide-wrapper mt-2" markdown="1">
-<h1 class="text-center title">Java-configuration</h1>
+<h1 class="text-center title">Java configuration</h1>
 <h2 class="text-center">Java configuration</h2>
 
-# Java 구성을 사용하는 경우 @Bean 주석을 사용하여 별칭을 제공할 수 있습니다. 
-## If you use Javaconfiguration, the @Bean annotation can be used to provide aliases.
+# Java configuration을 사용하는 경우 **@Bean**으로 별칭을 사용할 수 있다.
+## If you use Javaconfiguration, the **@Bean** annotation can be used to provide aliases.
 
-# 자세한 내용은 @Bean 주석 사용을 참조하십시오.
-## See Using the @Bean Annotation for details.
+# 자세한 내용은 [**@Bean** 사용하기](#using-the-@Bean-annotation) 참조.
+## See Using the **@Bean** Annotation for details.
 </div>
 <!-- // guide wrapper end -->
 </div>
