@@ -859,7 +859,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <alias name="fromName" alias="toName"/>
 ```
 
-# 예시와 같이 별칭을 정의하면 `fromName`이라는 이름을 가진 `Bean`은 `toName`이라는 별칭으로도 참조할 수 있게 된다. (동일한 container에 있는 경우)
+# 예시는 `fromName`이라는 이름을 가진 `Bean`을 `toName`이라는 별칭으로도 참조할 수 있게 정의하는 것을 보여준다. (동일한 container에 있는 경우)
 ## In this case, a bean (in the same container) named `fromName` may also, after the use of this alias definition, be referred to as `toName`.
 <br/>
 
