@@ -881,8 +881,9 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <alias name="myApp-dataSource" alias="subsystemA-dataSource"/>
     <alias name="myApp-dataSource" alias="subsystemB-dataSource"/>
 ```
+<br/>
 
-# 이제 각 구성 요소와 기본 응용 프로그램은 고유한 이름을 통해 dataSource를 참조할 수 있고 다른 정의와 충돌하지 않도록 보장되지만(효과적으로 네임스페이스 생성) 동일한 빈을 참조합니다.
+# 이렇게 하면 각 컴포넌트와 어플리케이션은 고유한 이름을 통해 동일한 DataSource `Bean`을 참조할 수 있지만 다른 정의와는 충돌하지 않는다.
 ## Now each component and the main application can refer to the dataSource through a name that is unique and guaranteed not to clash with any other definition (effectively creating a namespace), yet they refer to the same bean.
 
 <!-- guide wrapper start -->
