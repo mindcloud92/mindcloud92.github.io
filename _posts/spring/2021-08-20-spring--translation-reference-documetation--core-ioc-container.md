@@ -835,6 +835,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 이렇게 정의되는 이름은 동일한 `Bean`에 대한 별칭이 될 수 있으며 어플리케이션의 각 컴포넌트가 해당 컴포넌트와 관련된 `Bean`의 이름을 사용하여 공통된 의존성을 참조하는 경우와 같은 특정 상황에 유용하게 사용할 수 있다.
 ## These names can be equivalent aliases to the same bean and are useful for some situations, such as letting each component in an application refer to a common dependency by using a bean name that is specific to that component itself.
+<br/>
+
 
 # `Bean`이 실제로 정의되는 configuration에 별칭을 지정하는 것이 항상 적절한 것은 아니다.
 ## Specifying all aliases where the bean is actually defined is not always adequate, however. 
@@ -842,7 +844,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `Bean`에 대한 별칭을 해당 `Bean`을 참조하는 configuration에 지정하는 것이 바람직한 경우도 있다.
 ## It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. 
 
-# 일반적으로 configuration이 하위시스템 별로 되는 대규모 시스템인 경우에 해당한다.
+# 일반적으로 configuration이 하위시스템 별로 되는 대규모 시스템인 경우에 해당하며
 ## This is commonly the case in large systems where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. 
 
 # 이 경우 XML 기반 configuration 메타데이터에서 `<alias/>` 요소를 사용하면 된다. 
