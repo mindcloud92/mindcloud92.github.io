@@ -838,7 +838,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 
 
-# `Bean`이 정의되는 해당 configuration에 별칭을 지정하는 것이 항상 적절한 것은 아니다.
+# `Bean`에 대한 별칭을 해당 `Bean`이 정의되는 configuration에 지정하는 것이 항상 적절한 것은 아니다.
 ## Specifying all aliases where the bean is actually defined is not always adequate, however. 
 
 # `Bean`에 대한 별칭을 해당 `Bean`을 참조하는 configuration에 지정하는 것이 바람직한 경우도 있다.
