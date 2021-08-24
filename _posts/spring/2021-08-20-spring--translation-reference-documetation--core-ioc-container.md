@@ -859,13 +859,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <alias name="fromName" alias="toName"/>
 ```
 
-# 이 경우 이름이 fromName인 빈(동일한 컨테이너에 있음)은 이 별칭 정의를 사용한 후 toName으로 참조될 수도 있습니다. 
-## In this case, a bean (in the same container) named fromName may also, after the use of this alias definition, be referred to as toName.
+# 예시와 같이 별칭을 정의하면 `fromName`이라는 이름을 가진 `Bean`은 `toName`이라는 별칭으로도 참조할 수 있게 된다. (동일한 container에 있는 경우)
+## In this case, a bean (in the same container) named `fromName` may also, after the use of this alias definition, be referred to as `toName`.
+<br/>
 
-# 예를 들어, 서브시스템 A에 대한 구성 메타데이터는 서브시스템 A-dataSource라는 이름으로 DataSource를 참조할 수 있습니다. 
-## For example, the configuration metadata for subsystem A may refer to a DataSource by the name of subsystemA-dataSource. 
+# 예를 들어 같은 DataSource `Bean`을 서브시스템 A에 대한 configuration 메타데이터는 `subsystemA-dataSource` 라는 이름으로
+## For example, the configuration metadata for subsystem A may refer to a DataSource by the name of `subsystemA-dataSource`. 
 
-# 서브시스템 B에 대한 구성 메타데이터는 서브시스템B-dataSource라는 이름으로 DataSource를 참조할 수 있습니다. 
+# 서브시스템 B에 대한 configuration 메타데이터는 `subsystemB-dataSource`라는 이름으로 DataSource를 참조할 수 있다.
 ## The configuration metadata for subsystem B may refer to a DataSource by the name of subsystemB-dataSource. 
 
 # 이 두 하위 시스템을 모두 사용하는 기본 응용 프로그램을 구성할 때 기본 응용 프로그램은 myApp-dataSource라는 이름으로 DataSource를 참조합니다. 
