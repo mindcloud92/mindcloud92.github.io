@@ -111,7 +111,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata.
 <br/>
 
-# configuration 메타데이터는 XML이나 Java annotation 또는 코드로 표시되고
+# configuration 메타데이터는 XML이나 Java annotation 또는 코드로 작성되고
 ## The configuration metadata is represented in XML, Java annotations, or Java code.
 
 # 어플리케이션을 구성하는 객체 간의 풍부한 상호 의존성을 표현할 수 있게 해준다.
