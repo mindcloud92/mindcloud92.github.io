@@ -30,7 +30,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## This chapter covers the Spring Framework implementation of the Inversion of Control (IoC) principle. 
 <br/>
 
-# `IoC`는 의존성 주입(DI)이라고 하기도 한다.
+# `IoC`는 의존성 주입(DI)으로 알려져 있다.
 ## IoC is also known as dependency injection (DI).
  
 # `IoC`는 팩토리 메소드에서 생성되거나 반환된 객체의 인스턴스에 선언된 속성 또는 객체 생성자의 인자, 팩토리 메소드의 인자를 통해서 의존성을 정의하는 프로세스를 말하며
