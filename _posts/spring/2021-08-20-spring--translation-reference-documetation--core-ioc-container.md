@@ -908,45 +908,45 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 
 
-# 빈 정의는 본질적으로 하나 이상의 객체를 생성하기 위한 레시피입니다.
+# 기본적으로 `Bean` 정의는 하나 이상의 객체를 생성하기 위한 조리법이다.
 ## A bean definition is essentially a recipe for creating one or more objects. 
 
-# 컨테이너는 요청 시 명명된 빈에 대한 레시피를 살펴보고 해당 빈 정의에 의해 캡슐화된 구성 메타데이터를 사용하여 실제 객체를 생성(또는 획득)합니다.
+# container는 요청 시 명명된 `Bean`에 대한 조리법을 보고 해당 Bean 정의에 의해 캡슐화된 configuration 메타데이터를 사용해서 실제 객체를 생성 (또는 획득) 한다.
 ## The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or acquire) an actual object.
 
-# XML 기반 구성 메타데이터를 사용하는 경우 <bean/> 요소의 class 속성에 인스턴스화할 객체의 유형(또는 클래스)을 지정합니다. 
+# XML 기반 configuration 메타데이터를 사용하는 경우 `<bean/>` 요소의 `class` 속성에 인스턴스화될 객체의 유형(또는 클래스)을 지정한다.
 ## If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the class attribute of the `<bean/>` element. 
 
-# 이 클래스 속성(내부적으로 BeanDefinition 인스턴스의 Class 속성임)은 일반적으로 필수입니다. 
+# `class` 속성은 보통 필수이다. (내부적으로 BeanDefinition 인스턴스에서 Class 속성임)
 ## This class attribute (which, internally, is a Class property on a BeanDefinition instance) is usually mandatory. 
 
-# (예외의 경우 인스턴스 팩토리 메소드 및 Bean 정의 상속을 사용하여 인스턴스화를 참조하십시오.) 
+# (예외의 경우에는 [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 를 참조)
 ## (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) 
 
-# 다음 두 가지 방법 중 하나로 Class 속성을 사용할 수 있습니다.
+# 다음과 같은 방법으로 Class 속성을 사용할 수 있다.
 ## You can use the Class property in one of two ways:
 
-- # 일반적으로 컨테이너 자체가 생성자를 반사적으로 호출하여 Bean을 직접 생성하는 경우 생성할 Bean 클래스를 지정합니다. 이는 new 연산자를 사용하는 Java 코드와 다소 동일합니다. 
-## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the new operator.
+- # 일반적으로 container 자체가 사적으로 생성자가 호출해서 직접 Bean을 생성하는 경우에 생성할 Bean 클래스를 지정한다. Java 코드의 `new` 연산자와 어느 정도 동일하다.
+## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the `new` operator.
 
-- # 컨테이너가 Bean을 생성하기 위해 클래스에서 정적 팩토리 메소드를 호출하는 덜 일반적인 경우에 개체를 생성하기 위해 호출되는 정적 팩토리 메소드를 포함하는 실제 클래스를 지정합니다. 
-## To specify the actual class containing the static factory method that is invoked to create the object, in the less common case where the container invokes a static factory method on a class to create the bean.
-# 정적 팩토리 메서드 호출에서 반환된 개체 유형은 완전히 동일한 클래스이거나 다른 클래스일 수 있습니다.
-## The object type returned from the invocation of the static factory method may be the same class or another class entirely.
+- # 객체를 생성하기 위해 호출되는 `정적` 팩토리 메소드를 포함한 실제 클래스를 지정하려면 container가 `Ben`을 생성하기 위해 클래스에서 `정적` 팩토리 메소드를 호출하는 게 덜 일반적이다.
+## To specify the actual class containing the `static` factory method that is invoked to create the object, in the less common case where the container invokes a `static` factory method on a class to create the bean.
+# `정적` 팩토리 메소드 호출에서 반환된 객체 유형은 완전히 동일한 클래스이거나 다른 클래스 일 수 있다.
+## The object type returned from the invocation of the `static` factory method may be the same class or another class entirely.
 
 <!-- guide wrapper start -->
 <div class="spring guide-wrapper mt-2" markdown="1">
 <h1 class="text-center title">중첩된 클래스 이름</h1>
 <h2 class="text-center">Nested class names</h2>
 
-# 중첩 클래스에 대한 빈 정의를 구성하려면 중첩 클래스의 바이너리 이름이나 소스 이름을 사용할 수 있습니다. 
+# 중첩 클래스에 대한 **Bean** 정의를 구성하려면 중첩 클래스의 바이너리 이름이나 소스 이름을 사용할 수 있다. 
 ## If you want to configure a bean definition for a nested class, you may use either the binary name or the source name of the nested class.
 
-# 예를 들어, com.example 패키지에 SomeThing이라는 클래스가 있고 이 SomeThing 클래스에 OtherThing이라는 정적 중첩 클래스가 있는 경우 달러 기호($) 또는 점(.)으로 구분할 수 있습니다.
-## For example, if you have a class called SomeThing in the com.example package, and this SomeThing class has a static nested class called OtherThing, they can be separated by a dollar sign ($) or a dot (.).
+# 예를 들어  **com.example** 패키지에 **SomeThing**이라는 클래스가 있고 이 **SomeThing** 클래스에 **OtherThing**이라는 정적 중첩 클래스가 있는 경우 달러 기호(**$**) 또는 점(**.**)으로 구분할 수 있다.
+## For example, if you have a class called **SomeThing** in the com.example package, and this **SomeThing** class has a **static** nested class called **OtherThing**, they can be separated by a dollar sign (**$**) or a dot (**.**).
 
-# 따라서 빈 정의에서 클래스 속성의 값은 com.example.SomeThing$OtherThing 또는 com.example.SomeThing.OtherThing이 됩니다.
-## So the value of the class attribute in a bean definition would be com.example.SomeThing$OtherThing or com.example.SomeThing.OtherThing.
+# 따라서 빈 정의에서 클래스 속성의 값은 **com.example.SomeThing$OtherThing** 또는 **com.example.SomeThing.OtherThing**이 된다.
+## So the value of the class attribute in a bean definition would be **com.example.SomeThing$OtherThing** or **com.example.SomeThing.OtherThing**.
 </div>
 <!-- // guide wrapper end -->
 
