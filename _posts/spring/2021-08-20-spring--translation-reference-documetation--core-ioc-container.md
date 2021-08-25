@@ -118,7 +118,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## It lets you express the objects that compose your application and the rich interdependencies between those objects.
 <br/>
 
-# `ApplicationContext` 인터페이스의 구현체 중 몇 가지는 Spring과 함께 제공되며
+# Spring은 여러 `ApplicationContext` 인터페이스 구현체를 제공하며
 ## Several implementations of the `ApplicationContext` interface are supplied with Spring.
 
 # 일반적으로 독립 실행형 어플리케이션에서는 [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [FileSystemXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"}를 사용한다.
