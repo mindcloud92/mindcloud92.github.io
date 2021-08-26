@@ -465,10 +465,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The Groovy Bean Definition DSL
 <br/>
 
-# Grails 프레임워크로 알려진 Groovy `Bean` 정의 DSL으로도 configuration 메타데이터에 `Bean` 정의를 할 수 있으며
+# 더 나아가 Spring의 Groovy `Bean` 정의 DSL(Grails 프레임워크)을 사용하여 외부화된 configuration 메타데이터로 `Bean` 정의를 할 수 있으며 
 ## As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring’s Groovy Bean Definition DSL, as known from the Grails framework.
 
-# 이 경우 ".groovy" 파일으로 만들어진다. 다음은 Groovy `Bean` DSL configuration 예시다.
+# 이 경우 ".groovy" 파일로 만들어진다. 기본 구조는 다음 예시와 같다.
 ## Typically, such configuration live in a ".groovy" file with the structure shown in the following example:
 <br/>
 
@@ -496,7 +496,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 이 스타일은 XML `Bean` 정의 형태와 유사하며 Spring의 XML 네임스페이스도 지원한다.
 ## This configuration style is largely equivalent to XML bean definitions and even supports Spring’s XML configuration namespaces.
 
-# 또한 `importBeans` 지시문을 통해 XML 다른 파일의 `Bean` 정의를 가져올 수도 있다.
+# 또한 `importBeans` directive를 통해 다른 XML 파일의 `Bean` 정의를 가져올 수도 있다.
 ## It also allows for importing XML bean definition files through an importBeans directive.
 </div>
 <!-- // section inner contents end -->
