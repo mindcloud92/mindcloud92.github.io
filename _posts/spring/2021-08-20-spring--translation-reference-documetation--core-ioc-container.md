@@ -547,7 +547,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 <br/>
 
-# `GenericApplicationContext`는 `Bean`정의를 가져오는 책임을 `XmlBeanDefinitionReader`와 같은 리더에 위임하고 이러한 리더와 결합하여 사용한다. 예시는 다음과 같다.   
+# `GenericApplicationContext`는 `Bean`정의를 가져오는 책임을 `XmlBeanDefinitionReader`와 같은 BeanDefinitionReader에 위임하고 결합하여 사용한다. 예시는 다음과 같다.   
 ## The most flexible variant is `GenericApplicationContext` in combination with reader delegates — for example, with `XmlBeanDefinitionReader` for XML files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -560,7 +560,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 다음 예시와 같이 리더로 `GroovyBeanDefinitionReader`를 사용할 수도있다.
+# 다음 예시와 같이 BeanDefinitionReader로 `GroovyBeanDefinitionReader`를 사용할 수도있다.
 ## You can also use the `GroovyBeanDefinitionReader` for Groovy files, as the following example shows:
 
 <div class="mt-2"></div>
@@ -573,7 +573,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 이렇게 하면 다양한 configuration에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에 리더를 알맞게 짝지을 수 있다.
+# 이렇게 하면 다양한 configuration에서 `Bean` 정의를 읽고 동일한 `ApplicationContext`에 BeanDefinitionReader를 알맞게 짝지을 수 있다.
 ## You can mix and match such reader delegates on the same `ApplicationContext`, reading bean definitions from diverse configuration sources.
 <br/>
 
