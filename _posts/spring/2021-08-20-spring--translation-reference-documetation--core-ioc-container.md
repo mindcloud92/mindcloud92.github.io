@@ -245,7 +245,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-- `<bean />` 필수 속성
+- `<bean />` 요소 필수 속성
     - # `id`: 개별 `Bean` 정의의 식별자   
       ## The id attribute is a string that identifies the individual bean definition.
     - # `class`: `Bean`의 클래스 타입을 정의 & full classname 사용   
@@ -369,20 +369,20 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Composing XML-based Configuration Metadata
 <br/>
 
-# XML을 여러 개로 나누어 `Bean`을 정의하는 것은 유용할 수 있다. 
+# `Bean`에 대한 정의는 XML을 여러 개로 나누어 하는 것이 유용할 수 있다. 
 ## It can be useful to have bean definitions span multiple XML files.
 
 # 이렇게 하면 각각의 XML configuration은 아키텍처의 논리적 계층 또는 모듈을 나타낼 수 있으며
 ## Often, each individual XML configuration file represents a logical layer or module in your architecture.
 
-# 분리된 XML configuration에 있는 `Bean` 정의는 `ApplicationContext` 생성자를 통해 전부 로드할 수 있다. 
+# `ApplicationContext` 생성자를 통해 분리된 XML configuration의 `Bean` 정의를 전부 가져올 수 있다. 
 ## You can use the application context constructor to load bean definitions from all these XML fragments.
 <br/>
 
 # `ApplicationContext`는 [1.2.2. Container 인스턴스화](#instantiating-a-container)에서 보여준 것처럼 생성자를 통해 하나 이상의 `Resource` 경로를 인자로 받거나
 ## This constructor takes multiple `Resource` locations, as was shown in the previous section.
 
-# `<import/>` 요소를 사용하여 다른 리소스 경로에서 `Bean` 정의를 가져온다. 
+# `<import/>` 요소를 사용하여 다른 `Resource` 경로에서 `Bean` 정의를 가져온다. 
 ## Alternatively, use one or more occurrences of the `<import/>` element to load bean definitions from another file or files.
 <br/>
 
@@ -404,20 +404,20 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <div class="mt-2"></div>
 
-# 앞의 예시에서 `Bean` 정의는 `services.xml`, `messageSource.xml`, `themeSource.xml` 세 개의 리소스 경로에서 로드된다.
+# 앞의 예시에서 `Bean` 정의는 `services.xml`, `messageSource.xml`, `themeSource.xml` 세 개의 `Resource` 경로에서 가져온다.
 ## In the preceding example, external bean definitions are loaded from three files: `services.xml`, `messageSource.xml`, and `themeSource.xml`.
 <br/>
 
-# `<import />` 요소에 정의된 경로는 전부 상대 경로이기 때문에 `service.xml`은 해당 configuration 파일과 동일한 디렉토리 또는 classpath애 있어야 하고 `messageSource.xml`과 `themeSource.xml`은 해당 configuration 하위 디렉토리인 `resources` 디렉토리 안에 있어야 한다.
+# `<import />` 요소에 정의된 경로는 전부 상대 경로이기 때문에 `service.xml`은 해당 configuration 파일과 동일한 디렉토리 또는 classpath에 있어야 하고 `messageSource.xml`과 `themeSource.xml`은 해당 configuration 하위 디렉토리인 `resources` 디렉토리 안에 있어야 한다.
 ## All location paths are relative to the definition file doing the importing, so `services.xml` must be in the same directory or classpath location as the file doing the importing, while `messageSource.xml` and `themeSource.xml` must be in a resources location below the location of the importing file.
 
-# 경로 문자열에서 가장 앞의 "/"는 무시되므로
+# 경로 문자열의 맨 앞에 있는 "/"는 무시되므로
 ## As you can see, a leading slash is ignored.
  
 # 사용하지 않는 것을 권장한다.  
 ## However, given that these paths are relative, it is better form not to use the slash at all.
 
-# 리소스 경로로 가져오는 `Bean` 정의는 Spring 스키마에 따른 유효한 XML `Bean` 정의여야만 한다.
+# `Resource` 경로를 통해 가져오는 `Bean` 정의는 Spring 스키마에 따른 유효한 XML `Bean` 정의여야만 한다.
 ## The contents of the files being imported, including the top level `<beans/>` element, must be valid XML bean definitions, according to the Spring Schema.
 
 <!-- info wrapper start -->
@@ -429,12 +429,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 # 현재 어플리케이션 외부에 있는 파일에 의존성이 생기기 때문에 권장하지는 않는다.
 ## Doing so creates a dependency on a file that is outside the current application.
+<br/>
 
-# 특히 현재 경로에서 "가장 가까운" classpath root를 선택한 다음 상위 디렉토리를 찾는 **classpath:URL**(예: classpath:../services.xml)는 더더욱 권장하지 않는다.
+# 특히 현재 경로에서 "가장 가까운" classpath root를 선택한 다음 상위 디렉토리를 찾는 `classpath:URL`(예: classpath:../services.xml) 사용은 더더욱 권장하지 않는다.
 ## In particular, this reference is not recommended for classpath: URLs (for example, classpath:../services.xml), where the runtime resolution process chooses the “nearest” classpath root and then looks into its parent directory. 
 
-# Classpath 구성의 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있다.
+# classpath 구성의 변경으로 인해 다른 잘못된 디렉토리가 선택될 수 있다.
 ## Classpath configuration changes may lead to the choice of a different, incorrect directory.
+<br/>
 
 # 상대 경로 대신 정규화된 리소스 경로를 사용할 수도 있지만(예: file:C:/config/services.xml 또는 classpath:/config/services.xml)
 ## You can always use fully qualified resource locations instead of relative paths: for example, file:C:/config/services.xml or classpath:/config/services.xml.
@@ -449,10 +451,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <!-- // info wrapper end -->
 <br/>
 
-# 네임스페이스 자체는 가져오기 지시문 기능을 제공한다.
+# XML 네임스페이스 자체는 import directive를 제공하며
 ## The namespace itself provides the import directive feature.
 
-# 게다가 일반적인 `Bean` 정의 이상의 추가 configuration 기능을 제공하는 XML 네임스페이스(예: 컨텍스트 및 util 네임스페이스)를 선택해서 사용할 수도 있다. 
+# 일반적인 `Bean` 정의 이상의 추가 configuration 기능을 제공하는 네임스페이스(예: 컨텍스트 및 util 네임스페이스)를 선택해서 사용할 수도 있다. 
 ## Further configuration features beyond plain bean definitions are available in a selection of XML namespaces provided by Spring — for example, the context and util namespaces.
 </div>
 <!-- // section inner contents end -->
