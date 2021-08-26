@@ -104,17 +104,17 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section content start -->
 <div markdown="1" class="contents">
-# `ApplicationContext`<a href="#footnote-3" class="footnote">[3]</a> 인터페이스는 Spring `IoC container`를 나타내고 `Bean`의 인스턴스화, 구성 및 조립을 담당한다.
+# `ApplicationContext`<a href="#footnote-3" class="footnote">[3]</a> 인터페이스는 Spring `IoC container`이며
 ## The `org.springframework.context.ApplicationContext` interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans.
  
-# 또한 configuration 메타데이터를 읽어 인스턴스화, 구성 및 조립할 객체에 대한 지침을 가져온다.
+# configuration 메타데이터를 읽어 인스턴스화, 구성 및 조립할 `Bean` 객체에 대한 지침을 가져오는 것을 담당한다.
 ## The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata.
 <br/>
 
-# configuration 메타데이터는 XML이나 Java annotation 또는 코드로 작성되고
+# configuration 메타데이터는 XML이나 Java annotation 또는 코드로 표현되어
 ## The configuration metadata is represented in XML, Java annotations, or Java code.
 
-# 어플리케이션을 구성하는 객체 간의 풍부한 상호 의존성을 표현할 수 있게 해준다.
+# 어플리케이션을 구성하는 객체 간의 풍부한 상호 의존성을 보여준다.
 ## It lets you express the objects that compose your application and the rich interdependencies between those objects.
 <br/>
 
@@ -124,7 +124,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 일반적으로 독립 실행형 어플리케이션에서는 [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html){:target="_blank"}이나 [FileSystemXmlApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html){:target="_blank"}를 사용한다.
 ## In stand-alone applications, it is common to create an instance of `ClassPathXmlApplicationContext` or `FileSystemXmlApplicationContext`.
 
-# configuration 메타데이터를 정의하기 위한 형식으로는 전통 형식인 XML과 Java annotation이나 코드로 선언하는 부가적인 형식<a href="#footnote-4" class="footnote">[4]</a>이 있다. 
+# configuration 메타데이터는 전통적인 포맷 XML과 Java annotation이나 코드로 선언하는 부가적인 포맷<a href="#footnote-4" class="footnote">[4]</a>을 사용하여 정의할 수 있다. 
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 <br/>
 
