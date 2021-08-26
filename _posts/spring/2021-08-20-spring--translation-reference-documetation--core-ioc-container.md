@@ -252,7 +252,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
       ## The class attribute defines the type of the bean and uses the fully qualified classname.
 
 
-# `id` 속성의 값은 객체를 나타내며
+# `id` 속성의 값은 협업할 객체를 나타내며
 ## The value of the id attribute refers to collaborating objects.
  
 # 객체를 참조하기 위한 XML은 위 예시에 포함되어 있지 않다. 
@@ -605,14 +605,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section content start -->
 <div markdown="1" class="contents">
-#  Spring `IoC container`는 하나 이상의 `Bean`을 관리하고
+# Spring `IoC container`는 하나 이상의 `Bean`을 관리하고
 ## A Spring IoC container manages one or more beans.
 
-# `Bean`은 container가 제공하는 configuration 메타데이터를 통해 생성된다. (예: XML `<bean/>` 정의 형식)
+# `Bean`은 container가 제공하는 configuration 메타데이터를 통해 생성된다.
 ## These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML `<bean/>` definitions).
 <br/>
 
-# `Bean` 정의는 `BeanDefinition` 객체로 표현되며 이 객체가 포함하는 메타데이터는 다음과 같다.
+# `Bean` 정의는 `BeanDefinition` 객체로 표현되고 이 객체가 포함하는 메타데이터는 다음과 같다.
 ## Within the container itself, these bean definitions are represented as `BeanDefinition` objects, which contain (among other information) the following metadata:
 
 - # 패키지 클래스 이름: 일반적으로 정의되는 `Bean` 구현 클래스다.
@@ -626,7 +626,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 이러한 참조를 협력자 또는 의존성이라고도 한다. 
 ## These references are also called collaborators or dependencies.
 
-- # 새로 생성된 객체에서 설정할 기타 구성 설정(예: connection 풀을 관리하는 `Bean`에서 사용할 connection 수 또는 풀 크기 제한)
+- # 새로 생성된 객체에서 설정할 기타 구성 설정(예: 커넥션 풀을 관리하는 `Bean`에서 사용할 커넥션 수 또는 풀 크기 제한)
 ## Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
 
 # 위와 같은 메타데이터는 각각 `Bean`의 정의를 구성하는 속성으로 변환되며 
