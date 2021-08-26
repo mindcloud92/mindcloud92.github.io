@@ -155,27 +155,27 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 1.2.1. Configuration Metadata
 <br/>
 
-# 앞에 있는 다이어그램에서 볼 수 있듯이 Spring `IoC container`는 configuration 메타데이터 형식을 사용한다.
+# 위 다이어그램에서 볼 수 있듯이 Spring `IoC container`는 configuration 메타데이터 형식을 사용한다.
 ## As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. 
 <br/>
 
 # configuration 메타데이터는 개발자가 Spring `IoC container`에게 어플리케이션의 객체를 인스턴스화, 구성 및 조립하도록 지시하는 방법을 말하며
 ## This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure, and assemble the objects in your application.
 
-# 전통적으로 간단하고 직관적인 XML 형식으로 제공된다. 덧붙어 이 장에서는 대부분 Spring `IoC container`의 주요 컨셉과 기능을 전달하는 데 사용된다. 
+# 전통적으로 간단하고 직관적인 XML 형식으로 제공된다. 덧붙여 이 장에서는 Spring `IoC container`의 주요 컨셉과 기능을 전달하는 데 주로 사용한다. 
 ## Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.
 
 <!-- info wrapper start -->
-<div class="spring info-wrapper mt-2">
+<div class="spring info-wrapper mt-4">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
 # XML 기반 메타데이터가 유일한 configuration 메타데이터 형식은 아니다.
 ## XML-based metadata is not the only allowed form of configuration metadata.
 
-# Spring **IoC container** 자체는 실제로 작성되는 configuration 메타데이터 형식과는 별개다. 
+# Spring `IoC container` 자체는 실제로 작성되는 configuration 메타데이터 형식과는 별개다. 
 ## The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written.
  
-# 요즘 많은 개발자들은 Spring 어플리케이션을 만드는 데에 [Java 기반 환경 설정](#java-based-container-configuration)을 사용한다.
+# 요즘 많은 개발자들은 Spring 어플리케이션을 만드는 데에 [Java 기반 Configuration](#java-based-container-configuration)을 사용한다.
 ## These days, many developers choose Java-based configuration for their Spring applications.
 </div>
 </div>
@@ -189,31 +189,29 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Annotation-based configuration: Spring 2.5 introduced support for annotation-based configuration metadata.
 - # [Java](#java-based-container-configuration): `Spring 3.0`부터는 Spring JavaConfig 프로젝트에서 제공하는 많은 기능이 핵심 Spring Framework의 일부가 되면서  
 ## Java-based configuration: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework. 
-
 # XML 대신 Java를 사용하여 `Bean`을 정의할 수 있게 되었다.
 ## Thus, you can define beans external to your application classes by using Java rather than XML files.
-
-# 이러한 기능을 사용하려면 [`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html){:target="_blank"}, [`@Bean`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html){:target="_blank"}, [`@Import`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html){:target="_blank"}, [`@DependsOn`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html){:target="_blank"} 참고. 
+# 이를 사용하려면 [`@Configuration`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html){:target="_blank"}, [`@Bean`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html){:target="_blank"}, [`@Import`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html){:target="_blank"}, [`@DependsOn`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html){:target="_blank"} 참고. 
 ## To use these new features, see the `@Configuration`, `@Bean`, `@Import`, and `@DependsOn` annotations.
 <br/>
 
-# Spring configuration은 일반적으로 하나 이상의 `Bean`에 대한 정의로 구성된다.   
+# 일반적으로 Spring configuration은 하나 이상의 `Bean` 정의로 구성된다.   
 ## Spring configuration consists of at least one and typically more than one bean definition that the container must manage. 
 
-# XML을 기반으로 하는 configuration 메타데이터는 `<beans/>` 요소 내부의 `<bean/>` 요소로 
+# configuration 메타데이터 형식이 XML인 경우에는 `<beans/>` 요소 내부의 `<bean/>` 요소로 
 ## XML-based configuration metadata configures these beans as `<bean/>` elements inside a top-level `<beans/>` element.
 
-# Java annotation을 기반으로 하는 configuration 메타데이터는 `@Configuration` 클래스 내부의 `@Bean` 메소드를 사용하여 `Bean`을 정의한다. 
+# Java annotation인 경우에는 `@Configuration` 클래스 내부의 `@Bean` 메소드를 사용하여 `Bean`을 정의한다. 
 ## Java configuration typically uses @Bean-annotated methods within a @Configuration class.
 <br/>
 
 # 이렇게 정의된 `Bean`은 어플리케이션을 구성하는 실제 객체가 된다.
 ## These bean definitions correspond to the actual objects that make up your application.
 
-# 일반적으로 configuration에는 서비스 계층 객체, 데이터 액세스 객체(DAO), presentation 객체<a href="#footnote-6" class="footnote">[6]</a>, infrastructure 객체<a href="#footnote-7" class="footnote">[7]</a>를 정의하며 
+# configuration에는 일반적으로 서비스 계층 객체, 데이터 액세스 객체(DAO), presentation 객체<a href="#footnote-6" class="footnote">[6]</a>, infrastructure 객체<a href="#footnote-7" class="footnote">[7]</a>를 정의하고
 ## Typically, you define service layer objects, data access objects (DAOs), presentation objects such as Struts Action instances, infrastructure objects such as Hibernate SessionFactories, JMS Queues, and so forth. 
 
-# 보통 도메인 객체를 만들고 로드하는 것은 DAO 및 비즈니스 로직의 책임이기 때문에 세분화된 도메인 객체는 정의하지 않는다. 
+# 세분화된 도메인 객체는 정의하지 않는다. (도메인 객체를 만들고 로드하는 것은 보통 DAO와 비즈니스 로직의 책임이기 때문) 
 ## Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. 
 <br/>
 
