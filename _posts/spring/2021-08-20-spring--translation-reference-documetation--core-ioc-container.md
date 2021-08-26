@@ -270,7 +270,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## 1.2.2. Instantiating a Container
 <br/>
 
-# `ApplicationContext` 생성자가 인자로 받는 경로 값은 container가 다양한 외부 리소스(로컬 파일 시스템, Java `CLASSPATH` 등)에서 configuration 메타데이터를 로드할 수 있도록 하는 리소스 문자열이다.  
+# `ApplicationContext` 생성자의 인자는 container가 다양한 외부 리소스(로컬 파일 시스템, Java `CLASSPATH` 등)에서 configuration 메타데이터를 가져올 수 있도록 하는 리소스 문자열이다.  
 ## The location path or paths supplied to an `ApplicationContext` constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system, the Java `CLASSPATH`, and so on.
 
 <div class="mt-2"></div>
@@ -283,22 +283,22 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper mt-2">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# Spring의 **IoC conatiner**에 대해 배우고 나면 URI 형식의 경로를 사용해서 InputStream을 편리하게 읽어 올 수 있는 메커니즘을 제공하는 Spring의 [**Resource**](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#resources){:target="_blank"} 추상화에 대해 더 알고 싶어 할 수도 있다. 
-## After you learn about Spring’s IoC container, you may want to know more about Spring’s **Resource** abstraction (as described in Resources), which provides a convenient mechanism for reading an InputStream from locations defined in a URI syntax.
+# Spring의 `IoC conatiner`에 대해 배우고 나면 URI 형식의 경로를 사용해서 InputStream을 편리하게 읽어 올 수 있는 메커니즘을 제공하는 Spring의 [`Resoucre`](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#resources){:target="_blank"} 추상화에 대해 더 알고 싶어 할 수도 있다. 
+## After you learn about Spring’s IoC container, you may want to know more about Spring’s `Resource` abstraction (as described in Resources), which provides a convenient mechanism for reading an InputStream from locations defined in a URI syntax.
 
-# **Resource** 경로는 어플리케이션 컨텍스트를 구성하는 데 사용된다. ([Application Context와 Resource Path](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#resources-app-ctx){:target="_blank"} 참조)
-## In particular, **Resource** paths are used to construct applications contexts, as described in Application Contexts and Resource Paths.
+# `Resoucre` 경로는 `ApplicationContext`를 구성하는 데 사용된다. ([`ApplicationContext`와 `Resoucre` Path](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#resources-app-ctx){:target="_blank"} 참조)
+## In particular, `Resource` paths are used to construct applications contexts, as described in Application Contexts and Resource Paths.
 </div>
 </div>
 <!-- // info wrapper end -->
 
 <div class="mt-2"></div>
 
-# 다음은 서비스 계층 객체 configuration(`services.xml`) 예시다.
+# 다음은 서비스 계층 객체 configuration 예시다.
 ## The following example shows the service layer objects (`services.xml`) configuration file:
 
-<div class="mt-2"></div>
-
+<div markdown="1" class="file-wrapper mt-2" mb-2>
+<p class="filename-badge">service.xml</p>
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="http://www.springframework.org/schema/beans"
@@ -318,13 +318,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     
     </beans>
 ```
-<div class="mt-2"></div>
+</div>
 
-# 다음은 데이터 액세스 객체 configuration(`daos.xml`) 예시다.
+# 다음은 데이터 액세스 객체 configuration 예시다.
 ## The following example shows the data access objects `daos.xml` file:
 
-<div class="mt-2"></div>
-
+<div markdown="1" class="file-wrapper mt-2" mb-2>
+<p class="filename-badge">daos.xml</p>
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="http://www.springframework.org/schema/beans"
@@ -345,12 +345,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     
     </beans>
 ```
+</div>
 
-# 앞의 예시에서 서비스 계층은 `PetStoreServiceImpl` 클래스와 데이터 액세스 객체<a href="#footnote-8" class="footnote">[8]</a>인 `JpaAccountDao`와 `JpaItemDao `두 개로 구성된다. 
+# 앞의 예시에서 서비스 계층 객체인 `PetStoreServiceImpl`는 데이터 액세스 객체<a href="#footnote-8" class="footnote">[8]</a>인 `JpaAccountDao`, `JpaItemDao `두 개로 구성된다. 
 ## In the preceding example, the service layer consists of the `PetStoreServiceImpl` class and two data access objects of the types `JpaAccountDao` and `JpaItemDao` (based on the JPA Object-Relational Mapping standard).
 <br/>
 
-# `<property />`요소의 `name` 속성은 해당 `Bean`에서 사용할 속성의 이름을 나타내고 `ref` 속성은 다른 `Bean` 정의의 `id`를 참조하며 
+# `<property />`요소의 `name` 속성과 `ref` 속성은 각각 해당 `Bean`에서 속성으로 사용할 다른 `Bean`의 이름과 참조할 `id`를 나타내며 
 ## The `property name` element refers to the name of the JavaBean property, and the `ref` element refers to the name of another bean definition.
 
 # `<bean />` 요소의 `id`와 `<property />` 요소의 `ref` 속성으로 객체 간의 의존성을 나타낸다.
