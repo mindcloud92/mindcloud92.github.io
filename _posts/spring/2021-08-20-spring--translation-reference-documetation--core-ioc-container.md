@@ -215,7 +215,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. 
 <br/>
 
-# 하지만 AspectJ와 Spring의 통합을 사용하여 `IoC container`의 제어 밖에서 생성된 객체를 정의할 수도 있다. 
+# `IoC container`에 정의되지 않은 객체는 AspectJ와 Spring의 통합을 사용하여 구성할 수 있다. 
 ## However, you can use Spring’s integration with AspectJ to configure objects that have been created outside the control of an IoC container.
 
 # ([AspectJ를 사용하여 Spring으로 도메인 객체 의존성 주입](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-atconfigurable){:target="_blank"} 참조)
@@ -248,7 +248,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - `<bean />` 필수 속성
     - # `id`: 개별 `Bean` 정의의 식별자   
       ## The id attribute is a string that identifies the individual bean definition.
-    - # `class`: `Bean`의 클래스 타입을 정의 & full classname을 사용   
+    - # `class`: `Bean`의 클래스 타입을 정의 & full classname 사용   
       ## The class attribute defines the type of the bean and uses the fully qualified classname.
 
 
