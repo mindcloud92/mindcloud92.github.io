@@ -128,7 +128,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively enable support for these additional metadata formats.
 <br/>
 
-# 대부분의 어플리케이션 시나리오에서는 Spring `IoC container`에 정의된 객체를 명시적인 코드로 직접 인스턴스화하지 않아도 된다. 
+# 대부분의 어플리케이션 시나리오에서는 명시적인 코드로  Spring `IoC container`에 정의된 객체를 직접 인스턴스화하지 않아도 된다. 
 ## In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container.
 
 # 예를 들어 일반적으로 웹 어플리케이션 시나리오에서는 어플리케이션의 `web.xml`에 상용구 코드 8줄 정도만 작성해도 충분히 `ApplicationContext`를 인스턴스화할 수 있다.<a href="#footnote-5" class="footnote">[5]</a>
