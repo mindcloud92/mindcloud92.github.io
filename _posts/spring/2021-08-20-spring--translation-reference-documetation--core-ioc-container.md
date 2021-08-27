@@ -741,26 +741,26 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <br/>
 
-# `Bean`에 대한 식별자는 `Bean`을 호스팅하는 container에서 고유해야 하기 때문에
+# `Bean`을 호스팅하는 container에서 `Bean에` 대한 식별자는 고유해야 하기 때문에
 ## These identifiers must be unique within the container that hosts the bean.
 
 # 보통 하나만 지정하지만
 ## A bean usually has only one identifier.
 
-# 한 개 이상이 필요한 경우에 추가된 식별자는 별칭으로 간주될 수 있다.
+# 한 개 이상이 필요한 경우 추가된 식별자는 별칭으로 간주될 수 있다.
 ## However, if it requires more than one, the extra ones can be considered aliases.
 <br/>
 
-# XML 기반 configuration 메타데이터인 경우 `id`나 `name` 속성을 사용해서 `Bean`에 대한 식별자를 지정할 수 있고
+# XML 기반 configuration 메타데이터인 경우 Bean에 대한 식별자를 `id`나 `name` 속성을 사용해서 지정할 수 있고
 ## In XML-based configuration metadata, you use the `id` attribute, the `name` attribute, or both to specify the bean identifiers.
 
-# `id` 속성을 사용하면 정확히 하나의 `Bean` 가르키는 식별자로 지정할 수 있다.
+# `id` 속성을 사용하면 정확히 하나의 `Bean`을 가르키는 식별자를 지정할 수 있다.
 ## The id attribute lets you specify exactly one id. 
 
-# `id` 속성에는 일반적으로 영숫자<a href="#footnote-9" class="footnote">[9]</a>와 특수문자를 사용할 수 있으며
+# 일반적으로 `id` 속성에는 영숫자<a href="#footnote-9" class="footnote">[9]</a>와 특수문자를 사용할 수 있으며
 ## Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well.
 
-# `Bean`에 대한 별칭을 여러 개 지정하고 싶은 경우에는 `name` 속성에 공백, 세미콜론, 콤마로 구분된 문자열을 사용하면 된다.
+# `name` 속성에 공백이나 세미콜론 또는 콤마로 구분된 문자열을 사용하면 `Bean`에 대한 별칭을 여러 개 지정할 수 있다.
 ## If you want to introduce other aliases for the bean, you can also specify them in the `name` attribute, separated by a comma (`,`), semicolon (`;`), or white space.
 
 # 참고로 `id` 속성은 `Spring 3.1`까지는 `xsd:ID`<a href="#footnote-10" class="footnote">[10]</a> 유형으로 정의되고
@@ -769,7 +769,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `Spring 3.1`부터는 `xsd:string` 유형으로 정의된다.
 ## As of 3.1, it is defined as an `xsd:string` type.
 
-# `Bean`의 `id`는 XML 파서가 아닌 container에 의해 고유성이 강요된다는 점에 유의해라.
+# `Bean`의 `id`에 대한 고유성은 XML 파서가 아닌 container에 의해 강요된다는 점에 유의해라.
 ## Note that bean `id` uniqueness is still enforced by the container, though no longer by XML parsers.
 <br/>
 
@@ -779,7 +779,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 #  `id`나 `name`속성을 명시적으로 지정하지 않으면 container는 해당 `Bean`에 대한 고유 이름을 만들어주지만
 ## If you do not supply a name or id explicitly, the container generates a unique name for that bean.
 
-# `ref` 요소를 사용하거나 Service Locator 스타일을 조회하여 `Bean`의 이름으로 해당 `Bean`을 참조하려는 경우에는 고유 이름을 지정해야 한다.
+# `ref` 요소를 사용하거나 Service Locator를 조회하여 `Bean`의 이름으로 `Bean`을 참조하려는 경우에는 고유한 이름을 지정해야 한다.
 ## However, if you want to refer to that bean by name, through the use of the `ref` element or a Service Locator style lookup, you must provide a name.
 
 # 이는 <a href="#inner-beans">내부 `Bean`</a>을 사용하는 것과 <a href="#autowiring-collaborators">협력자 autowiring</a>과 관련이 있다.
@@ -789,19 +789,19 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring guide-wrapper mt-4 mb-4" markdown="1">
 <h1 class="text-center title">Bean 이름 짓기 규칙</h1>
 <h2 class="text-center">Bean Naming Conventions</h2> 
-# **Bean**의 이름을 지을 때는 인스턴스 필드에 대한 Java 표준 규약을 사용해야 한다.
+# `Bean`의 이름을 지을 때는 인스턴스 필드에 대한 Java 표준 규약을 사용해야 한다.
 ## The convention is to use the standard Java convention for instance field names when naming beans.
 
-# 즉 **Bean**의 이름은 소문자로 시작하는 카멜 케이스 표기법을 사용해야 한다.
+# 즉 `Bean`의 이름은 소문자로 시작하는 카멜 케이스 표기법을 사용해야 한다.
 ## That is, bean names start with a lowercase letter and are camel-cased from there.
 
-# (예: **accountManager**, **accountService**, **userDao**, **loginController** 등)
-## Examples of such names include **accountManager**, **accountService**, **userDao**, **loginController**, and so forth.
+# (예: `accountManager`, `accountService`, `userDao`, `loginController` 등)
+## Examples of such names include `accountManager`, `accountService`, `userDao`, `loginController`, and so forth.
 
-# **Bean**의 이름을 일관되게 만들면 configuration을 좀 더 쉽게 읽고 이해할 수 있으며
+# `Bean`의 이름을 일관성 있게 지으면 configuration을 좀 더 쉽게 읽고 이해할 수 있고
 ## Naming beans consistently makes your configuration easier to read and understand.
 
-# Spring **AOP**를 사용하는 경우에는 동일한 이름을 가진 하나 이상의 **Bean**에 advice를 적용할 때 많은 도움이 된다.
+# Spring `AOP`를 사용하는 경우에는 동일한 이름을 가진 하나 이상의 `Bean`에 advice를 적용할 때 많은 도움이 된다.
 ## Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.
 </div>
 <!-- // guide wrapper end -->
