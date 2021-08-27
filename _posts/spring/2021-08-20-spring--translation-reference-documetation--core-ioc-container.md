@@ -860,7 +860,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <alias name="fromName" alias="toName"/>
 ```
 
-# 예시는 `fromName`이라는 이름을 가진 `Bean`을 `toName`이라는 별칭으로도 참조할 수 있게 정의하는 것을 보여준다. (동일한 container에 있는 경우)
+# 예시는 `fromName`이라는 이름을 가진 `Bean`을 동일한 container에 있는 다른 `Bean`이 `toName`이라는 별칭으로 참조할 수 있게 정의하는 것을 보여준다. 
 ## In this case, a bean (in the same container) named `fromName` may also, after the use of this alias definition, be referred to as `toName`.
 <br/>
 
@@ -873,7 +873,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 이 두 하위시스템을 가진 어플리케이션은 `myApp-dataSource`라는 이름으로
 ## When composing the main application that uses both these subsystems, the main application refers to the DataSource by the name of `myApp-dataSource`. 
 
-# 지정하고 모두 동일한 DataSource 객체를 참조하도록 하려면 configuration 메타데이터에 다음과 같은 별칭을 정의하면 된다.
+# 동일한 DataSource 객체를 참조하도록 하려면 configuration 메타데이터에 다음과 같이 별칭을 정의하면 된다.
 ## To have all three names refer to the same object, you can add the following alias definitions to the configuration metadata:
 
 <div class="mt-2"></div>
@@ -884,7 +884,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 <br/>
 
-# 이렇게 하면 각 컴포넌트와 어플리케이션은 고유한 이름을 통해 다른 정의와 충돌하지 않고 동일한 DataSource `Bean`을 참조할 수 있다.
+# 이렇게 하면 각 컴포넌트와 어플리케이션은 다른 정의와 충돌하지 않고 고유한 이름을 통해 동일한 DataSource `Bean`을 참조할 수 있다.
 ## Now each component and the main application can refer to the dataSource through a name that is unique and guaranteed not to clash with any other definition (effectively creating a namespace), yet they refer to the same bean.
 
 <!-- guide wrapper start -->
@@ -895,8 +895,8 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # Java configuration을 사용하는 경우 **@Bean**으로 별칭을 사용할 수 있다.
 ## If you use Javaconfiguration, the **@Bean** annotation can be used to provide aliases.
 
-# 자세한 내용은 [**@Bean** 사용하기](#using-the-@Bean-annotation) 참조.
-## See Using the **@Bean** Annotation for details.
+# 자세한 내용은 [`@Bean` 사용하기](#using-the-@Bean-annotation) 참조.
+## See Using the `@Bean` Annotation for details.
 </div>
 <!-- // guide wrapper end -->
 </div>
