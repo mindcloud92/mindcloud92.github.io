@@ -801,7 +801,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # `Bean`의 이름을 일관성 있게 지으면 configuration을 좀 더 쉽게 읽고 이해할 수 있고
 ## Naming beans consistently makes your configuration easier to read and understand.
 
-# Spring `AOP`를 사용하는 경우에는 동일한 이름을 가진 하나 이상의 `Bean`에 advice를 적용할 때 많은 도움이 된다.
+# Spring `AOP`를 사용하는 경우 동일한 이름을 가진 하나 이상의 `Bean`에 advice를 적용할 때도 많은 도움이 된다.
 ## Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.
 </div>
 <!-- // guide wrapper end -->
