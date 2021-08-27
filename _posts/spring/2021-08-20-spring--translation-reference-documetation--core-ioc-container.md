@@ -810,14 +810,14 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# Spring은 앞에서 설명한 규칙에 따라 classpath에서 컴포넌트 스캐닝을 통해 이름 없는 컴포넌트에 대한 **Bean**의 이름을 생성한다. 기본적으로는 클래스 이름을 가져와 첫 번째 문자를 소문자로 바꾸지만
+# Spring은 앞에서 설명한 규칙에 따라 classpath에서 컴포넌트 스캐닝을 통해 이름 없는 컴포넌트에 대한 `Bean`의 이름을 생성한다. 기본적으로는 클래스 이름을 가져와 첫 번째 문자를 소문자로 바꾸지만
 ## With component scanning in the classpath, Spring generates bean names for unnamed components, following the rules described earlier: essentially, taking the simple class name and turning its initial character to lower-case.
 
 # 하나 이상의 문자가 있고 첫 번째와 두 번째 문자가 모두 대문자인 특수한(비정상적인) 경우에는 원래 대소문자가 유지된다.
 ## However, in the (unusual) special case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved.
 
-# 이는 **java.beans.Introspector.decapitalize**에 의해 정의된 것과 동일한 규칙이다.
-## These are the same rules as defined by **java.beans.Introspector.decapitalize** (which Spring uses here).
+# 이는 `java.beans.Introspector.decapitalize`에 의해 정의된 것과 동일한 규칙이다.
+## These are the same rules as defined by `java.beans.Introspector.decapitalize` (which Spring uses here).
 </div>
 </div>
 <!-- // info wrapper end -->
