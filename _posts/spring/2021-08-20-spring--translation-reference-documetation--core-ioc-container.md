@@ -962,17 +962,18 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Instantiation with a Constructor
 <br/>
 
-# 생성자 접근 방식으로 Bean을 생성하면 모든 일반 클래스가 Spring에서 사용 가능하고 호환됩니다. 
+# 생성자를 통해 `Bean`을 생성하면 모든 일반 클래스가 Spring에서 사용이 가능하고 호환될 수 있으며    
 ## When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring. 
 
-# 즉, 개발 중인 클래스는 특정 인터페이스를 구현하거나 특정 방식으로 코딩할 필요가 없습니다. 
+# 개발 중인 클래스는 특정 인터페이스를 구현하거나 특정 방식으로 코딩할 필요가 없다. 
 ## That is, the class being developed does not need to implement any specific interfaces or to be coded in a specific fashion. 
 
-# 단순히 빈 클래스를 지정하는 것으로 충분합니다. 
+# 보통은 단순히 `Bean` 클래스를 지정하는 것으로도 충분하지만
 ## Simply specifying the bean class should suffice. 
 
-# 그러나 특정 빈에 사용하는 IoC 유형에 따라 기본(빈) 생성자가 필요할 수 있습니다. 
+# 특정 `Bean`에 사용하는 `IoC` 유형에 따라 기본(비어있는) 생성자가 필요한 경우도 있다. 
 ## However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.
+<br/>
 
 # Spring IoC 컨테이너는 관리하고자 하는 거의 모든 클래스를 관리할 수 있습니다. 
 ## The Spring IoC container can manage virtually any class you want it to manage. 
