@@ -925,10 +925,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # (예외 경우: [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 참조)
 ## (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) 
 
-# 다음과 같은 방법으로 Class 속성을 사용할 수 있다.
+# `class` 속성은 다음 두가지 방법 중 하나로 사용헐 수 있다.
 ## You can use the Class property in one of two ways:
 
-- # 일반적으로 container 자체가 사적으로 생성자가 호출해서 직접 Bean을 생성하는 경우에 생성할 Bean 클래스를 지정한다. Java 코드의 `new` 연산자와 어느 정도 동일하다.
+- # 일반적으로 container가 객체의 생성자를 호출해 직접 `Bean`을 생성하는 경우 생성할 `Bean` 클래스를 지정한다. 이는 Java 코드의 `new` 연산자와 어느 정도 유사한 역할을 한다. 
 ## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the `new` operator.
 
 - # 객체를 생성하기 위해 호출되는 `정적` 팩토리 메소드를 포함한 실제 클래스를 지정하려면 container가 `Ben`을 생성하기 위해 클래스에서 `정적` 팩토리 메소드를 호출하는 게 덜 일반적이다.
@@ -937,7 +937,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## The object type returned from the invocation of the `static` factory method may be the same class or another class entirely.
 
 <!-- guide wrapper start -->
-<div class="spring guide-wrapper mt-2" markdown="1">
+<div class="spring guide-wrapper mt-4" markdown="1">
 <h1 class="text-center title">중첩된 클래스 이름</h1>
 <h2 class="text-center">Nested class names</h2>
 
