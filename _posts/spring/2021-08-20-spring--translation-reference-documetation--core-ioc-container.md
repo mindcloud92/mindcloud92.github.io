@@ -962,7 +962,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Instantiation with a Constructor
 <br/>
 
-# 생성자를 통해 `Bean`을 생성하면 모든 일반 클래스가 Spring에서 사용이 가능하고 호환될 수 있으며    
+# 생성자를 통해 `Bean`을 생성하면 모든 일반 클래스가 Spring에서 호환될 수 있으며    
 ## When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring. 
 
 # 개발 중인 클래스는 특정 인터페이스를 구현하거나 특정 방식으로 코딩할 필요가 없다. 
@@ -975,19 +975,24 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.
 <br/>
 
-# Spring IoC 컨테이너는 관리하고자 하는 거의 모든 클래스를 관리할 수 있습니다. 
+# Spring `IoC container`는 관리하고자 하는 클래스를 대부분 관리할 수 있다.   
 ## The Spring IoC container can manage virtually any class you want it to manage. 
 
-# 진정한 JavaBeans 관리에만 국한되지 않습니다. 대부분의 Spring 사용자는 기본(인수 없는) 생성자와 컨테이너의 속성을 따라 모델링된 적절한 설정자 및 게터만 있는 실제 JavaBeans를 선호합니다. 
-## It is not limited to managing true JavaBeans. Most Spring users prefer actual JavaBeans with only a default (no-argument) constructor and appropriate setters and getters modeled after the properties in the container. 
+# 이는 완전한 `JavaBean` 관리에만 국한되는 것은 아니다.
+## It is not limited to managing true JavaBeans. 
 
-# 또한 컨테이너에 더 이국적인 비-빈 스타일 클래스를 가질 수 있습니다. 
+# 대부분의 Spring 사용자는 기본(인자 없는) 생성자와 container의 속성을 고려해서 모델링된 적절한 setter와 getter만 있는 `JavaBean`을 선호한다.
+## Most Spring users prefer actual JavaBeans with only a default (no-argument) constructor and appropriate setters and getters modeled after the properties in the container.
+<br/> 
+
+# 평범한 `Bean` 스타일과는 다른 형태의 클래스를 container가 관리하게 할 수도 있다.
 ## You can also have more exotic non-bean-style classes in your container. 
 
-# 예를 들어 JavaBean 사양을 절대적으로 준수하지 않는 레거시 연결 풀을 사용해야 하는 경우 Spring에서도 이를 관리할 수 있습니다. 
+# 예를 들어 `JavaBean` 사양을 준수하지 않는 레거시 커넥션 풀을 사용해야 하는 경우에도 Spring에서 관리할 수 있다.
 ## If, for example, you need to use a legacy connection pool that absolutely does not adhere to the JavaBean specification, Spring can manage it as well.
+<br/>
 
-# XML 기반 구성 메타데이터를 사용하여 다음과 같이 빈 클래스를 지정할 수 있습니다.
+# XML 기반 configuration 메타데이터를 사용하여 다음과 같이 `Bean` 클래스를 지정할 수 있다.
 ## With XML-based configuration metadata you can specify your bean class as follows:
 
 <div class="mt-2"></div>
@@ -998,7 +1003,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     <bean name="anotherExample" class="examples.ExampleBeanTwo"/>
 ```
 
-# 생성자에 인수를 제공하고(필요한 경우) 개체가 생성된 후 개체 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 종속성 주입을 참조하세요.
+# 생성자에 인자를 제공하고(필요한 경우) 객체가 생성된 후 객체 인스턴스 속성을 설정하는 매커니즘에 대한 자세한 내용은 [의존성 주입](#dependency-injection)을 참조.
 ## For details about the mechanism for supplying arguments to the constructor (if required) and setting object instance properties after the object is constructed, see Injecting Dependencies.
 </div>
 <!-- // section inner contents end -->
