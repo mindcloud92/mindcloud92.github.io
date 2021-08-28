@@ -931,24 +931,24 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 - # 일반적으로 container가 객체의 생성자를 호출해 직접 `Bean`을 생성해야 하는 경우 생성할 `Bean` 클래스를 지정한다. 이는 Java 코드의 `new` 연산자와 어느 정도 유사한 역할을 한다. 
 ## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the `new` operator.
 
-- # `정적` 팩토리 메소드를 통해 생성되는 객체의 클래스를 지정하고자 하는 경우 container가 `Bean`을 생성하기 위한 `정적` 팩토리 메소드를 호출하게 한다.
+- # `static` 팩토리 메소드를 통해 생성되는 객체의 클래스를 지정하고자 하는 경우 container가 `Bean`을 생성하기 위한 `static` 팩토리 메소드를 호출하게 한다.
 ## To specify the actual class containing the `static` factory method that is invoked to create the object, in the less common case where the container invokes a `static` factory method on a class to create the bean.
 # 하지만 이 경우 반환되는 객체의 타입이 지정한 것과 완전히 동일한 클래스 타입이라는 보장은 없다.
 ## The object type returned from the invocation of the `static` factory method may be the same class or another class entirely.
 
 <!-- guide wrapper start -->
 <div class="spring guide-wrapper mt-4" markdown="1">
-<h1 class="text-center title">중첩된 클래스 이름</h1>
+<h1 class="text-center title">중첩 클래스 이름</h1>
 <h2 class="text-center">Nested class names</h2>
 
-# 중첩 클래스에 대한 **Bean** 정의를 구성하려면 중첩 클래스의 바이너리 이름이나 소스 이름을 사용할 수 있다. 
+# 중첩 클래스의 바이너리 이름이나 소스 이름을 사용해서 중첩 클래스에 대한 `Bean` 정의를 구성할 수 있다. 
 ## If you want to configure a bean definition for a nested class, you may use either the binary name or the source name of the nested class.
 
-# 예를 들어  **com.example** 패키지에 **SomeThing**이라는 클래스가 있고 이 **SomeThing** 클래스에 **OtherThing**이라는 정적 중첩 클래스가 있는 경우 달러 기호(**$**) 또는 점(**.**)으로 구분할 수 있다.
-## For example, if you have a class called **SomeThing** in the com.example package, and this **SomeThing** class has a **static** nested class called **OtherThing**, they can be separated by a dollar sign (**$**) or a dot (**.**).
+# 예를 들어 `com.example` 패키지에 `SomeThing`이라는 클래스가 있고 이 `SomeThing` 클래스에 `OtherThing`이라는 `static` 중첩 클래스가 있는 경우 달러 기호(`$`) 또는 점(`.`)으로 구분할 수 있다.
+## For example, if you have a class called `SomeThing` in the com.example package, and this `SomeThing` class has a `static` nested class called `OtherThing`, they can be separated by a dollar sign (`$`) or a dot (`.`).
 
-# 따라서 빈 정의에서 클래스 속성의 값은 **com.example.SomeThing$OtherThing** 또는 **com.example.SomeThing.OtherThing**이 된다.
-## So the value of the class attribute in a bean definition would be **com.example.SomeThing$OtherThing** or **com.example.SomeThing.OtherThing**.
+# 즉 이와 같은 경우 `Bean` 정의에서 클래스 속성의 값은 `com.example.SomeThing$OtherThing` 또는 `com.example.SomeThing.OtherThing`이 된다.
+## So the value of the class attribute in a bean definition would be `com.example.SomeThing$OtherThing` or `com.example.SomeThing.OtherThing`.
 </div>
 <!-- // guide wrapper end -->
 
