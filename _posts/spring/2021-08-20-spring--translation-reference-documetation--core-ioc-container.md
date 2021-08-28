@@ -1015,25 +1015,25 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Instantiation with a Static Factory Method
 <br/>
 
-# 정적 팩토리 메소드로 생성하는 Bean을 정의할 때 클래스 속성을 사용하여 정적 팩토리 메소드를 포함하는 클래스를 지정하고 factory-method라는 속성을 사용하여 팩토리 메소드 자체의 이름을 지정하십시오. 
-## When defining a bean that you create with a static factory method, use the class attribute to specify the class that contains the static factory method and an attribute named factory-method to specify the name of the factory method itself.
+# `static` 팩토리 메소드를 통해 생성되는 `Bean`을 정의하려면 `factory-method`라는 속성을 사용하여 팩토리 메소드 이름을 지정하고 static 팩토리 메소드를 포함한 클래스를 `class` 속성에 지정하면 된다.
+## When defining a bean that you create with a `static` factory method, use the `class` attribute to specify the class that contains the `static` factory method and an attribute named `factory-method` to specify the name of the factory method itself.
 
-# 이 메서드를 호출하고(나중에 설명하는 선택적 인수를 사용하여) 라이브 개체를 반환할 수 있어야 합니다. 이 개체는 이후에 생성자를 통해 생성된 것처럼 처리됩니다. 
+# 나중에 설명하는 선택적 인자를 사용하여 `static` 팩토리 메소드를 호출하면 유효한 객체가 반환되어야하고 유효한 객체는 생성자를 통해 생성된 것처럼 처리된다.
 ## You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created through a constructor. 
 
-# 이러한 빈 정의의 한 가지 용도는 레거시 코드에서 정적 팩토리를 호출하는 것입니다. 
-## One use for such a bean definition is to call static factories in legacy code.
+# 이러한 `Bean` 정의의 용도 중 하나는 레거시 코드에서 `static` 팩토리를 호출하는 것이다.
+## One use for such a bean definition is to call `static` factories in legacy code.
 
-# 다음 빈 정의는 팩토리 메소드를 호출하여 빈을 생성하도록 지정합니다. 
+# 팩토리 메소드를 호출하여 `Bean`을 생성하는 `Bean`정의는 다음과 같다.
 ## The following bean definition specifies that the bean be created by calling a factory method.
 
-# 정의는 반환된 객체의 유형(클래스)을 지정하지 않고 팩토리 메서드를 포함하는 클래스만 지정합니다. 
+# 이 정의는 반환된 객체의 타입(클래스)를 지정하지 않고 팩토리 메소드를 포함하는 클래스만 지정한다.
 ## The definition does not specify the type (class) of the returned object, only the class containing the factory method.
 
-# 이 예에서 createInstance() 메서드는 정적 메서드여야 합니다. 
-## In this example, the createInstance() method must be a static method. 
+# 이 예시에서 `createInstatnce()` 메소드는 `static` 메소드여야한다.
+## In this example, the `createInstatnce()` method must be a `static` method. 
 
-# 다음 예는 팩토리 메소드를 지정하는 방법을 보여줍니다.
+# 다음 예시는 팩토리 메소드를 지정하는 방법을 보여준다.
 ## The following example shows how to specify a factory method:
 
 <div class="mt-2"></div>
@@ -1044,7 +1044,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         factory-method="createInstance"/>
 ```
 
-# 다음 예제는 앞의 빈 정의와 함께 작동하는 클래스를 보여줍니다.
+# 다음 예시는 앞의 `Bean` 정의와 함께 작동하는 클래스를 보여준다.
 ## The following example shows a class that would work with the preceding bean definition:
 
 ```java
@@ -1058,7 +1058,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
     }
 ```  
 
-# 팩토리 메서드에 인수(선택 사항)를 제공하고 객체가 팩토리에서 반환된 후 객체 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 종속성 및 구성 세부 정보를 참조하세요.
+# 팩토리 메소드에 인자를 제공(선택적)하고 팩토리를 통해 반환된 객체의 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 [의존성과 configuration 세부정보](#dependencies-and-configuration-in-detail) 를 참조.
 ## For details about the mechanism for supplying (optional) arguments to the factory method and setting object instance properties after the object is returned from the factory, see Dependencies and Configuration in Detail.
 </div>
 <!-- // section inner contents end -->
