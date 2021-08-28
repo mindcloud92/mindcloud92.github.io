@@ -919,10 +919,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # XML 기반 configuration 메타데이터인 경우 `<bean/>` 요소의 `class` 속성에 인스턴스화할 객체의 타입 또는 클래스를 지정하며
 ## If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the class attribute of the `<bean/>` element. 
 
-# 보통 `class` 속성은 필수이다. (BeanDefinition 인스턴스 내부에서는 Class 속성)
+# 보통 `class`(eq. BeanDefinition 인스턴스 - Class 속성) 속성은 필수이다. 
 ## This class attribute (which, internally, is a Class property on a BeanDefinition instance) is usually mandatory. 
 
-# (예외의 경우에는 [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 를 참조)
+# (예외 경우: [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 참조)
 ## (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) 
 
 # 다음과 같은 방법으로 Class 속성을 사용할 수 있다.
