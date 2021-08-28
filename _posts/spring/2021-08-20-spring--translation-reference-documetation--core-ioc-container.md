@@ -925,15 +925,15 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # (예외 경우: [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 참조)
 ## (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) 
 
-# `class` 속성은 다음 두가지 방법 중 하나로 사용헐 수 있다.
+# `class` 속성은 다음 두 가지 방법 중 하나로 사용할 수 있다.
 ## You can use the Class property in one of two ways:
 
-- # 일반적으로 container가 객체의 생성자를 호출해 직접 `Bean`을 생성하는 경우 생성할 `Bean` 클래스를 지정한다. 이는 Java 코드의 `new` 연산자와 어느 정도 유사한 역할을 한다. 
+- # 일반적으로 container가 객체의 생성자를 호출해 직접 `Bean`을 생성해야 하는 경우 생성할 `Bean` 클래스를 지정한다. 이는 Java 코드의 `new` 연산자와 어느 정도 유사한 역할을 한다. 
 ## Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the `new` operator.
 
-- # 객체를 생성하기 위해 호출되는 `정적` 팩토리 메소드를 포함한 실제 클래스를 지정하려면 container가 `Ben`을 생성하기 위해 클래스에서 `정적` 팩토리 메소드를 호출하는 게 덜 일반적이다.
+- # `정적` 팩토리 메소드를 통해 생성되는 객체의 클래스를 지정하고자 하는 경우 container가 `Bean`을 생성하기 위한 `정적` 팩토리 메소드를 호출하게 한다.
 ## To specify the actual class containing the `static` factory method that is invoked to create the object, in the less common case where the container invokes a `static` factory method on a class to create the bean.
-# `정적` 팩토리 메소드 호출에서 반환된 객체 유형은 완전히 동일한 클래스이거나 다른 클래스 일 수 있다.
+# 하지만 이 경우 반환되는 객체의 타입이 지정한 것과 완전히 동일한 클래스 타입이라는 보장은 없다.
 ## The object type returned from the invocation of the `static` factory method may be the same class or another class entirely.
 
 <!-- guide wrapper start -->
