@@ -909,16 +909,17 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 
 
-# 기본적으로 `Bean` 정의는 하나 이상의 객체를 생성하기 위한 조리법이다.
+# `Bean` 정의는 본질적으로 하나 이상의 객체를 생성하기 위한 레시피이다.
 ## A bean definition is essentially a recipe for creating one or more objects. 
 
-# container는 요청 시 명명된 `Bean`에 대한 조리법을 보고 해당 Bean 정의에 의해 캡슐화된 configuration 메타데이터를 사용해서 실제 객체를 생성 (또는 획득) 한다.
+# container는 `Bean`에 대한 요청이 있을 때 해당 `Bean` 정의를 확인하고 캡슐화된 configuration 메타데이터를 사용해서 실제 객체를 생성 또는 획득한다.   
 ## The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or acquire) an actual object.
+<br/>
 
-# XML 기반 configuration 메타데이터를 사용하는 경우 `<bean/>` 요소의 `class` 속성에 인스턴스화될 객체의 유형(또는 클래스)을 지정한다.
+# XML 기반 configuration 메타데이터인 경우 `<bean/>` 요소의 `class` 속성에 인스턴스화할 객체의 타입 또는 클래스를 지정하며
 ## If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the class attribute of the `<bean/>` element. 
 
-# `class` 속성은 보통 필수이다. (내부적으로 BeanDefinition 인스턴스에서 Class 속성임)
+# 보통 `class` 속성은 필수이다. (BeanDefinition 인스턴스 내부에서는 Class 속성)
 ## This class attribute (which, internally, is a Class property on a BeanDefinition instance) is usually mandatory. 
 
 # (예외의 경우에는 [인스턴스 팩토리 메소드를 사용하여 인스턴스화](#instantiation-by-using-an -instance-factory-method)와 [Bean 정의 상속](#bean-definition-inheritance) 를 참조)
