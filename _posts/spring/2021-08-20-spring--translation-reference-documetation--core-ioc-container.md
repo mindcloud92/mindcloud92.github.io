@@ -1070,16 +1070,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Instantiation by Using an Instance Factory Method
 <br/>
 
-# 정적 팩토리 메소드를 통한 인스턴스화와 유사하게 인스턴스 팩토리 메소드를 사용한 인스턴스화는 컨테이너에서 기존 Bean의 비정적 메소드를 호출하여 새 Bean을 생성합니다. 
+# 인스턴스 팩토리 메소드를 사용한 인스턴스화<a href="#footnote-11" class="footnote">[11]</a>는 container에 이미 만들어져있는 `Bean`의 `static`이 아닌 메소드를 호출하여 새로운 `Bean`을 생성하는 매커니즘이다.  
 ## Similar to instantiation through a `static` factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. 
 
-# 이 메커니즘을 사용하려면 클래스 속성을 비워두고 factory-bean 속성에서 객체를 생성하기 위해 호출될 인스턴스 메소드를 포함하는 현재(또는 상위 또는 상위) 컨테이너의 빈 이름을 지정하십시오. 
+# 이 매커니즘을 사용하려면 `class` 속성을 비워두고 `factory-bean` 속성에 인스턴스 팩토리 메소드를 가진 `Bean`의 이름을
 ## To use this mechanism, leave the `class` attribute empty and, in the `factory-bean` attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. 
 
-# factory-method 속성으로 팩토리 메서드 자체의 이름을 설정합니다. 
+# `factory-method` 속성에 해당 팩토리 메소드를 지정하면 된다. 
 ## Set the name of the factory method itself with the `factory-method` attribute. 
 
-# 다음 예제는 이러한 빈을 구성하는 방법을 보여줍니다.
+# 이와 같은 경우 `Bean`을 구성하는 방법에 대한 예시는 다음과 같다.
 ## The following example shows how to configure such a bean:
 
 <div class="mt-2"></div>
@@ -1096,7 +1096,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         factory-method="createClientServiceInstance"/>
 ```
 
-# 다음 예제에서는 해당 클래스를 보여줍니다. 
+# 인스턴스 팩토리 메소드를 가진 `Bean` 클래스는 다음과 같다. 
 ## The following example shows the corresponding class:
 
 <div class="mt-2"></div>
@@ -1239,6 +1239,9 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </p>
 <p id="footnote-10" class="footnote-desc" markdown="1">
     <strong class="number">10.</strong> 특수문자 사용 불가
+</p>
+<p id="footnote-11" class="footnote-desc" markdown="1">
+    <strong class="number">11.</strong> `static` 팩토리 메소드를 통해 인스턴스화 하는 방법과 유사
 </p>
 </blockquote>
 
