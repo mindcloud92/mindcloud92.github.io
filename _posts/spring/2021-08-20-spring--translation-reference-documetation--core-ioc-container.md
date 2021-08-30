@@ -1071,13 +1071,13 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <br/>
 
 # 정적 팩토리 메소드를 통한 인스턴스화와 유사하게 인스턴스 팩토리 메소드를 사용한 인스턴스화는 컨테이너에서 기존 Bean의 비정적 메소드를 호출하여 새 Bean을 생성합니다. 
-## Similar to instantiation through a static factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. 
+## Similar to instantiation through a `static` factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. 
 
 # 이 메커니즘을 사용하려면 클래스 속성을 비워두고 factory-bean 속성에서 객체를 생성하기 위해 호출될 인스턴스 메소드를 포함하는 현재(또는 상위 또는 상위) 컨테이너의 빈 이름을 지정하십시오. 
-## To use this mechanism, leave the class attribute empty and, in the factory-bean attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. 
+## To use this mechanism, leave the `class` attribute empty and, in the `factory-bean` attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. 
 
 # factory-method 속성으로 팩토리 메서드 자체의 이름을 설정합니다. 
-## Set the name of the factory method itself with the factory-method attribute. 
+## Set the name of the factory method itself with the `factory-method` attribute. 
 
 # 다음 예제는 이러한 빈을 구성하는 방법을 보여줍니다.
 ## The following example shows how to configure such a bean:
