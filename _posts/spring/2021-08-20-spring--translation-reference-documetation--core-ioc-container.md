@@ -1155,7 +1155,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ```
 <br/>
 
-# 이러한 접근 방식은 팩토리 `Bean` 잔체가 의존성 주입(DI)를 통해 관리되고 구성될 수 있음을 보여준다. 
+# 이러한 접근 방식은 팩토리 `Bean` 자체가 의존성 주입(DI)를 통해 관리되고 구성될 수 있음을 보여준다. 
 ## This approach shows that the factory bean itself can be managed and configured through dependency injection (DI). 
 
 # [의존성 및 구성 세부정보](#dependencies-and-configuration-in-detail)를 참조.
