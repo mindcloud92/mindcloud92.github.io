@@ -1165,7 +1165,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <div class="spring info-wrapper mt-4">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# Spring documentation에서 "factory bean"은 Spring conatiner에 설정되어 팩토리 메소드(static or 인스턴스)를 통해 객체를 생성하는 `Bean`을 의미한다. 
+# Spring documentation에서 "factory bean"은 Spring conatiner에 구성된 팩토리 메소드(static or 인스턴스)를 통해 객체를 생성하는 `Bean`을 의미한다. 
 ## In Spring documentation, "factory bean" refers to a bean that is configured in the Spring container and that creates objects through an instance or static factory method.
 
 # `FactoryBean`은 Spring 고유의 `FactoryBean` 구현체를 참조한다. 
