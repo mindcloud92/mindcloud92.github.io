@@ -1096,7 +1096,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         factory-method="createClientServiceInstance"/>
 ```
 
-# 인스턴스 팩토리 메소드를 가진 `Bean` 클래스는 다음과 같다. 
+# 앞의 팩토리 클래스는 다음과 같다. 
 ## The following example shows the corresponding class:
 
 <div class="mt-2"></div>
@@ -1111,8 +1111,9 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         }
     }
 ```
+<br/>
 
-# 다음 예제와 같이 하나의 팩토리 클래스는 둘 이상의 팩토리 메소드를 보유할 수도 있습니다.
+# 다음 예시와 같이 하나의 팩토리 클래스는 하나 이상의 팩토리 메소드를 가질 수도 있다.
 ## One factory class can also hold more than one factory method, as the following example shows:
 
 <div class="mt-2"></div>
@@ -1131,7 +1132,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         factory-method="createAccountServiceInstance"/>
 ```
 
-# 다음 예제에서는 해당 클래스를 보여줍니다.
+# 앞의 팩토리 클래스는 다음과 같다.
 ## The following example shows the corresponding class:
 
 <div class="mt-2"></div>
@@ -1152,21 +1153,22 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         }
     }
 ```
+<br/>
 
-# 이 접근 방식은 팩토리 빈 자체가 종속성 주입(DI)을 통해 관리 및 구성될 수 있음을 보여줍니다. 
+# 이러한 접근 방식은 팩토리 `Bean` 잔체가 의존성 주입(DI)를 통해 관리되고 구성될 수 있음을 보여준다. 
 ## This approach shows that the factory bean itself can be managed and configured through dependency injection (DI). 
 
-# 자세한 내용은 종속성 및 구성을 참조하십시오.
+# [의존성 및 구성 세부정보](#dependencies-and-configuration-in-detail)를 참조.
 ## See Dependencies and Configuration in Detail.
 
 <!-- info wrapper start -->
-<div class="spring info-wrapper mt-2">
+<div class="spring info-wrapper mt-4">
 <i class="fa fa-info-circle icon mr-1 mt-1"></i>
 <div markdown="1">
-# Spring 문서에서 "factory bean"은 Spring 컨테이너에 설정되어 인스턴스 또는 정적 factory메소드를 통해 객체를 생성하는 bean을 의미한다. 
+# Spring documentation에서 "factory bean"은 Spring conatiner에 설정되어 팩토리 메소드(static or 인스턴스)를 통해 객체를 생성하는 `Bean`을 의미한다. 
 ## In Spring documentation, "factory bean" refers to a bean that is configured in the Spring container and that creates objects through an instance or static factory method.
 
-# 대조적으로 FactoryBean(대문자에 주의)은 Spring 고유의 FactoryBean 구현 클래스를 참조합니다. 
+# `FactoryBean`은 Spring 고유의 `FactoryBean` 구현체를 참조한다. 
 ## By contrast, FactoryBean (notice the capitalization) refers to a Spring-specific FactoryBean implementation class.
 </div>
 </div>
