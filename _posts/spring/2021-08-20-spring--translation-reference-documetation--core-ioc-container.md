@@ -1025,16 +1025,16 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## One use for such a bean definition is to call `static` factories in legacy code.
 <br />
 
-# 아래에 팩토리 메소드를 호출하여 `Bean`을 생성하는 `Bean`정의는 다음과 같다.
+# 다음에 나올 예시에서는 팩토리 메소드를 호출하여 `Bean`을 생성하도록 지정하는 `Bean` 정의를 보여준다.
 ## The following bean definition specifies that the bean be created by calling a factory method.
 
-# 이 정의는 반환된 객체의 타입(클래스)를 지정하지 않고 팩토리 메소드를 포함하는 클래스만 지정한다.
+# 이 정의에서는 팩토리 메소드와 클래스만 지정하며
 ## The definition does not specify the type (class) of the returned object, only the class containing the factory method.
 
-# 이 예시에서 `createInstatnce()` 메소드는 `static` 메소드여야한다.
+# 팩토리 메소드인 `createInstatnce()`는 반드시 `static` 메소드여야 한다.
 ## In this example, the `createInstatnce()` method must be a `static` method. 
 
-# 다음 예시는 팩토리 메소드를 지정하는 방법을 보여준다.
+# 예시는 다음과 같다.
 ## The following example shows how to specify a factory method:
 
 <div class="mt-2"></div>
@@ -1045,7 +1045,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         factory-method="createInstance"/>
 ```
 
-# 다음 예시는 앞의 `Bean` 정의와 함께 작동하는 클래스를 보여준다.
+# 앞의 `Bean` 정의와 함께 작동하는 클래스는 다음과 같다.
 ## The following example shows a class that would work with the preceding bean definition:
 
 ```java
