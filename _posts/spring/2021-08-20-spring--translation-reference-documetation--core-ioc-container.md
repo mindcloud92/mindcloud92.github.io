@@ -1058,8 +1058,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
         }
     }
 ```  
-
-# 팩토리 메소드에 인자를 제공(선택적)하고 팩토리를 통해 반환된 객체의 인스턴스 속성을 설정하는 메커니즘에 대한 자세한 내용은 [의존성과 configuration 세부정보](#dependencies-and-configuration-in-detail) 를 참조.
+# 팩토리 메소드에 인자를 제공하고 팩토리를 통해 반환된 객체의 인스턴스 속성에 값을 설정하는 메커니즘에 대한 자세한 내용은 [의존성과 configuration 세부정보](#dependencies-and-configuration-in-detail)를 참조.
 ## For details about the mechanism for supplying (optional) arguments to the factory method and setting object instance properties after the object is returned from the factory, see Dependencies and Configuration in Detail.
 </div>
 <!-- // section inner contents end -->
