@@ -1011,20 +1011,21 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 
 <!-- section inner content start -->
 <div id="instantiation-with-a-static-factory-method" markdown="1" class="inner-contents">
-# **정적 팩토리 메소드를 사용한 인스턴스화**
+# **static 팩토리 메소드를 사용한 인스턴스화**
 ## Instantiation with a Static Factory Method
 <br/>
 
 # `static` 팩토리 메소드를 통해 생성되는 `Bean`을 정의하려면 `factory-method`라는 속성을 사용하여 팩토리 메소드 이름을 지정하고 static 팩토리 메소드를 포함한 클래스를 `class` 속성에 지정하면 된다.
 ## When defining a bean that you create with a `static` factory method, use the `class` attribute to specify the class that contains the `static` factory method and an attribute named `factory-method` to specify the name of the factory method itself.
 
-# 나중에 설명하는 선택적 인자를 사용하여 `static` 팩토리 메소드를 호출하면 유효한 객체가 반환되어야하고 유효한 객체는 생성자를 통해 생성된 것처럼 처리된다.
+# `static` 팩토리 메소드는 호출이 가능한 상태여야 하고 라이브 객체를 반환할 수 있어야 한다. 이렇게 반환된 객체는 생성자를 통해 생성된 것처럼 처리된다.
 ## You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created through a constructor. 
 
-# 이러한 `Bean` 정의의 용도 중 하나는 레거시 코드에서 `static` 팩토리를 호출하는 것이다.
+# 이러한 `Bean` 정의는 레거시 코드에서 `static` 팩토리를 호출하는 용도로 사용되기도 한다.
 ## One use for such a bean definition is to call `static` factories in legacy code.
+<br />
 
-# 팩토리 메소드를 호출하여 `Bean`을 생성하는 `Bean`정의는 다음과 같다.
+# 아래에 팩토리 메소드를 호출하여 `Bean`을 생성하는 `Bean`정의는 다음과 같다.
 ## The following bean definition specifies that the bean be created by calling a factory method.
 
 # 이 정의는 반환된 객체의 타입(클래스)를 지정하지 않고 팩토리 메소드를 포함하는 클래스만 지정한다.
