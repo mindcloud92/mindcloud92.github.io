@@ -1195,7 +1195,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 또한 `AOP` 프록시는 `Bean` 인스턴스를 실제 타입보다 노출이 제한된 인터페이스 기반 프록시로 래핑할 수 있다.
 ## Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean’s actual type (just its implemented interfaces).
 
-# 특정 `Bean`의 실제 런타입 타입을 찾는 권장 방법은 `Bean`의 이름으로 `BeanFactory.getType` 호출하는 것이다.
+# 특정 `Bean`의 실제 런타임 타입을 찾는 권장 방법은 `Bean`의 이름으로 `BeanFactory.getType` 호출하는 것이다.
 ## The recommended way to find out about the actual runtime type of a particular bean is a `BeanFactory.getType` call for the specified bean name. 
 
 # 이것은 위의 모든 경우를 고려하고 `BeanFactory.getBean` 호출이 동일한 `Bean` 이름에 대해 반환할 객체의 유형을 반환한다.
