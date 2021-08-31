@@ -1186,8 +1186,11 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 # 특정 `Bean`의 런타임 타입을 결정하기는 쉽지 않다.
 ## The runtime type of a specific bean is non-trivial to determine. 
 
-# `Bean` 메타데이터 정의에 지정된 클래스는 초기 클래스의 참조일 뿐이다. 팩토리 메소드 또는 `FactoryBean` 클래스와의 결합으로 인해 `Bean`의 런타임 타입이 달라질 수 있고 `factory-bean` 속성 대신 다른 방법으로 인스턴스 레벨의 팩토리 메소드를 사용한 경우에 런타임 유형은 지정하지 않는다.
-## A specified class in the bean metadata definition is just an initial class reference, potentially combined with a declared factory method or being a `FactoryBean` class which may lead to a different runtime type of the bean, or not being set at all in case of an instance-level factory method (which is resolved via the specified `factory-bean` name instead). 
+# `Bean` 메타데이터 정의에 지정된 클래스는 초기 클래스의 참조일 뿐이다. 
+## A specified class in the bean metadata definition is just an initial class reference, 
+
+# 팩토리 메소드 또는 `FactoryBean` 클래스와의 결합으로 인해 `Bean`의 런타임 타입이 달라질 수 있고 `factory-bean` 속성 대신 다른 방법으로 인스턴스 레벨의 팩토리 메소드를 사용한 경우에 런타임 유형은 지정하지 않는다.
+## potentially combined with a declared factory method or being a `FactoryBean` class which may lead to a different runtime type of the bean, or not being set at all in case of an instance-level factory method (which is resolved via the specified `factory-bean` name instead). 
 
 # 또한 `AOP` 프록시는 `Bean` 인스턴스를 실제 타입보다 노출이 제한된 인터페이스 기반 프록시로 래핑할 수 있다.
 ## Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean’s actual type (just its implemented interfaces).
