@@ -26,7 +26,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 </section>
 
 ### # 목차
-1. <a href="/xyz+/2021/08/20/spring-translation-reference-documetation-core-ioc-container/">IoC Container</a>
+1. <a href="/xyz+/2021/08/31/spring-translation-reference-documetation-core-ioc-container/">IoC Container</a>
 2. Resources
 3. Validation, Data Binding, and Type Conversion
 4. Spring Expression Language (SpEL)
