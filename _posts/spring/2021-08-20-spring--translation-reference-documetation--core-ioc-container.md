@@ -1196,10 +1196,10 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 ## Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean’s actual type (just its implemented interfaces).
 <br/>
 
-# 특정 `Bean`의 실제 런타임 타입을 찾는 권장 방법은 `Bean`의 이름으로 `BeanFactory.getType` 호출하는 것이다.
+# `Bean`의 실제 런타임 타입은 `BeanFactory.getType` 메소드를 호출하여 `Bean`의 이름으로 찾기를 권장하며
 ## The recommended way to find out about the actual runtime type of a particular bean is a `BeanFactory.getType` call for the specified bean name. 
 
-# 이것은 위의 모든 경우를 고려하고 `BeanFactory.getBean` 호출이 동일한 `Bean` 이름에 대해 반환할 객체의 유형을 반환한다.
+# 이는 앞서 설명한 모든 경우를 고려하여 `BeanFactory.getBean` 메소드를 통해 반환된 `Bean`과 동일한 객체의 타입을 반환한다.
 ## This takes all of the above cases into account and returns the type of object that a `BeanFactory.getBean` call is going to return for the same bean name.
 </div>
 <!-- // section inner contents end -->
