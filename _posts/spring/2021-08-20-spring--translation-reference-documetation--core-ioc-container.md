@@ -1213,6 +1213,7 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <blockquote markdown="1" class="mt-4">
 **Reference**
 - [원문](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core){:target="_blank"}
+
 <br/>
 
 
