@@ -1209,6 +1209,26 @@ thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e197
 <!-- // section contents end -->
 </section>
 
+<section id="dependencies" class="translation-article-wrapper accordion-wrapper" markdown="1">
+<div markdown="1" class="handler">
+# **1.4. 의존성**
+## 1.4. Dependencies
+</div>
+
+<!-- section content start -->
+<div markdown="1" class="contents">
+# 일반적인 엔터프라이즈 어플리케이션은 단일 객체(= Spring 용어로 `Bean`)로 구성되지 않는다.
+## A typical enterprise application does not consist of a single object (or bean in the Spring parlance).
+ 
+# 가장 단순한 어플리케이션조차도 최종 사용자가 보기에는 하나로 이루어져 있는 것 같이 보여도 실제로는 몇 가지의 객체로 구성되어 있다.
+## Even the simplest application has a few objects that work together to present what the end-user sees as a coherent application.
+
+# 이 장에서는 독립적인 여러 `Bean`을 정의하는 것부터 여러 객체가 협력하여 목표를 달성한 완전한 어플리케이션이 되는 방법까지 설명한다.  
+## This next section explains how you go from defining a number of bean definitions that stand alone to a fully realized application where objects collaborate to achieve a goal.
+</div>
+<!-- // section contents end -->
+</section>
+
 
 <blockquote markdown="1" class="mt-4">
 **Reference**
