@@ -53,3 +53,29 @@
           font-weight: 100
           opacity: .5
           font-family: var(--font-family--icon)
+
+
+@media screen and (max-width: 768px)
+  .post-container
+    .empty-post
+      display: none!important
+
+    li
+      margin-bottom: 2em
+      &:last-child
+        margin-bottom: 0
+
+    &.thumbnail
+      display: block
+
+      .thumbnail-wrapper
+        .thumbnail
+          height: calc(100vw * 0.4)
+
+      li
+        width: 100%
+        padding: 0
+
+
+    &.text
+      display: block
