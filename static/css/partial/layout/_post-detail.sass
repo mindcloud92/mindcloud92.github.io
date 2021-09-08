@@ -21,10 +21,10 @@
       font-size: 1.6em
 
     h2
-      font-size: 1.4em
+      font-size: 1.3em
 
     h3
-      font-size: 1.2em
+      font-size: 1.1em
 
     h4
       font-size: 1em
@@ -35,7 +35,6 @@
     a
       color: #2196f3
       text-decoration: underline
-
 
 
   .book-cover
@@ -127,6 +126,10 @@
   code
     line-height: 2em
 
+    &:after
+      content: 'empty'
+      color: transparent
+      margin-bottom: 2em
 
   blockquote
     margin: 0
@@ -204,13 +207,14 @@
   [class^=language]
       background: var(--background-color--file)
       border: 1px solid #eee
-      padding: .8em 0
       color: #dadcf3
       border-top: 0
       position: relative
 
       .highlight
         overflow: auto
+        margin: 0
+        margin-top: 1.2em
 
       &:before
         line-height: 2em
@@ -241,6 +245,9 @@
     background: #efefef
     padding: .2em .5em
     border-radius: 5px
+
+    &:after
+      content: ''
 
   .language-xml
     .cp, .nt
@@ -339,67 +346,39 @@
   .filename-badge + [class^=language]
     &:before
       content: ''
-//
-//    .btn-debugger
-//      color: var(--font-color--default)
-//
+
+  .btn-debugger
+    color: var(--font-color--default) !important
+    text-decoration: none !important
+    opacity: .8
+    font-weight: bold
+    margin-top: .5em
+    margin-bottom: .5em
+
+    &:before
+      content: '\f144'
+      font-weight: 900
+      font-family: var(--font-family--icon)
 
 
+  .translation-article-wrapper
+    &:not(:first-child)
+      border-top: 1px solid #eee
+      margin-top: 3em
+      padding-top: 1em
 
+    h1
+      line-height: 1.5em
+      font-size: 1em
+      font-weight: normal
+      margin-block-start: 2em
 
-
-
-
-
-
-//    .translation-article-wrapper
-//      &:not(:first-child)
-//        border-top: 1px solid #eee
-//        margin-top: 3em
-//        padding-top: 1em
-//
-//      h1
-//        line-height: 1.5em
-//        font-size: 1em
-//        font-weight: normal
-//        margin-block-start: 2em
-//
-//      h2
-//        line-height: 1.5em
-//        font-size: .9em
-//        margin-block-start: 0
-//        font-weight: normal
-//        opacity: .6
-//
-//      a
-//        .language-plaintext
-//          color: inherit
-//
-//      .info-wrapper, .guide-wrapper
-//        font-size: .95em
-//
-//        .language-plaintext
-//          background: #dedede
-//
-//      .info-wrapper
-//        display: flex
-//        padding: .5em 2em 2em 2em
-//
-//        .icon
-//          font-size: 2em
-//
-//        &.spring
-//          background: #ecf1e8
-//
-//          .icon
-//            color: #3f6a22
-//
-//      .guide-wrapper
-//        padding: .5em 2em 2em 2em
-//        background: #dce6e6
-//
-//        .title
-//          font-weight: bold
+    h2
+      line-height: 1.5em
+      font-size: .9em
+      margin-block-start: 0
+      font-weight: normal
+      opacity: .6
 
 
 

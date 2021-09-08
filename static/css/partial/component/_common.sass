@@ -14,12 +14,13 @@
 
 
 .category-badge
-  color: var(--font-color--post-category-badge)
+  color: var(--font-color--post-category-badge)!important
   font-size: .75em
   font-weight: 600
   margin-right: .5em
   padding: .1em 1em
   background: var(--key-color--default)
+  text-decoration: none!important
 
   &.brown
     background: var(--color-brown)
@@ -55,3 +56,11 @@
   border-radius: 5px
     border: 1px solid var(--border-color--thumbnail)
 
+
+.tag-container
+  .tag
+    float: left
+    font-size: .88em
+    color: var(--font-color--post-tag) !important
+    text-decoration: none!important
+    padding-inline-end: .8em

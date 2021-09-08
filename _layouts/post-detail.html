@@ -8,8 +8,8 @@
         <div class="contents-wrapper">
             {% include category-link.html categories=page.categories class="category-badge" %}
 
-            <h2 class="post-title mt-1">{{ page.title }}</h2>
-            <p class="post-date">{{ page.date | date: '%Y.%m.%d' }}</p>
+            <h1 class="post-title mt-1">{{ page.title }}</h1>
+            <p class="post-date mt-half">{{ page.date | date: '%Y.%m.%d' }}</p>
             <div class="post-contents mt-5">
                 {{ page.content }}
             </div>
