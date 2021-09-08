@@ -7,9 +7,7 @@
 
         <div class="contents-wrapper">
             <section>
-                <h2 class="section-title">
-                    Latest Posts
-                </h2>
+                <h2 class="section-title">Latest Posts</h2>
                 <ul class="post-container thumbnail">
                     {% for post in site.posts limit: 6 %}
                         <li>
@@ -30,10 +28,10 @@
                 </ul>
             </section>
 
-            <section class="mt-3 tag-section">
+            <section class="tag-section mt-3">
                 <h2 class="section-title">Tags</h2>
 
-                <div class="tag-container">
+                <div class="tag-container section-contents">
                     {% capture tags %}
                         {% for tag in site.tags %}
                             {{ tag | last |size }}|{{ tag | first }}

@@ -8,8 +8,8 @@
 @import 'variable/blue-theme';
 
 @import 'base';
-@import 'navigation-bar';
 
-@import 'post--base';
-@import 'post--list';
-@import 'post--detail';
+@import 'component/navigation-bar';
+
+@import 'layout/base';
+@import 'layout/main';
