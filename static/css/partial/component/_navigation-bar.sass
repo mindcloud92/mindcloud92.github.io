@@ -22,6 +22,31 @@
             align-items: center
             font-weight: normal
 
+    .account-container
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .account
+            margin: 0 .5em
+            color: var(--font-color--nav-link)
+            font-style: normal
+
+            &.email
+                font-family: var(--font-family--icon)
+                font-weight: 900
+
+                &:before
+                    content: '\f658'
+
+            &.github
+                font-family: 'Font Awesome 5 Brands'
+
+                &:before
+                    content: '\f09b'
+
+
     .title
         color: var(--font-color--nav-title)
         font-size: 2em

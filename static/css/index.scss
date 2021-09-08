@@ -9,7 +9,9 @@
 
 @import 'base';
 
+@import 'component/common';
 @import 'component/navigation-bar';
+@import 'component/post-list';
 
-@import 'layout/base';
+@import 'layout/common';
 @import 'layout/main';

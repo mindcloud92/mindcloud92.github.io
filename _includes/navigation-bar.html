@@ -13,10 +13,10 @@
     </section>
 
     <section class="footer">
-        <div class="profile-container">
+        <div class="account-container">
             {% for account in site.account %}
                 <a href="{{ account | last }}" target="_blank" >
-                    <i class="account {{ profile | first }}"></i>
+                    <i class="account {{ account | first }}"></i>
                 </a>
             {% endfor %}
         </div>

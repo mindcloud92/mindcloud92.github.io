@@ -1,0 +1,31 @@
+.post-container
+  list-style: none
+
+  .additional-info-wrapper
+    display: flex
+    align-items: center
+
+  .tag-container
+    .tag
+      float: left
+      font-size: .88em
+      color: var(--font-color--post-tag)
+      padding-inline-end: .8em
+
+  &.thumbnail
+    background: var(--background-color--post-container)
+    border: 1px solid var(--border-color--post-container)
+    padding: 2em 1.5em
+    gap: 2em 1.5em
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+    .thumbnail-wrapper
+      border-radius: 5px
+      border: 1px solid var(--border-color--thumbnail)
+      float: left
+      padding: .25em 1em
+      width: 90%
+
+      .thumbnail
+        height: calc((100vw - 18em) * 0.18)

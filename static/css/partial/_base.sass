@@ -16,8 +16,11 @@ body
     &:hover
       opacity: .8
 
-  img
+  img.thumbnail
+    width: 100%
     max-width: 100%
+    object-fit: contain
+
 
   .w-50
     width: 50%!important
@@ -109,31 +112,6 @@ body
   .text-center
     text-align: center
 
-  &.container
-    display: grid
-    grid-template-columns: 18% auto
+  .clear-fix
+    clear: both
 
-    .contents-wrapper
-      overflow: scroll
-      padding: var(--padding--contents-wrapper-y) var(--padding--contents-wrapper-x)
-
-    .section-title
-      color: var(--font-color--section-title)
-
-    .btn-search
-      cursor: pointer
-      font-style: normal
-      font-family: var(--font-family--icon)
-      font-weight: 900
-
-      &:before
-        content: '\f002'
-
-@media screen and (max-width: 768px)
-  body
-    &.container
-      display: block
-
-      .contents-wrapper
-        padding: var(--padding--contents-wrapper-y) calc(var(--padding--contents-wrapper-x) / 2)
-        margin-top: 3em
