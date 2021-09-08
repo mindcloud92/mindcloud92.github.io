@@ -1,409 +1,410 @@
-//.post-detail.container
-//  text-align: center
+//.container
+//  &.post-detail
+//    text-align: center
 //
-//  .contents-wrapper
-//    padding-left: 18%
-//    padding-right: 18%
+//    .contents-wrapper
+//      padding-left: 18%
+//      padding-right: 18%
 //
-//  .post-content
-//    text-align: left
-//    color: var(--font-color--post-content)
+//    .post-content
+//      text-align: left
+//      color: var(--font-color--post-content)
 //
-//    h1, h2, h3, h4, h5
-//      margin-block-start: 3em
+//      h1, h2, h3, h4, h5
+//        margin-block-start: 3em
 //
-//    h1
-//      font-size: 1.5em
+//      h1
+//        font-size: 1.5em
 //
-//    h2
-//      font-size: 1.3em
+//      h2
+//        font-size: 1.3em
 //
-//    h3
-//      font-size: 1.1em
+//      h3
+//        font-size: 1.1em
 //
-//    h4
-//      font-size: 1em
+//      h4
+//        font-size: 1em
 //
-//    h5
-//      font-size: 0.85em
+//      h5
+//        font-size: 0.85em
 //
-//    a
-//      color: #2196f3
-//      text-decoration: underline
+//      a
+//        color: #2196f3
+//        text-decoration: underline
 //
-//    p, li
-//      line-height: 1.8em
+//      p, li
+//        line-height: 1.8em
 //
 //
-//    table
-//      width: 100%
-//      border-spacing: 0
-//      border: 1px solid #eee
-//      border-width: 1px 1px 0 1px
-//
-//      th, td
-//        padding: 1em
+//      table
+//        width: 100%
+//        border-spacing: 0
 //        border: 1px solid #eee
-//        border-width: 0 0 1px 1px
+//        border-width: 1px 1px 0 1px
 //
-//        &:first-child
-//          border-left-width: 0
+//        th, td
+//          padding: 1em
+//          border: 1px solid #eee
+//          border-width: 0 0 1px 1px
 //
-//      th
-//        background: #f7f6f5
+//          &:first-child
+//            border-left-width: 0
 //
-//      td
-//        background: #fff
+//        th
+//          background: #f7f6f5
+//
+//        td
+//          background: #fff
+//          font-size: .9em
+//
+//        tr
+//          border: 1px solid red
+//
+//    .thumbnail
+//      border-radius: 0
+//
+//    .footnote
+//      font-size: .8em
+//      font-weight: bold
+//      color: #2196f3
+//      vertical-align: super
+//      margin-inline-end: .5em
+//      text-decoration: none!important
+//
+//    .footnote-desc
+//      opacity: .8
+//      margin-left: 1em
+//
+//      .number
+//        margin-right: .3em
+//
+//    code
+//      line-height: 2em
+//
+//    div
+//      &[class^=language]
+//        background: var(--background-color--file)
+//        border: 1px solid #eee
+//        padding: .8em 0
+//        color: #dadcf3
+//        border-top: 0
+//        position: relative
+//
+//        .highlight
+//          overflow: auto
+//
+//        &:before
+//          line-height: 2em
+//          position: absolute
+//          top: 0
+//          right: 0
+//          font-weight: bold
+//          padding: 0 1em
+//          font-size: .68em
+//
+//      .language-groovy
+//        &:before
+//          content: 'GROOVY'
+//          background: #5f97b6
+//
+//        .s2
+//          color: #709a59
+//
+//        .nl
+//          color: #9b80ce
+//
+//      .language-plaintext
+//        font-weight: bold
+//        margin: 0 .2em
+//        color: #5d696d
+//        font-size: .9em
+//        font-family: var(--font-family--default)
+//        background: #efefef
+//        padding: .2em .5em
+//        border-radius: 5px
+//
+//      .language-xml
+//        .cp, .nt
+//          color: #ffbf00
+//
+//        .c
+//          color: #8e8e8e
+//
+//        .s
+//          color: #709a59
+//
+//        &:before
+//          content: 'XML'
+//          background: #6d6d6d
+//
+//      .language-yaml
+//        .na, .pi
+//          color: #ff5722
+//        .c1
+//          color: #4caf50
+//
+//      .language-html
+//        &:before
+//          content: 'HTML'
+//          background: #dd4b24
+//
+//        code
+//          line-height: 1em
+//
+//        .cp, .nt
+//          color: #ffbf00
+//
+//        .s
+//          color: #cddc39
+//
+//      .language-kotlin
+//        &:before
+//          content: 'KOTLIN'
+//          background: #7854b9
+//
+//      .language-java
+//        &:before
+//          content: 'JAVA'
+//          background: #3b7bbe
+//
+//      .language-java, .language-kotlin
+//        .no
+//          color: #9b80ce
+//          font-style: italic
+//
+//        .c1, .cm
+//          color: #8fbf74
+//
+//        .kd, .k, .kt, .kn
+//          color: #ff8d38
+//
+//        .nf
+//          color: #ffc107
+//
+//        .mi, .mf, .mi
+//          color: #42c4ff
+//
+//        .s, .sc
+//          color: #709a59
+//
+//      .language-javascript
+//        &:before
+//          content: 'JAVASCRIPT'
+//          background: #f7df1e
+//          color: #423600
+//
+//        .mi, .mf, .mi
+//          color: #42c4ff
+//
+//        .kd, .k
+//          color: #ff8d38
+//
+//        .kd + .nx
+//          color: #ffc107
+//
+//        .p + .kd + .nx
+//          color: #dadcf3
+//
+//        .cm, .c1
+//          color: #8fbf74
+//
+//        .dl, .dl + .s1, .dl + .s2
+//          color: #709a59
+//
+//        .nb + .p + .nx, .dl + .p + .nx
+//          color: #ffc107
+//
+//        .p + .na
+//          color: #9d78e0
+//
+//      .filename-badge + [class^=language]
+//        &:before
+//          content: ''
+//
+//    a.btn-debugger
+//      color: var(--font-color--default)
+//
+//    .stepper
+//      .title
+//        &:before
+//          content: attr(data-step)
+//          border-radius: 5px
+//          background: var(--background-color--stepper-title)
+//          padding: .15em .55em
+//          font-size: .8em
+//          margin-right: .5em
+//          color: var(--font-color--post-step-title)
+//
+//    .file-wrapper
+//      .filename-badge
+//        font-size: .8em
+//        color: #fff
+//        background: var(--background-color--file)
+//        margin: 0
+//        display: inline-block
+//        padding: .5em 1em
+//        border: 1px solid #eee
+//        border-bottom: none
+//        margin-bottom: -1px
+//
+//        &:before
+//          font-family: var(--font-family--icon)
+//          content: '\f15b'
+//          margin-right: .5em
+//
+//    .warning
+//      font-size: .78em
+//      color: var(--font-color--post-warning)
+//
+//      &:before
+//        font-size: 1.3em
+//        font-family: var(--font-family--icon)
+//        content: '\f071'
+//        margin-right: .5em
+//        font-weight: 900
+//        color: #f7c93f
+//
+//    .info
+//      display: flex
+//      align-items: center
+//      font-size: .78em
+//      color: var(--font-color--post-info)
+//
+//      &:before
+//        font-size: 1.3em
+//        font-family: var(--font-family--icon)
+//        content: '\f05a'
+//        margin-right: .5em
+//        font-weight: 900
+//
+//    blockquote
+//      margin: 0
+//      background: var(--background-color--blockquote)
+//      border: 1px solid #fefefe
+//      padding: .5em 1.5em
+//      font-size: .9em
+//      border-left: 4px solid var(--key-color--default)
+//      overflow: auto
+//
+//      a
 //        font-size: .9em
 //
-//      tr
-//        border: 1px solid red
-//
-//  .thumbnail
-//    border-radius: 0
-//
-//  .footnote
-//    font-size: .8em
-//    font-weight: bold
-//    color: #2196f3
-//    vertical-align: super
-//    margin-inline-end: .5em
-//    text-decoration: none!important
-//
-//  .footnote-desc
-//    opacity: .8
-//    margin-left: 1em
-//
-//    .number
-//      margin-right: .3em
-//
-//  code
-//    line-height: 2em
-//
-//  div
-//    &[class^=language]
-//      background: var(--background-color--file)
-//      border: 1px solid #eee
-//      padding: .8em 0
-//      color: #dadcf3
-//      border-top: 0
-//      position: relative
-//
-//      .highlight
-//        overflow: auto
-//
-//      &:before
-//        line-height: 2em
-//        position: absolute
-//        top: 0
-//        right: 0
-//        font-weight: bold
-//        padding: 0 1em
-//        font-size: .68em
-//
-//    .language-groovy
-//      &:before
-//        content: 'GROOVY'
-//        background: #5f97b6
-//
-//      .s2
-//        color: #709a59
-//
-//      .nl
-//        color: #9b80ce
-//
-//    .language-plaintext
-//      font-weight: bold
-//      margin: 0 .2em
-//      color: #5d696d
-//      font-size: .9em
-//      font-family: var(--font-family--default)
-//      background: #efefef
-//      padding: .2em .5em
-//      border-radius: 5px
-//
-//    .language-xml
-//      .cp, .nt
-//        color: #ffbf00
-//
-//      .c
-//        color: #8e8e8e
-//
-//      .s
-//        color: #709a59
-//
-//      &:before
-//        content: 'XML'
-//        background: #6d6d6d
-//
-//    .language-yaml
-//      .na, .pi
-//        color: #ff5722
-//      .c1
-//        color: #4caf50
-//
-//    .language-html
-//      &:before
-//        content: 'HTML'
-//        background: #dd4b24
-//
-//      code
-//        line-height: 1em
-//
-//      .cp, .nt
-//        color: #ffbf00
-//
-//      .s
-//        color: #cddc39
-//
-//    .language-kotlin
-//      &:before
-//        content: 'KOTLIN'
-//        background: #7854b9
-//
-//    .language-java
-//      &:before
-//        content: 'JAVA'
-//        background: #3b7bbe
-//
-//    .language-java, .language-kotlin
-//      .no
-//        color: #9b80ce
-//        font-style: italic
-//
-//      .c1, .cm
-//        color: #8fbf74
-//
-//      .kd, .k, .kt, .kn
-//        color: #ff8d38
-//
-//      .nf
-//        color: #ffc107
-//
-//      .mi, .mf, .mi
-//        color: #42c4ff
-//
-//      .s, .sc
-//        color: #709a59
-//
-//    .language-javascript
-//      &:before
-//        content: 'JAVASCRIPT'
-//        background: #f7df1e
-//        color: #423600
-//
-//      .mi, .mf, .mi
-//        color: #42c4ff
-//
-//      .kd, .k
-//        color: #ff8d38
-//
-//      .kd + .nx
-//        color: #ffc107
-//
-//      .p + .kd + .nx
-//        color: #dadcf3
-//
-//      .cm, .c1
-//        color: #8fbf74
-//
-//      .dl, .dl + .s1, .dl + .s2
-//        color: #709a59
-//
-//      .nb + .p + .nx, .dl + .p + .nx
-//        color: #ffc107
-//
-//      .p + .na
-//        color: #9d78e0
-//
-//    .filename-badge + [class^=language]
-//      &:before
-//        content: ''
-//
-//  a.btn-debugger
-//    color: var(--font-color--default)
-//
-//  .stepper
-//    .title
-//      &:before
-//        content: attr(data-step)
-//        border-radius: 5px
-//        background: var(--background-color--stepper-title)
-//        padding: .15em .55em
-//        font-size: .8em
-//        margin-right: .5em
-//        color: var(--font-color--post-step-title)
-//
-//  .file-wrapper
-//    .filename-badge
-//      font-size: .8em
-//      color: #fff
-//      background: var(--background-color--file)
-//      margin: 0
-//      display: inline-block
-//      padding: .5em 1em
-//      border: 1px solid #eee
-//      border-bottom: none
-//      margin-bottom: -1px
-//
-//      &:before
-//        font-family: var(--font-family--icon)
-//        content: '\f15b'
-//        margin-right: .5em
-//
-//  .warning
-//    font-size: .78em
-//    color: var(--font-color--post-warning)
-//
-//    &:before
-//      font-size: 1.3em
-//      font-family: var(--font-family--icon)
-//      content: '\f071'
-//      margin-right: .5em
-//      font-weight: 900
-//      color: #f7c93f
-//
-//  .info
-//    display: flex
-//    align-items: center
-//    font-size: .78em
-//    color: var(--font-color--post-info)
-//
-//    &:before
-//      font-size: 1.3em
-//      font-family: var(--font-family--icon)
-//      content: '\f05a'
-//      margin-right: .5em
-//      font-weight: 900
-//
-//  blockquote
-//    margin: 0
-//    background: var(--background-color--blockquote)
-//    border: 1px solid #fefefe
-//    padding: .5em 1.5em
-//    font-size: .9em
-//    border-left: 4px solid var(--key-color--default)
-//    overflow: auto
-//
-//    a
-//      font-size: .9em
-//
-//  &.text
-//    .thumbnail
-//      width: 70%
-//
-//  .book-cover
-//    border: 2px solid #d4cece
-//    width: 42%
-//
-//  .book-evaluation-wrapper
-//    display: grid
-//    grid-template-columns: .85fr 1fr
-//
-//    .title
-//      text-align: right
-//      padding-right: .5em
-//      margin: 0
-//      font-weight: bold
-//      font-size: .95em
-//      opacity: .8
-//
-//  .rating-container
-//    display: flex
-//    align-items: center
-//    padding-left: .5em
-//
-//    .rating
-//      font-family: var(--font-family--icon)
-//      color: #f3e3a5
-//
-//      &.full
-//        font-weight: 900
-//        color: #f1c40e
-//
-//      &:before
-//        content: '\f005'
-//
-//  .translation-article-wrapper
-//    &:not(:first-child)
-//      border-top: 1px solid #eee
-//      margin-top: 3em
-//      padding-top: 1em
-//
-//    h1
-//      line-height: 1.5em
-//      font-size: 1em
-//      font-weight: normal
-//      margin-block-start: 2em
-//
-//    h2
-//      line-height: 1.5em
-//      font-size: .9em
-//      margin-block-start: 0
-//      font-weight: normal
-//      opacity: .6
-//
-//    a
-//      .language-plaintext
-//        color: inherit
-//
-//    .info-wrapper, .guide-wrapper
-//      font-size: .95em
-//
-//      .language-plaintext
-//        background: #dedede
-//
-//    .info-wrapper
-//      display: flex
-//      padding: .5em 2em 2em 2em
-//
-//      .icon
-//        font-size: 2em
-//
-//      &.spring
-//        background: #ecf1e8
-//
-//        .icon
-//          color: #3f6a22
-//
-//    .guide-wrapper
-//      padding: .5em 2em 2em 2em
-//      background: #dce6e6
+//    &.text
+//      .thumbnail
+//        width: 70%
+//
+//    .book-cover
+//      border: 2px solid #d4cece
+//      width: 42%
+//
+//    .book-evaluation-wrapper
+//      display: grid
+//      grid-template-columns: .85fr 1fr
 //
 //      .title
+//        text-align: right
+//        padding-right: .5em
+//        margin: 0
 //        font-weight: bold
-//
-//  .accordion-wrapper
-//    .contents
-//      display: none
-//      margin-top: 4em
-//
-//    .handler.active + .contents
-//      display: block
-//
-//    .inner-contents
-//      border-top: 1px dashed #e8e8e8
-//      margin-top: 3em
-//      padding-top: 1em
-//
-//    .handler
-//      position: relative
-//      padding-left: 2em
-//      cursor: pointer
-//
-//      &:hover
+//        font-size: .95em
 //        opacity: .8
 //
-//      &:before
-//        content: '\f078'
-//        font-family: var(--font-family--icon)
-//        font-weight: 900
-//        position: absolute
-//        left: 0
+//    .rating-container
+//      display: flex
+//      align-items: center
+//      padding-left: .5em
 //
-//      &.active
+//      .rating
+//        font-family: var(--font-family--icon)
+//        color: #f3e3a5
+//
+//        &.full
+//          font-weight: 900
+//          color: #f1c40e
+//
 //        &:before
-//          content: '\f077'
+//          content: '\f005'
+//
+//    .translation-article-wrapper
+//      &:not(:first-child)
+//        border-top: 1px solid #eee
+//        margin-top: 3em
+//        padding-top: 1em
+//
+//      h1
+//        line-height: 1.5em
+//        font-size: 1em
+//        font-weight: normal
+//        margin-block-start: 2em
+//
+//      h2
+//        line-height: 1.5em
+//        font-size: .9em
+//        margin-block-start: 0
+//        font-weight: normal
+//        opacity: .6
+//
+//      a
+//        .language-plaintext
+//          color: inherit
+//
+//      .info-wrapper, .guide-wrapper
+//        font-size: .95em
+//
+//        .language-plaintext
+//          background: #dedede
+//
+//      .info-wrapper
+//        display: flex
+//        padding: .5em 2em 2em 2em
+//
+//        .icon
+//          font-size: 2em
+//
+//        &.spring
+//          background: #ecf1e8
+//
+//          .icon
+//            color: #3f6a22
+//
+//      .guide-wrapper
+//        padding: .5em 2em 2em 2em
+//        background: #dce6e6
+//
+//        .title
+//          font-weight: bold
+//
+//    .accordion-wrapper
+//      .contents
+//        display: none
+//        margin-top: 4em
+//
+//      .handler.active + .contents
+//        display: block
+//
+//      .inner-contents
+//        border-top: 1px dashed #e8e8e8
+//        margin-top: 3em
+//        padding-top: 1em
+//
+//      .handler
+//        position: relative
+//        padding-left: 2em
+//        cursor: pointer
+//
+//        &:hover
+//          opacity: .8
+//
+//        &:before
+//          content: '\f078'
+//          font-family: var(--font-family--icon)
+//          font-weight: 900
+//          position: absolute
+//          left: 0
+//
+//        &.active
+//          &:before
+//            content: '\f077'
 //
 //
 //
