@@ -7,11 +7,10 @@
         <div class="contents-wrapper">
             <form type="submit" action="/search" class="search-input-wrapper">
                 <input id="searchInput" type="text" name="q" placeholder="Enter a keyword" />
-                <button type="submit" class="icon search"></button>
+                <button type="submit" class="btn-search"></button>
             </form>
 
-            <section id="postSection" class="mt-2">
-            </section>
+            <section id="postSection" class="mt-2 post-section"></section>
         </div>
     </body>
 
@@ -44,33 +43,37 @@
     </script>
     <script id="template-post-list" type="text/template">
         <% if (_.size(data) > 0) { %>
-            <h5>
-                Total <b class="count"><%= _.size(data) %></b>
+            <h5 class="mt-2 mb-2">
+                Total <b class="post-count"><%= _.size(data) %></b>
             </h5>
 
             <ul class="post-container mt-2">
                 <% _.each(data, (v, i) => { %>
                     <li>
                         <div>
-                            <div class="additional-info-wrapper">
+                            <div class="additional-info-wrapper mb-1">
                                 <% const category = v.categories[0].toUpperCase() %>
-                                <a href="/<%= category %>" class="category ma-0 <%= v.categoryColorClass %>">
+                                <a href="/<%= category %>" class="category-text ma-0 <%= v.categoryColorClass %>">
                                     <%= category %>
                                 </a>
                                 <i class="divider"></i>
-                                <p class="date ma-0">
+                                <p class="post-date ma-0">
                                     <%= formatDate(v.date) %>
                                 </p>
                             </div>
+
                             <a href=<%= v.url %>>
-                                <p class="title"><%= v.title %></p>
+                                <p class="title mb-half"><%= v.title %></p>
                                 <p class="contents"><%= v.content %></p>
                             </a>
                         </div>
+
                         <div class="mt-2  mb-2 tag-container">
                             <% _.each(v.tags, (t, j) => { %>
                                 <a href="/search?q=<%= t %>" class="tag"># <%= t %></a>
                             <% }) %>
+
+                            <div class="clear-fix"></div>
                         </div>
                     </li>
                 <% }) %>

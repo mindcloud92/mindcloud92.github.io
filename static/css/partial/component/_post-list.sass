@@ -1,5 +1,7 @@
 .post-container
   list-style: none
+  margin: 0
+  padding: 0
 
   .additional-info-wrapper
     display: flex
@@ -13,8 +15,6 @@
       padding-inline-end: .8em
 
   &.thumbnail
-    background: var(--background-color--post-container)
-    border: 1px solid var(--border-color--post-container)
     padding: 2em 1.5em
     gap: 2em 1.5em
     display: grid
@@ -29,3 +29,27 @@
 
       .thumbnail
         height: calc((100vw - 18em) * 0.18)
+
+  &.text
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 1em 1.5em
+
+    li
+      background: var(--background-color--post-container)
+      border: 1px solid var(--border-color--post-container)
+      padding: 2em 1.5em
+      display: grid
+
+      &.empty-post
+        background: #fbfafa!important
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 2em
+
+        &:before
+          content: '\f017'
+          font-weight: 100
+          opacity: .5
+          font-family: var(--font-family--icon)
