@@ -3,14 +3,13 @@
 
 @import 'font';
 
-@import 'default-theme--variable';
-@import 'pink-theme--variable';
-@import 'blue-theme--variable';
+@import 'variable/default-theme';
+@import 'variable/pink-theme';
+@import 'variable/blue-theme';
 
 @import 'base';
 @import 'navigation-bar';
 
 @import 'post--base';
 @import 'post--list';
-@import 'search';
 @import 'post--detail';

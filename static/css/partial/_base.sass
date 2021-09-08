@@ -1,13 +1,16 @@
 body
   font-family: var(--font-family--default)
-  height: 100vh
-  margin: 0
   background: var(--background-color--default)
   color: var(--font-color--default)
-  line-height: 1.6
+  height: 100vh
+  margin: 0
+
+  h1, h2, h3, h4, h5, a, p
+    padding: 0
+    margin: 0
 
   a
-    color: var(--font-color--default)
+    color: inherit
     text-decoration: none
 
     &:hover
@@ -106,39 +109,6 @@ body
   .text-center
     text-align: center
 
-  img.thumbnail
-    width: 100%
-    border-radius: 5px
-    border: 1px solid var(--border-color--thumbnail)
-    object-fit: contain
-
-  .details-description
-    font-size: .8em
-    color: #968d8a
-    font-weight: bold
-
-  .icon
-    font-style: normal
-
-    &.github
-      font-family: 'Font Awesome 5 Brands'
-      &:before
-        content: '\f09b'
-
-    &.email
-      font-family: var(--font-family--icon)
-      font-weight: 900
-
-      &:before
-        content: '\f658'
-
-    &.search
-      font-family: var(--font-family--icon)
-      font-weight: 900
-
-      &:before
-        content: '\f002'
-
   &.container
     display: grid
     grid-template-columns: 18% auto
@@ -147,47 +117,23 @@ body
       overflow: scroll
       padding: var(--padding--contents-wrapper-y) var(--padding--contents-wrapper-x)
 
-      .count
-        color: var(--font-color--post-count)
-        font-size: .75em
-
-
     .section-title
       color: var(--font-color--section-title)
 
-    .paginator
-      display: flex
-      justify-content: center
-      align-items: center
-      line-height: 0
+    .btn-search
+      cursor: pointer
+      font-style: normal
+      font-family: var(--font-family--icon)
+      font-weight: 900
 
-      .page-link
-        margin: .5em
-        padding: 0
-        opacity: .6
-
-        &.current
-          opacity: 1
-          font-weight: bold
-
-
-  .tag-container
-    &:before
-      content: ''
-      display: table
-
-    &:after
-      display: table
-      content: ''
-      clear: both
-
-
+      &:before
+        content: '\f002'
 
 @media screen and (max-width: 768px)
   body
     &.container
       display: block
 
-    .contents-wrapper
-      padding: var(--padding--contents-wrapper-y) calc(var(--padding--contents-wrapper-x) / 2) !important
-      margin-top: 3em
+      .contents-wrapper
+        padding: var(--padding--contents-wrapper-y) calc(var(--padding--contents-wrapper-x) / 2)
+        margin-top: 3em
