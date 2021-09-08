@@ -21,7 +21,7 @@ thumbnail: '/asset/images/jekyll/custom-layout/thumbnail.png'
     
     theme: project theme # ← remove!
 ```
-<p class="info">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용됨</p>
+<p class="info mt-1">_config.yml을 수정하면 서버를 다시 껏다 켜야 적용됨</p>
 </div>
 </div>
 
@@ -78,7 +78,7 @@ thumbnail: '/asset/images/jekyll/custom-layout/thumbnail.png'
     date:   2021-02-23 18:34:39 +0900
     ---
 ```  
-<p class="info">레이아웃명이 default인 경우에는 따로 지정하지 않아도 바로 전체에 적용됨</p>
+<p class="info mt-1">레이아웃명이 default인 경우에는 따로 지정하지 않아도 바로 전체에 적용됨</p>
 </div>
 </div>
 

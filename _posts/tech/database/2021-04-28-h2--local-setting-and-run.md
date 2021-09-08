@@ -22,7 +22,7 @@ thumbnail: '/asset/images/database/h2-local-setting/thumbnail.png'
 ```text
     $ chmod 755 h2.sh
 ```
-<p class="info">755권한: 소유자만 모든 것(쓰기, 읽기, 실행)이 가능 & 그 외 사용자의 경우는 읽기, 실행은 가능하나 쓰기는 불가능</p>
+<p class="info mt-1">755권한: 소유자만 모든 것(쓰기, 읽기, 실행)이 가능 & 그 외 사용자의 경우는 읽기, 실행은 가능하나 쓰기는 불가능</p>
 </div>
 
 

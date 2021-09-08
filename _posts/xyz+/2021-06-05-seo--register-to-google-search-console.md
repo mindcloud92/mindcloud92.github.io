@@ -24,7 +24,7 @@ thumbnail: '/asset/images/seo/register-google/thumbnail.png'
     <br/>
     
     ![step1-2]({{ "/asset/images/seo/register-google/step1-2.png"| relative_url }}){:class="thumbnail"}
-    <p class="info ml-3">배포가 다 된 다음에 확인을 요청해야 정상 인증 가능</p>
+    <p class="info mt-1">배포가 다 된 다음에 확인을 요청해야 정상 인증 가능</p>
 
 </div>
 

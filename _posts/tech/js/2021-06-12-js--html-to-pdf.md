@@ -7,7 +7,6 @@ tags: javascript html2canvas jspdf pdf download
 thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
 ---
 <h3 markdown="1">
-    <i class="fas fa-play-circle"></i>
     [실행 해보고 싶다면 클릭](https://jsfiddle.net/developer92/rqyjbf8a/){:target="_blank" class="btn-debugger"}
 </h3>
 
@@ -22,9 +21,9 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
     ```html
       <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     ```
-  <p class="info">
+  <p class="info mt-1">
     공식 홈페이지
-    <a href="https://html2canvas.hertzen.com/" target="_blank">   
+    <a href="https://html2canvas.hertzen.com/" target="_blank" class="ml-half">   
         <i class="fas fa-external-link-alt"></i>
     </a>
   </p>
@@ -33,9 +32,9 @@ thumbnail: '/asset/images/js/html-to-pdf/thumbnail.png'
     ```html
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     ```
-    <p class="info">
+    <p class="info mt-1">
       공식 홈페이지
-      <a href="https://parall.ax/products/jspdf" target="_blank">   
+      <a href="https://parall.ax/products/jspdf" target="_blank" class="ml-half">   
           <i class="fas fa-external-link-alt"></i>
       </a>
     </p>

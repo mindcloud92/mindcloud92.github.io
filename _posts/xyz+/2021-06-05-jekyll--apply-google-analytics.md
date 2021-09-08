@@ -37,7 +37,7 @@ thumbnail: '/asset/images/jekyll/analytics/thumbnail.png'
 ![step2-1]({{ "/asset/images/jekyll/analytics/step2-1.png"| relative_url }}){:class="thumbnail"}
 ![step2-2]({{ "/asset/images/jekyll/analytics/step2-2.png"| relative_url }}){:class="thumbnail mt-1"}
 
-<p class="info">데이터 스트림 선택 전에 원하는 계정으로 변경 가능</p>
+<p class="info mt-1">데이터 스트림 선택 전에 원하는 계정으로 변경 가능</p>
 
 </div>
 
