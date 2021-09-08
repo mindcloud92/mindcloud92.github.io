@@ -10,7 +10,7 @@
                 {% assign categorizedPosts = site.posts | where_exp: 'post', 'post.categories contains currentCategory' %}
                 <h2 class="section-title">
                     {{ currentCategory | upcase }}
-                    <span class="count">{{ categorizedPosts.size }}</span>
+                    <span class="post-count">{{ categorizedPosts.size }}</span>
                 </h2>
 
                 <ul class="post-container text">
