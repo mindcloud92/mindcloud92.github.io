@@ -2,11 +2,11 @@ title: DdDd
 
 url: 'https://super-dev.xyz'
 
-social_profile:
+account:
   github: 'https://github.com/mindcloud92'
   email: 'mailto:mira@coyobi.com'
 
-custom-theme: pink-theme
+theme_color: pink
 
 ga_stream_id: G-JQ9TZ4W7KK
 

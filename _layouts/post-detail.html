@@ -2,7 +2,7 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="{{ page.layout }} {{ site.custom-theme }} {{ page.contentsType | default: 'text' }} container">
+    <body class="{{ page.layout }} {{ site.theme_color }} theme {{ page.contentsType | default: 'text' }} container">
         {% include navigation-bar.html %}
 
         <div class="contents-wrapper">
