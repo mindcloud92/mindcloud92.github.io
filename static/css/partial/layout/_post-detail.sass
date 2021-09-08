@@ -12,24 +12,25 @@
   .contents-wrapper
     padding-left: 18%
     padding-right: 18%
+    font-size: .95em
 
     h1, h2, h3, h4, h5
       margin-block-start: 2em
 
     h1
-      font-size: 1.5em
+      font-size: 1.6em
 
     h2
-      font-size: 1.3em
+      font-size: 1.4em
 
     h3
-      font-size: 1.1em
+      font-size: 1.2em
 
     h4
       font-size: 1em
 
     h5
-      font-size: 0.85em
+      font-size: .9em
 
     a
       color: #2196f3
@@ -131,7 +132,7 @@
     margin: 0
     background: var(--background-color--blockquote)
     border: 1px solid #fefefe
-    padding: .5em 1.5em
+    padding: 2em 1.5em
     font-size: .9em
     border-left: 4px solid var(--key-color--default)
     overflow: auto
@@ -220,124 +221,124 @@
         padding: 0 1em
         font-size: .68em
 
-    .language-groovy
-      &:before
-        content: 'GROOVY'
-        background: #5f97b6
+  .language-groovy
+    &:before
+      content: 'GROOVY'
+      background: #5f97b6
 
-      .s2
-        color: #709a59
+    .s2
+      color: #709a59
 
-      .nl
-        color: #9b80ce
+    .nl
+      color: #9b80ce
 
-    .language-plaintext
-      font-weight: bold
-      margin: 0 .2em
-      color: #5d696d
-      font-size: .9em
-      font-family: var(--font-family--default)
-      background: #efefef
-      padding: .2em .5em
-      border-radius: 5px
+  .language-plaintext
+    font-weight: bold
+    margin: 0 .2em
+    color: #5d696d
+    font-size: .9em
+    font-family: var(--font-family--default)
+    background: #efefef
+    padding: .2em .5em
+    border-radius: 5px
 
-    .language-xml
-      .cp, .nt
-        color: #ffbf00
+  .language-xml
+    .cp, .nt
+      color: #ffbf00
 
-      .c
-        color: #8e8e8e
+    .c
+      color: #8e8e8e
 
-      .s
-        color: #709a59
+    .s
+      color: #709a59
 
-      &:before
-        content: 'XML'
-        background: #6d6d6d
+    &:before
+      content: 'XML'
+      background: #6d6d6d
 
-    .language-yaml
-      .na, .pi
-        color: #ff5722
-      .c1
-        color: #4caf50
+  .language-yaml
+    .na, .pi
+      color: #ff5722
+    .c1
+      color: #4caf50
 
-    .language-html
-      &:before
-        content: 'HTML'
-        background: #dd4b24
+  .language-html
+    &:before
+      content: 'HTML'
+      background: #dd4b24
 
-      code
-        line-height: 1em
+    code
+      line-height: 1em
 
-      .cp, .nt
-        color: #ffbf00
+    .cp, .nt
+      color: #ffbf00
 
-      .s
-        color: #cddc39
+    .s
+      color: #cddc39
 
-    .language-kotlin
-      &:before
-        content: 'KOTLIN'
-        background: #7854b9
+  .language-kotlin
+    &:before
+      content: 'KOTLIN'
+      background: #7854b9
 
-    .language-java
-      &:before
-        content: 'JAVA'
-        background: #3b7bbe
+  .language-java
+    &:before
+      content: 'JAVA'
+      background: #3b7bbe
 
-    .language-java, .language-kotlin
-      .no
-        color: #9b80ce
-        font-style: italic
+  .language-java, .language-kotlin
+    .no
+      color: #9b80ce
+      font-style: italic
 
-      .c1, .cm
-        color: #8fbf74
+    .c1, .cm
+      color: #8fbf74
 
-      .kd, .k, .kt, .kn
-        color: #ff8d38
+    .kd, .k, .kt, .kn
+      color: #ff8d38
 
-      .nf
-        color: #ffc107
+    .nf
+      color: #ffc107
 
-      .mi, .mf, .mi
-        color: #42c4ff
+    .mi, .mf, .mi
+      color: #42c4ff
 
-      .s, .sc
-        color: #709a59
+    .s, .sc
+      color: #709a59
 
-    .language-javascript
-      &:before
-        content: 'JAVASCRIPT'
-        background: #f7df1e
-        color: #423600
+  .language-javascript
+    &:before
+      content: 'JAVASCRIPT'
+      background: #f7df1e
+      color: #423600
 
-      .mi, .mf, .mi
-        color: #42c4ff
+    .mi, .mf, .mi
+      color: #42c4ff
 
-      .kd, .k
-        color: #ff8d38
+    .kd, .k
+      color: #ff8d38
 
-      .kd + .nx
-        color: #ffc107
+    .kd + .nx
+      color: #ffc107
 
-      .p + .kd + .nx
-        color: #dadcf3
+    .p + .kd + .nx
+      color: #dadcf3
 
-      .cm, .c1
-        color: #8fbf74
+    .cm, .c1
+      color: #8fbf74
 
-      .dl, .dl + .s1, .dl + .s2
-        color: #709a59
+    .dl, .dl + .s1, .dl + .s2
+      color: #709a59
 
-      .nb + .p + .nx, .dl + .p + .nx
-        color: #ffc107
+    .nb + .p + .nx, .dl + .p + .nx
+      color: #ffc107
 
-      .p + .na
-        color: #9d78e0
+    .p + .na
+      color: #9d78e0
 
-    .filename-badge + [class^=language]
-      &:before
-        content: ''
+  .filename-badge + [class^=language]
+    &:before
+      content: ''
 //
 //    .btn-debugger
 //      color: var(--font-color--default)
