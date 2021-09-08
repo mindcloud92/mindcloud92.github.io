@@ -58,6 +58,7 @@
     text-align: left
     color: var(--font-color--post-content)
 
+
   .footnote
     font-size: .8em
     font-weight: bold
@@ -72,6 +73,7 @@
 
     .number
       margin-right: .3em
+
 
   .rating-container
     display: flex
@@ -90,220 +92,259 @@
       &:before
         content: '\f005'
 
-//.container
-//  &.post-detail
 
-//    code
-//      line-height: 2em
-//
-//    div
-//      &[class^=language]
-//        background: var(--background-color--file)
-//        border: 1px solid #eee
-//        padding: .8em 0
-//        color: #dadcf3
-//        border-top: 0
-//        position: relative
-//
-//        .highlight
-//          overflow: auto
-//
-//        &:before
-//          line-height: 2em
-//          position: absolute
-//          top: 0
-//          right: 0
-//          font-weight: bold
-//          padding: 0 1em
-//          font-size: .68em
-//
-//      .language-groovy
-//        &:before
-//          content: 'GROOVY'
-//          background: #5f97b6
-//
-//        .s2
-//          color: #709a59
-//
-//        .nl
-//          color: #9b80ce
-//
-//      .language-plaintext
-//        font-weight: bold
-//        margin: 0 .2em
-//        color: #5d696d
-//        font-size: .9em
-//        font-family: var(--font-family--default)
-//        background: #efefef
-//        padding: .2em .5em
-//        border-radius: 5px
-//
-//      .language-xml
-//        .cp, .nt
-//          color: #ffbf00
-//
-//        .c
-//          color: #8e8e8e
-//
-//        .s
-//          color: #709a59
-//
-//        &:before
-//          content: 'XML'
-//          background: #6d6d6d
-//
-//      .language-yaml
-//        .na, .pi
-//          color: #ff5722
-//        .c1
-//          color: #4caf50
-//
-//      .language-html
-//        &:before
-//          content: 'HTML'
-//          background: #dd4b24
-//
-//        code
-//          line-height: 1em
-//
-//        .cp, .nt
-//          color: #ffbf00
-//
-//        .s
-//          color: #cddc39
-//
-//      .language-kotlin
-//        &:before
-//          content: 'KOTLIN'
-//          background: #7854b9
-//
-//      .language-java
-//        &:before
-//          content: 'JAVA'
-//          background: #3b7bbe
-//
-//      .language-java, .language-kotlin
-//        .no
-//          color: #9b80ce
-//          font-style: italic
-//
-//        .c1, .cm
-//          color: #8fbf74
-//
-//        .kd, .k, .kt, .kn
-//          color: #ff8d38
-//
-//        .nf
-//          color: #ffc107
-//
-//        .mi, .mf, .mi
-//          color: #42c4ff
-//
-//        .s, .sc
-//          color: #709a59
-//
-//      .language-javascript
-//        &:before
-//          content: 'JAVASCRIPT'
-//          background: #f7df1e
-//          color: #423600
-//
-//        .mi, .mf, .mi
-//          color: #42c4ff
-//
-//        .kd, .k
-//          color: #ff8d38
-//
-//        .kd + .nx
-//          color: #ffc107
-//
-//        .p + .kd + .nx
-//          color: #dadcf3
-//
-//        .cm, .c1
-//          color: #8fbf74
-//
-//        .dl, .dl + .s1, .dl + .s2
-//          color: #709a59
-//
-//        .nb + .p + .nx, .dl + .p + .nx
-//          color: #ffc107
-//
-//        .p + .na
-//          color: #9d78e0
-//
-//      .filename-badge + [class^=language]
-//        &:before
-//          content: ''
+  .stepper
+    .title
+      &:before
+        content: attr(data-step)
+        border-radius: 5px
+        background: var(--background-color--stepper-title)
+        padding: .15em .55em
+        font-size: .8em
+        margin-right: .5em
+        color: var(--font-color--post-step-title)
+
+
+  .file-wrapper
+    .filename-badge
+      font-size: .8em
+      color: #fff
+      background: var(--background-color--file)
+      margin: 0
+      display: inline-block
+      padding: .5em 1em
+      border: 1px solid #eee
+      border-bottom: none
+      margin-bottom: -1px
+
+      &:before
+        font-family: var(--font-family--icon)
+        content: '\f15b'
+        margin-right: .5em
+
+
+  code
+    line-height: 2em
+
+
+  blockquote
+    margin: 0
+    background: var(--background-color--blockquote)
+    border: 1px solid #fefefe
+    padding: .5em 1.5em
+    font-size: .9em
+    border-left: 4px solid var(--key-color--default)
+    overflow: auto
+
+    a
+      font-size: .9em
+
+
+
+  .accordion-wrapper
+    .contents
+      display: none
+      margin-top: 4em
+
+    .handler.active + .contents
+      display: block
+
+    .inner-contents
+      border-top: 1px dashed #e8e8e8
+      margin-top: 3em
+      padding-top: 1em
+
+    .handler
+      position: relative
+      padding-left: 2em
+      cursor: pointer
+
+      &:hover
+        opacity: .8
+
+      &:before
+        content: '\f078'
+        font-family: var(--font-family--icon)
+        font-weight: 900
+        position: absolute
+        left: 0
+
+      &.active
+        &:before
+          content: '\f077'
+
+
+  .warning
+    font-size: .8em
+    color: var(--font-color--post-warning)
+
+    &:before
+      font-size: 1.3em
+      font-family: var(--font-family--icon)
+      content: '\f071'
+      margin-right: .5em
+      font-weight: 900
+      color: #f7c93f
+
+  .info
+    display: flex
+    align-items: center
+    font-size: .8em
+    color: var(--font-color--post-info)
+
+    &:before
+      font-size: 1.3em
+      font-family: var(--font-family--icon)
+      content: '\f05a'
+      margin-right: .5em
+      font-weight: 900
+
+
+  [class^=language]
+      background: var(--background-color--file)
+      border: 1px solid #eee
+      padding: .8em 0
+      color: #dadcf3
+      border-top: 0
+      position: relative
+
+      .highlight
+        overflow: auto
+
+      &:before
+        line-height: 2em
+        position: absolute
+        top: 0
+        right: 0
+        font-weight: bold
+        padding: 0 1em
+        font-size: .68em
+
+    .language-groovy
+      &:before
+        content: 'GROOVY'
+        background: #5f97b6
+
+      .s2
+        color: #709a59
+
+      .nl
+        color: #9b80ce
+
+    .language-plaintext
+      font-weight: bold
+      margin: 0 .2em
+      color: #5d696d
+      font-size: .9em
+      font-family: var(--font-family--default)
+      background: #efefef
+      padding: .2em .5em
+      border-radius: 5px
+
+    .language-xml
+      .cp, .nt
+        color: #ffbf00
+
+      .c
+        color: #8e8e8e
+
+      .s
+        color: #709a59
+
+      &:before
+        content: 'XML'
+        background: #6d6d6d
+
+    .language-yaml
+      .na, .pi
+        color: #ff5722
+      .c1
+        color: #4caf50
+
+    .language-html
+      &:before
+        content: 'HTML'
+        background: #dd4b24
+
+      code
+        line-height: 1em
+
+      .cp, .nt
+        color: #ffbf00
+
+      .s
+        color: #cddc39
+
+    .language-kotlin
+      &:before
+        content: 'KOTLIN'
+        background: #7854b9
+
+    .language-java
+      &:before
+        content: 'JAVA'
+        background: #3b7bbe
+
+    .language-java, .language-kotlin
+      .no
+        color: #9b80ce
+        font-style: italic
+
+      .c1, .cm
+        color: #8fbf74
+
+      .kd, .k, .kt, .kn
+        color: #ff8d38
+
+      .nf
+        color: #ffc107
+
+      .mi, .mf, .mi
+        color: #42c4ff
+
+      .s, .sc
+        color: #709a59
+
+    .language-javascript
+      &:before
+        content: 'JAVASCRIPT'
+        background: #f7df1e
+        color: #423600
+
+      .mi, .mf, .mi
+        color: #42c4ff
+
+      .kd, .k
+        color: #ff8d38
+
+      .kd + .nx
+        color: #ffc107
+
+      .p + .kd + .nx
+        color: #dadcf3
+
+      .cm, .c1
+        color: #8fbf74
+
+      .dl, .dl + .s1, .dl + .s2
+        color: #709a59
+
+      .nb + .p + .nx, .dl + .p + .nx
+        color: #ffc107
+
+      .p + .na
+        color: #9d78e0
+
+    .filename-badge + [class^=language]
+      &:before
+        content: ''
 //
 //    .btn-debugger
 //      color: var(--font-color--default)
 //
-//    .stepper
-//      .title
-//        &:before
-//          content: attr(data-step)
-//          border-radius: 5px
-//          background: var(--background-color--stepper-title)
-//          padding: .15em .55em
-//          font-size: .8em
-//          margin-right: .5em
-//          color: var(--font-color--post-step-title)
-//
-//    .file-wrapper
-//      .filename-badge
-//        font-size: .8em
-//        color: #fff
-//        background: var(--background-color--file)
-//        margin: 0
-//        display: inline-block
-//        padding: .5em 1em
-//        border: 1px solid #eee
-//        border-bottom: none
-//        margin-bottom: -1px
-//
-//        &:before
-//          font-family: var(--font-family--icon)
-//          content: '\f15b'
-//          margin-right: .5em
-//
-//    .warning
-//      font-size: .78em
-//      color: var(--font-color--post-warning)
-//
-//      &:before
-//        font-size: 1.3em
-//        font-family: var(--font-family--icon)
-//        content: '\f071'
-//        margin-right: .5em
-//        font-weight: 900
-//        color: #f7c93f
-//
-//    .info
-//      display: flex
-//      align-items: center
-//      font-size: .78em
-//      color: var(--font-color--post-info)
-//
-//      &:before
-//        font-size: 1.3em
-//        font-family: var(--font-family--icon)
-//        content: '\f05a'
-//        margin-right: .5em
-//        font-weight: 900
-//
-//    blockquote
-//      margin: 0
-//      background: var(--background-color--blockquote)
-//      border: 1px solid #fefefe
-//      padding: .5em 1.5em
-//      font-size: .9em
-//      border-left: 4px solid var(--key-color--default)
-//      overflow: auto
-//
-//      a
-//        font-size: .9em
-//
+
+
+
 
 
 
@@ -361,40 +402,6 @@
 
 
 
-//    .accordion-wrapper
-//      .contents
-//        display: none
-//        margin-top: 4em
-//
-//      .handler.active + .contents
-//        display: block
-//
-//      .inner-contents
-//        border-top: 1px dashed #e8e8e8
-//        margin-top: 3em
-//        padding-top: 1em
-//
-//      .handler
-//        position: relative
-//        padding-left: 2em
-//        cursor: pointer
-//
-//        &:hover
-//          opacity: .8
-//
-//        &:before
-//          content: '\f078'
-//          font-family: var(--font-family--icon)
-//          font-weight: 900
-//          position: absolute
-//          left: 0
-//
-//        &.active
-//          &:before
-//            content: '\f077'
-//
-//
-//
 
 @media screen and (max-width: 768px)
   .post-detail.container
