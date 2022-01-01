@@ -1,13 +1,6 @@
-title: DdDd
+title: Dd:Dd
 
 url: 'https://super-dev.xyz'
-
-account:
-  github: 'https://github.com/mindcloud92'
-  email: 'mailto:mira@coyobi.com'
-
-theme_color: pink
-
 ga_stream_id: G-JQ9TZ4W7KK
 
 plugins:
@@ -21,12 +14,6 @@ sass:
   sass_dir: static/css/partial
   style: compressed
 
-category:
-  tech:
-    priority: 0
-    color_class: black
-  book:
-    priority: 1
-    color_class: green
-  xyz+:
-    priority: 2
+
+theme:
+  color: black
