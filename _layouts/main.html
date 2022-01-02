@@ -2,27 +2,25 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="layout:main" style="background: #ebf0f3">
-        <main style="height: 100vh">
-            <section id="section_bi" class="main-section:bi">
-                <div>
-                    <h1 class="title">
-                        {{ site.title }}
-                        {% include logo.html %}
-                    </h1>
-                    <p class="description">{{ site.description }}</p>
-                </div>
+    <body>
+        <main class="layout:main">
+            <section class="section:bi">
+                <h1 class="title">
+                    {{ site.title }}
+                    {% include logo.html %}
+                </h1>
+                <p class="description">{{ site.description }}</p>
             </section>
 
-            <section id="section_category" class="main-section:post-overview" style="position: absolute;margin-top:0;bottom:10%;padding:0 24%">
+            <section class="section mt-5">
                 <div class="card-list">
                     {% for category in site.categories reversed %}
-                        <div class="card-item:category" style="padding: 0;border-radius: 0;">
-                            <img src="{{ '/asset/images' | relative_url }}/{{category.first}}.png" style="height: 172px"/>
+                        <div class="card-item:overview">
+                            <img src="{{ '/asset/images' | relative_url }}/category/{{category.first}}.png" class="thumbnail"/>
                             <h3>{{ category.first | upcase }}</h3>
 
-                            <a href="/" class="btn-outline" style="display: inline-block;margin-top:2em;margin-bottom: 2em;border-color: #DCA11D; color: #DCA11D">
-                                View More
+                            <a href="/" class="btn-outline:yellow mb-2">
+                                View ALL
                             </a>
                         </div>
                     {% endfor %}

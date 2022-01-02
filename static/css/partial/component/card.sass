@@ -1,22 +1,12 @@
+@mixin card-item()
+  .thumbnail
+    height: 10em
+    object-fit: cover
+
 @mixin card-list()
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  grid-gap: 1.5em!important
-  width: 100%
-
-@mixin card-item()
-  padding: 1em
-
-  .thumbnail
-    background-repeat: no-repeat
-    background-color: white
-    background-size: contain
-    display: block
-    color: transparent
-    background-position: 50% 50%
-    background-origin: border-box
-    height: 172px
-
+  grid-gap: 2em
 
 .card
   &-list
@@ -25,7 +15,7 @@
   &-item
     @include card-item()
 
-    &\:category
+    &\:overview
       @include card-item()
-      background-color: #ffffff
-      border-radius: 15px
+      background-color: #fff
+      text-align: center

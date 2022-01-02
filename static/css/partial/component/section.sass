@@ -1,33 +1,6 @@
-@mixin section--main()
+@mixin section()
   padding: 3em 20%
-  text-align: center
 
-  .title
-    margin-block: 0
 
-.main-section
-  &\:bi
-    @include section--main
-    padding: 0 20%
-    height: 70vh
-    background: #01213c
-    color: white
-    display: flex
-    align-items: center
-    justify-content: center
-
-    .title
-      font-size: 4.125rem
-      font-family: $font-family--site-title
-
-    .description
-      opacity: .85
-      font-family: $font-family--site-description
-
-    .logo
-      fill: white
-      width: 1.25em
-      margin-bottom: -.2em
-
-  &\:post-overview
-    @include section--main
+.section
+  @include section()

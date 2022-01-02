@@ -1,23 +1,28 @@
 @mixin button()
+  display: inline-block
   text-decoration: none
-  padding: .6em 1em
-  font-size: 0.9rem
-  text-align: left
+  font-size: .8rem
+  padding: .4em 1em
+  position: relative
 
   &:hover
-    opacity: .9
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background-color: rgba(0, 0, 0, .02)
 
 @mixin button--outline($color)
   @include button()
   border: 1px solid $color
   color: $color
-  background: rgba(255, 255, 255, .25)
 
 .btn
   &-outline
     @include button--outline(black)
 
-    &\:white
-      @include button--outline(white)
-
-
+    &\:yellow
+      @include button--outline(#DCA11D)
