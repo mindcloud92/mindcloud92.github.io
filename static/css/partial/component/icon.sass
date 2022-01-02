@@ -1,0 +1,28 @@
+@mixin icon($content)
+  &:before
+    content: $content
+    font-family: $font-family--fa-fa-free
+    font-style: normal
+
+@mixin icon--light($content)
+  @include icon($content)
+  &:before
+    font-weight: normal
+
+@mixin icon--bold($content)
+  @include icon($content)
+  &:before
+    font-weight: bold
+
+.icon
+  &\:book
+    @include icon--bold('\f5da')
+
+  &\:tech
+    @include icon--bold('\f5fc')
+
+  &\:tag
+    @include icon--bold('\f292')
+
+  &\:xyz\+
+    @include icon--light('\f328')

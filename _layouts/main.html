@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body class="theme:{{ site.theme.color }}">
-        {% include header.html %}
+    {% include head.html %}
 
-        <main>
-            {{ page.content }}
+    <body class="layout:main" style="background: #ebf0f3">
+        <main style="height: 100vh">
+            <section id="section_bi" class="main-section:bi">
+                <div>
+                    <h1 class="title">
+                        {{ site.title }}
+                        {% include logo.html %}
+                    </h1>
+                    <p class="description">{{ site.description }}</p>
+                </div>
+            </section>
+
+            <section id="section_category" class="main-section:post-overview" style="position: absolute;margin-top:0;bottom:10%;padding:0 24%">
+                <div class="card-list">
+                    {% for category in site.categories reversed %}
+                        <div class="card-item:category" style="padding: 0;border-radius: 0;">
+                            <img src="{{ '/asset/images' | relative_url }}/{{category.first}}.png" style="height: 172px"/>
+                            <h3>{{ category.first | upcase }}</h3>
+
+                            <a href="/" class="btn-outline" style="display: inline-block;margin-top:2em;margin-bottom: 2em;border-color: #DCA11D; color: #DCA11D">
+                                View More
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </main>
-
-        {% include footer.html %}
     </body>
 </html>
