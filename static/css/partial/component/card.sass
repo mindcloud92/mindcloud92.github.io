@@ -3,10 +3,19 @@
     height: 10em
     object-fit: cover
 
+  @media screen and (max-width: 768px)
+    &:not(:last-child)
+      margin-bottom: 2em
+
 @mixin card-list()
   display: grid
   grid-template-columns: repeat(3, 1fr)
   grid-gap: 2em
+  margin: 3em 20%
+
+  @media screen and (max-width: 768px)
+    display: block
+    margin: 3em 10%
 
 .card
   &-list

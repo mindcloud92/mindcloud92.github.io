@@ -1,7 +1,8 @@
 .layout
   &\:main
-    min-height: 100vh
-    background: linear-gradient(#01213c 70vh,  #ebf0f3 70vh)
+    .main
+      min-height: 100vh
+      background: linear-gradient(#01213c 69.8vh,  #ebf0f3 69.8vh)
 
     .logo
       fill: white
@@ -24,3 +25,17 @@
           color: white
           font-family: $font-family--site-description
           text-align: center
+
+      &\:overview
+        @include section()
+        position: absolute
+        top: calc(69.8vh - 13em)
+
+
+@media screen and (max-width: 768px)
+  .layout
+    &\:main
+      .section
+        &\:overview
+          top: 52vh
+

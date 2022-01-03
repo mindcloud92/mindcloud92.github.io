@@ -2,8 +2,8 @@
 <html lang="en">
     {% include head.html %}
 
-    <body>
-        <main class="layout:main">
+    <body class="layout:main">
+        <main class="main">
             <section class="section:bi">
                 <h1 class="title">
                     {{ site.title }}
@@ -12,20 +12,18 @@
                 <p class="description">{{ site.description }}</p>
             </section>
 
-            <section class="section mt-5">
+            <div class="section:overview">
                 <div class="card-list">
                     {% for category in site.categories reversed %}
                         <div class="card-item:overview">
-                            <img src="{{ '/asset/images' | relative_url }}/category/{{category.first}}.png" class="thumbnail"/>
+                            <img src="{{ '/static/images' | relative_url }}/category/{{category.first}}.png" class="thumbnail"/>
                             <h3>{{ category.first | upcase }}</h3>
 
-                            <a href="/" class="btn-outline:yellow mb-2">
-                                View ALL
-                            </a>
+                            <a href="/{{ category.first }}" class="btn-outline:yellow mb-3">View ALL</a>
                         </div>
                     {% endfor %}
                 </div>
-            </section>
+            </div>
         </main>
     </body>
 </html>
