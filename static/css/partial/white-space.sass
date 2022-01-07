@@ -1,0 +1,33 @@
+@use "sass:map"
+
+$spaces: ('padding': 'p', 'margin': 'm')
+
+@for $i from 0 through 20
+  $-actual-value: #{$i * .5}
+
+  @each $key, $class-prefix in $spaces
+    .#{$class-prefix}r-#{$i}
+      #{$key}-right: #{$-actual-value}em
+
+    .#{$class-prefix}l-#{$i}
+      #{$key}-left: #{$-actual-value}em
+
+    .#{$class-prefix}t-#{$i}
+      #{$key}-top: #{$-actual-value}em
+
+    .#{$class-prefix}b-#{$i}
+      #{$key}-bottom: #{$-actual-value}em
+
+    .#{$class-prefix}x-#{$i}
+      #{$key}-left: #{$-actual-value}em
+      #{$key}-right: #{$-actual-value}em
+
+    .#{$class-prefix}y-#{$i}
+      #{$key}-top: #{$-actual-value}em
+      #{$key}-bottom: #{$-actual-value}em
+
+    .#{$class-prefix}a-#{$i}
+      #{$key}-top: #{$-actual-value}em
+      #{$key}-bottom: #{$-actual-value}em
+      #{$key}-left: #{$-actual-value}em
+      #{$key}-right: #{$-actual-value}em

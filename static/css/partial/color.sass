@@ -1,0 +1,28 @@
+@use "sass:map"
+
+$color--indigo: #01213c
+$color--white: #fff
+$color--mustard: #DCA11D
+
+$colors: ('indigo': $color--indigo, 'white': $color--white, 'mustard': $color--mustard)
+
+
+@mixin border--color ($color, $width: 1, $style: solid)
+  border: #{$width}px #{$style} #{$color}
+
+@mixin text--color ($color, $opacity: 1)
+  color: rgba($color, $opacity)
+
+@mixin background--color ($color, $opacity: 1)
+  background: rgba($color, $opacity)
+
+
+@each $key, $color in $colors
+  .background-#{$key}
+    @include background--color($color)
+
+  .text-#{$key}
+    @include text--color($color)
+
+  .border-#{$key}
+    @include border--color($color)

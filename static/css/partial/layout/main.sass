@@ -1,41 +1,47 @@
-.layout
-  &\:main
+.layout-main
+  @include layout
+    padding: 0 20%
+    text-align: center
+    position: relative
+    background: url('/static/images/category/xyz+.png') 50% 50%
+    background-size: cover
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba(#000, .45)
+      z-index: -1
+
     .main
-      min-height: 100vh
-      background: linear-gradient(#01213c 69.8vh,  #ebf0f3 69.8vh)
+      height: 100vh
+      display: flex
+      justify-content: center
+      align-items: center
 
-    .logo
-      fill: white
-      width: 1.25em
-      margin-bottom: -.2em
+      .logo
+        fill: white
+        width: 1.25em
+        margin-bottom: -.2em
 
-    .section
-      &\:bi
-        padding-top: 26vh
+      .title
+        margin-block: 0
+        font-size: 4.125rem
+        text-align: center
+        color: $color--white
+        font-family: $font-family--site-title
 
-        .title
-          margin-block: 0
-          font-size: 4.125rem
-          font-family: $font-family--site-title
-          color: white
-          text-align: center
-
-        .description
-          opacity: .85
-          color: white
-          font-family: $font-family--site-description
-          text-align: center
-
-      &\:overview
-        @include section()
-        position: absolute
-        top: calc(69.8vh - 13em)
+      .description
+        opacity: .85
+        text-align: center
+        color: $color--white
+        font-family: $font-family--site-description
 
 
 @media screen and (max-width: 768px)
   .layout
     &\:main
-      .section
-        &\:overview
-          top: 52vh
-
+      padding: 0 8%

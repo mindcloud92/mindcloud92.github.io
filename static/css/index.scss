@@ -1,12 +1,19 @@
 ---
 ---
 
-@import 'variable/font';
+@import 'font';
+@import 'color';
+@import 'white-space';
+@import 'radius';
+@import 'display';
 
-@import 'component/section';
-@import 'component/card';
+@import 'component/input';
 @import 'component/button';
-
-@import 'base';
+@import 'component/layout';
 
 @import 'layout/main';
+
+
+
+
+

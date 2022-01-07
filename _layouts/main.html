@@ -2,25 +2,26 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="layout:main">
+    <body class="layout-main" >
         <main class="main">
-            <section class="section:bi">
+            <div>
                 <h1 class="title">
                     {{ site.title }}
                     {% include logo.html %}
                 </h1>
                 <p class="description">{{ site.description }}</p>
-            </section>
 
-            <div class="section:overview">
-                <div class="card-list">
+                <form action="/search" class="mt-10 input-search-wrapper">
+                    <input type="text" name="keyword" class="input-search" />
+                    <i class="icon fas fa-search"></i>
+                </form>
+
+                <div class="mt-4">
                     {% for category in site.categories reversed %}
-                        <div class="card-item:overview">
-                            <img src="{{ '/static/images' | relative_url }}/category/{{category.first}}.png" class="thumbnail"/>
-                            <h3>{{ category.first | upcase }}</h3>
-
-                            <a href="/{{ category.first }}" class="btn-outline:yellow mb-3">View ALL</a>
-                        </div>
+                        <a href="/{{ category.first }}" class="button-outline border-rounded-4 mx-1 mb-2 d-inline-block">
+                            {{ category.first | upcase }}
+                            <i class="fas fa-long-arrow-alt-right ml-4"></i>
+                        </a>
                     {% endfor %}
                 </div>
             </div>
