@@ -3,7 +3,7 @@
     padding: 0 20%
     text-align: center
     position: relative
-    background: url('/static/images/category/xyz+.png') 50% 50%
+    background: url('/static/images/background-main.png') 50% 50%
     background-size: cover
 
     &:before
@@ -13,8 +13,8 @@
       left: 0
       right: 0
       bottom: 0
-      background: rgba(#000, .45)
       z-index: -1
+      @include background--color($color--black, .45)
 
     .main
       height: 100vh
