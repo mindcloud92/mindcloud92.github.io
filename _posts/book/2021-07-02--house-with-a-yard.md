@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "소설 :: 마당이 있는 집"
 date:   2021-07-05 20:03:00 +0900
-categories: book
+categories: review
 tags: 소설 마당이 있는 집 김진영
 ---
 

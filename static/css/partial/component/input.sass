@@ -1,26 +1,34 @@
-@mixin input()
+@import 'base'
+
+%input
   outline: none
-  border-style: initial
-  padding: .8em 1em
+  border: none
   font-size: 1rem
+  padding: 1em
 
 
 .input
   &-search
-    @include input()
-    padding-right: 2.5em
+    @extend %input
 
-    &-wrapper
-      display: grid
+    @at-root &-wrapper
+      $-color: 'indigo'
+
+      border:
+        width: 2px
+        style: solid
+      @include color-border($-color)
       position: relative
-      @include border--color($color--mustard, 2)
+      display: grid
+      @include color-background('white')
 
       .icon
         position: absolute
         top: 0
-        right: .5em
         bottom: 0
+        right: .5em
+        color:
         display: flex
         align-items: center
-        font-size: 1.3rem
-        @include text--color($color--mustard, .6)
+        font-size: 1.5rem
+        @include color-text($-color, .7)

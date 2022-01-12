@@ -1,0 +1,9 @@
+$_white-spaces: (p: padding, m: margin)
+$_white-space-positions: (l: left, r: right, t: top, b: bottom, y: (top, bottom), x: (left, right), a: (top, bottom, left, right))
+
+@each $white-space-class-name, $white-space-property-name in $_white-spaces
+  @each $position-class-name, $position-property-names in $_white-space-positions
+    @for $i from 0 through 20
+      .#{$white-space-class-name}#{$position-class-name}-#{$i}
+        @each $position-property-name in $position-property-names
+          #{$white-space-property-name}-#{$position-property-name}: #{$i * .5}em

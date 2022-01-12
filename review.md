@@ -1,4 +1,4 @@
 ---
 layout: post-list
-category: book
+category: review
 ---

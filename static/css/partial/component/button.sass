@@ -1,22 +1,24 @@
-@mixin button()
-  padding: .5em 1em
-  font-size: 0.8rem
+@import 'base'
+
+%button
   text-decoration: none
-  opacity: .85
+  padding: .4em 1em
+  display: inline-block
+  font-size: .85rem
+  opacity: .8
 
   &:hover
     opacity: 1
 
-
 .button
   &-outline
-    @include button()
+    @include color-dynamic('border-color', 'color')
+      @extend %button
+      @include color-background(white, .2)
+      border:
+        width: 1px
+        style: solid
 
-    @include border--color($color--white)
-    @include text--color($color--white)
-    @include background--color($color--white, 0.3)
-
-  &-fill
-    @include button()
-
-
+  &-text
+    @include color-dynamic('color')
+      @extend %button

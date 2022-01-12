@@ -2,23 +2,25 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="layout:post-list">
-        {% include header.html %}
+    <body class="page-post-list">
+        {% include layout/header.html %}
 
-        <main>
-            <section>
-                <h3>{{ page.category }}</h3>
+        <main style="">
+            <h3>
+                {{ page.category | upcase }}
 
-                <div class="card-list">
-                    {% for post in site.categories[page.category] %}
+                {{ site.categories[page.category].size }}
+            </h3>
+
+            <div class="card-list">
+                {% for post in site.categories[page.category] %}
                     <div class="card-item">
                         {{ post.title }}
                     </div>
-                    {% endfor %}
-                </div>
-            </section>
+                {% endfor %}
+            </div>
         </main>
 
-        {% include footer.html %}
+        {% include layout/footer.html %}
     </body>
 </html>

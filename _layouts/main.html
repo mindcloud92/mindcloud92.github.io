@@ -2,28 +2,23 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="layout-main" >
-        <main class="main">
-            <div>
-                <h1 class="title">
-                    {{ site.title }}
-                    {% include logo.html %}
-                </h1>
-                <p class="description">{{ site.description }}</p>
+    <body class="page-main" >
+        <main>
+            <h1 class="title">
+                {{ site.title }}
+                {% include component/logo.html %}
+            </h1>
+            <p class="description">{{ site.description }}</p>
 
-                <form action="/search" class="mt-10 input-search-wrapper">
-                    <input type="text" name="keyword" class="input-search" />
-                    <i class="icon fas fa-search"></i>
-                </form>
+            {% include component/search-input.html %}
 
-                <div class="mt-4">
-                    {% for category in site.categories reversed %}
-                        <a href="/{{ category.first }}" class="button-outline border-rounded-4 mx-1 mb-2 d-inline-block">
-                            {{ category.first | upcase }}
-                            <i class="fas fa-angle-right ml-4"></i>
-                        </a>
-                    {% endfor %}
-                </div>
+            <div class="mt-4">
+                {% for category in site.categories reversed %}
+                    <a href="/{{ category.first }}" class="button-outline:white rounded-3 mx-1 mb-2">
+                        {{ category.first | upcase }}
+                        <i class="fas fa-angle-right ml-3"></i>
+                    </a>
+                {% endfor %}
             </div>
         </main>
     </body>

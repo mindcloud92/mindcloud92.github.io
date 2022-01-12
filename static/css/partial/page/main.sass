@@ -1,0 +1,17 @@
+@import 'layout/page'
+
+.page-main
+  @include page-full
+  @extend %page
+  @include color-text(white)
+  text-align: center
+  background: url('/static/images/background/primary-pattern.png')
+
+  .title
+    @include font(site-title)
+    font-size: 4.125rem
+    margin-block: 0
+
+  .description
+    @include font(site-description)
+    opacity: .75

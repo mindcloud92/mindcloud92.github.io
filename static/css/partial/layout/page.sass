@@ -1,0 +1,20 @@
+@import 'base'
+
+
+@mixin page-full($h-align: center, $v-align: center)
+  height: 100vh
+  display: flex
+  justify-content: $h-align
+  align-items: $v-align
+
+
+
+%page
+  @include font('default')
+  margin: 0
+
+  main
+    padding: 0 20%
+
+    @media screen and (max-width: 768px)
+      padding: 0 5%

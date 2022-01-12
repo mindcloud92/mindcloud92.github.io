@@ -1,0 +1,26 @@
+$_colors: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11D, 'indigo': #364D6C)
+
+@function getColor($name, $opacity: 1)
+  $value: map-get($_colors, $name)
+  @if $value == null or $value == ''
+    $value: $name
+
+  @return rgba($value, $opacity)
+
+
+@mixin color-text($color-name, $opacity: 1)
+  color: getColor($color-name, $opacity)
+
+@mixin color-background($color-name, $opacity: 1)
+  background-color: getColor($color-name, $opacity)
+
+@mixin color-border($color-name, $opacity: 1)
+  border-color: getColor($color-name, $opacity)
+
+@mixin color-dynamic($property-names...)
+  @each $key, $value in $_colors
+    &\:#{$key}
+      @content
+      @each $property-name in $property-names
+        #{$property-name}: $value
+

@@ -1,19 +1,12 @@
 ---
 ---
 
-@import 'font';
-@import 'color';
-@import 'white-space';
-@import 'radius';
-@import 'display';
 
-@import 'component/input';
 @import 'component/button';
-@import 'component/layout';
+@import 'component/input';
+@import 'component/logo';
 
-@import 'layout/main';
+@import 'layout/header';
 
-
-
-
-
+@import 'page/main';
+@import 'page/post-list';

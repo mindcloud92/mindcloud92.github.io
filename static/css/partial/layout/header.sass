@@ -1,0 +1,15 @@
+@import 'base'
+
+header
+  @include color-text('white')
+  background: url('/static/images/background/primary-pattern.png')
+  padding: .9em 20%
+  display: flex
+  justify-content: space-between
+
+  .link-title
+    @include font(site-title)
+    color: inherit
+    margin-block: 0
+    font-size: 1.5rem
+    text-decoration: none

@@ -2,7 +2,7 @@
 layout: post-detail
 title:  "에세이 :: 어린이라는 세계"
 date:   2021-07-01 21:45:00 +0900
-categories: book
+categories: review
 tags: 에세이 어린이라는 세계 김소영
 ---
 
