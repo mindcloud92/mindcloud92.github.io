@@ -1,20 +1,52 @@
-<header>
-    <a href="/" class="button-text title">
-        {{ site.title }}
-        {% include component/logo.html %}
-    </a>
+<header class="header">
+    <div class="content">
+        <span class="mobile">
+            <button id="btnToggleMenu" type="button" class="button-text:white mr-4 icon">
+                <i class="fas fa-bars"></i>
+            </button>
+        </span>
 
-    <div>
-        {% assign categories = site.data.categories | split: ',' %}
-        {% for category in categories %}
-            <a href="/{{ category }}" class="button-text:white ml-3 {% if page.category == category %} active{% endif %}">
-                {{ category | upcase }}
+        <a href="/" class="button-text title">
+            {{ site.title }}
+            {% include component/logo.html %}
+        </a>
+
+        <div>
+            <span class="menu-container">
+                {% assign categories = site.data.categories | split: ',' %}
+                {% for category in categories %}
+                    <a href="/{{ category }}" class="button-text:white ml-3 {% if page.category == category %} active{% endif %}">
+                        {{ category | upcase }}
+                    </a>
+                {% endfor %}
+            </span>
+
+            <a href="/search" class="button-text:white ml-4 {% if page.layout == search %}active{% endif %} icon">
+                <i class="fas fa-search icon"></i>
             </a>
-        {% endfor %}
+        </div>
+    </div>
 
-        <!-- ToDO: search layout & header ui -->
-<!--        <a href="/search" class="button-text:white ml-4 {% if page.layout == search %}active{% endif %}">-->
-<!--            <i class="fas fa-search icon"></i>-->
-<!--        </a>-->
+    <div id="mobileMenuContainer" class="menu-container mobile">
+        {% assign categories = site.data.categories | split: ',' %}
+            {% for category in categories %}
+                <a href="/{{ category }}" class="button-text:primary {% if page.category == category %} active{% endif %} menu">
+                    • &nbsp; {{ category | upcase }}
+                </a>
+        {% endfor %}
     </div>
 </header>
+
+
+<script src="//code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    (function($) {
+        bindEvent()
+
+        function bindEvent() {
+            $('#btnToggleMenu').on('click', function() {
+                $('#mobileMenuContainer').slideToggle()
+            })
+        }
+    })(jQuery)
+</script>

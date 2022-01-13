@@ -1,22 +1,51 @@
 @import 'base'
 
-header
-  @include color-text('white')
-  background: url('/static/images/background/primary-pattern.png')
-  padding: .9em 20%
-  position: sticky
-  top: 0
-  display: flex
-  justify-content: space-between
-  align-items: center
-  z-index: 1
+.header
+  .content
+    @include color-text('white')
+    background: url('/static/images/background/primary-pattern.png')
+    padding: .9em 20%
+    position: sticky
+    top: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 1
 
-  @media screen and (max-width: 768px)
-    padding: .9em 8%
+    .title
+      @include font(site-title)
+      color: inherit
+      margin-block: 0
+      font-size: 1.5rem
+      opacity: 1
 
-  .title
-    @include font(site-title)
-    color: inherit
-    margin-block: 0
-    font-size: 1.5rem
-    opacity: 1
+  .mobile
+    display: none
+
+
+
+@media screen and (max-width: 768px)
+  .header
+    .content
+      padding: .9em 8%
+
+    .mobile
+      display: block
+
+    .menu-container
+      display: none
+      z-index: 1
+      position: absolute
+      left: 0
+      right: 0
+      @include color-background('white')
+      @include color-border('grey')
+      border-width: 0 0 1px
+
+      .menu
+        display: block
+        padding: 1em 2em
+
+    .icon
+      font-size: 1.35rem
+
