@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Jekyll :: Custom Layout 적용하기"
+title: "Custom Layout 적용하기"
+test: Jekyll
 date: 2021-02-23 18:34:39 +0900
 categories: tech
 tags: jekyll custom layout

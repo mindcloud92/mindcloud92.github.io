@@ -1,10 +1,10 @@
 ---
 layout: post-detail
-title: "Jekyll :: 검색 페이지 만들기"
+title: "검색 페이지 만들기"
 date: 2021-06-09 15:21:00 +0900
 categories: tech
+test: Jekyll
 tags: jekyll static search dddd javascript underscore template
-thumbnail: '/asset/images/jekyll/search/thumbnail.png'
 ---
 
 <p class="warning">페이지 템플릿, css는 구현 필요</p>
