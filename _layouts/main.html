@@ -13,9 +13,10 @@
             {% include component/search-input.html %}
 
             <div class="mt-4">
-                {% for category in site.categories reversed %}
-                    <a href="/{{ category.first }}" class="button-outline:white rounded-3 mx-1 mb-2">
-                        {{ category.first | upcase }}
+                {% assign categories = site.data.categories | split: ',' %}
+                {% for category in categories %}
+                    <a href="/{{ category }}" class="button-outline:white rounded-3 mx-1 mb-2">
+                        {{ category | upcase }}
                         <i class="fas fa-angle-right ml-3"></i>
                     </a>
                 {% endfor %}

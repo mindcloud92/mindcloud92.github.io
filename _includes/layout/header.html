@@ -5,9 +5,10 @@
     </a>
 
     <div>
-        {% for category in site.categories reversed %}
-            <a href="/{{ category.first }}" class="button-text:white ml-3">
-                {{ category.first | upcase }}
+        {% assign categories = site.data.categories | split: ',' %}
+        {% for category in categories %}
+            <a href="/{{ category }}" class="button-text:white ml-3">
+                {{ category | upcase }}
             </a>
         {% endfor %}
     </div>

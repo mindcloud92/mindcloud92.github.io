@@ -7,14 +7,17 @@
 
         <main class="main">
             <section class="content-wrapper">
+                {% assign posts =  site.categories[page.category] %}
+
                 <h2 class="category-wrapper">
                     {{ page.category | upcase }}
-                    <sup class="post-count" style="font-weight: normal;">{{ site.categories[page.category].size }}</sup>
+                    <sup class="post-count" style="font-weight: normal;">{{ posts.size }}</sup>
                 </h2>
 
+
                 <div class="card-list mt-5">
-                    {% for post in site.categories[page.category] %}
-                        <a  href="{{ post.url }}" class="card-item button-text:black">
+                    {% for post in posts %}
+                        <a  href="{{ post.url | relative_url }}" class="card-item button-text:black">
                             <div class="thumbnail-wrapper mb-3">
                                 {% if post.thumbnail %}
                                     <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" />
