@@ -23,8 +23,9 @@
                                 {% endif %}
                             </div>
 
-                            <div style="color: #5A4317;font-size: .85rem;">
-                                {{ post.test }} · <span style="font-size: .8rem;color: #B6A999">{{ post.date | date: '%Y' }}</span>
+                            <div>
+                                <span class="additional-info:primary">{{ post.test }} ·</span>
+                                <span class="additional-info:secondary">{{ post.date | date: '%Y' }}</span>
                             </div>
                             <p class="title">{{ post.title }}</p>
                         </a>
