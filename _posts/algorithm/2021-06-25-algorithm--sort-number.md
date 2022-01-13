@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 숫자 정렬하기 [선택 정렬]"
+test: Algorithm
+title: "숫자 정렬하기 [선택 정렬]"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
 tags: 알고리즘 선택 정렬 selection sort java

@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 경우의 수 구하기 [조합]"
+test: Algorithm
+title: "경우의 수 구하기 [조합]"
 date: "2021-07-05 10:26:00 +0900"
 categories: tech
 tags: 알고리즘 경우의 수 조합 java

@@ -5,20 +5,36 @@
     <body class="page-post-list">
         {% include layout/header.html %}
 
-        <main style="">
-            <h3>
-                {{ page.category | upcase }}
+        <main class="main">
+            <section class="content-wrapper">
+                <h2 class="category-wrapper">
+                    {{ page.category | upcase }}
+                    <sup class="post-count" style="font-weight: normal;">{{ site.categories[page.category].size }}</sup>
+                </h2>
 
-                {{ site.categories[page.category].size }}
-            </h3>
+                <div class="card-list mt-4">
+                    {% for post in site.categories[page.category] %}
+                        <div class="card-item">
+                            <a href="/" class="thumbnail-wrapper mb-3" style="overflow: hidden;display: flex;justify-content: center;align-items: center;border: 1px solid #eee;background: #fefefe">
+                                {% if post.thumbnail %}
+                                    <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" style="width: 100%" />
+                                {% endif %}
+                            </a>
+                            <div style="color: #5A4317;font-size: .85rem;" class="my-1">
+                                {{ post.test }}
+                                ·
+                                <span style="font-size: .8rem;color: #5A4317">
+                                    {{ post.date | date: '%Y' }}
+                                </span>
+                            </div>
 
-            <div class="card-list">
-                {% for post in site.categories[page.category] %}
-                    <div class="card-item">
-                        {{ post.title }}
-                    </div>
-                {% endfor %}
-            </div>
+                            <a href="/" class="button-text:black title">
+                                {{ post.title }}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </main>
 
         {% include layout/footer.html %}

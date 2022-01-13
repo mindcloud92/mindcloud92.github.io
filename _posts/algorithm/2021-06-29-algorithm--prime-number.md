@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 1과 n 사이의 소수 찾기"
+test: Algorithm
+title: "1과 n 사이의 소수 찾기"
 date: "2021-06-29 21:14:00 +0900"
 categories: tech
 tags: 알고리즘 에라토스테네스의체 메모이제이션 소수 prime number java

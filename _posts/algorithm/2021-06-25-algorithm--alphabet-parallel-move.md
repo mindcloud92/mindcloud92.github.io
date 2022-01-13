@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 알파벳 평행 이동 시키기"
+test: Algorithm
+title: "알파벳 평행 이동 시키기"
 date: "2021-06-25 23:57:00 +0900"
 categories: tech
 tags: 알고리즘 알파벳 평행 이동 시저 암호 java

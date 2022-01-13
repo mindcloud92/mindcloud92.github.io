@@ -4,12 +4,15 @@ header
   @include color-text('white')
   background: url('/static/images/background/primary-pattern.png')
   padding: .9em 20%
+  position: sticky
+  top: 0
   display: flex
   justify-content: space-between
+  align-items: center
 
-  .link-title
+  .title
     @include font(site-title)
     color: inherit
     margin-block: 0
     font-size: 1.5rem
-    text-decoration: none
+    opacity: 1

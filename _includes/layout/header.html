@@ -1,13 +1,12 @@
 <header>
-    <a href="/" class="link-title">
+    <a href="/" class="button-text title">
         {{ site.title }}
         {% include component/logo.html %}
     </a>
 
-
     <div>
         {% for category in site.categories reversed %}
-            <a href="/{{ category.first }}" class="button-text:white ml-1">
+            <a href="/{{ category.first }}" class="button-text:white ml-3">
                 {{ category.first | upcase }}
             </a>
         {% endfor %}

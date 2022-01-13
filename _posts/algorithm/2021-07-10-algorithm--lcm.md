@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 최소 공배수 구하기"
+test: Algorithm
+title: "최소 공배수 구하기"
 date: "2021-07-10 13:26:00 +0900"
 categories: tech
 tags: 알고리즘 최소공배수 lcm java

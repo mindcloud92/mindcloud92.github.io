@@ -6,12 +6,14 @@
   @return $value
 
 
-$_font-default-regular: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff')
-$_font-default-bold: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff', weight: bold)
+$_font-default-regular: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+$_font-default-500: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff', weight: 500)
+$_font-default-600: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff', weight: 600)
+$_font-default-900: (name: 'default', source-url: '//cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff', weight: 900)
 $_font-site-title: (name: 'site-title', source-url: '//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff')
 $_font-site-description: (name: 'site-description', source-url: '//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
 
-$_fonts: (default-regular: $_font-default-regular, default-bold: $_font-default-bold, site-title: $_font-site-title, site-description: $_font-site-description)
+$_fonts: (default-regular: $_font-default-regular, default-500: $_font-default-500, default-600: $_font-default-600, default-900: $_font-default-900, site-title: $_font-site-title, site-description: $_font-site-description)
 
 @each $key, $value in $_fonts
   @font-face
@@ -32,4 +34,3 @@ $_fonts: (default-regular: $_font-default-regular, default-bold: $_font-default-
       family: $name
       weight: $weight
       style: $style
-

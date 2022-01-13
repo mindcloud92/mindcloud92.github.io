@@ -3,4 +3,21 @@
 .page-post-list
   @extend %page
 
+  .main
+    background: #f9f9f9
+
+  .category-wrapper
+    margin-block: 0
+
+    .post-count
+      font-size: .9rem
+      @include color-text(secondary)
+
+  .content-wrapper
+    border:
+      width: 0 1px
+      style: solid
+    @include color-border('black', .05)
+    @include color-background('white')
+    padding: 2em
 

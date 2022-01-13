@@ -1,6 +1,7 @@
 ---
 layout: post-detail
-title: "Algorithm :: 최대 공약수 구하기"
+test: Algorithm
+title: "최대 공약수 구하기"
 date: "2021-07-09 22:50:00 +0900"
 categories: tech
 tags: 알고리즘 최대공약수 유클리드 gcd java
