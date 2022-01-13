@@ -5,7 +5,6 @@ title: "숫자 정렬하기 [선택 정렬]"
 date: "2021-06-25 21:14:00 +0900"
 categories: tech
 tags: 알고리즘 선택 정렬 selection sort java
-thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif'
 ---
 
 ### # 알아둬야 할

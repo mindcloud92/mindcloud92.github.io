@@ -1,4 +1,4 @@
-$_colors: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11D, 'accent': #364D6C)
+$_colors: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11D, 'accent': #364D6C, 'grey': #eee)
 
 @function getColor($name, $opacity: 1)
   $value: map-get($_colors, $name)
@@ -15,7 +15,10 @@ $_colors: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11
   background-color: getColor($color-name, $opacity)
 
 @mixin color-border($color-name, $opacity: 1)
-  border-color: getColor($color-name, $opacity)
+  border:
+    width: 1px
+    style: solid
+    color: getColor($color-name, $opacity)
 
 @mixin color-dynamic($property-names...)
   @content
@@ -26,5 +29,8 @@ $_colors: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11
     &\:#{$key}
       @content
       @each $property-name in $property-names
-        #{$property-name}: $value
+        @if $property-name == 'border-color'
+          @include color-border($value)
+        @else
+          #{$property-name}: $value
 

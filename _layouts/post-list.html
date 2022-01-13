@@ -12,26 +12,22 @@
                     <sup class="post-count" style="font-weight: normal;">{{ site.categories[page.category].size }}</sup>
                 </h2>
 
-                <div class="card-list mt-4">
+                <div class="card-list mt-5">
                     {% for post in site.categories[page.category] %}
-                        <div class="card-item">
-                            <a href="/" class="thumbnail-wrapper mb-3" style="overflow: hidden;display: flex;justify-content: center;align-items: center;border: 1px solid #eee;background: #fefefe">
+                        <a  href="{{ post.url }}" class="card-item button-text:black">
+                            <div class="thumbnail-wrapper mb-3">
                                 {% if post.thumbnail %}
-                                    <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" style="width: 100%" />
+                                    <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" />
+                                {% else %}
+                                    <i class="far fa-images thumbnail-default"></i>
                                 {% endif %}
-                            </a>
-                            <div style="color: #5A4317;font-size: .85rem;" class="my-1">
-                                {{ post.test }}
-                                ·
-                                <span style="font-size: .8rem;color: #5A4317">
-                                    {{ post.date | date: '%Y' }}
-                                </span>
                             </div>
 
-                            <a href="/" class="button-text:black title">
-                                {{ post.title }}
-                            </a>
-                        </div>
+                            <div style="color: #5A4317;font-size: .85rem;">
+                                {{ post.test }} · <span style="font-size: .8rem;color: #B6A999">{{ post.date | date: '%Y' }}</span>
+                            </div>
+                            <p class="title">{{ post.title }}</p>
+                        </a>
                     {% endfor %}
                 </div>
             </section>

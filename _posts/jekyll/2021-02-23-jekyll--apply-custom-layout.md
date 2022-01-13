@@ -4,7 +4,6 @@ title: "Jekyll :: Custom Layout 적용하기"
 date: 2021-02-23 18:34:39 +0900
 categories: tech
 tags: jekyll custom layout
-thumbnail: '/asset/images/jekyll/custom-layout/thumbnail.png'
 ---
 
 <div markdown="1" class="stepper text">

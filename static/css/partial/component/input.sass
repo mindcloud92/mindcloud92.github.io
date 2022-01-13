@@ -14,10 +14,9 @@
     @at-root &-wrapper
       $-color: 'accent'
 
+      @include color-border($-color)
       border:
         width: 2px
-        style: solid
-      @include color-border($-color)
       position: relative
       display: grid
       @include color-background('white')

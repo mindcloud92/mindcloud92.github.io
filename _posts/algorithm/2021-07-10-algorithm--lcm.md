@@ -5,7 +5,6 @@ title: "최소 공배수 구하기"
 date: "2021-07-10 13:26:00 +0900"
 categories: tech
 tags: 알고리즘 최소공배수 lcm java
-thumbnail: 'https://img.khan.co.kr/news/2008/01/08/8a08k04n.webp'
 ---
 
 ### # 알아둬야 할

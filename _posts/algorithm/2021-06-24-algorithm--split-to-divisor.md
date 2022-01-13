@@ -5,7 +5,6 @@ date: "2021-06-24 16:32:00 +0900"
 categories: tech
 tags: 알고리즘 약수 divisor java
 test: Algorithm 
-thumbnail: '/asset/images/algorithm/split-to-divisor/thumbnail.png'
 ---
 
 ### # 알아둬야 할

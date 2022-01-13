@@ -4,7 +4,6 @@ title:  "SEO :: 구글이 내 사이트 크롤링 잘 할 수 있게하기"
 date:   2021-06-05 18:06:39 +0900
 categories: xyz+
 tags: seo google search console web crawling 
-thumbnail: '/asset/images/seo/register-google/thumbnail.png'
 ---
 
 <p class="warning">최소한의 SEO meta tag와 sitemap.xml이 있다는 가정하에 작성</p>

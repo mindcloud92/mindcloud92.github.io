@@ -5,7 +5,6 @@ date: "2021-06-22 23:41:00 +0900"
 categories: tech
 test: Algorithm
 tags: 알고리즘 n진수 10진수 진법변환 java
-thumbnail: '/asset/images/algorithm/n-vs-decimal/thumbnail.png'
 ---
 
 ### # 알아둬야 할
