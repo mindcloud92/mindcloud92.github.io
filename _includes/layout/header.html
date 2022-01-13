@@ -7,7 +7,7 @@
     <div>
         {% assign categories = site.data.categories | split: ',' %}
         {% for category in categories %}
-            <a href="/{{ category }}" class="button-text:white ml-3">
+            <a href="/{{ category }}" class="button-text:white ml-3 {% if page.category == category %} active{% endif %}">
                 {{ category | upcase }}
             </a>
         {% endfor %}

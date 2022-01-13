@@ -11,9 +11,8 @@
 
                 <h2 class="category-wrapper">
                     {{ page.category | upcase }}
-                    <sup class="post-count" style="font-weight: normal;">{{ posts.size }}</sup>
+                    <sup class="post-count" style="font-weight: normal;">{{ posts.size | default: 0 }}</sup>
                 </h2>
-
 
                 <div class="card-list mt-5">
                     {% for post in posts %}
