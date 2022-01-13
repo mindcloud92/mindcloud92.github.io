@@ -1,9 +1,10 @@
 ---
 layout: post-detail
-title: "Spring :: 한 줄씩 읽는 Documentation [Overview]"
+title: "한 줄씩 읽는 Documentation [Overview]"
 date: "2021-08-02 15:26:00 +0900"
 categories: xyz+
 tags: spring framework documentation overview translation 5.3.9v
+test: spring
 thumbnail: 'https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg'
 ---
 

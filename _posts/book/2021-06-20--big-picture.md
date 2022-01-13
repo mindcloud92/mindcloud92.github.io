@@ -1,8 +1,9 @@
 ---
 layout: post-detail
-title:  "소설 :: 빅 픽처"
+title:  "빅 픽처"
 date:   2021-06-20 15:02:00 +0900
 categories: review
+test: 소설
 tags: 소설 빅픽처 더글라스 케네디
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: post-detail
-title:  "시 · 에세이 :: 푸름이 밀려온다"
+title:  "푸름이 밀려온다"
 date:   2021-07-17 23:41:00 +0900
 categories: review
+test: 시 · 에세이
 tags: 시 에세이 푸름이 밀려온다 MAGGIE SMITH
 ---
 

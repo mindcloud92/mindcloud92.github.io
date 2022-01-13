@@ -1,8 +1,9 @@
 ---
 layout: post-detail
-title:  "GitHub :: 조직 탈퇴하기"
+title:  "조직 탈퇴하기"
 date:   2021-02-16 21:34:39 +0900
 categories: xyz+
+test: GitHub
 tags: github 조직 탈퇴
 ---
 
