@@ -14,25 +14,29 @@
                     <sup class="post-count" style="font-weight: normal;">{{ posts.size | default: 0 }}</sup>
                 </h2>
 
-                <div class="card-list mt-5">
-                    {% for post in posts %}
-                        <a  href="{{ post.url | relative_url }}" class="card-item button-text:black">
-                            <div class="thumbnail-wrapper mb-3">
-                                {% if post.thumbnail %}
-                                    <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" />
-                                {% else %}
-                                    <i class="far fa-images thumbnail-default"></i>
-                                {% endif %}
-                            </div>
+                {% if posts.size > 0 %}
+                    <div class="card-list mt-3">
+                        {% for post in posts %}
+                            <a  href="{{ post.url | relative_url }}" class="card-item button-text:black">
+                                <div class="thumbnail-wrapper mb-3">
+                                    {% if post.thumbnail %}
+                                        <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" />
+                                    {% else %}
+                                        <i class="far fa-images thumbnail-default"></i>
+                                    {% endif %}
+                                </div>
 
-                            <div>
-                                <span class="additional-info:primary">{{ post.sub_category }} ·</span>
-                                <span class="additional-info:secondary">{{ post.date | date: '%Y' }}</span>
-                            </div>
-                            <p class="title">{{ post.title }}</p>
-                        </a>
-                    {% endfor %}
-                </div>
+                                <div>
+                                    <span class="additional-info:primary">{{ post.sub_category }} ·</span>
+                                    <span class="additional-info:secondary">{{ post.date | date: '%Y' }}</span>
+                                </div>
+                                <p class="title">{{ post.title }}</p>
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {% include component/empty-post-guide.html class="mt-3 pt-10" %}
+                {% endif %}
             </section>
         </main>
     </body>

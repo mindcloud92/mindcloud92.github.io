@@ -11,5 +11,9 @@
                 {{ category | upcase }}
             </a>
         {% endfor %}
+
+        <a href="/search" class="button-text:white ml-4 {% if page.layout == search %}active{% endif %}">
+            <i class="fas fa-search"></i>
+        </a>
     </div>
 </header>
