@@ -1,16 +1,17 @@
 @import 'base'
 
 .header
+  position: sticky
+  top: 0
+  z-index: 1
+
   .content
     @include color-text('white')
     background: url('/static/images/background/primary-pattern.png')
     padding: .9em 20%
-    position: sticky
-    top: 0
     display: flex
     justify-content: space-between
     align-items: center
-    z-index: 1
 
     .title
       @include font(site-title)
