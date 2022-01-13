@@ -1,10 +1,7 @@
 @import 'layout/page'
 
 .page-post-list
-  @extend %page
-
-  .main
-    background: #f9f9f9
+  @extend %page-default
 
   .category-wrapper
     margin-block: 0
@@ -12,11 +9,3 @@
     .post-count
       font-size: .9rem
       @include color-text(secondary)
-
-  .content-wrapper
-    @include color-border('black', .05)
-    @include color-background('white')
-    padding: 2em
-    border:
-      width: 0 1px
-

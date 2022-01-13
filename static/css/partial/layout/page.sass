@@ -1,13 +1,6 @@
 @import 'base'
 
 
-@mixin page-full($h-align: center, $v-align: center)
-  height: 100vh
-  display: flex
-  justify-content: $h-align
-  align-items: $v-align
-
-
 %page
   @include font('default')
   margin: 0
@@ -17,3 +10,26 @@
 
     @media screen and (max-width: 768px)
       padding: 0 8%
+
+%page-default
+  @extend %page
+
+  .main
+    background: #f9f9f9
+
+  .content-wrapper
+    @include color-border('black', .05)
+    @include color-background('white')
+    min-height: calc(100vh - 2.8em - 1.5rem)
+    padding: 2em
+    border:
+      width: 0 1px
+
+
+@mixin page-full($h-align: center, $v-align: center)
+  height: 100vh
+  display: flex
+  justify-content: $h-align
+  align-items: $v-align
+
+

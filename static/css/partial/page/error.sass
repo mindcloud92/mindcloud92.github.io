@@ -1,0 +1,17 @@
+@import 'layout/page'
+
+.page-error
+  @extend %page-default
+  text-align: center
+
+  .message
+    font-size: 1.25rem
+    @include color-text('primary')
+
+    .icon
+      font-size: 2rem
+      display: block
+      @include color-text('danger')
+
+    &-detail
+      opacity: .5

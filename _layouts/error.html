@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-        <main>
-            {{ page.content }}
+{% include head.html %}
 
-            <button>Go To Main</button>
+    <body class="page-error">
+        {% include layout/header.html %}
+
+        <main class="main">
+            <section class="content-wrapper">
+                {{ page.content }}
+            </section>
         </main>
     </body>
 </html>
