@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% include head.html %}
+---
+layout: default
+type: post-detail
+---
 
-    <body class="page-post-detail">
-        {% include layout/header.html %}
+<article class="content-wrapper">
+    <h2>{{ page.title }}</h2>
 
-        <main class="main">
-            <article class="content-wrapper">
-                <h2>{{ page.title }}</h2>
-
-                <div>
-                    {{ page.content }}
-                </div>
-            </article>
-        </main>
-    </body>
-</html>
+    <div>
+        {{ page.content }}
+    </div>
+</article>

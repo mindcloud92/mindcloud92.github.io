@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% include head.html %}
+---
+layout: default
+type: post-list
+---
 
-    <body class="page-post-list">
-        {% include layout/header.html %}
-
-        <main class="main">
-            <section class="content-wrapper">
-                {% include component/search-input.html %}
-                {% include component/empty-post-guide.html class="mt-3 pt-10" %}
-            </section>
-        </main>
-    </body>
-</html>
+<section class="content-wrapper">
+    {% include component/search-input.html %}
+    {% include component/empty-post-guide.html class="mt-3 pt-10" %}
+</section>
