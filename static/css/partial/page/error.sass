@@ -5,13 +5,16 @@
   text-align: center
 
   .message
-    font-size: 1.25rem
     @include color-text('primary')
-
-    .icon
-      font-size: 2rem
-      display: block
-      @include color-text('danger')
+    font:
+      size: 3rem
+      family: 'message'
 
     &-detail
       opacity: .5
+      font-size: .9rem
+
+    .icon
+      font-size: 3rem
+      display: block
+      @include color-text('danger')
