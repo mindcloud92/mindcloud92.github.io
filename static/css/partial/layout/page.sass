@@ -15,7 +15,7 @@
   @extend %page
 
   .main
-    @include color-background('white-draken')
+    @include color-background('white-darken')
 
   .content-wrapper
     @include color-border('black', .05)
@@ -32,8 +32,12 @@
     border-width: 1px 0 0
 
     .icon
-      font-size: 2.5rem
+      font-size: 2.8rem
 
+    .message
+      font:
+        family: 'message'
+        size: 1.2rem
 
 @mixin page-full($h-align: center, $v-align: center)
   height: 100vh
