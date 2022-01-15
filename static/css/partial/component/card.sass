@@ -11,13 +11,22 @@
     opacity: 1
     display: block
 
+    &:hover
+      .title
+        text-decoration: underline
+
+      .thumbnail-wrapper
+        height: 8.4em
+        padding: 1em
+
     .thumbnail-wrapper
       height: 8em
-      padding: 1em
+      padding: 1.2em
       display: flex
       justify-content: center
       align-items: center
       overflow: hidden
+      position: relative
       background: url('/static/images/background/thumbnail-pattern.png')
 
       $-color: 'grey'
