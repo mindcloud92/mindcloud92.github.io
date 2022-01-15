@@ -1,7 +1,9 @@
 $_colors-brown: ('brown': #5A4317, 'brown-lighten': #B6A999)
-$_colors-default: ('white': #fff, 'black': #000, 'primary': #01213c, 'secondary': #DCA11D, 'accent': #364D6C, 'danger': #C1554E,  'grey': #eee)
+$_color-white: ('white': #fff, 'white-darken': '#f9f9f9')
 
-$_colors: map-merge($_colors-default, $_colors-brown)
+$_colors-default: ('black': #000, 'primary': #01213c, 'secondary': #DCA11D, 'accent': #364D6C, 'danger': #C1554E,  'grey': #eee)
+
+$_colors: map-merge($_colors-default, $_colors-brown, $_color-white)
 
 @function getColor($name, $opacity: 1)
   $value: map-get($_colors, $name)
