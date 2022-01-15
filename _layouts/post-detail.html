@@ -3,24 +3,26 @@ layout: default
 type: post-detail
 ---
 
-<div class="content-wrapper" style="text-align: center">
-    <p style="margin-block: 0;background: #DCA11D;display: inline-block;padding: 0.25em .8em;font-size: .8rem;color: #f9f9f9;text-align: center;font-weight: 600;">{{ page.category | upcase }}</p>
-    <h2 class="title">{{ page.title }}</h2>
+<div class="content-wrapper">
+    <div style="text-align: center">
+        <p class="category-badge">{{ page.category | upcase }}</p>
+        <h2>{{ page.title }}</h2>
 
-    <div>
-        <span class="additional-info:primary">{{ page.sub_category }} ·</span>
-        <span class="additional-info:secondary">{{ page.date | date: '%Y' }}</span>
+        <div>
+            <span class="additional-info:primary">{{ page.sub_category }} ·</span>
+            <span class="additional-info:secondary">{{ page.date | date: '%Y' }}</span>
+        </div>
     </div>
 
-    <article class="my-10" style="text-align: left">
+    <article class="my-10">
         {{ page.content }}
     </article>
 
-    <div style="font-size: .9rem; text-align: left">
+    <div class="tag-container">
         {% for tag in page.tags %}
-        <a href="/" class="button-text mx-1">
-            # {{ tag }}
-        </a>
+            <a href="/" class="button-text mr-1">
+                # {{ tag }}
+            </a>
         {% endfor %}
     </div>
 </div>

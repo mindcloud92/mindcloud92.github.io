@@ -2,3 +2,16 @@
 
 .page-post-detail
   @extend %page-post
+
+  .tag-container
+    font-size: .9rem
+
+  .category-badge
+    margin-block: 0
+    padding: 0.25em .8em
+    display: inline-block
+    font:
+      size: .8rem
+      weight: 600
+    @include color-background('secondary')
+    @include color-text('white-darken')
