@@ -34,7 +34,11 @@
       @include color-text($-color)
 
       .thumbnail
-        width: 100%
+        &.h-full
+          width: 100%
+
+        &.v-full
+          height: 100%
 
         &-default
           font-size: 3rem

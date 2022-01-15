@@ -17,7 +17,7 @@ type: post-list
                 <a  href="{{ post.url | relative_url }}" class="card-item button-text:black">
                     <div class="thumbnail-wrapper mb-3">
                         {% if post.thumbnail %}
-                            <img src="{{ post.thumbnail | relative_url }}" class="thumbnail" />
+                            <img src="{{ post.thumbnail | relative_url }}" class="thumbnail {{ post.thumbnail_type | default: h-full }}" />
                         {% else %}
                             <i class="far fa-images thumbnail-default"></i>
                         {% endif %}
