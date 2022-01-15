@@ -8,11 +8,11 @@ type: post-detail
     <h2 class="title">{{ page.title }}</h2>
 
     <div>
-        <span class="additional-info:primary" style="color: #5a4317; font-size: .85rem">{{ page.sub_category }} ·</span>
-        <span class="additional-info:secondary" style="color: #b6a999;font-size: .8rem">{{ page.date | date: '%Y' }}</span>
+        <span class="additional-info:primary">{{ page.sub_category }} ·</span>
+        <span class="additional-info:secondary">{{ page.date | date: '%Y' }}</span>
     </div>
 
-    <article class="my-10">
+    <article class="my-10" style="text-align: left">
         {{ page.content }}
     </article>
 

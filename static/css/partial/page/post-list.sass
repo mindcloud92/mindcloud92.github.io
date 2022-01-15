@@ -1,7 +1,7 @@
 @import 'layout/page'
 
 .page-post-list
-  @extend %page-default
+  @extend %page-post
 
   .category-wrapper
     margin-block: 0
@@ -9,12 +9,3 @@
     .post-count
       font-size: .9rem
       @include color-text(secondary)
-
-  .additional-info
-    &\:primary
-      font-size: .85rem
-      @include color-text('brown')
-
-    &\:secondary
-      font-size: .8rem
-      @include color-text('brown-lighten')

@@ -39,6 +39,20 @@
         family: 'message'
         size: 1.2rem
 
+%page-post
+  @extend %page-default
+
+  .additional-info
+    &\:primary
+      font-size: .85rem
+      @include color-text('brown')
+
+    &\:secondary
+      font-size: .8rem
+      @include color-text('brown-lighten')
+
+
+
 @mixin page-full($h-align: center, $v-align: center)
   height: 100vh
   display: flex
