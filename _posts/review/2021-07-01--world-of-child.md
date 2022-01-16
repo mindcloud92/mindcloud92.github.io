@@ -16,7 +16,7 @@ thumbnail_type: v-full
 <div class="my-3 rating-container">
     <i class="fas fa-star"></i>
     <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
     <i class="far fa-star empty"></i>
     <i class="far fa-star empty"></i>
 </div>
