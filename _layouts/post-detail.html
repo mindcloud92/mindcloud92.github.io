@@ -4,7 +4,7 @@ type: post-detail
 ---
 
 <div class="content-wrapper">
-    <div style="text-align: center">
+    <div class="post-header">
         <p class="category-badge">{{ page.category | upcase }}</p>
         <h2>{{ page.title }}</h2>
 
@@ -14,7 +14,7 @@ type: post-detail
         </div>
     </div>
 
-    <article class="my-10">
+    <article class="my-10 post-contents {{ page.category }}">
         {{ page.content }}
     </article>
 

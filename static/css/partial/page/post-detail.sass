@@ -15,3 +15,46 @@
       weight: 600
     @include color-background('secondary')
     @include color-text('white-darken')
+
+
+  .post-header
+    text-align: center
+
+  .post-contents
+    line-height: 1.5rem
+
+    &.review
+      .thumbnail-wrapper
+        display: flex
+        justify-content: center
+
+        .thumbnail
+          width: 30%
+
+      .rating-container
+        text-align: center
+        font-size: 1.2rem
+        @include color-text('yellow')
+
+        .empty
+          opacity: .3
+
+      blockquote
+        margin-block: 3em
+        margin-inline: 0
+        font:
+          weight: bold
+          family: 'message'
+        padding: 1em 2em
+        @include color-background('secondary', .1)
+        @include color-text('brown')
+        text-align: center
+
+
+@media screen and (max-width: 768px)
+  .page-post-detail
+    .post-contents
+      &.review
+        .thumbnail-wrapper
+          .thumbnail
+            width: 70%
