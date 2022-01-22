@@ -2,7 +2,7 @@
 <html lang="en">
     {% include head.html %}
 
-    <body class="page-{{ layout.type | default: page.type }}">
+    <body class="page {{ layout.type | default: page.type }}">
         {% include layout/header.html %}
 
         <main class="main">
