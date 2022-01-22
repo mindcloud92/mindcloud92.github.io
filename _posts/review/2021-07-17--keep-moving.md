@@ -10,7 +10,7 @@ thumbnail_type: v-full
 ---
 
 <div class="thumbnail-wrapper">
-    <img src="/asset/images/review/book/keep-moving/cover.jpeg" class="thumbnail" />
+    <img src="/asset/images/review/book/keep-moving/cover.jpeg" class="thumbnail" alt="푸름이 밀려온다" />
 </div>
 
 <div class="my-3 rating-container">

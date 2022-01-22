@@ -10,7 +10,7 @@ thumbnail_type: v-full
 ---
 
 <div class="thumbnail-wrapper">
-    <img src="/asset/images/review/book/house-with-a-yard/cover.jpeg" class="thumbnail" />
+    <img src="/asset/images/review/book/house-with-a-yard/cover.jpeg" class="thumbnail" alt="마당이 있는 집" />
 </div>
 
 <div class="my-3 rating-container">

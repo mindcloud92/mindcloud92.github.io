@@ -10,7 +10,7 @@ thumbnail_type: v-full
 ---
 
 <div class="thumbnail-wrapper">
-    <img src="/asset/images/review/book/big-picture/cover.jpeg" class="thumbnail" />
+    <img src="/asset/images/review/book/big-picture/cover.jpeg" class="thumbnail" alt="빅 픽처" />
 </div>
 
 <div class="my-3 rating-container">

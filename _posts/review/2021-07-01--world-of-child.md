@@ -10,7 +10,7 @@ thumbnail_type: v-full
 ---
 
 <div class="thumbnail-wrapper">
-    <img src="/asset/images/review/book/world-of-child/cover.jpeg" class="thumbnail" />
+    <img src="/asset/images/review/book/world-of-child/cover.jpeg" class="thumbnail"  alt="어린이라는 세계"/>
 </div>
 
 <div class="my-3 rating-container">
