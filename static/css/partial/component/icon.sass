@@ -1,0 +1,10 @@
+@import 'base'
+
+$_icon-contents: ('info': '\f05a')
+
+@mixin icon($name)
+  content: map-get($_icon-contents, $name)
+  font:
+    family: $_font-icon-default
+    weight: bold
+    size: inherit

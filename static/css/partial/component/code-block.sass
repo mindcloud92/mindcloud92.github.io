@@ -1,0 +1,20 @@
+@import 'base'
+
+code
+  font-family: $_font-code-block
+
+.highlighter-rouge
+  font-size: .9rem
+  padding: .5em 1em
+  @include color-background('black-lighten-1')
+  @include color-text('white-darken-3')
+
+.language-plaintext
+  @include color-background('white-darken-2')
+  @include color-text('danger')
+  padding: .4em .6em
+  border-radius: 5px
+  font:
+    size: .9rem
+    weight: 800
+
