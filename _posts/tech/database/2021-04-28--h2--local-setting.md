@@ -3,7 +3,7 @@ layout: post-detail
 title:  "H2 DB 설치 및 실행하기 for Mac"
 date:   2021-04-28
 category: tech
-sub_category: H2
+sub_category: DB
 tags: h2 in-memory database mac local setting guide 
 thumbnail: '/asset/images/tech/database/h2--local-setting/thumbnail.png'
 thumbnail_type: v-full
