@@ -25,7 +25,7 @@ thumbnail_type: 'v-full'
 
 #### <em class="step-badge mr-1">4</em> clone한 저장소 위치에서 터미널을 열어 jekyll 프로젝트를 만들어서 덮어씌운 다음 commit & push 하면 끗
 ```text 
-    $ jekyll new project_name
+    $ jekyll new {project name}
 ```
 
 
