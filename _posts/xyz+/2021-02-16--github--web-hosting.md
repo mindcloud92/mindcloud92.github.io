@@ -29,7 +29,7 @@ thumbnail_type: 'v-full'
 ```
 
 
-<div markdown="1" class="reference-wrapper mt-14">
+<div markdown="1" class="reference-wrapper mt-13">
 Reference 
 * [GitHub Docs](https://docs.github.com/en/github/working-with-github-pages){:target="_blank"}
 * [Jekyll 단계별 튜토리얼 - 1. Setup](https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/){:target="_blank"}
