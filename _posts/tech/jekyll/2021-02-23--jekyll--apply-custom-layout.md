@@ -32,7 +32,7 @@ thumbnail_type: v-full
     ├─ index.md
 ```
 
-<p class="filename-badge">layout_name.html</p>
+<p class="filename-badge mt-4">layout_name.html</p>
 ```html
     <!DOCTYPE html>
     <html lang="en">

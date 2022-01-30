@@ -19,7 +19,7 @@ thumbnail_type: v-full
     $ cd ~/{압축 푼 위치}/bin
     $ chmod 755 h2.sh
 ```
-<p class="info-message mb-5">755권한: 소유자만 모든 것(쓰기, 읽기, 실행)이 가능 & 그 외 사용자의 경우는 읽기, 실행은 가능하나 쓰기는 불가능</p>
+<p class="info-message mb-8">755권한: 소유자만 모든 것(쓰기, 읽기, 실행)이 가능 & 그 외 사용자의 경우는 읽기, 실행은 가능하나 쓰기는 불가능</p>
 
 
 #### <em class="step-badge mr-1">3</em> h2 쉘 스크립트를 실행하면 끗

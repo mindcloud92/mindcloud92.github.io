@@ -1,20 +1,76 @@
 @import 'base'
 
-code
-  font-family: $_font-code-block
 
-.highlighter-rouge
+%code-block
   font-size: .9rem
   padding: .5em 1em
   @include color-background('black-lighten-1')
   @include color-text('white-darken-3')
+  position: relative
 
-.language-plaintext
-  @include color-background('white-darken-2')
-  @include color-text('danger')
-  padding: .4em .6em
-  border-radius: 5px
-  font:
-    size: .9rem
-    weight: 800
+  .highlight
+    overflow: auto
 
+  &:before
+    line-height: 2em
+    position: absolute
+    top: 0
+    right: 0
+    font-weight: bold
+    padding: 0 1em
+    font-size: .68em
+
+
+.filename-badge
+  @include color-background('black-lighten-1')
+  @include color-text('white')
+  padding: .2em 1.5em
+  margin-block: 0
+  font-size: .8rem
+  display: inline-block
+  border-bottom: none
+  margin-bottom: -1px
+
+  &:before
+    @include icon('file')
+    margin-right: .5em
+    font-weight: 500
+
+code
+  font-family: $_font-code-block
+
+
+.language
+  &-plaintext
+    @include color-background('white-darken-2')
+    @include color-text('danger')
+    padding: .4em .6em
+    border-radius: 5px
+    font:
+      size: .9rem
+      weight: 800
+
+  &-markdown
+    @extend %code-block
+
+  &-text
+    @extend %code-block
+
+  &-html
+    @extend %code-block
+    &:before
+      content: 'HTML'
+      background: #dd4b24
+
+    .cp, .nt
+      color: #ffbf00
+
+    .s
+      color: #cddc39
+
+  &-yaml
+    @extend %code-block
+    .na, .pi
+      color: #ff5722
+    .c1
+      color: #4caf50
