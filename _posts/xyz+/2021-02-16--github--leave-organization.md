@@ -16,11 +16,11 @@ thumbnail_type: 'h-full'
 
 
 #### <em class="step-badge mr-1">2</em> `Organizations` 선택 한 다음에 탈퇴하고 싶은 조직에서 `Leave` 클릭하면 끗
-![step2]({{ "/step2.png" | prepend: thumbnail_path | relative_url }}){:class="mb-10"}
+![step2]({{ "/step2.png" | prepend: thumbnail_path | relative_url }})
 
 
 
-<div markdown="1" class="reference-wrapper">
-Reference 
+<hr class="mb-5 mt-8"/>
+<i class="fas fa-link mr-1"></i> Reference
 * [GitHub Docs](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/removing-yourself-from-an-organization){:target="_blank"}
-</div>
+
