@@ -74,3 +74,34 @@ code
       color: #ff5722
     .c1
       color: #4caf50
+
+  &-javascript
+    @extend %code-block
+    &:before
+      content: 'JAVASCRIPT'
+      background: #f7df1e
+      color: #423600
+
+    .mi, .mf, .mi
+      color: #42c4ff
+
+    .kd, .k
+      color: #ff8d38
+
+    .kd + .nx
+      color: #ffc107
+
+    .p + .kd + .nx
+      color: #dadcf3
+
+    .cm, .c1
+      color: #8fbf74
+
+    .dl, .dl + .s1, .dl + .s2
+      color: #709a59
+
+    .nb + .p + .nx, .dl + .p + .nx
+      color: #ffc107
+
+    .p + .na
+      color: #9d78e0

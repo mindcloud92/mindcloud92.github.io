@@ -6,7 +6,7 @@ category: xyz+
 sub_category: GitHub
 tags: github pages web hosting jekyll free
 thumbnail: '/asset/images/xyz+/github--web-hosting/thumbnail.jpeg'
-thumbnail_type: 'v-full'
+thumbnail_type: v-full
 ---
 
 {% assign thumbnail_path = '/asset/images/xyz+/github--web-hosting' %}

@@ -6,7 +6,7 @@ category: xyz+
 sub_category: GitHub
 tags: github 조직 탈퇴
 thumbnail: '/asset/images/xyz+/github--leave-organization/thumbnail.png'
-thumbnail_type: 'h-full'
+thumbnail_type: h-full
 ---
 
 {% assign thumbnail_path = '/asset/images/xyz+/github--leave-organization' %}
