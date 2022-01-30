@@ -12,7 +12,8 @@ thumbnail_type: 'v-full'
 {% assign thumbnail_path = '/asset/images/xyz+/github--web-hosting' %}
 
 #### <em class="step-badge mr-1">1</em> GitHub에서 `{username}.github.io`라는 이름으로 저장소를 만들고
-![step1]({{ "/step1.png" | prepend: thumbnail_path | relative_url }}){:class="mb-5"}
+![step1]({{ "/step1.png" | prepend: thumbnail_path | relative_url }})
+<p class="info-message mb-8">{username} = github username</p>
 
 #### <em class="step-badge mr-1">2</em> 터미널로 `jekyll bundler`를 깐 다음
 ```text 
