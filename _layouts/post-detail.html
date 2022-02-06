@@ -18,11 +18,20 @@ type: post-detail
         {{ page.content }}
     </article>
 
-    <div class="tag-container">
+    <div class="tag-container mb-10">
         {% for tag in page.tags %}
             <a href="/" class="button-text mr-1 mb-1">
                 # {{ tag }}
             </a>
         {% endfor %}
     </div>
+
+    <script src="https://utteranc.es/client.js"
+            repo="mindcloud92/mindcloud92.github.io"
+            issue-term="pathname"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
 </div>
