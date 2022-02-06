@@ -1,7 +1,7 @@
 ---
 layout: post-detail
 title: "Utterances 적용하기"
-date: "2022-02-07"
+date: "2022-02-06"
 category: tech
 sub_category: GitHub
 tags: github utterances comment widget
