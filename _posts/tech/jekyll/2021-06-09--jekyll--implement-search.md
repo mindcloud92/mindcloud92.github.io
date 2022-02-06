@@ -119,6 +119,6 @@ thumbnail_type: v-full
 
 <hr class="mb-5 mt-8"/>
 <i class="fas fa-link mr-1"></i> Reference
-- [dddd.static-search Docs](https://github.com/mindcloud92/dddd.static-search/blob/main/README.md){:target="blank"}
+- [dddd.static-search GitHub](https://github.com/mindcloud92/dddd.static-search){:target="blank"}
 - [underscore.js 공식 사이트](https://underscorejs.org/){:target="_blank"}
 
