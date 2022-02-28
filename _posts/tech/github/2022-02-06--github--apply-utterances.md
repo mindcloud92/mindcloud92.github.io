@@ -1,6 +1,6 @@
 ---
 layout: post-detail
-title: "Utterances 적용하기"
+title: "댓글 플러그인 적용하기 (feat. Utterances)"
 date: "2022-02-06"
 category: tech
 sub_category: GitHub
