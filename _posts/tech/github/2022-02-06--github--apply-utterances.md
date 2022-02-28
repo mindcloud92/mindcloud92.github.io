@@ -26,13 +26,13 @@ thumbnail_type: v-full
  
 #### <em class="step-badge mr-1">2</em> 설치 완료 후 이동되는 [설정 페이지](https://utteranc.es/){:target="_blank"}에서 관련 정보를 설정하면 
 * repo(`{github username}/{step1에서 선택한 github repository name}`) 입력   
-![step2-1]({{ "/step2-1.png" | prepend: thumbnail_path | relative_url }})    
+![step2-1]({{ "/step2-1.png" | prepend: thumbnail_path | relative_url }}){:class="mt-1"}   
 
 * 포스트 이슈 매핑 방법 선택   
-![step2-2]({{ "/step2-2.png" | prepend: thumbnail_path | relative_url }})
+![step2-2]({{ "/step2-2.png" | prepend: thumbnail_path | relative_url }}){:class="mt-1"}
  
 * <em class="badge:grey">optional</em> 이슈 라벨 입력 & 테마 선택   
-![step2-3]({{ "/step2-3.png" | prepend: thumbnail_path | relative_url }})
+![step2-3]({{ "/step2-3.png" | prepend: thumbnail_path | relative_url }}){:class="mt-1"}
 <div class="py-2"></div>
  
 #### <em class="step-badge mr-1">3</em> template에 적용할 수 있는 script tag가 나오는데 copy해서 적용하려는 layout에 적용하면 끗! 
