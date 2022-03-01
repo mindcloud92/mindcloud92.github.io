@@ -1,15 +1,15 @@
 ---
 layout: post-detail
-title:  "Google Analytics 적용하기 for Jekyll"
+title:  "Google Analytics 적용하기"
 date:   2021-06-05
 category: xyz+
 sub_category: GA
-tags: GA google web analytics jekyll
-thumbnail: '/asset/images/xyz+/ga--apply-for-jekyll/thumbnail.png'
+tags: GA google web analytics
+thumbnail: '/asset/images/xyz+/ga--apply/thumbnail.png'
 thumbnail_type: v-full
 ---
 
-{% assign thumbnail_path = '/asset/images/xyz+/ga--apply-for-jekyll' %}
+{% assign thumbnail_path = '/asset/images/xyz+/ga--apply' %}
 
 #### <em class="step-badge mr-1">1</em> [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision){:target="_blank"} 계정을 새로 생성하고
 * 계정 이름 입력   
@@ -34,7 +34,7 @@ thumbnail_type: v-full
 <p class="info-message mb-8">데이터 스트림 선택 전에 원하는 계정으로 변경 가능</p>
 
 
-#### <em class="step-badge mr-1">3</em> 만든 데이터 스트림 상세에서 `태그하기에 대한 안내`를 열어서 gtag.js를 복사해서 사이트에 적용하면 끗
+#### <em class="step-badge mr-1">3</em> 만든 데이터 스트림 상세에서 `태그하기에 대한 안내`를 열어서 gtag.js를 복사해서 원하는 곳에 적용하면 끗
 ![step3]({{ "/step3.png" | prepend: thumbnail_path | relative_url }})
 
 
