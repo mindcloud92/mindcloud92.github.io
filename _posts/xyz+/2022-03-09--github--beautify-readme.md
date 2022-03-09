@@ -6,7 +6,7 @@ category: xyz+
 sub_category: GitHub
 tags: github profile design beautify stats Readme.md
 thumbnail: '/asset/images/xyz+/github--beautify-readme/thumbnail.png'
-thumbnail_type: h-full
+thumbnail_type: v-full
 ---
 
 {% assign thumbnail_path = '/asset/images/xyz+/github--beautify-readme' %}
