@@ -20,7 +20,7 @@ type: post-detail
 
     <div class="tag-container mb-10">
         {% for tag in page.tags %}
-            <a href="/" class="button-text mr-1 mb-1">
+            <a href="/search?q={{ tag }}" class="button-text mr-1 mb-1">
                 # {{ tag }}
             </a>
         {% endfor %}
