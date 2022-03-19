@@ -32,14 +32,14 @@ type: post-list
 </section>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@d29767d9d1a797ebcdca17353344e7d7d3b8f34e/src/dist/dddd.search.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@6ab1ea67a0357bed734a216d4de9e675c13ec45a/src/dist/dddd.search.min.js"></script>
 <script type="text/javascript">
     window.onload = () => {
         const data = [{{ posts }}];
         const search = new dddd.Search(data);
 
         document.getElementById('searchInput').value = search.keyword;
-        search.render();
+        search.renderResult();
     }
 </script>
 <script id="template-post-list" type="text/template">
