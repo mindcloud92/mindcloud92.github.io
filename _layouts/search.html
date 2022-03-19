@@ -7,11 +7,11 @@ type: post-list
 {% for post in site.posts %}
     {% capture v %}
         "title": "{{ post.title | xml_escape }}",
-        "categories": ["{{ post.category }}"],
+        "category": "{{ post.category }}",
         "sub_category": ["{{ post.sub_category }}"],
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "tags": [{% for tag in post.tags %} "{{ tag }}" {% unless forloop.last %},{% endunless %} {% endfor %}],
-        "date": "{{ post.date | date: '%FT%TZ' }}",
+        "date": "{{ post.date | date: '%Y' }}",
         "url": "{{ post.url | xml_escape | relative_url }}",
         "thumbnail": "{{ post.thumbnail | relative_url }}",
         "thumbnail_type": "{{ post.thumbnail_type | default: h-full }}"
@@ -32,15 +32,14 @@ type: post-list
 </section>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@f542b5b31a23cda9ad481c1022799a56f96d1798/src/static/js/dddd.static-search.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@d29767d9d1a797ebcdca17353344e7d7d3b8f34e/src/dist/dddd.search.min.js"></script>
 <script type="text/javascript">
     window.onload = () => {
-        dddd.static.Search.renderResult({
-            data: [{{ posts }}],
-            renderOptions: {
-                dateFormat: 'yyyy'
-            }
-        })
+        const data = [{{ posts }}];
+        const search = new dddd.Search(data);
+
+        document.getElementById('searchInput').value = search.keyword;
+        search.render();
     }
 </script>
 <script id="template-post-list" type="text/template">
@@ -58,7 +57,7 @@ type: post-list
 
                     <div>
                         <span class="additional-info:primary"><%= v.sub_category %> ·</span>
-                        <span class="additional-info:secondary"><%= formatDate(v.date) %></span>
+                        <span class="additional-info:secondary"><%= v.date %></span>
                     </div>
                     <p class="title"><%= v.title %></p>
                 </a>
