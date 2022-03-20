@@ -1,7 +1,7 @@
 ---
 layout: post-detail
 title: "Jekyll 검색 페이지 만들기"
-date: 2021-06-09
+date: 2022-03-20
 category: tech
 sub_category: Jekyll
 tags: jekyll static search dddd javascript underscore template
@@ -30,14 +30,14 @@ thumbnail_type: v-full
 * `body`에 검색 영역 추가
     <div class="my-2"></div> 
     ```html
-        <div class="contents-wrapper">
+        <div>
             <!-- 키워드 입력 영역 -->
             <form type="submit" action="{검색 페이지 path}">
                 <input id="{검색 입력란 id}" type="text" name="{검색 키워드 query 변수 이름}" />
             </form>
         
             <!-- 검색 결과 영역 -->
-            <section id="{검색 결과 영역 id}" class="mt-2">
+            <section id="{검색 결과 영역 id}">
             </section>
         </div>
     ```
@@ -50,7 +50,7 @@ thumbnail_type: v-full
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
     
         <!-- search library -->
-        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@f542b5b31a23cda9ad481c1022799a56f96d1798/src/static/js/dddd.static-search.min.js"></script>">
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/mindcloud92/dddd.static-search@6ab1ea67a0357bed734a216d4de9e675c13ec45a/src/dist/dddd.search.min.js"></script>
     ```
     <p class="info-message mb-4">template engine은 underscore를 사용하지 않아도 됨</p>
 
@@ -59,7 +59,7 @@ thumbnail_type: v-full
     <div class="my-2"></div>
     ```html
         <script id="{검색결과 템플릿 id}" type="text/template">
-            <!-- supported properties:  data, keyword, renderOptions -->
+            <!-- supported properties:  data -->
         </script>
     ```  
     <div class="my-2"></div>
@@ -69,25 +69,25 @@ thumbnail_type: v-full
     ```html
         {% raw %}{% assign posts = '' | split: ',' %}
         {% for post in site.posts %}
-             {% capture v %}
-                 "title": "{{ post.title | xml_escape }}",
-                 "categories": ["{{ post.category }}"],
-                 "sub_category": ["{{ post.sub_category }}"],
-                 "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-                 "tags": [{% for tag in post.tags %} "{{ tag }}" {% unless forloop.last %},{% endunless %} {% endfor %}],
-                 "date": "{{ post.date | date: '%FT%TZ' }}",
-                 "url": "{{ post.url | xml_escape | relative_url }}",
-                 "thumbnail": "{{ post.thumbnail | relative_url }}",
-                 "thumbnail_type": "{{ post.thumbnail_type | default: h-full }}"
-             {% endcapture %}
+            {% capture v %}
+                "title": "{{ post.title | xml_escape }}",
+                "category": "{{ post.category }}",
+                "sub_category": ["{{ post.sub_category }}"],
+                "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+                "tags": [{% for tag in post.tags %} "{{ tag }}" {% unless forloop.last %},{% endunless %} {% endfor %}],
+                "date": "{{ post.date | date: '%Y' }}",
+                "url": "{{ post.url | xml_escape | relative_url }}",
+                "thumbnail": "{{ post.thumbnail | relative_url }}",
+                "thumbnail_type": "{{ post.thumbnail_type | default: h-full }}"
+            {% endcapture %}
          
-             {% assign v = v | prepend: '{' | append: '}' | strip_newlines %}
-             {% unless forloop.last %}
-                 {% assign v = v | append: ', ' %}
-             {% endunless %}
+            {% assign v = v | prepend: '{' | append: '}' | strip_newlines %}
+            {% unless forloop.last %}
+                {% assign v = v | append: ', ' %}
+            {% endunless %}
          
-             {% assign posts = posts | push: v %}
-        {% endfor %}{% endraw %}
+            {% assign posts = posts | push: v %}
+         {% endfor %}{% endraw %}
     ```
     <div class="my-2"></div>
     
@@ -95,9 +95,11 @@ thumbnail_type: v-full
     <div class="my-2"></div>
     ```javascript
         {% raw %}window.onload = () => {
-            dddd.static.Search.renderResult({
-                data: data: [{{ posts }}]
-            })
+            const data = [{{ posts }}];
+            const search = new dddd.Search(data);
+            
+            document.getElementById('searchInput').value = search.keyword;
+            search.renderResult();
         }{% endraw %}
     ```
 
@@ -113,12 +115,12 @@ thumbnail_type: v-full
 <div class="mt-8"></div>
 #### <em class="step-badge mr-1">4</em> 원하는 영역에 검색 페이지 링크를 걸면 끗
 ```html
-    <a href="/search_path">검색</a>
+    <a href="{검색 페이지 path}">검색</a>
 ```
 
 
 <hr class="mb-5 mt-8"/>
 <i class="fas fa-link mr-1"></i> Reference
-- [dddd.static-search GitHub](https://github.com/mindcloud92/dddd.static-search){:target="blank"}
+- [dddd.static-search Documentation](https://github.com/mindcloud92/dddd.static-search){:target="blank"}
 - [underscore.js 공식 사이트](https://underscorejs.org/){:target="_blank"}
 
