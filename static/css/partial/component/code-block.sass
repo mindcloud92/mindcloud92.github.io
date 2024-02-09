@@ -11,6 +11,20 @@
   .highlight
     overflow: auto
 
+    &::-webkit-scrollbar
+      position: relative
+      border-radius: 5px
+      height: 8px
+      @include color-background('white-darken-1', .05)
+
+      &:hover
+        opacity: 1
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      @include color-background('white-darken-1', .88)
+
+
   &:before
     line-height: 2em
     position: absolute
